@@ -4,6 +4,7 @@ const inputMes = document.getElementById('mes-expiracion');
 const inputAnno = document.getElementById('anno-expiracion');
 const inputCVV = document.getElementById('cvv');
 const inputNombre = document.getElementById('nombre-tarjetahabiente');
+const inputFavorito = document.getElementById('interruptor');
 const btnCancelar = document.getElementById('btn-cancelar');
 const btnAgregar = document.getElementById('btn-agregar');
 
@@ -61,18 +62,34 @@ const validar = () => {
             navegar();
         }
     }
-
 };
 
 // PLACEHOLDER
+const verificarFavorito = () => {
+    if (inputFavorito.value) {
+        listaMetodos.forEach(metodo => {
+            metodo.favorito = false;
+        });
+    }
+};
+
 const navegar = () => {
-    Swal.fire({
-        'icon': 'success',
-        'title': 'Método de pago registrado',
-        'text': 'Se ha registrado un nuevo método de pago.'
-    }).then(() => {
-        window.location.href = 'registro_metodo_pago.html'
+    verificarFavorito();
+    listaMetodos.push({
+        'numeroTarjeta': inputNumeroTarjeta.value,
+        'nombre': inputNombre.value,
+        'mesExpiracion': inputMes.value,
+        'annoExpiracion': inputAnno.value,
+        'favorito': inputFavorito.value
     });
+    window.location.href = 'seleccion_metodo_pago.html';
+    // Swal.fire({
+    //     'icon': 'success',
+    //     'title': 'Método de pago registrado',
+    //     'text': 'Se ha registrado un nuevo método de pago.'
+    // }).then(() => {
+    //     window.location.href = 'seleccion_metodo_pago.html'
+    // });
 };
 
 btnAgregar.addEventListener('click', () => {
@@ -81,5 +98,5 @@ btnAgregar.addEventListener('click', () => {
 
 btnCancelar.addEventListener('click', () => {
     // PLACEHOLDER
-    window.location.href = 'registro_metodo_pago.html'
+    window.location.href = 'registro_metodo_pago.html';
 });
