@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asap:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/registro_metodo_pago.css">
+    <title>Registrar un método de pago</title>
+</head>
+
+<body>
+    <section id="sct-registro-metodo-pago">
+        <form class="formulario-tarjeta">
+            <h1>Añadir tarjeta</h1>
+            <div class="cont-control">
+                <p id="informacion-error"></p>
+            </div>
+            <div class="cont-control">
+                <!-- <label for="numero-tarjeta">Numero de tarjeta</label> -->
+                <input id="numero-tarjeta" type="text" placeholder="Numero de tarjeta VISA o MasterCard">
+            </div>
+            <div class="parametros-medio">
+                <div class="cont-control">
+                    <!-- <label for="mes-expiracion">Mes de expiración</label> -->
+                    <input id="mes-expiracion" type="text" placeholder="MM">
+                </div>
+                <div class="cont-control">
+                    <!-- <label for="anno-expiracion">Año de expiración</label> -->
+                    <input id="anno-expiracion" type="text" placeholder="YYYY">
+                </div>
+                <div class="cont-control">
+                    <!-- <label for="cvv">CVV</label> -->
+                    <input id="cvv" type="text" placeholder="CVV">
+                </div>
+                <div class="cont-control">
+                    <i id="icono-tarjeta" class="fa-solid fa-credit-card fa-2x"></i>
+                </div>
+            </div>
+            <div class="cont-control">
+                <!-- <label for="nombre-tarjetahabiente">Nombre</label> -->
+                <input id="nombre-tarjetahabiente" type="text" placeholder="Nombre del tarjetahabiente">
+            </div>
+            <div class="cont-botones">
+                <button type="button" id="btn-cancelar" class="btn-metodo-pago">Cancelar</button>
+                <button type="button" id="btn-agregar" class="btn-metodo-pago">Agregar</button>
+            </div>
+
+        </form>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://kit.fontawesome.com/3269682608.js" crossorigin="anonymous"></script>
+    <script src="../js/registro_metodo_pago.js"></script>
+</body>
+
+</html>
