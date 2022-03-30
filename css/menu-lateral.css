@@ -15,14 +15,12 @@ body {
 }
 
 .menu-lateral {
-    align-items: center;
     border: solid 2px #000;
-    display: flex;
-    flex-direction: column;
     font-family: 'Asap', sans-serif;
     height: 97%;
     list-style: none;
     margin: 1% 0 2% 0;
+    padding: 20px 0;
     width: 15%;
 }
 
@@ -31,7 +29,31 @@ body {
 }
 
 
-/* Estilos de las listas */
+/* Estilos de la primera sección */
+
+.menu-lateral-arriba {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px 20px 20px;
+}
+
+.menu-lateral-arriba i {
+    font-size: 25px;
+}
+
+.menu-lateral-usuario {
+    line-height: 10px;
+    text-align: center;
+}
+
+
+/* Estilos de la segunda sección */
+
+.menu-lateral-segundo {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
 
 .menu-lateral-lista {
     display: flex;
@@ -41,11 +63,12 @@ body {
 
 .menu-lateral-lista i {
     font-size: 17px;
-    margin: 1px 4px;
+    margin: 1px 8px 1px 4px;
 }
 
 .menu-lateral-titulo {
     /* border: 2px solid blue; */
+    font-weight: 600;
     padding-top: 15px;
 }
 
