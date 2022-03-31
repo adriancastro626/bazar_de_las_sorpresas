@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asap:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/registro_autor.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <section id="sct-registro-autor">
+        <form>
+            <h1> Registro de Autor</h1>
+            <div class="cont-control">
+                <label for="txt-adjunto">Foto</label>
+
+                <input type="file" id="txt-adjunto">
+            </div>
+
+            <div class="cont-control">
+                <label for="txt-nombre">Nombre</label>
+
+                <input type="text" id="txt-nombre">
+            </div>
+
+            <div class="cont-control">
+                <label for="txt-apellido">Apellido</label>
+
+                <input type="text" id="txt-apellido">
+            </div>
+            <div class="cont-control">
+                <label for="slt-genero">Género</label>
+
+                <select id="slt-genero">
+                    <option value="">-- Seleccione el género --</option>
+                    <option value="1">Femenino</option>
+                    <option value="2">Masculino</option>
+                </select>
+            </div>
+
+            <div class="cont-control">
+                <label for="txt-nacimiento">Fecha Nacimiento</label>
+
+                <input type="date" id="txt-nacimiento">
+            </div>
+
+            <div class="cont-control">
+                <label for="txt-defuncion">Fecha Defunción</label>
+
+                <input type="date" id="txt-defuncion">
+            </div>
+
+
+            <div class="cont-control">
+                <label for="txt-biografia">Biografía</label>
+                <textarea name="Biografia" id="txt-biografia" cols="27" rows="12">Escriba aquí la Biografía</textarea>
+            </div>
+
+            <div>
+                <button type="button" id="btn-registrar" class="btn-oscuro">Registrar</button>
+
+            </div>
+        </form>
+
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/registro_autor.js"></script>
+</body>
+
+</html>
