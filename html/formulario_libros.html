@@ -6,13 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width-devide-width, initial-scale=1.0">
     <!-- Link del CSS reset -->
-    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="../css/reset.css">
     <!-- Script de FontAwsome -->
     <!-- <script src="https://kit.fontawesome.com/0db8cde7c4.js" crossorigin="anonymous"></script> -->
     <!-- Links de Google Fonts -->
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Asap:wght@400;600;700&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Asap:wght@400;600;700&display=swap" rel="stylesheet">
     <!-- Link del CSS -->
     <!-- TODO tengo q corregir el href -->
     <link rel="stylesheet" href="../css/formulario_libros.css">
@@ -23,9 +23,13 @@
 
     <div class="formulario-libros">
 
-        <h1>Formulario de Registro de Libros</h1>
-        <div class="formulario-libros-controles">
-            <form>
+        <div>
+            <h1>Formulario de Registro de Libros</h1>
+        </div>
+
+        <form>
+
+            <div class="formulario-libros-controles">
 
                 <div class="formulario-libros-izq">
 
@@ -39,7 +43,6 @@
 
                     <div class="formulario-libros-izq-control">
 
-                        <!-- Revisar -->
                         <label for="file-foto">Adjuntar fotografía</label>
                         <input type="file" id="" name="file-foto">
 
@@ -101,22 +104,6 @@
 
                     </div>
 
-
-                    <div class="formulario-libros-izq-control">
-
-                        <label for="number-precio">Precio</label>
-                        <input type="number" id="number-precio" name="number-precio">
-
-                    </div>
-
-
-                    <div class="formulario-libros-izq-control">
-
-                        <label for="textarea-sinopsis">Sinopsis</label>
-                        <textarea id="textarea-sinopsis" name="textarea-sinopsis"></textarea>
-
-                    </div>
-
                 </div>
 
 
@@ -140,21 +127,61 @@
 
                     <div class="formulario-libros-der-control">
 
-                        <label for="txt-premios">Premios</label>
-                        <input type="text" id="txt-premios" name="txt-premios">
+                        <label for="number-precio">Precio</label>
+                        <input type="number" id="number-precio" name="number-precio">
+
+                    </div>
+
+
+                    <div class="formulario-libros-der-premio">
+
+                        <label for="checkbox-premios">Premios</label>
+                        <div>
+                            <input type="checkbox" id="checkbox-premios" name="checkbox-premios">Premio Nobel de Literatura
+                            <input type="date" id="checkbox-premios" name="checkbox-premios" placeholder="Ingrese el año" class="checkbox-premio-nobel">
+                        </div>
+                        <div>
+                            <input type="checkbox" id="checkbox-premios" name="checkbox-premios">Premio Príncipe de Asturias de las Letras
+                        </div>
+                        <div>
+                            <input type="checkbox" id="checkbox-premios" name="checkbox-premios">Premio Franz Kafka
+                        </div>
+                        <div>
+                            <input type="checkbox" id="checkbox-premios" name="checkbox-premios">Premio Hans Christian Andersen
+                        </div>
+                        <div>
+                            <input type="checkbox" id="checkbox-premios" name="checkbox-premios">Premio Man Booker Internacional
+                        </div>
+                        <div>
+                            <input type="checkbox" id="checkbox-premios" name="checkbox-premios">Premio Miguel de Cervantes
+                        </div>
+                        <div>
+                            <input type="checkbox" id="checkbox-premios" name="checkbox-premios">Premio Nadal
+                        </div>
+                        <div>
+                            <input type="checkbox" id="checkbox-premios" name="checkbox-premios">Otros
+                        </div>
 
                     </div>
 
                 </div>
 
-                <div class="formulario-libros-control-boton">
+            </div>
 
-                </div>
+            <div class="formulario-libros-control-sinopsis">
 
-            </form>
+                <label for="textarea-sinopsis">Sinopsis</label>
+                <textarea id="textarea-sinopsis" name="textarea-sinopsis"></textarea>
 
-        </div>
+            </div>
 
+            <div class="formulario-libros-control-boton">
+
+                <button type="button" id="btn-guardar" class="btn-guardar" name="btn-guardar">Guardar</button>
+
+            </div>
+
+        </form>
 
     </div>
 

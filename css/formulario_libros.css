@@ -1,0 +1,117 @@
+/* Estilos Generales */
+
+html {
+    height: 98%;
+    /* border: 5px solid green; */
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.formulario-libros {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Asap', sans-serif;
+    font-size: 18px;
+    height: 800px;
+    justify-content: space-evenly;
+    margin: 50px auto;
+    width: 1100px;
+    /* border: 2px solid red; */
+}
+
+
+/* Estilos de formulario*/
+
+form {
+    height: 650px;
+    /* border: 5px solid green; */
+}
+
+form label {
+    padding-right: 10px;
+}
+
+.formulario-libros-controles {
+    display: flex;
+    height: 500px;
+    justify-content: space-around;
+    padding: 50px 0 20px 0;
+    width: 1000px;
+    /* border: 2px solid black; */
+}
+
+
+/* Estilos formulario izq */
+
+.formulario-libros-izq {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* border: 2px solid yellow; */
+}
+
+.formulario-libros-izq-control input,
+.formulario-libros-izq-control select {
+    font-size: 15px;
+    height: 30px;
+    width: 220px;
+}
+
+
+/* Estilos formulario der */
+
+.formulario-libros-der {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* border: 2px solid blue; */
+}
+
+.formulario-libros-der-control input {
+    height: 30px;
+    width: 220px;
+}
+
+.formulario-libros-der-premio {
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario-libros-der-premio div {
+    padding: 10px 0 0 35px;
+    /* border: 2px solid purple; */
+}
+
+.formulario-libros-der-premio div input[type=date] {
+    font-size: 15px;
+    height: 30px;
+    margin-left: 5px;
+    width: 150px;
+}
+
+
+/* Estilos parte inferior */
+
+.formulario-libros-control-sinopsis {
+    height: 100px;
+    padding-left: 40px;
+    width: 900px;
+    /* border: 2px solid pink; */
+}
+
+.formulario-libros-control-sinopsis textarea {
+    height: 95%;
+    margin: 10px 0 10px 20px;
+    width: 900px;
+}
+
+.formulario-libros-control-boton {
+    align-items: center;
+    display: block;
+    margin: 50px 0 0 450px;
+    /* border: 2px solid purple; */
+}
