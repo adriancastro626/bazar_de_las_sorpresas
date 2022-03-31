@@ -30,7 +30,7 @@ form label {
 
 .formulario-libros-controles {
     display: flex;
-    height: 500px;
+    height: 600px;
     justify-content: space-around;
     padding: 50px 0 20px 0;
     width: 1000px;
@@ -39,31 +39,26 @@ form label {
 
 /* Estilos formulario izq */
 
-.formulario-libros-izq {
+.formulario-libros-izq,
+.formulario-libros-izq-control {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-}
-
-.formulario-libros-izq-control input,
-.formulario-libros-izq-control select {
-    font-size: 15px;
-    height: 30px;
-    width: 220px;
 }
 
 
 /* Estilos formulario der */
 
-.formulario-libros-der {
+.formulario-libros-der,
+.formulario-libros-der-control {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
 
-.formulario-libros-der-control input {
-    height: 30px;
-    width: 220px;
+.formulario-libros-der-control label,
+.formulario-libros-der-premio label {
+    margin-top: 15px;
 }
 
 .formulario-libros-der-premio {
@@ -72,7 +67,7 @@ form label {
 }
 
 .formulario-libros-der-premio div {
-    padding: 10px 0 0 35px;
+    padding: 5px 0 0 20px;
 }
 
 .formulario-libros-der-premio div input[type=date] {
@@ -87,8 +82,12 @@ form label {
 
 .formulario-libros-control-sinopsis {
     height: 100px;
-    padding-left: 40px;
-    width: 900px;
+    padding-left: 30px;
+    width: 980px;
+}
+
+.formulario-libros-control-sinopsis label {
+    margin-left: 20px;
 }
 
 .formulario-libros-control-sinopsis textarea {
@@ -101,4 +100,93 @@ form label {
     align-items: center;
     display: block;
     margin: 50px 0 0 450px;
+}
+
+
+/*Estilos Input*/
+
+form label {
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+input,
+select,
+textarea {
+    font-size: 15px;
+    border: 3px solid rgb(109, 104, 117);
+    background-color: #fed7ce;
+    border-radius: 6px;
+}
+
+input[type="text"],
+select,
+textarea {
+    box-sizing: border-box;
+    padding: 0.1rem 0.75rem;
+    height: 35px;
+    width: 350px;
+}
+
+input[type="file"] {
+    background-color: transparent;
+    border: none;
+    height: 35px;
+    width: 350px;
+}
+
+input[type="number"] {
+    height: 26px;
+    width: 340px;
+}
+
+input[type="date"] {
+    height: 28px;
+    width: 340px;
+}
+
+input[type="checkbox"] {
+    height: 26px;
+    width: 26px;
+    vertical-align: middle;
+}
+
+button[type="button"] {
+    background-color: #FFB4A2;
+    border: none;
+    border-radius: 6px;
+    color: #636069;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 6px 10px;
+    transition: 0.3s;
+}
+
+button:hover[type="button"] {
+    background-color: #fed7ce;
+    color: #000105;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px #636069;
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px #636069;
+}
+
+select>option:hover {
+    color: #1B517E;
+    cursor: pointer;
+}
+
+
+/* Estilos de validacion */
+
+.formulario-libros-incompleto {
+    border: 2pc solid red;
 }

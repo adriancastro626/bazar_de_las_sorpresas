@@ -126,7 +126,7 @@
                         <div class="formulario-libros-izq-control">
 
                             <label for="file-foto">Adjuntar fotografía</label>
-                            <input type="file" id="" name="file-foto">
+                            <input type="file" id="file-foto" name="file-foto">
 
                         </div>
 
@@ -179,7 +179,7 @@
 
                             <label for="select-descuento">Descuento</label>
                             <select id="select-descuento" name="select-descuento">
-                                <option value="0">Seleccione el descuento</option>
+                                <option value="0">Ninguno</option>
                                 <option value="1">Día de la madre</option>
                                 <option value="2">Libros de cuentos</option>
                             </select>
@@ -216,33 +216,33 @@
                         </div>
 
 
-                        <div class="formulario-libros-der-premio">
+                        <div class="formulario-libros-der-premio" id="checkbox-premio-nobel">
 
                             <label for="checkbox-premios">Premios</label>
                             <div>
-                                <input type="checkbox" id="checkbox-premios" name="checkbox-premios">Premio Nobel de Literatura
+                                <input type="checkbox" id="checkbox-premios" name="checkbox-premios" value="1">Premio Nobel de Literatura
                                 <input type="date" id="checkbox-premios" name="checkbox-premios" placeholder="Ingrese el año" class="checkbox-premio-nobel">
                             </div>
                             <div>
-                                <input type="checkbox" id="checkbox-premios" name="checkbox-premios">Premio Príncipe de Asturias de las Letras
+                                <input type="checkbox" id="checkbox-premios" name="checkbox-premios" value="2">Premio Príncipe de Asturias de las Letras
                             </div>
                             <div>
-                                <input type="checkbox" id="checkbox-premios" name="checkbox-premios">Premio Franz Kafka
+                                <input type="checkbox" id="checkbox-premios" name="checkbox-premios" value="3">Premio Franz Kafka
                             </div>
                             <div>
-                                <input type="checkbox" id="checkbox-premios" name="checkbox-premios">Premio Hans Christian Andersen
+                                <input type="checkbox" id="checkbox-premios" name="checkbox-premios" value="4">Premio Hans Christian Andersen
                             </div>
                             <div>
-                                <input type="checkbox" id="checkbox-premios" name="checkbox-premios">Premio Man Booker Internacional
+                                <input type="checkbox" id="checkbox-premios" name="checkbox-premios" value="5">Premio Man Booker Internacional
                             </div>
                             <div>
-                                <input type="checkbox" id="checkbox-premios" name="checkbox-premios">Premio Miguel de Cervantes
+                                <input type="checkbox" id="checkbox-premios" name="checkbox-premios" value="6">Premio Miguel de Cervantes
                             </div>
                             <div>
-                                <input type="checkbox" id="checkbox-premios" name="checkbox-premios">Premio Nadal
+                                <input type="checkbox" id="checkbox-premios" name="checkbox-premios" value="7">Premio Nadal
                             </div>
                             <div>
-                                <input type="checkbox" id="checkbox-premios" name="checkbox-premios">Otros
+                                <input type="checkbox" id="checkbox-premios" name="checkbox-premios" value="8">Otros
                             </div>
 
                         </div>
@@ -271,6 +271,7 @@
 
     </div>
 
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../js/formulario_libros.js"></script>
 </body>
 
