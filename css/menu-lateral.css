@@ -3,17 +3,18 @@
 html,
 body {
     height: 100%;
-    width: 100%;
+    /* margin: 0px;
+    width: 100%;*/
 }
 
 .menu-lateral {
     background-color: #6D6875;
-    border: solid 2px #000;
+    /* border: solid 2px #000; */
     font-family: 'Asap', sans-serif;
-    height: 97%;
+    height: 100%;
     list-style: none;
-    margin: 1% 0 2% 0;
-    padding: 20px 0;
+    /* margin: 1% 0 2% 0;
+    padding: 20px 0; */
     width: 300px;
 }
 
@@ -28,7 +29,7 @@ body {
 .menu-lateral-arriba {
     display: flex;
     justify-content: space-between;
-    padding: 0 20px 20px 20px;
+    padding: 20px 20px 20px 20px;
 }
 
 .menu-lateral-arriba i {
@@ -46,16 +47,20 @@ body {
 
 .menu-lateral-primero {
     align-items: center;
+    background-color: #FFB4A2;
+    border-radius: 0 0 2% 2%;
+    -webkit-box-shadow: 0px 9px 10px -8px #000000;
+    box-shadow: 0px 9px 10px -8px #000000;
 }
 
 .menu-lateral-usuario {
     /* background-color: #E5989B; */
     /* border: 2px solid green; */
     /* border-radius: 20%; */
-    color: #FFCDB2;
+    color: #000105;
     font-size: 18px;
     font-weight: bold;
-    line-height: 10px;
+    line-height: 30px;
     margin: auto;
     padding: 15px 0;
     text-align: center;
@@ -69,10 +74,13 @@ body {
     display: flex;
     flex-direction: column;
     margin-left: 15px;
+    padding-top: 20px;
 }
 
 .menu-lateral-segundo h2 {
-    color: #FFB4A2;
+    color: #000105;
+    font-size: 25px;
+    padding-top: 30px;
 }
 
 .menu-lateral-lista {
@@ -83,7 +91,13 @@ body {
 a {
     color: #FFCDB2;
     font-weight: bold;
+    padding: 8px;
     text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: #000105;
 }
 
 .menu-lateral-lista i {
@@ -112,6 +126,7 @@ a {
     margin-bottom: 50px;
     max-height: 30;
     padding: 0 0 10px 20px;
+    transition: 0.3s
 }
 
 #menu-lateral-desplegar-2:target ul {
@@ -119,6 +134,7 @@ a {
     margin-bottom: 60px;
     max-height: 30;
     padding: 0 0 20px 20px;
+    transition: 0.3s
 }
 
 .menu-lateral-titulo {
