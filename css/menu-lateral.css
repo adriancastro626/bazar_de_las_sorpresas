@@ -3,18 +3,13 @@
 html,
 body {
     height: 100%;
-    /* margin: 0px;
-    width: 100%;*/
 }
 
 .menu-lateral {
     background-color: #6D6875;
-    /* border: solid 2px #000; */
     font-family: 'Asap', sans-serif;
     height: 100%;
     list-style: none;
-    /* margin: 1% 0 2% 0;
-    padding: 20px 0; */
     width: 300px;
 }
 
@@ -54,9 +49,6 @@ body {
 }
 
 .menu-lateral-usuario {
-    /* background-color: #E5989B; */
-    /* border: 2px solid green; */
-    /* border-radius: 20%; */
     color: #000105;
     font-size: 18px;
     font-weight: bold;
