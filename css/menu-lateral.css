@@ -1,13 +1,12 @@
 /* Estilos Generales */
 
-html,
-body {
-    height: 100%;
+html {
+    min-height: 100%;
 }
 
 .pagina-completa {
     display: flex;
-    height: 100%;
+    min-height: 1000px;
 }
 
 .menu-lateral {
