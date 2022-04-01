@@ -8,7 +8,7 @@ body {
 
 .cont-metodo-envío {
     width: 1000px;
-    height: 600px;
+    height: auto;
     margin: 60px auto 0;
     border: 1px solid #ddd;
     border-radius: 6px;
@@ -29,12 +29,16 @@ h1 {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    margin-bottom: 30px;
 }
 
 .cont-domicilio,
 .cont-punto-retiro {
     width: 440px;
 }
+
+
+/* Sección entrega a domicilio */
 
 .cont-domicilio {
     border-right: 2px solid #6D6875;
@@ -44,4 +48,68 @@ h1 {
     font-size: 18px;
     font-weight: bold;
     text-align: left;
+}
+
+.cont-linea {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 0px;
+    margin-right: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.cont-linea select {
+    width: 240px;
+    text-align: center;
+}
+
+
+/* Sección punto de retiro */
+
+.cont-retiro-inferior {
+    height: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 80px;
+}
+
+
+/* Sección del mapa */
+
+#mapa {
+    height: 300px;
+    /* The height is 400 pixels */
+    width: 100%;
+    /* The width is the width of the web page */
+}
+
+
+/* Botones */
+
+.cont-botones {
+    margin: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.btn-metodo-envio {
+    margin-left: 30px;
+    height: 30px;
+    width: 80px;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+#btn-atras {
+    background: #fff;
+    border: 1px solid #000;
+}
+
+#btn-continuar {
+    background: #B5838D;
+    border: 1px solid #B5838D;
 }
