@@ -21,9 +21,7 @@ const mostrarMetodos = () => {
         radioLabel.appendChild(document.createTextNode(nombreMetodo));
 
         obtenerMetodos.appendChild(radioLabel);
-
     });
-
 };
 
 const definirNombreMetodo = (numeroTarjeta) => {
