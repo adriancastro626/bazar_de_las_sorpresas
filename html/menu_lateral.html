@@ -14,86 +14,89 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Asap:wght@400;600;700&display=swap" rel="stylesheet">
     <!-- Link del CSS -->
-    <link rel="stylesheet" href="css/menu-lateral.css">
+    <link rel="stylesheet" href="../css/menu-lateral.css">
     <title></title>
 </head>
 
 <body>
 
-    <!-- Menú lateral -->
-    <div class="menu-lateral">
+    <div class="pagina-completa">
 
-        <!-- Primera sección del menú lateral -->
-        <div class="menu-lateral-primero">
-            <div class="menu-lateral-arriba">
-                <a href="pagina_principal.html"><i class="fa-solid fa-house" title="Icono para ir a la página principal"></i></a>
-                <a href="inicio_sesion.html"><i class="fa-solid fa-lock" title="Icono para cerrar sesión en la cuenta"></i></a>
-            </div>
-            <div class="menu-lateral-usuario">
-                <div class="menu-lateral-foto">
-                    <img src="../img/foto-perfil.png" alt="Foto de perfil del usuario">
+        <!-- Menú lateral -->
+        <div class="menu-lateral">
+
+            <!-- Primera sección del menú lateral -->
+            <div class="menu-lateral-primero">
+                <div class="menu-lateral-arriba">
+                    <a href="pagina_principal.html"><i class="fa-solid fa-house" title="Icono para ir a la página principal"></i></a>
+                    <a href="inicio_sesion.html"><i class="fa-solid fa-lock" title="Icono para cerrar sesión en la cuenta"></i></a>
                 </div>
-                <p class="menu-lateral-nombre"></p>John Doe</p>
-                <p class="menu-lateral-email">johndoe@mitienda.com</p>
+                <div class="menu-lateral-usuario">
+                    <div class="menu-lateral-foto">
+                        <img src="../img/foto-perfil.png" alt="Foto de perfil del usuario">
+                    </div>
+                    <p class="menu-lateral-nombre"></p>John Doe</p>
+                    <p class="menu-lateral-email">johndoe@mitienda.com</p>
+                </div>
             </div>
+
+            <!-- Segunda sección del menú lateral -->
+            <div class="menu-lateral-segundo">
+
+                <!-- Primera lista -->
+                <div>
+                    <h2 class="menu-lateral-titulo">CUENTAS</h2>
+                    <nav class="menu-lateral-nav">
+                        <ul>
+                            <div class="menu-lateral-lista">
+                                <li><i class="fa-solid fa-user"></i><a href="pagina_sesion_iniciada.html">Perfil </a></li>
+                            </div>
+                            <div class="menu-lateral-lista">
+                                <li><i class="fa-solid fa-receipt"></i><a href="historial_compra.html">Historial de compras</a></li>
+                            </div>
+                            <div class="menu-lateral-lista">
+                                <li><i class="fa-solid fa-users"></i><a href="edicion_usuarios.html">Usuarios</a></li>
+                            </div>
+                        </ul>
+                    </nav>
+                </div>
+
+                <!-- Segunda lista -->
+                <div>
+                    <h2 class="menu-lateral-titulo">TIENDA</h2>
+                    <nav class="menu-lateral-nav">
+                        <ul>
+                            <div class="menu-lateral-lista">
+                                <li><i class="fa-solid fa-tag"></i><a href="parametros_sistema.html">Parámetros del sistema</a></li>
+                            </div>
+                            <div class="menu-lateral-lista menu-lateral-anidado" id="menu-lateral-desplegar-1">
+                                <li><i class="fa-solid fa-book-open"></i><a href="#menu-lateral-desplegar-1">Catálogo</a>
+                                    <ul>
+                                        <li><a href="lista_libros.html">Libros</a></li>
+                                        <li><a href="lista_autores.html">Autores</a></li>
+                                        <li><a href="lista_generos.html">Géneros literarios</a></li>
+                                    </ul>
+                                </li>
+                            </div>
+                            <div class="menu-lateral-lista menu-lateral-anidado" id="menu-lateral-desplegar-2">
+                                <li> <i class="fa-solid fa-newspaper"></i><a href="#menu-lateral-desplegar-2">Reportes</a>
+                                    <ul>
+                                        <li><a href="reportes_top10.html">Top 10</a></li>
+                                        <li><a href="reportes_desglose_ventas.html">Ventas</a></li>
+                                        <li><a href="reportes_descuentos.html">Descuentos</a></li>
+                                        <li><a href="reportes_socios_comerciales.html">Socios comerciales</a></li>
+                                    </ul>
+                                </li>
+                            </div>
+                            <div class="menu-lateral-lista">
+                                <li><i class="fa-solid fa-store"></i><a href="lista_socios.html">Socios comerciales</a></li>
+                            </div>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
         </div>
-
-        <!-- Segunda sección del menú lateral -->
-        <div class="menu-lateral-segundo">
-
-            <!-- Primera lista -->
-            <div>
-                <h2 class="menu-lateral-titulo">CUENTAS</h2>
-                <nav class="menu-lateral-nav">
-                    <ul>
-                        <div class="menu-lateral-lista">
-                            <li><i class="fa-solid fa-user"></i><a href="pagina_sesion_iniciada.html">Perfil </a></li>
-                        </div>
-                        <div class="menu-lateral-lista">
-                            <li><i class="fa-solid fa-receipt"></i><a href="historial_compra.html">Historial de compras</a></li>
-                        </div>
-                        <div class="menu-lateral-lista">
-                            <li><i class="fa-solid fa-users"></i><a href="edicion_usuarios.html">Usuarios</a></li>
-                        </div>
-                    </ul>
-                </nav>
-            </div>
-
-            <!-- Segunda lista -->
-            <div>
-                <h2 class="menu-lateral-titulo">TIENDA</h2>
-                <nav class="menu-lateral-nav">
-                    <ul>
-                        <div class="menu-lateral-lista">
-                            <li><i class="fa-solid fa-tag"></i><a href="parametros_sistema.html">Parámetros del sistema</a></li>
-                        </div>
-                        <div class="menu-lateral-lista menu-lateral-anidado" id="menu-lateral-desplegar-1">
-                            <li><i class="fa-solid fa-book-open"></i><a href="#menu-lateral-desplegar-1">Catálogo</a>
-                                <ul>
-                                    <li><a href="lista_libros.html">Libros</a></li>
-                                    <li><a href="lista_autores.html">Autores</a></li>
-                                    <li><a href="lista_generos.html">Géneros literarios</a></li>
-                                </ul>
-                            </li>
-                        </div>
-                        <div class="menu-lateral-lista menu-lateral-anidado" id="menu-lateral-desplegar-2">
-                            <li> <i class="fa-solid fa-newspaper"></i><a href="#menu-lateral-desplegar-2">Reportes</a>
-                                <ul>
-                                    <li><a href="reportes_top10.html">Top 10</a></li>
-                                    <li><a href="reportes_desglose_ventas.html">Ventas</a></li>
-                                    <li><a href="reportes_descuentos.html">Descuentos</a></li>
-                                    <li><a href="reportes_socios_comerciales.html">Socios comerciales</a></li>
-                                </ul>
-                            </li>
-                        </div>
-                        <div class="menu-lateral-lista">
-                            <li><i class="fa-solid fa-store"></i><a href="lista_socios.html">Socios comerciales</a></li>
-                        </div>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-
     </div>
 
 </body>
