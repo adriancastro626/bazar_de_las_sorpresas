@@ -1,0 +1,143 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Asap', sans-serif;
+    background-color: #FFCDB2;
+}
+
+#sct-registro-usuarios {
+    display: flex;
+}
+
+.parent {
+    display: flex;
+}
+
+.footerParent {
+    display: flex;
+}
+
+img {
+    height: 100px;
+    width: 100px;
+}
+
+#sct-registro-usuarios form {
+    height: 35rem;
+    width: 105rem;
+    backdrop-filter: blur(0.4rem);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0.6rem 0.5rem 0.5rem rgba(0, 0, 0, 0.6);
+    border-radius: 0.7rem;
+    text-align: center;
+    transition: transform .2s;
+    margin: 50px;
+}
+
+
+/* form:hover {
+    transform: scale(1.1);
+    backdrop-filter: blur(0.7rem);
+    cursor: pointer;
+} */
+
+#sct-registro-usuarios form h1 {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+#sct-registro-usuarios form .cont-control {
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#sct-registro-usuarios form label {
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.75);
+    padding: 0 2rem;
+    text-align: left;
+    width: 220px;
+}
+
+.col-uno {
+    width: 25%;
+}
+
+.col-dos {
+    width: 25%;
+}
+
+.col-tres {
+    width: 25%;
+}
+
+.col-cuatro {
+    width: 25%;
+}
+
+.footerChildUno {
+    width: 15%
+}
+
+.footerChildDos {
+    width: 15%
+}
+
+.footerChildTres {
+    width: 15%
+}
+
+.cont-control input,
+.cont-control select {
+    width: 220px;
+    height: 35px;
+    color: black;
+    margin-right: 2rem;
+    align-items: right;
+    border-radius: 5px;
+    border: none;
+}
+
+.btn-oscuro {
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+    border: none;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0.2rem 0.2rem 0.3rem rgba(0, 0, 0, 0.4);
+}
+
+.btn-oscuro:hover {
+    background: rgba(255, 255, 255, 1);
+    cursor: pointer;
+}
+
+.contenedor-img {
+    background-image: url('../img/libreria_registro.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    padding: 20px;
+    background-color: #FFCDB2;
+}
+
+footer h4 {
+    font-weight: bold;
+}

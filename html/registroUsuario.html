@@ -5,189 +5,198 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/registroUsuarios.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/registroUsuarios.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asap:wght@400;600;700&display=swap" rel="stylesheet">
     <title>Registro Usuario</title>
+
 </head>
 
 <body>
     <header>
         <nav>
-            <a href="/home/">Logo</a>
+            <img src="/img/logo.png" alt="Logo">
         </nav>
     </header>
-    <section id="sct-registro-usuarios">
-        <form>
-            <h1>Registro de Usuario</h1>
-            <div class="cont-control">
-                <label for="slt-tipo">Tipo de Identificación</label>
-                <select id="slt-tipo">
-                <option value="">-- Seleccione el tipo de Identificación --</option>
-                <option value="1">Cédula de Identidad</option>
-                <option value="2">DIMEX</option>
-                <option value="3">NITE</option>
-                <option value="4">DIDI</option>
-            </select>
-            </div>
-            <div class="cont-control">
-                <label for="txt-identificacion">Ingrese Número de Identificación</label>
-                <input id="txt-identificacion" type="text" placeholder="Número de Identificación">
-            </div>
+    <div class="contenedor-img ">
+        <section id="sct-registro-usuarios">
+            <form>
+                <h1>Registro de Usuario</h1>
+                <div class="parent">
+                    <div class="col-uno">
+                        <div class="cont-control">
+                            <label for="txt-nombre">Nombre</label>
+                            <input id="txt-nombre" type="text">
+                        </div>
 
-            <div class="cont-control">
-                <label for="txt-nombre">Nombre</label>
-                <input id="txt-nombre" type="text">
-            </div>
+                        <div class="cont-control">
+                            <label for="txt-segundoNombre">Segundo Nombre</label>
+                            <input id="txt-segundoNombre" type="text">
+                        </div>
 
-            <div class="cont-control">
-                <label for="txt-segundoNombre">Segundo Nombre</label>
-                <input id="txt-segundoNombre" type="text">
-            </div>
+                        <div class="cont-control">
+                            <label for="txt-Apellido">Primer Apellido</label>
+                            <input id="txt-Apellido" type="text">
+                        </div>
 
-            <div class="cont-control">
-                <label for="txt-Apellido">Primer Apellido</label>
-                <input id="txt-Apellido" type="text">
-            </div>
+                        <div class="cont-control">
+                            <label for="txt-SegundoApellido">Segundo Apellido</label>
+                            <input id="txt-SegundoApellido" type="text">
+                        </div>
 
-            <div class="cont-control">
-                <label for="txt-SegundoApellido">Segundo Apellido</label>
-                <input id="txt-SegundoApellido" type="text">
-            </div>
+                        <div class="cont-control">
+                            <label for="slt-tipo">Tipo de Identificación</label>
+                            <select id="slt-tipo">
+                            <option value="">-- Seleccione el tipo de Identificación --</option>
+                            <option value="1">Cédula de Identidad</option>
+                            <option value="2">DIMEX</option>
+                            <option value="3">NITE</option>
+                            <option value="4">DIDI</option>
+                            </select>
+                        </div>
+                        <div class="cont-control">
+                            <label for="txt-identificacion">Ingrese Número de Identificación</label>
+                            <input id="txt-identificacion" type="text" placeholder="Número de Identificación">
+                        </div>
+                    </div>
+                    <div class="col-dos">
+                        <div class="cont-control">
+                            <label for="slt-genero">Seleccione su Género</label>
+                            <select id="slt-genero">
+                            <option value="">-- Seleccione el tipo de Género --</option>
+                            <option value="1">Femenino</option>
+                            <option value="2">Masculino</option>
+                            <option value="3">Otro - Especifique</option>
+                            </select>
+                        </div>
 
-            <div class="cont-control">
-                <label for="slt-genero">Seleccione su Género</label>
-                <select id="slt-genero">
-                <option value="">-- Seleccione el tipo de Género --</option>
-                <option value="1">Femenino</option>
-                <option value="2">Masculino</option>
-                <option value="3">Otro - Especifique</option>
-            </select>
-            </div>
+                        <div class="cont-control">
+                            <label for="txt-otroGenero">Especifique</label>
+                            <input id="txt-otroGenero" type="text" placeholder="Especifique Género">
+                        </div>
+                        <div class="cont-control">
+                            <label for="txt-nacimiento">Fecha de nacimiento</label>
+                            <input id="txt-nacimiento" type="date">
+                        </div>
+                        <div class="cont-control">
+                            <label for="slt-generoLiterario">Seleccione Género Literario</label>
+                            <select id="slt-generoLiterario">
+                        <option value="">-- Seleccione Género Literario --</option>
+                        <option value="1">TBD</option>
+                         </select>
+                        </div>
+                    </div>
 
-            <div class="cont-control">
-                <label for="txt-otroGenero">Especifique</label>
-                <input id="txt-otroGenero" type="text" placeholder="Especifique Género">
-            </div>
+                    <div class="col-tres">
+                        <div class="cont-control">
+                            <label for="txt-correo">Correo Electrónico</label>
+                            <input id="txt-correo" type="email" placeholder="Ingrese Correo Electrónico">
+                        </div>
+                        <div class="cont-control">
+                            <label for="txt-confirmacionCorreo">Confirme su Correo Electrónico</label>
+                            <input id="txt-confirmacionCorreo" type="email" placeholder="Ingrese Correo Electrónico">
+                        </div>
 
-            <div class="cont-control">
-                <label for="txt-nacimiento">Fecha de nacimiento</label>
-                <input id="txt-nacimiento" type="date">
-            </div>
+                        <div class=" cont-control ">
+                            <label for="txt-contrasenna ">Contraseña</label>
+                            <input id="txt-contrasenna " type="password ">
+                        </div>
+                        <div class="cont-control ">
+                            <label for="txt-confirmacion ">Confirmacion</label>
+                            <input id="txt-confirmacion " type="password ">
+                        </div>
+                        <div class="cont-control">
+                            <label for="slt-autores">Seleccione Autores Favoritos</label>
+                            <select id="slt-autores">
+                    <option value="">-- Seleccione Autores Favoritos --</option>
+                    <option value="1">TBD</option>
+                </select>
+                        </div>
 
-            <div class="cont-control">
-                <label for="txt-correo">Correo Electrónico</label>
-                <input id="txt-correo" type="email" placeholder="Ingrese Correo Electrónico">
-            </div>
-            <div class="cont-control">
-                <label for="txt-confirmacionCorreo">Confirme su Correo Electrónico</label>
-                <input id="txt-confirmacionCorreo" type="email" placeholder="Ingrese Correo Electrónico">
-            </div>
+                    </div>
 
-            <div class=" cont-control ">
-                <label for="txt-contrasenna ">Contraseña</label>
-                <input id="txt-contrasenna " type="password ">
-            </div>
-            <div class="cont-control ">
-                <label for="txt-confirmacion ">Confirmacion</label>
-                <input id="txt-confirmacion " type="password ">
-            </div>
-
-            <div class="cont-control">
-                <label for="slt-provincia">Seleccione Provincia</label>
-                <select id="slt-provincia">
-                <option value="">-- Seleccione Provincia --</option>
-                <option value="1">San José</option>
-                <option value="2">Alajuela</option>
-                <option value="3">Cartago</option>
-                <option value="4">Heredia</option>
-                <option value="5">Guanacaste</option>
-                <option value="6">Puntarenas</option>
-                <option value="7">Limón</option>
-            </select>
-            </div>
-
-            <div class="cont-control">
-                <label for="slt-distrito">Seleccione Distrito</label>
-                <select id="slt-distrito">
-                <option value="">-- Seleccione Distrito --</option>
-                <option value="1">TBD</option>                
-            </select>
-            </div>
-
-            <div class="cont-control">
-                <label for="slt-canton">Seleccione Cantón</label>
-                <select id="slt-canton">
-                <option value="">-- Seleccione Cantón --</option>
-                <option value="1">TBD</option>                
-            </select>
-            </div>
-            <div class="cont-control">
-                <label for="txt-direccion">Ingrese Detalles de Dirección</label>
-                <input id="txt-direccion" type="text">
-            </div>
-            <div class="cont-control">
-                <label for="txt-mapa">Seleccione Ubicación</label>
-                <input id="txt-mapa" type="text">
-            </div>
-            <div class="cont-control">
-                <label for="txt-foto">Subir Foto de Perfil</label>
-                <input id="txt-foto" type="text">
-            </div>
-
-            <div class="cont-control">
-                <label for="slt-generoLiterario">Seleccione Género Literario</label>
-                <select id="slt-generoLiterario">
-                <option value="">-- Seleccione Género Literario --</option>
-                <option value="1">TBD</option>                
-            </select>
-            </div>
-
-            <div class="cont-control">
-                <label for="slt-autores">Seleccione Autores Favoritos</label>
-                <select id="slt-autores">
-                <option value="">-- Seleccione Autores Favoritos --</option>
-                <option value="1">TBD</option>                
-            </select>
-            </div>
-
-
-
-
-            <div class="cont-control ">
-                <button id="btn-registrar " type="button " class="btn-oscuro ">Registrar</button>
-            </div>
-        </form>
-        <div class="contenedor-img ">
-
-
-        </div>
-
-    </section>
+                    <div class="col-cuatro">
+                        <div class="cont-control">
+                            <label for="slct-provincias">Provincia:</label>
+                            <select name="provincias" id="slct-provincias">
+                            <option value="">-- Seleccione una provincia --</option>
+                        </select>
+                        </div>
+                        <div class="cont-control">
+                            <label for="slct-cantones">Canton:</label>
+                            <select name="cantones" id="slct-cantones">
+                            <option value="">-- Seleccione un canton --</option>
+                        </select>
+                        </div>
+                        <div class="cont-control">
+                            <label for="slct-distritos">Distrito:</label>
+                            <select name="distritos" id="slct-distritos">
+                                <option value="">-- Seleccione un distrito --</option>
+                            </select>
+                        </div>
+                        <div class="cont-control">
+                            <label for="direccion-exacta">Dirección exacta:</label>
+                            <textarea name="direccion-exacta" id="direccion-exacta" cols="30" rows="3"></textarea>
+                        </div>
+                        <div class="cont-control">
+                            <label for="txt-mapa">Seleccione Ubicación</label>
+                            <div id="mapa"></div>
+                        </div>
+                        <div class="cont-control">
+                            <label for="txt-foto">Subir Foto de Perfil</label>
+                            <button id="btn-cargar" type="button " class="btn-oscuro ">Cargar</button>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <button id="btn-registrar" type="button " class="btn-oscuro ">Registrar</button>
+                </div>
+            </form>
+        </section>
+    </div>
     <footer>
-        <div>
-            <h4>Quiénes Somos</h4>
-            <a href="/nosotros.html">Nosotros</a>
-            <a href="/libroFan.html">Libro Fan</a>
-        </div>
 
-        <div>
-            <h4>Mi Perfil</h4>
-            <a href="/perfil.html">Perfil</a>
-            <a href="/carrito.html">Carrito Fan</a>
-        </div>
+        <div class="footerParent">
+            <div class="footerChildUno">
+                <h4>Quiénes Somos</h4>
+                <div>
+                    <a href="/nosotros.html">Nosotros</a>
+                </div>
+                <div>
+                    <a href="/libroFan.html">Libro Fan</a>
+                </div>
+            </div>
 
-        <div>
-            <h4>Contactanos</h4>
-            <p type="text">Correo Electronico</p>
-            <p type="text">bazar@bazar.com</p>
-            <p href="text">Teléfono</p>
-            <p href="text">800-bazar</p>
+            <div class="footerChildDos">
+                <h4>Mi Perfil</h4>
+                <div>
+                    <a href="/perfil.html">Perfil</a>
+                </div>
+                <div>
+                    <a href="/carrito.html">Carrito Fan</a>
+                </div>
+            </div>
 
+            <div class="footerChildTres">
+                <h4>Contactanos</h4>
+                <p type="text">Correo Electronico</p>
+                <p type="text">bazar@bazar.com</p>
+                <p href="text">Teléfono</p>
+                <p href="text">800-bazar</p>
+
+            </div>
         </div>
 
     </footer>
 
     <script src="js/registroUsuarios.js "></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRmganvykFdvqjaVFviJSOnA6rGwG9IjM&callback=initMap&v=weekly" async></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://kit.fontawesome.com/3269682608.js" crossorigin="anonymous"></script>
+  
+
 </body>
 
 </html>
