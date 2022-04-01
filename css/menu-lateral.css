@@ -1,8 +1,8 @@
 /* Estilos Generales */
 
-html,
-body {
-    height: 100%;
+html {
+    margin: 0;
+    min-height: 100%;
 }
 
 .pagina-completa {

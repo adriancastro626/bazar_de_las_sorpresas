@@ -1,3 +1,4 @@
+const formLibroCompleto = document.querySelector('#formulario-libros-completo');
 const formLibroTitulo = document.querySelector('#txt-titulo');
 const formLibroFoto = document.querySelector('#file-foto');
 const formLibroPublicacion = document.querySelector('#date-publicacion');
@@ -98,17 +99,18 @@ const formLibroValidacion = () => {
 
     if (formLibroIncompleto == true) {
         Swal.fire({
-            'icon': 'warning',
-            'title': 'El usuario no se puede registrar',
+            'icon': 'error',
+            'title': 'El libro no se puede registrar',
             'text': 'Por favor revise los campos resaltados',
         });
     } else {
         formLibroImprimir()
         Swal.fire({
             'icon': 'success',
-            'title': 'Usuario registrado',
-            'text': 'Le enviaremos un correo electronico con la informacion',
-        })
+            'title': 'Libro registrado',
+        }).then(() => {
+            formLibroCompleto.reset();
+        });
     }
 
 };
@@ -116,15 +118,15 @@ const formLibroValidacion = () => {
 
 const formLibroImprimir = () => {
 
-    console.log('titulo', formLibroTitulo.value);
-    console.log('foto', formLibroFoto.value);
-    console.log('public', formLibroPublicacion.value);
-    console.log('generi', formLibroGenero.value);
-    console.log('autor', formLibroAutor.value);
-    console.log('isbn', formLibroISBN.value);
-    console.log('editor', formLibroEditorial.value);
-    console.log('precio', formLibroPrecio.value);
-    console.log('sinop', formLibroSinopsis.value);
+    console.log('El título es', formLibroTitulo.value);
+    console.log('Los nombres de las fotos adjunta son', formLibroFoto.value);
+    console.log('La fecha de publicación es', formLibroPublicacion.value);
+    console.log('El género literario es', formLibroGenero.value);
+    console.log('El autor es', formLibroAutor.value);
+    console.log('El ISBN es', formLibroISBN.value);
+    console.log('La editorial es', formLibroEditorial.value);
+    console.log('El precio es', formLibroPrecio.value);
+    console.log('La sinopsis es', formLibroSinopsis.value);
 
 }
 

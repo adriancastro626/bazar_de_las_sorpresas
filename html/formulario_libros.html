@@ -108,7 +108,7 @@
             </div>
 
             <!-- Formulario -->
-            <form>
+            <form id="formulario-libros-completo">
 
                 <div class="formulario-libros-controles">
 
@@ -118,7 +118,7 @@
                         <div class="formulario-libros-izq-control">
 
                             <label for="txt-titulo">Título del libro</label>
-                            <input type="text" id="txt-titulo" name="txt-titulo">
+                            <input type="text" id="txt-titulo" name="txt-titulo" placeholder="Introduzca el título">
 
                         </div>
 
@@ -126,7 +126,7 @@
                         <div class="formulario-libros-izq-control">
 
                             <label for="file-foto">Adjuntar fotografía</label>
-                            <input type="file" id="file-foto" name="file-foto">
+                            <input type="file" id="file-foto" name="file-foto" multiple>
 
                         </div>
 
@@ -177,7 +177,7 @@
 
                         <div class="formulario-libros-izq-control">
 
-                            <label for="select-descuento">Descuento</label>
+                            <label for="select-descuento">Descuento (Opcional)</label>
                             <select id="select-descuento" name="select-descuento">
                                 <option value="0">Ninguno</option>
                                 <option value="1">Día de la madre</option>
@@ -195,7 +195,7 @@
                         <div class="formulario-libros-der-control">
 
                             <label for="txt-isbn">ISBN</label>
-                            <input type="text" id="txt-isbn" name="txt-isbn">
+                            <input type="text" id="txt-isbn" name="txt-isbn" placeholder="Introduzca el ISBN">
 
                         </div>
 
@@ -203,7 +203,7 @@
                         <div class="formulario-libros-der-control">
 
                             <label for="txt-editorial">Editorial</label>
-                            <input type="text" id="txt-editorial" name="txt-editorial">
+                            <input type="text" id="txt-editorial" name="txt-editorial" placeholder="Introduzca el nombre de la editorial">
 
                         </div>
 
@@ -211,14 +211,14 @@
                         <div class="formulario-libros-der-control">
 
                             <label for="number-precio">Precio</label>
-                            <input type="number" id="number-precio" name="number-precio">
+                            <input type="number" id="number-precio" name="number-precio" placeholder="Introduzca el precio" step="0.01">
 
                         </div>
 
 
                         <div class="formulario-libros-der-premio" id="checkbox-premio-nobel">
 
-                            <label for="checkbox-premios">Premios</label>
+                            <label for="checkbox-premios">Premios (Opcional)</label>
                             <div>
                                 <input type="checkbox" id="checkbox-premios" name="checkbox-premios" value="1">Premio Nobel de Literatura
                                 <input type="date" id="checkbox-premios" name="checkbox-premios" placeholder="Ingrese el año" class="checkbox-premio-nobel">
@@ -252,17 +252,19 @@
                 </div>
 
                 <!-- Parte inferior del formulario -->
-                <div class="formulario-libros-control-sinopsis">
+                <div class="formulario-libros-inferior">
+                    <div class="formulario-libros-control-sinopsis">
 
-                    <label for="textarea-sinopsis">Sinopsis</label>
-                    <textarea id="textarea-sinopsis" name="textarea-sinopsis"></textarea>
+                        <label for="textarea-sinopsis">Sinopsis</label>
+                        <textarea id="textarea-sinopsis" name="textarea-sinopsis" placeholder="Introduzca la sinopsis"></textarea>
 
-                </div>
+                    </div>
 
-                <div class="formulario-libros-control-boton">
+                    <div class="formulario-libros-control-boton">
 
-                    <button type="button" id="btn-guardar" class="btn-guardar" name="btn-guardar">Guardar</button>
+                        <button type="button" id="btn-guardar" class="btn-guardar" name="btn-guardar">Guardar</button>
 
+                    </div>
                 </div>
 
             </form>
