@@ -4,6 +4,7 @@ const formLibroFoto = document.querySelector('#file-foto');
 const formLibroPublicacion = document.querySelector('#date-publicacion');
 const formLibroGenero = document.querySelector('#select-genero');
 const formLibroAutor = document.querySelector('#select-autor');
+const formLibroDescuento = document.querySelector('#select-descuento');
 const formLibroISBN = document.querySelector('#txt-isbn');
 const formLibroEditorial = document.querySelector('#txt-editorial');
 const formLibroPrecio = document.querySelector('#number-precio');
@@ -123,6 +124,7 @@ const formLibroImprimir = () => {
     console.log('La fecha de publicación es', formLibroPublicacion.value);
     console.log('El género literario es', formLibroGenero.value);
     console.log('El autor es', formLibroAutor.value);
+    console.log('El descuento es', formLibroDescuento.value);
     console.log('El ISBN es', formLibroISBN.value);
     console.log('La editorial es', formLibroEditorial.value);
     console.log('El precio es', formLibroPrecio.value);
@@ -142,3 +144,8 @@ formLibroGuardar.addEventListener('click', () => {
     // };
 
 })
+
+
+
+// Pendiente
+// Premios y fecha
