@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/registro-socio-comercial.css">
+    <title>registro-socio-comercial</title>
+</head>
+
+<body>
+    <section id="sct-registro-socio-comercial">
+        <form>
+            </div>
+            <h1>Registro socio comercial</h1>
+            <div class="cont-control">
+                <label for="txt-idsocio">Cédula Jurídica</label>
+                <input type="text" id="txt-idsocio">;
+
+            </div>
+            <div class="cont-control">
+                <label for="txt-fecha">Fecha inicio de la relación comercial</label>
+                <input type="date" id="txt-fecha">
+            </div>
+            <div class="cont-control">
+                <label for="slt-retiro">Punto de retiro</label>
+                <select id="slt-retiro">
+                    <option value="">-- Seleccione la Provincia --</option>
+                    <option value="1">Cartago</option>
+                    <option value="2">San José</option>
+                    <option value="3">Heredia</option>
+                    <option value="4">Alajuela</option>
+                    <option value="5">Puntarenas</option>
+                    <option value="6">Limón</option>
+                    <option value="7">Guanacaste</option>
+                </select>
+
+            </div>
+            <div class="cont-control">
+                <button type="button" id="btn-registrar_socio" class="btn-oscuro">Registrar</button>
+
+            </div>
+        </form>
+
+    </section>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/registro-socio-comercial.js"></script>
+</body>
+
+</html>

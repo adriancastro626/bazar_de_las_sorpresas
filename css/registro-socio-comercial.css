@@ -1,0 +1,82 @@
+/* Borde cajita de texto */
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* Tipo de letra */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url(../imgs/fondo-pastel.jpeg);
+    background-size: 100%;
+    background-position: 80%;
+}
+
+
+/* Borde del formulario */
+
+#sct-registro-socio-comercial {
+    background-image: url(../imgs/fondo-formulario.jpeg);
+    border: 3px solid #946C00;
+    flex-direction: column;
+    width: 60%;
+    justify-content: center;
+    padding: 5%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#sct-registro-socio-comercial form h1 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+#sct-registro-socio-comercial form label {
+    display: inline-block;
+    margin-bottom: 30px;
+    width: 70%;
+}
+
+#sct-registro-socio-comercial form .cont-control {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.cont-control input,
+.cont-control select {
+    width: 220px;
+    height: 35px;
+}
+
+.btn-oscuro {
+    background: #946C00;
+    color: #ffffff;
+    height: 30px;
+    width: 150px;
+    font-weight: bold;
+    border: 2px solid #946C00;
+}
+
+.btn-oscuro:hover {
+    background: #ddd0ab;
+    border: 2px solid #b4a16c;
+    color: #946C00;
+    cursor: pointer;
+}
+
+input:focus {
+    outline: none;
+}
+
+.input-error {
+    border: 2px solid #c44569;
+}
+
+.contenedor-img {
+    background-image: url(../imgs/fondo-biblioteca.jpg);
+}

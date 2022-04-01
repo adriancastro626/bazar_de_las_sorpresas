@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/factura.css">
+    <title>Factura</title>
+</head>
+
+<body>
+    <section id="sct-socios-comerciales">
+        <table id="tbl-factura">
+            <thead>
+                <th>Producto</th>
+                <th>Cantidad</th>
+                <th>Importe</th>
+                <th>Total</th>
+            </thead>
+
+            <tr>
+                <td><input type="text"></td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+                <td class="subtotal">0.00</td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td class='text'>Total Venta<br>IVA 13%<br><span class="bold">Total en CRC</span></td>
+                <td class='text'>
+                    <div class="base">0.00</div>
+                    <div class="iva">0.00</div>
+                    <div class="total bold">0.00</div>
+                </td>
+            </tr>
+
+        </table>
+        <div class="cont-control">
+            <button type="button" id="btn-imprimir" class="btn-oscuro">Imprimir</button>
+        </div>
+
+
+    </section>
+
+    <script src="../js/factura.js"></script>
+
+</body>
+
+</html>
