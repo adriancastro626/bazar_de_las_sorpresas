@@ -1,0 +1,1 @@
+let listaAutores = ['Pablo', 'Isabelle', 'Edgar']; // se sacan con alt 91
