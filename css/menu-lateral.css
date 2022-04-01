@@ -5,10 +5,14 @@ body {
     height: 100%;
 }
 
+.pagina-completa {
+    display: flex;
+    height: 100%;
+}
+
 .menu-lateral {
     background-color: #6D6875;
     font-family: 'Asap', sans-serif;
-    height: 100%;
     list-style: none;
     width: 300px;
 }
@@ -109,8 +113,9 @@ a:hover {
 
 #menu-lateral-desplegar-1 ul,
 #menu-lateral-desplegar-2 ul {
-    overflow: hidden;
     max-height: 0;
+    margin-left: 50px;
+    overflow: hidden;
 }
 
 #menu-lateral-desplegar-1:target ul {
