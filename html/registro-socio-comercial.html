@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -13,29 +13,43 @@
 <body>
     <section id="sct-registro-socio-comercial">
         <form>
-            </div>
             <h1>Registro socio comercial</h1>
+            <div class="cont-control">
+                <label for="txt-nombre">Nombre:</label>
+                <input type="text" id="txt-nombre">;
+            </div>
             <div class="cont-control">
                 <label for="txt-idsocio">Cédula Jurídica</label>
                 <input type="text" id="txt-idsocio">;
-
             </div>
             <div class="cont-control">
                 <label for="txt-fecha">Fecha inicio de la relación comercial</label>
                 <input type="date" id="txt-fecha">
             </div>
             <div class="cont-control">
-                <label for="slt-retiro">Punto de retiro</label>
-                <select id="slt-retiro">
-                    <option value="">-- Seleccione la Provincia --</option>
-                    <option value="1">Cartago</option>
-                    <option value="2">San José</option>
-                    <option value="3">Heredia</option>
-                    <option value="4">Alajuela</option>
-                    <option value="5">Puntarenas</option>
-                    <option value="6">Limón</option>
-                    <option value="7">Guanacaste</option>
+                <label for="slct-provincia">Provincia:</label>
+                <select name="provincias" id="slct-provincias">
+                    <option value="">-- Seleccione una provincia --</option>
                 </select>
+            </div>
+            <div class="cont-control">
+                <label for="slct-cantones">Cantón:</label>
+                <select name="cantones" id="slct-cantones">
+                    <option value="">-- Seleccione un cantón --</option>
+                </select>
+            </div>
+            <div class="cont-control">
+                <label for="slct-distritos">Distrito:</label>
+                <select name="distritos" id="slct-distritos">
+                    <option value="">-- Seleccione un distrito --</option>
+                </select>
+            </div>
+            <div class="cont-control">
+                <label for="direccion-exacta">Dirección exacta:</label>
+                <textarea name="direccion-exacta" id="direccion-exacta" cols="28" rows="3"></textarea>
+            </div class="cont-control">
+            <div id="mapa"></div>
+            <div>
 
             </div>
             <div class="cont-control">

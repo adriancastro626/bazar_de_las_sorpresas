@@ -5,48 +5,87 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/factura.css">
-    <title>Factura</title>
+    <title>Factura Impresa</title>
 </head>
-
-<body>
-    <section id="sct-socios-comerciales">
-        <table id="tbl-factura">
-            <thead>
-                <th>Producto</th>
-                <th>Cantidad</th>
-                <th>Importe</th>
-                <th>Total</th>
-            </thead>
-
-            <tr>
-                <td><input type="text"></td>
-                <td><input type="number"></td>
-                <td><input type="number"></td>
-                <td class="subtotal">0.00</td>
-            </tr>
-
-            <tr>
-                <td></td>
-                <td></td>
-                <td class='text'>Total Venta<br>IVA 13%<br><span class="bold">Total en CRC</span></td>
-                <td class='text'>
-                    <div class="base">0.00</div>
-                    <div class="iva">0.00</div>
-                    <div class="total bold">0.00</div>
-                </td>
-            </tr>
-
-        </table>
-        <div class="cont-control">
-            <button type="button" id="btn-imprimir" class="btn-oscuro">Imprimir</button>
+<section id="cont-factura">
+    <form>
+        <h1>Bazar De Las Sorpresas</h1>
+        <div class="cont-cedula-juridica">
+            <h4>Cédula Jurídica: 3-101-074154</h4>
+        </div>
+        <div class="cont-direccion">
+            <a>Cartago, Tejar, Costado Suroeste De La Iglesia Católica Inmaculáda Concepción</a>
+        </div>
+        <div class="cont-telefono">
+            <a>Teléfono: 25529168</a>
+        </div>
+        <div class="cont-recibo">
+            <h4>*Recibo de Compra*</h4>
+        </div>
+        <div class="cont-numero-recibo">
+            <a>Recibo No.583694</a>
+        </div>
+        <div class="cont-transaccion">
+            <a>Transacción. 903856330576</a>
+        </div>
+        <div class="cont-fecha">
+            <a>Fecha: 30-03-2022</a>
+        </div>
+        <div class="cont- linea">
+            <hr>
+        </div>
+        <div class="cont-cedula-cliente">
+            <a>Cédula: 305420784</a>
+        </div>
+        <div class="cont-nombre-cliente">
+            <a>SR(a): Vanessa Pérez Aguilar</a>
+        </div>
+        <div class="cont-direccion-cliente">
+            <a>Dirección: Cartago, Tejar, del colegio Elías Leiva 100m Norte casa mano derecha color vino</a>
+        </div>
+        <div class="cont-telefono-cliente">
+            <a>Teléfono: 82746352</a>
+        </div>
+        <div class="cont-espacio">
+            <br><br><br>
+        </div>
+        <div class="cont-cuenta-cliente">
+            <a>Cuenta: 83097011*****</a>
+        </div>
+        <div class="cont-producto">
+            <a>Nombre Producto: Libro Harry Potter</a>
+        </div>
+        <div class="cont-precio-base">
+            <a>Precio Base: ₡10000.00</a>
+        </div>
+        <div class="cont-iva">
+            <a>Iva: ₡1300.00</a>
+        </div>
+        <div class="cont-descuento">
+            <a>Descuento Total: ₡0.00</a>
+        </div>
+        <div class="cont-total">
+            <a>Total: ₡11300.00</a>
+        </div>
+        <div class="cont- linea">
+            <hr>
+        </div>
+        <div class="cont- linea">
+            <a>Monto Cancelado: ₡11300.00</a>
+        </div>
+        <div class="cont- linea">
+            <hr>
+        </div>
+        <div class="cont-final">
+            <h4>*Gracias por su Compra*</h4>
         </div>
 
 
-    </section>
 
-    <script src="../js/factura.js"></script>
+    </form>
+</section>
+
+<body>
 
 </body>
 

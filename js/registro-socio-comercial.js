@@ -1,7 +1,42 @@
 const btnRegistrar = document.getElementById('btn-registrar_socio');
 const inputCedula = document.getElementById('txt-idsocio');
 const inputFecha = document.getElementById('txt-fecha');
-const listaPuntoRetiro = document.getElementById('slt-retiro');
+const inputProvincias = document.getElementById('slct-provincias');
+const inputCantones = document.getElementById('slct-cantones');
+const inputDistritos = document.getElementById('slct-distritos');
+
+
+let selectProvincias = document.getElementById('slct-provincias');
+let selectCantones = document.getElementById('slct-cantones');
+let selectDistritos = document.getElementById('slct-distritos');
+
+const url = 'https://ubicaciones.paginasweb.cr/';
+
+let listarSelect = (url, elemento) => {
+    fetch(url)
+        .then(res => res.json())
+        .then((datos) => {
+            for (let dato in datos) {
+                let opcion = document.createElement('option');
+                opcion.text = datos[dato];
+                opcion.value = dato;
+                elemento.appendChild(opcion);
+            }
+        })
+        .catch(err => { throw err });
+};
+
+
+listarSelect(url + 'provincias.json', selectProvincias);
+
+selectProvincias.addEventListener('change', () => {
+    listarSelect(url + 'provincia/' + selectProvincias.value + '/cantones.json', selectCantones);
+});
+
+selectCantones.addEventListener('change', () => {
+    listarSelect(url + 'provincia/' + selectProvincias.value + '/canton/' + selectCantones.value + '/distritos.json', selectDistritos);
+});
+
 
 //Crear Funciones
 const validar = () => {
@@ -19,6 +54,26 @@ const validar = () => {
         inputFecha.classList.add('input-error')
     } else {
         inputFecha.classList.remove('input-error')
+    }
+    if (inputProvincias.value == '') {
+        hayError = true;
+        inputProvincias.classList.add('input-error')
+    } else {
+        inputProvincias.classList.remove('input-error')
+    }
+
+    if (inputCantones.value == '') {
+        hayError = true;
+        inputCantones.classList.add('input-error')
+    } else {
+        inputCantones.classList.remove('input-error')
+    }
+
+    if (inputDistritos.value == '') {
+        hayError = true;
+        inputDistritos.classList.add('input-error')
+    } else {
+        inputDistritos.classList.remove('input-error')
     }
 
     if (hayError == true) {
@@ -41,9 +96,15 @@ const validar = () => {
     }
 };
 
+
+
 const imprimir = () => {
     let Cedula = inputCedula.value;
     let Fecha = inputFecha.value;
+    let Provincias = inputProvincias.value;
+    let Cantones = inputCantones.value;
+    let Distritos = inputDistritos.value;
+
 
 
 
