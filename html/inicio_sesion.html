@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/inicioSesion.css">
+    <link rel="stylesheet" href="/css/inicio_sesion.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Asap:wght@400;600;700&display=swap" rel="stylesheet">
@@ -16,15 +16,26 @@
 <body>
     <header>
         <nav>
-            <img src="/img/logo.png" alt="Logo">
+            <div class="parentNav">
+                <div class="navUno">
+                    <a href="./pagina_principal.html">
+                        <img src=" /img/logo.png" alt="Logo">
+                    </a>
+                </div>
+                <div class="navDos">
+                    <a href="./registro_usuarios.html">
+                        <button id="btn-registro" type="button">Registrarse</button>
+                    </a>
+                </div>
+            </div>
         </nav>
     </header>
     <div class="contenedor-img">
         <section id="sct-ingreso-usuarios">
-            <div class="card">
+            <div class="card ">
                 <form>
                     <h1>Inicio de Sesión</h1>
-                    <div class="cont-control">
+                    <div class="cont-control ">
                         <label for="txt-usuario">Usuario</label>
                         <input id="txt-usuario" type="text" placeholder="Usuario">
                     </div>
@@ -32,10 +43,10 @@
                         <label for="txt-contrasenna">Constraseña</label>
                         <input id="txt-contrasenna" type="password" placeholder="Contraseña">
                     </div>
-                    <div class="cont-control">
-                        <a class="contrasenna" href="/recuperarContrasenna.html">¿Olvido su Constraseña?</a>
+                    <div class="cont-control lnk">
+                        <a class="contrasenna" href="./recuperar_contrasenna.html">¿Olvido su Constraseña?</a>
                     </div>
-                    <div class="cont-control">
+                    <div class="cont-control btn">
                         <button id="btn-ingresar" type="button" class="btn-oscuro">Ingresar</button>
                     </div>
 
@@ -62,21 +73,24 @@
                     <a href="/perfil.html">Perfil</a>
                 </div>
                 <div>
-                    <a href="/carrito.html">Carrito Fan</a>
+                    <a href="/carrito.html">Carrito</a>
                 </div>
             </div>
 
             <div class="footerChildTres">
                 <h4>Contactanos</h4>
-                <p type="text">Correo Electronico</p>
-                <p type="text">bazar@bazar.com</p>
-                <p href="text">Teléfono</p>
-                <p href="text">800-bazar</p>
+                <p type="text ">Correo Electronico</p>
+                <p type="text ">bazar@bazar.com</p>
+                <p href="text ">Teléfono</p>
+                <p href="text ">800-bazar</p>
 
             </div>
         </div>
 
     </footer>
+
+    <script src="/js/lista_usuarios.js"></script>
+    <script src="/js/inicio_sesion.js"></script>
 </body>
 
 </html>

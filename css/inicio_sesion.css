@@ -4,7 +4,6 @@
 
 body {
     font-family: 'Asap', sans-serif;
-    background-color: #FFCDB2;
 }
 
 .contenedor-img {
@@ -21,32 +20,38 @@ body {
 nav {
     padding: 20px;
     text-align: center;
+    background-color: #5989BE;
+    height: 100px;
 }
 
 img {
-    height: 100px;
-    width: 100px;
+    height: 50px;
+    width: 50px;
 }
 
-.footerParent {
+.footerParent,
+.navParent {
     display: flex;
 }
 
-.footerChildUno {
-    width: 15%
+.navUno {
+    text-align: center;
 }
 
-.footerChildDos {
-    width: 15%
+.navDos {
+    text-align: right;
+    text-decoration: none;
 }
 
+.footerChildUno,
+.footerChildDos,
 .footerChildTres {
     width: 15%
 }
 
 footer {
     padding: 20px;
-    background-color: #FFCDB2;
+    background-color: #6D6875;
 }
 
 footer h4 {
@@ -56,7 +61,7 @@ footer h4 {
 label {
     display: inline-block;
     color: rgba(255, 255, 255, 0.75);
-    padding: 6px;
+    padding: 10px;
     text-align: center;
     width: 220px;
 }
@@ -72,8 +77,8 @@ label {
 }
 
 .card {
-    height: 24rem;
-    width: 18rem;
+    height: 450px;
+    width: 300px;
     backdrop-filter: blur(0.4rem);
     background: rgba(255, 255, 255, 0.1);
     box-shadow: 0.6rem 0.5rem 0.5rem rgba(0, 0, 0, 0.6);
@@ -105,6 +110,19 @@ label {
     border: none;
     background: rgba(255, 255, 255, 0.7);
     box-shadow: 0.2rem 0.2rem 0.3rem rgba(0, 0, 0, 0.4);
+}
+
+#btn-registro {
+    padding: 10px;
+    border-radius: 1rem;
+    border: none;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0.2rem 0.2rem 0.3rem rgba(0, 0, 0, 0.4);
+}
+
+#btn-registro:hover {
+    background: rgba(255, 255, 255, 1);
+    cursor: pointer;
 }
 
 .card button:hover {
@@ -140,4 +158,12 @@ label {
     text-align: center;
     background: rgba(255, 255, 255, 0.7);
     box-shadow: 0.2rem 0.2rem 0.3rem rgba(0, 0, 0, 0.4);
+}
+
+.btn {
+    margin-top: 30px;
+}
+
+.lnk {
+    margin-top: 25px
 }

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/registroUsuarios.css">
+    <link rel="stylesheet" href="/css/registro_usuarios.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Asap:wght@400;600;700&display=swap" rel="stylesheet">
@@ -17,7 +17,18 @@
 <body>
     <header>
         <nav>
-            <img src="/img/logo.png" alt="Logo">
+            <div class="parentNav">
+                <div class="navUno">
+                    <a href="./pagina_principal.html">
+                        <img src=" /img/logo.png" alt="Logo">
+                    </a>
+                </div>
+                <div class="navDos">
+                    <a href="./inicio_sesion.html">
+                        <button id="btn" type="button">Iniciar Sesion</button>
+                    </a>
+                </div>
+            </div>
         </nav>
     </header>
     <div class="contenedor-img ">
@@ -37,13 +48,13 @@
                         </div>
 
                         <div class="cont-control">
-                            <label for="txt-Apellido">Primer Apellido</label>
-                            <input id="txt-Apellido" type="text">
+                            <label for="txt-apellido">Primer Apellido</label>
+                            <input id="txt-apellido" type="text">
                         </div>
 
                         <div class="cont-control">
-                            <label for="txt-SegundoApellido">Segundo Apellido</label>
-                            <input id="txt-SegundoApellido" type="text">
+                            <label for="txt-segundoApellido">Segundo Apellido</label>
+                            <input id="txt-segundoApellido" type="text">
                         </div>
 
                         <div class="cont-control">
@@ -99,13 +110,13 @@
                             <input id="txt-confirmacionCorreo" type="email" placeholder="Ingrese Correo Electrónico">
                         </div>
 
-                        <div class=" cont-control ">
-                            <label for="txt-contrasenna ">Contraseña</label>
-                            <input id="txt-contrasenna " type="password ">
+                        <div class="cont-control">
+                            <label for="txt-contrasenna">Contraseña</label>
+                            <input id="txt-contrasenna" type="password">
                         </div>
-                        <div class="cont-control ">
-                            <label for="txt-confirmacion ">Confirmacion</label>
-                            <input id="txt-confirmacion " type="password ">
+                        <div class="cont-control">
+                            <label for="txt-confirmacion">Confirmacion</label>
+                            <input id="txt-confirmacion" type="password">
                         </div>
                         <div class="cont-control">
                             <label for="slt-autores">Seleccione Autores Favoritos</label>
@@ -145,13 +156,13 @@
                             <div id="mapa"></div>
                         </div>
                         <div class="cont-control">
-                            <label for="txt-foto">Subir Foto de Perfil</label>
-                            <button id="btn-cargar" type="button " class="btn-oscuro ">Cargar</button>
+                            <label for="btn-foto">Subir Foto de Perfil</label>
+                            <button id="btn-foto" type="button" class="btn-oscuro">Cargar</button>
                         </div>
                     </div>
                 </div>
                 <div>
-                    <button id="btn-registrar" type="button " class="btn-oscuro ">Registrar</button>
+                    <button id="btn-registrar" type="button" class="btn-oscuro">Registrar</button>
                 </div>
             </form>
         </section>
@@ -175,7 +186,7 @@
                     <a href="/perfil.html">Perfil</a>
                 </div>
                 <div>
-                    <a href="/carrito.html">Carrito Fan</a>
+                    <a href="/carrito.html">Carrito</a>
                 </div>
             </div>
 
@@ -191,11 +202,8 @@
 
     </footer>
 
-    <script src="js/registroUsuarios.js "></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRmganvykFdvqjaVFviJSOnA6rGwG9IjM&callback=initMap&v=weekly" async></script>
+    <script src="/js/registro_usuarios.js "></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://kit.fontawesome.com/3269682608.js" crossorigin="anonymous"></script>
-  
 
 </body>
 
