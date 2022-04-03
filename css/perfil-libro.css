@@ -1,0 +1,56 @@
+h1 {
+    font-size: 38px;
+    font-weight: bold;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+.columna-der{
+    width: 74%;
+}
+
+.columna-izq{
+    margin-right: 20px;
+    padding-right: 20px;
+    width: 26%;
+}
+
+.columna-izq h2 {
+    font-size: 18px;
+}
+
+.columna-izq p {
+    font-size: 16px;
+    padding-bottom: 10px;
+}
+
+.img-portada {
+    width: 240px;
+}
+
+.info-libro {
+    background-color: #ffcdb2;
+    padding: 10px;
+    width: 220px;
+}
+
+.perfil-libro {
+    display: flex;
+    
+}
+
+
+.sinopsis{
+    text-align: justify;
+}
+
+.sinopsis p {
+    line-height: 150%;
+    padding-top: 28px;
+}

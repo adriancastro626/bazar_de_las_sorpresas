@@ -1,0 +1,61 @@
+.img-libro-perfil {
+    height: 372px;
+    width: 240px;
+    background-color: blueviolet;
+    border: 1px solid #fff;
+    overflow: hidden;
+}
+
+.navegacion {
+    display: flex;
+    position: relative;
+    left: 34.5%;
+    bottom: 5%;
+}
+
+.navegacion .barra {
+    height: 5px;
+    width: 10px;
+    background-color: #6D6875;
+    cursor: pointer;
+    border: 2px solid #5f5b65;
+    margin-left: 8px;
+    box-shadow: 2px 2px 6px #888490, -2px -2px 6px #888490;
+}
+
+.navegacion .barra:hover {
+    background-color: azure;
+}
+
+input[type="radio"] {
+    position: absolute;
+    visibility: hidden;
+}
+
+.slides {
+    display: flex;
+    height: 100%;
+    width: 500%;
+}
+
+.image-libro {
+    width: 20%;
+    transition: 0.4s ease;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+#btn1:checked ~ .primero {
+    margin-left: 0;
+}
+
+#btn2:checked ~ .primero {
+    margin-left: -20%;
+}
+
+#btn3:checked ~ .primero {
+    margin-left: -40%;
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de libro</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/estilos_general.css">
+    <link rel="stylesheet" href="../css/perfil-libro.css">
+    <link rel="stylesheet" href="../css/carrousel.css"> 
+    <script src="https://kit.fontawesome.com/0db8cde7c4.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="pagina-con-menu-lateral">
+
+        <!-- Menú lateral -->
+        <div class="menu-lateral">
+
+            <!-- Primera sección del menú lateral -->
+            <div class="menu-lateral-arriba">
+                <div class="menu-lateral-arriba-1">
+                    <a href="pagina_principal.html"><i class="fa-solid fa-house" title="Icono para ir a la página principal"></i></a>
+                    <a href="inicio_sesion.html"><i class="fa-solid fa-lock" title="Icono para cerrar sesión en la cuenta"></i></a>
+                </div>
+                <div class="menu-lateral-arriba-2">
+                    <img class="menu-lateral-foto-perfil" src="../img/foto-perfil.png" alt="Foto de Perfil del Usuario">
+                    <p class="menu-lateral-nombre-usuario">John Doe</p>
+                    <p class="menu-lateral-email-usuario">johndoe@mitienda.com</p>
+                </div>
+            </div>
+
+            <!-- Segunda sección del menú lateral -->
+            <div class="menu-lateral-form">
+
+                <!-- Primera lista -->
+                <h2>Cuentas</h2>
+                <nav>
+                    <ul>
+                        <li><i class="fa-solid fa-user"></i><a href="pagina_sesion_iniciada.html">Perfil</a></li>
+                        <li><i class="fa-solid fa-receipt"></i><a href="historial_compra.html">Historial de compras</a></li>
+                        <li><i class="fa-solid fa-users"></i><a href="edicion_usuarios.html">Usuarios</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Segunda lista -->
+                <h2>Tienda</h2>
+                <nav>
+                    <ul id="menu-lateral-form">
+                        <li><i class="fa-solid fa-tag"></i><a href="parametros_sistema.html">Parámetros del sistema</a></li>
+                        <li class="transicion"><i class="fa-solid fa-book-open"></i><a href="#">Catálogo</a>
+                            <ul class="menu-lateral-submenu">
+                                <li><a href="lista_libros.html">Libros</a></li>
+                                <li><a href="lista_autores.html">Autores</a></li>
+                                <li><a href="lista_generos.html">Géneros literarios</a></li>
+                            </ul>
+                        </li>
+                        <li><i class="fa-solid fa-newspaper"></i><a href="#">Reportes</a>
+                            <ul class="menu-lateral-submenu">
+                                <li><a href="reportes_top10.html">Top 10</a></li>
+                                <li><a href="reportes_desglose_ventas.html">Ventas</a></li>
+                                <li><a href="reportes_descuentos.html">Descuentos</a></li>
+                                <li><a href="reportes_socios_comerciales.html">Socios comerciales</a></li>
+                            </ul>
+                        </li>
+                        <li><i class="fa-solid fa-store"></i><a href="lista_socios.html">Socios comerciales</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Contenido de la página -->
+        <div class="pagina-contenido">
+            <h1>Sapiens: De animales a dioses</h1>
+            <div class="perfil-libro">
+                <div class="columna-izq">
+                    <!-- Slider Imagen Perfil Libro -->
+                    <div class="img-libro-perfil">
+                        <div class="slides">
+                            <input type="radio" name="common" id="btn1" checked>
+                            <input type="radio" name="common" id="btn2">
+                            <input type="radio" name="common" id="btn3">
+                
+                            <div class="image-libro primero">
+                                <img src="../img/libro01.jpg" alt="">
+                            </div>
+                            <div class="image-libro">
+                                <img src="../img/libro02.jpg" alt="">
+                            </div>
+                            <div class="imagen-libro">
+                                <img src="../img/libro03.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="navegacion">
+                            <label for="btn1" class="barra"></label>
+                            <label for="btn2" class="barra"></label>
+                            <label for="btn3" class="barra"></label>
+                        </div>
+                    </div>
+                    <div class="info-libro">
+                    <h2>Autor</h2>
+                    <p>Yuval Noa Harari</p>
+                    <h2>Editorial</h2>
+                    <p>Debate</p>
+                    <h2>ISBN</h2>
+                    <p>9788499924212</p>
+                    <h2>Genero</h2>
+                    <p>Ensayo</p>
+                    <h2>Premios</h2>
+                    <p>No Disponible</p>
+                    </div>
+                </div>
+                <div class="columna-der">
+                    <div class="sinopsis">
+                        <h2>Sinopsis</h2>
+                        <p>
+                            De la mano de uno de los historiadores más interesantes de la actualidad, he aquí la fascinante interpretación de Yuval Noah Harari sobre la historia de la humanidad. Bestseller nacional e internacional, este libro explora las formas en que la biología y la historia nos han definido y han mejorado nuestra comprensión de lo que significa ser «humano».
+                        </p>
+                        <p>
+                            Hace 70.000 años al menos seis especies de humanos habitaban la Tierra. Hoy solo queda una, la nuestra: Homo Sapiens. ¿Cómo logró nuestra especie imponerse en la lucha por la existencia? ¿Por qué nuestros ancestros recolectores se unieron para crear ciudades y reinos? ¿Cómo llegamos a creer en dioses, en naciones o en los derechos humanos; a confiar en el dinero, en los libros o en las leyes? ¿Cómo acabamos sometidos a la burocracia, a los horarios y al consumismo? ¿Y cómo será el mundo en los milenios venideros?
+                        </p>
+                        <p>
+                            En Sapiens, Yuval Noah Harari traza una breve historia de la humanidad, desde los primeros humanos que caminaron sobre la Tierra hasta los radicales y a veces devastadores avances de las tres grandes revoluciones que nuestra especie ha protagonizado: la cognitiva, la agrícola y la científica. A partir de hallazgos de disciplinas tan diversas como la biología, la antropología o la economía, Harari explora cómo las grandes corrientes de la historia han modelado nuestra sociedad, los animales y las plantas que nos rodean e incluso nuestras personalidades. ¿Hemos ganado en felicidad a medida que ha avanzado la historia? ¿Seremos capaces de liberar alguna vez nuestra conducta de la herencia del pasado? ¿Podemos hacer algo para influir en los siglos futuros?
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>
