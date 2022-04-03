@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/registro-socio-comercial.css">
+    <link rel="stylesheet" href="../css/registro_socio_comercial.css">
     <title>registro-socio-comercial</title>
 </head>
 
@@ -49,8 +49,9 @@
                 <textarea name="direccion-exacta" id="direccion-exacta" cols="28" rows="3"></textarea>
             </div class="cont-control">
             <div id="mapa"></div>
-            <div>
-
+            <div class="cont-control">
+                <label for="file-foto">Adjuntar fotografía</label>
+                <input type="file" id="file-foto" name="file-foto" multiple>
             </div>
             <div class="cont-control">
                 <button type="button" id="btn-registrar_socio" class="btn-oscuro">Registrar</button>
@@ -60,7 +61,7 @@
 
     </section>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="../js/registro-socio-comercial.js"></script>
+    <script src="../js/registro_socio_comercial.js"></script>
 </body>
 
 </html>
