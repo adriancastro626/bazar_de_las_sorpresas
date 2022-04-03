@@ -73,108 +73,134 @@
 
         <!-- Contenido de la página -->
         <div class="pagina-contenido">
-            <h2>Formulario de Registro de Libros</h2>
+
             <form>
-                <div class="formulario-libros">
-                    <div class="columna-izq">
-                        <div class="espaciado-form">
-                            <label for="txt-titulo">Título del libro</label>
-                            <input type="text" id="txt-titulo" name="txt-titulo">
-                        </div>
-                        <div class="espaciado-form">
-                            <label for="file-foto">Adjuntar fotografía</label>
-                            <input type="file" id="file-foto" name="file-foto">
-                        </div>
-                        <div class="espaciado-form">
-                            <label for="date-publicacion">Fecha de publicación</label>
-                            <input type="date" id="date-publicacion" name="date-publicacion">
-                        </div>
-                        <div class="espaciado-form">
-                            <label for="select-genero">Género literario</label>
-                            <select id="select-genero" name="select-genero">
-                                    <option value="0">Seleccione el género literario</option>
-                                    <option value="1">Ciencia Ficción</option>
-                                    <option value="2">Policiacos</option>
-                                    <option value="3">Infantil</option>
-                                    <option value="4">Poesía</option>
-                                    <option value="5">Novela romántica</option>
-                                    <option value="6">Biografías</option>
-                                    <option value="7">Historia</option>
-                                    <option value="8">Autoayuda</option>
+                <h2>Formulario de Registro de Libros</h2>
+
+                <div id="formulario-libros-completo">
+
+                    <div class="formulario-libros">
+                        <div class="columna-izq">
+
+                            <div class="espaciado-form">
+                                <label for="txt-titulo">Título del libro</label>
+                                <input type="text" id="txt-titulo" name="txt-titulo" placeholder="Introduzca el título">
+                            </div>
+
+                            <div class="espaciado-form">
+                                <label for="file-foto">Adjuntar fotografía</label>
+                                <input type="file" id="file-foto" name="file-foto" multiple>
+                            </div>
+
+                            <div class="espaciado-form">
+                                <label for="date-publicacion">Fecha de publicación</label>
+                                <input type="date" id="date-publicacion" name="date-publicacion">
+                            </div>
+
+                            <div class="espaciado-form">
+                                <label for="select-genero">Género literario</label>
+                                <select id="select-genero" name="select-genero">
+                                        <option value="0">Seleccione el género literario</option>
+                                        <option value="1">Ciencia Ficción</option>
+                                        <option value="2">Policiacos</option>
+                                        <option value="3">Infantil</option>
+                                        <option value="4">Poesía</option>
+                                        <option value="5">Novela romántica</option>
+                                        <option value="6">Biografías</option>
+                                        <option value="7">Historia</option>
+                                        <option value="8">Autoayuda</option>
+                                    </select>
+                            </div>
+
+                            <div class="espaciado-form">
+                                <label for="select-autor">Autor</label>
+                                <select id="select-autor" name="select-autor">
+                                    <option value="0">Seleccione el autor</option>
+                                    <option value="1">Isaac Asimov</option>
+                                    <option value="2">Federico García Lorca</option>
+                                    <option value="3">María Hesse</option>
+                                    <option value="4">Paulo Coelho</option>
+                                    <option value="5">Agatha Christie</option>
+                                    <option value="6">Jane Austen</option>
+                                    <option value="7">Joaquín Gutiérrez</option>
+                                    <option value="8">Yuval Noah Harari</option>
                                 </select>
+                            </div>
+
+                            <div class="espaciado-form">
+                                <label for="select-descuento">Descuento (Opcional)</label>
+                                <select id="select-descuento" name="select-descuento">
+                                        <option value="0">Ninguno</option>
+                                        <option value="1">Día de la madre</option>
+                                        <option value="2">Libros de cuentos</option>
+                                    </select>
+                            </div>
+
+                            <div class="espaciado-form">
+                                <label for="txt-isbn">ISBN</label>
+                                <input type="text" id="txt-isbn" name="txt-isbn" placeholder="Introduzca el ISBN">
+                            </div>
                         </div>
-                        <div class="espaciado-form">
-                            <label for="select-autor">Autor</label>
-                            <select id="select-autor" name="select-autor">
-                                <option value="0">Seleccione el autor</option>
-                                <option value="1">Isaac Asimov</option>
-                                <option value="2">Federico García Lorca</option>
-                                <option value="3">María Hesse</option>
-                                <option value="4">Paulo Coelho</option>
-                                <option value="5">Agatha Christie</option>
-                                <option value="6">Jane Austen</option>
-                                <option value="7">Joaquín Gutiérrez</option>
-                                <option value="8">Yuval Noah Harari</option>
-                            </select>
-                        </div>
-                        <div class="espaciado-form">
-                            <label for="select-descuento">Descuento (Opcional)</label>
-                            <select id="select-descuento" name="select-descuento">
-                                    <option value="0">Ninguno</option>
-                                    <option value="1">Día de la madre</option>
-                                    <option value="2">Libros de cuentos</option>
-                                </select>
-                        </div>
-                        <div class="espaciado-form">
-                            <label for="txt-isbn">ISBN</label>
-                            <input type="text" id="txt-isbn" name="txt-isbn">
+
+                        <div class="columna-der">
+                            <div class="espaciado-form">
+                                <label for="txt-editorial">Editorial</label>
+                                <input type="text" id="txt-editorial" name="txt-editorial" placeholder="Introduzca el nombre de la editorial">
+                            </div>
+
+                            <div class="espaciado-form">
+                                <label for="number-precio">Precio</label>
+                                <input type="number" id="number-precio" name="number-precio" placeholder="Introduzca el precio" step="0.01">
+                            </div>
+
+
+                            <div class="espaciado-form">
+                                <label for="checkbox-premios">Premios (Opcional)</label>
+                                <div id="formulario-libros-premios">
+
+
+
+                                    <div class="premio-literatura">
+                                        <div id="formulario-libros-premios-nobel">
+                                            <input type="checkbox" name="checkbox-premios" value="1">Premio Nobel de Literatura
+                                        </div>
+                                        <input type="date" name="checkbox-premios" placeholder="Ingrese el año" class="checkbox-premio-nobel">
+                                    </div>
+
+
+
+                                    <div>
+                                        <input type="checkbox" name="checkbox-premios" value="2">Premio Príncipe de Asturias de las Letras
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="checkbox-premios" value="3">Premio Franz Kafka
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="checkbox-premios" value="4">Premio Hans Christian Andersen
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="checkbox-premios" value="5">Premio Man Booker Internacional
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="checkbox-premios" value="6">Premio Miguel de Cervantes
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="checkbox-premios" value="7">Premio Nadal
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="checkbox-premios" value="8">Otros
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="columna-der">
-                        <div class="espaciado-form">
-                            <label for="txt-editorial">Editorial</label>
-                            <input type="text" id="txt-editorial" name="txt-editorial">
-                        </div>
-                        <div class="espaciado-form">
-                            <label for="number-precio">Precio</label>
-                            <input type="number" id="number-precio" name="number-precio">
-                        </div>
-                        <div class="espaciado-form">
-                            <label for="checkbox-premios">Premios (Opcional)</label>
-                            <div>
-                                <input type="checkbox" id="checkbox-premios" name="checkbox-premios" value="1">Premio Nobel de Literatura
-                                <input type="date" id="checkbox-premios" name="checkbox-premios" placeholder="Ingrese el año" class="checkbox-premio-nobel">
-                            </div>
-                            <div>
-                                <input type="checkbox" id="checkbox-premios" name="checkbox-premios" value="2">Premio Príncipe de Asturias de las Letras
-                            </div>
-                            <div>
-                                <input type="checkbox" id="checkbox-premios" name="checkbox-premios" value="3">Premio Franz Kafka
-                            </div>
-                            <div>
-                                <input type="checkbox" id="checkbox-premios" name="checkbox-premios" value="4">Premio Hans Christian Andersen
-                            </div>
-                            <div>
-                                <input type="checkbox" id="checkbox-premios" name="checkbox-premios" value="5">Premio Man Booker Internacional
-                            </div>
-                            <div>
-                                <input type="checkbox" id="checkbox-premios" name="checkbox-premios" value="6">Premio Miguel de Cervantes
-                            </div>
-                            <div>
-                                <input type="checkbox" id="checkbox-premios" name="checkbox-premios" value="7">Premio Nadal
-                            </div>
-                            <div>
-                                <input type="checkbox" id="checkbox-premios" name="checkbox-premios" value="8">Otros
-                            </div>
-                        </div>
+                    <div>
+                        <label for="textarea-sinopsis">Sinopsis</label>
+                        <textarea id="textarea-sinopsis" name="textarea-sinopsis" placeholder="Introduzca la sinopsis"></textarea>
                     </div>
-                </div>
-                <div>
-                    <label for="textarea-sinopsis">Sinopsis</label>
-                    <textarea id="textarea-sinopsis" name="textarea-sinopsis"></textarea>
-                </div>
-                <div class="btn-enviar">
-                    <button type="button" id="btn-guardar" class="btn-guardar" name="btn-guardar">Guardar</button>
+                    <div class="btn-enviar">
+                        <button type="button" id="btn-guardar" class="btn-guardar" name="btn-guardar">Guardar</button>
+                    </div>
                 </div>
             </form>
         </div>

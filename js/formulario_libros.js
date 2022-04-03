@@ -9,8 +9,6 @@ const formLibroISBN = document.querySelector('#txt-isbn');
 const formLibroEditorial = document.querySelector('#txt-editorial');
 const formLibroPrecio = document.querySelector('#number-precio');
 const formLibroSinopsis = document.querySelector('#textarea-sinopsis');
-// const formLibroPremios = document.querySelector('#checkbox-premios');
-// const formLibroNobel = document.querySelector('#checkbox-premio-nobel div input[type=date]');
 const formLibroGuardar = document.querySelector('#btn-guardar');
 
 
@@ -18,76 +16,82 @@ const formLibroValidacion = () => {
 
     let formLibroIncompleto = false;
 
-    if (formLibroTitulo.value == "") {
-        formLibroIncompleto = true;
-        formLibroTitulo.classList.add('formulario-libros-incompleto');
-    } else {
-        formLibroTitulo.classList.remove('formulario-libros-incompleto');
-    };
-
-
-    if (formLibroFoto.value == "") {
-        formLibroIncompleto = true;
-        formLibroFoto.classList.add('formulario-libros-incompleto');
-    } else {
-        formLibroFoto.classList.remove('formulario-libros-incompleto');
-    };
-
-
-    if (formLibroPublicacion.value == "") {
-        formLibroIncompleto = true;
-        formLibroPublicacion.classList.add('formulario-libros-incompleto');
-    } else {
-        formLibroPublicacion.classList.remove('formulario-libros-incompleto');
-    };
-
-
-    if (formLibroGenero.value == 0) {
-        formLibroIncompleto = true;
-        formLibroGenero.classList.add('formulario-libros-incompleto');
-    } else {
-        formLibroGenero.classList.remove('formulario-libros-incompleto');
-    };
-
-
-    if (formLibroAutor.value == 0) {
-        formLibroIncompleto = true;
-        formLibroAutor.classList.add('formulario-libros-incompleto');
-    } else {
-        formLibroAutor.classList.remove('formulario-libros-incompleto');
-    };
-
-
-    if (formLibroISBN.value == "") {
-        formLibroIncompleto = true;
-        formLibroISBN.classList.add('formulario-libros-incompleto');
-    } else {
-        formLibroISBN.classList.remove('formulario-libros-incompleto');
-    };
-
-
-    if (formLibroEditorial.value == "") {
-        formLibroIncompleto = true;
-        formLibroEditorial.classList.add('formulario-libros-incompleto');
-    } else {
-        formLibroEditorial.classList.remove('formulario-libros-incompleto');
-    };
-
-
-    if (formLibroPrecio.value == "") {
-        formLibroIncompleto = true;
-        formLibroPrecio.classList.add('formulario-libros-incompleto');
-    } else {
-        formLibroPrecio.classList.remove('formulario-libros-incompleto');
-    };
-
-
-    // if ((formLibroPremios.value == 1) && (formLibroNobel.value == "")) {
+    // if (formLibroTitulo.value == "") {
     //     formLibroIncompleto = true;
-    //     formLibroNobel.classList.add('formulario-libros-incompleto');
+    //     formLibroTitulo.classList.add('formulario-libros-incompleto');
     // } else {
-    //     formLibroNobel.classList.remove('formulario-libros-incompleto');
+    //     formLibroTitulo.classList.remove('formulario-libros-incompleto');
     // };
+
+
+    // if (formLibroFoto.value == "") {
+    //     formLibroIncompleto = true;
+    //     formLibroFoto.classList.add('formulario-libros-incompleto');
+    // } else {
+    //     formLibroFoto.classList.remove('formulario-libros-incompleto');
+    // };
+
+
+    // if (formLibroPublicacion.value == "") {
+    //     formLibroIncompleto = true;
+    //     formLibroPublicacion.classList.add('formulario-libros-incompleto');
+    // } else {
+    //     formLibroPublicacion.classList.remove('formulario-libros-incompleto');
+    // };
+
+
+    // if (formLibroGenero.value == 0) {
+    //     formLibroIncompleto = true;
+    //     formLibroGenero.classList.add('formulario-libros-incompleto');
+    // } else {
+    //     formLibroGenero.classList.remove('formulario-libros-incompleto');
+    // };
+
+
+    // if (formLibroAutor.value == 0) {
+    //     formLibroIncompleto = true;
+    //     formLibroAutor.classList.add('formulario-libros-incompleto');
+    // } else {
+    //     formLibroAutor.classList.remove('formulario-libros-incompleto');
+    // };
+
+
+    // if (formLibroISBN.value == "") {
+    //     formLibroIncompleto = true;
+    //     formLibroISBN.classList.add('formulario-libros-incompleto');
+    // } else {
+    //     formLibroISBN.classList.remove('formulario-libros-incompleto');
+    // };
+
+
+    // if (formLibroEditorial.value == "") {
+    //     formLibroIncompleto = true;
+    //     formLibroEditorial.classList.add('formulario-libros-incompleto');
+    // } else {
+    //     formLibroEditorial.classList.remove('formulario-libros-incompleto');
+    // };
+
+
+    // if (formLibroPrecio.value == "") {
+    //     formLibroIncompleto = true;
+    //     formLibroPrecio.classList.add('formulario-libros-incompleto');
+    // } else {
+    //     formLibroPrecio.classList.remove('formulario-libros-incompleto');
+    // };
+
+    // let formLibroPremioNobel = document.querySelectorAll('#formulario-libros-premios input[type=checkbox]:checked');
+    // const formLibroFechaNobel = document.querySelector('#formulario-libros-premios input[type=date]');
+
+    // formLibroPremioNobel.forEach(check => {
+    //     if (check.value == 1) {
+    //         if (formLibroFechaNobel.value == "") {
+    //             formLibroIncompleto = true;
+    //             formLibroFechaNobel.classList.add('formulario-libros-incompleto');
+    //         } else {
+    //             formLibroFechaNobel.classList.remove('formulario-libros-incompleto');
+    //         };
+    //     }
+    // });
 
 
     if (formLibroSinopsis.value == "") {
@@ -128,24 +132,20 @@ const formLibroImprimir = () => {
     console.log('El ISBN es', formLibroISBN.value);
     console.log('La editorial es', formLibroEditorial.value);
     console.log('El precio es', formLibroPrecio.value);
+
+    let formLibroPremio = document.querySelectorAll('#formulario-libros-premios input[type=checkbox]:checked');
+
+    formLibroPremio.forEach(check => {
+        console.log('El premio es', check.value);
+    });
+
     console.log('La sinopsis es', formLibroSinopsis.value);
 
-}
+};
 
 
 formLibroGuardar.addEventListener('click', () => {
 
     formLibroValidacion();
 
-    // if (formLibroPremios.value == 1) {
-    //     console.log('igual a 1');
-    // } else {
-    //     console.log('diferente');
-    // };
-
-})
-
-
-
-// Pendiente
-// Premios y fecha
+});

@@ -1,21 +1,26 @@
-.btn-enviar{
+form h2 {
+    font-size: 38px;
+    font-weight: bold;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.btn-enviar {
     margin-top: 20px;
     text-align: center;
 }
 
-.columna-der{
-    background-color: blue;
+.columna-der {
     padding-left: 20px;
     width: 50%;
 }
 
-.columna-izq{
-    background-color: brown;
+.columna-izq {
     padding-right: 20px;
     width: 50%;
 }
 
-.contenido h2{
+.contenido h2 {
     font-size: 40px;
     font-weight: bold;
     text-align: center;
@@ -26,12 +31,12 @@
     display: flex;
 }
 
+
 /*Estilos Input*/
 
 form label {
     font-size: 20px;
     font-weight: bold;
-
 }
 
 input,
@@ -61,12 +66,17 @@ input[type="file"] {
 
 input[type="number"] {
     height: 26px;
-    width: 100%;
+    padding-left: 10px;
+    width: 97%;
 }
 
 input[type="date"] {
     height: 28px;
-    width: 340px;
+    width: 100%;
+}
+
+.premio-literatura input[type="date"] {
+    width: 270px;
 }
 
 input[type="checkbox"] {
@@ -103,12 +113,26 @@ button:focus {
     box-shadow: 0 0 0 3px #636069;
 }
 
-.espaciado-form{
-    margin-bottom: 10px;
+.espaciado-form {
+    margin-bottom: 20px;
 }
+
+textarea {
+    height: 200px;
+}
+
 
 /* Estilos de validacion */
 
-.formulario-libros-incompleto {
-    border: 3px solid #6D6875;
+.formulario-libros-incompleto,
+.formulario-libros-incompleto input[type=date] {
+    border: 3px solid #ad3049;
+    color: #ad3049;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.formulario-libros-incompleto::placeholder {
+    color: #ad3049;
+    font-weight: bold;
 }
