@@ -1,3 +1,5 @@
+/* Estilos generales */
+
 h1 {
     font-size: 38px;
     font-weight: bold;
@@ -10,47 +12,113 @@ h2 {
     font-weight: bold;
 }
 
-
-.columna-der{
-    width: 74%;
+.perfil-libro {
+    display: flex;
 }
 
-.columna-izq{
+
+/* Estilos generales columna izquierda */
+
+.perfil-libro-columna-izq {
     margin-right: 20px;
     padding-right: 20px;
     width: 26%;
 }
 
-.columna-izq h2 {
+.perfil-libro-columna-izq h2 {
     font-size: 18px;
 }
 
-.columna-izq p {
+.perfil-libro-columna-izq p {
     font-size: 16px;
     padding-bottom: 10px;
 }
 
-.img-portada {
+
+/* Estilos slider columna izquierda */
+
+.perfil-libro-img {
+    border: 1px solid #fff;
+    height: 372px;
+    overflow: hidden;
     width: 240px;
 }
 
-.info-libro {
+.perfil-libro-navegacion {
+    bottom: 5%;
+    display: flex;
+    left: 34.5%;
+    position: relative;
+}
+
+.perfil-libro-navegacion .barra {
+    background-color: #6D6875;
+    border: 2px solid #5f5b65;
+    box-shadow: 2px 2px 6px #888490, -2px -2px 6px #888490;
+    cursor: pointer;
+    height: 5px;
+    margin-left: 8px;
+    width: 10px;
+}
+
+.perfil-libro-navegacion .barra:hover {
+    background-color: azure;
+}
+
+input[type="radio"] {
+    position: absolute;
+    visibility: hidden;
+}
+
+.perfil-libro-slides {
+    display: flex;
+    height: 100%;
+    width: 500%;
+}
+
+.perfil-libro-image-libro {
+    transition: 0.4s ease;
+    width: 20%;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+#perfil-libro-btn1:checked~.perfil-libro-primero {
+    margin-left: 0;
+}
+
+#perfil-libro-btn2:checked~.perfil-libro-primero {
+    margin-left: -20%;
+}
+
+#perfil-libro-btn3:checked~.perfil-libro-primero {
+    margin-left: -40%;
+}
+
+
+/* Estilos información columna izquierda */
+
+.perfil-libro-info {
     background-color: #ffcdb2;
-    padding: 10px;
+    padding: 5px 10px 10px 10px;
     width: 220px;
 }
 
-.perfil-libro {
-    display: flex;
-    
+
+/* Estilos generales columna derecha */
+
+.perfil-libro-columna-der {
+    width: 74%;
 }
 
-
-.sinopsis{
+.perfil-libro-sinopsis {
     text-align: justify;
 }
 
-.sinopsis p {
+.perfil-libro-sinopsis p {
     line-height: 150%;
     padding-top: 28px;
 }
