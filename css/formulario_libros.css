@@ -25,8 +25,8 @@ form h2 {
 .contenido h2 {
     font-size: 40px;
     font-weight: bold;
-    text-align: center;
     padding-bottom: 60px;
+    text-align: center;
 }
 
 .formulario-libros {
@@ -34,8 +34,8 @@ form h2 {
 }
 
 .premio-literatura {
-    display: flex;
     align-items: center;
+    display: flex;
 }
 
 
@@ -49,19 +49,24 @@ form label {
 input,
 select,
 textarea {
+    background-color: #fed7ce;
+    border: 3px solid rgb(109, 104, 117);
+    border-radius: 6px;
     font-family: 'Asap', sans-serif;
     font-size: 15px;
-    border: 3px solid rgb(109, 104, 117);
-    background-color: #fed7ce;
-    border-radius: 6px;
+}
+
+input,
+textarea {
+    margin-top: 2px;
 }
 
 input[type="text"],
 select,
 textarea {
     box-sizing: border-box;
-    padding: 0.1rem 0.75rem;
     height: 35px;
+    padding: 0.1rem 0.75rem;
     width: 100%;
 }
 
@@ -83,13 +88,14 @@ input[type="file"] {
 
 input[type="number"] {
     height: 26px;
-    padding-left: 10px;
-    width: 97%;
+    padding-left: 12px;
+    width: 96%;
 }
 
 input[type="date"] {
     height: 28px;
-    width: 98%;
+    width: 96%;
+    padding-left: 12px;
 }
 
 .premio-literatura input[type="date"] {
@@ -99,8 +105,8 @@ input[type="date"] {
 
 input[type="checkbox"] {
     height: 26px;
-    width: 26px;
     vertical-align: middle;
+    width: 26px;
 }
 
 button[type="button"] {
@@ -122,13 +128,13 @@ button:hover[type="button"] {
 input:focus,
 select:focus,
 textarea:focus {
-    outline: none;
     box-shadow: 0 0 0 3px #636069;
+    outline: none;
 }
 
 button:focus {
-    outline: none;
     box-shadow: 0 0 0 3px #636069;
+    outline: none;
 }
 
 .formulario-libros-espaciado-form {
