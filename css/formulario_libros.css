@@ -1,3 +1,5 @@
+/* Estilos Generales */
+
 form h2 {
     font-size: 38px;
     font-weight: bold;
@@ -129,7 +131,7 @@ button:focus {
     box-shadow: 0 0 0 3px #636069;
 }
 
-.espaciado-form {
+.formulario-libros-espaciado-form {
     margin-bottom: 20px;
 }
 

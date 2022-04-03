@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro de Libros</title>
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/estilos_general.css">
-    <link rel="stylesheet" href="../css/formulario_libros.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/estilos_general.css">
+    <link rel="stylesheet" href="/css/formulario_libros.css">
     <script src="https://kit.fontawesome.com/0db8cde7c4.js" crossorigin="anonymous"></script>
 </head>
 
@@ -80,22 +80,26 @@
                 <div class="formulario-libros">
                     <div class="columna-izq">
 
-                        <div class="espaciado-form">
+                        <!-- Título -->
+                        <div class="formulario-libros-espaciado-form">
                             <label for="txt-titulo">Título del libro</label>
                             <input type="text" id="txt-titulo" name="txt-titulo" placeholder="Introduzca el título">
                         </div>
 
-                        <div class="espaciado-form">
+                        <!-- Adjuntos -->
+                        <div class="formulario-libros-espaciado-form">
                             <label for="file-foto">Adjuntar fotografía</label>
                             <input type="file" id="file-foto" name="file-foto" multiple>
                         </div>
 
-                        <div class="espaciado-form">
+                        <!-- Fecha de publicación -->
+                        <div class="formulario-libros-espaciado-form">
                             <label for="date-publicacion">Fecha de publicación</label>
                             <input type="date" id="date-publicacion" name="date-publicacion">
                         </div>
 
-                        <div class="espaciado-form">
+                        <!-- Género literario -->
+                        <div class="formulario-libros-espaciado-form">
                             <label for="select-genero">Género literario</label>
                             <select id="select-genero" name="select-genero">
                                     <option value="0">Seleccione el género literario</option>
@@ -110,7 +114,8 @@
                                 </select>
                         </div>
 
-                        <div class="espaciado-form">
+                        <!-- Autor -->
+                        <div class="formulario-libros-espaciado-form">
                             <label for="select-autor">Autor</label>
                             <select id="select-autor" name="select-autor">
                                 <option value="0">Seleccione el autor</option>
@@ -125,7 +130,8 @@
                             </select>
                         </div>
 
-                        <div class="espaciado-form">
+                        <!-- Descuentos -->
+                        <div class="formulario-libros-espaciado-form">
                             <label for="select-descuento">Descuento (Opcional)</label>
                             <select id="select-descuento" name="select-descuento">
                                     <option value="0">Ninguno</option>
@@ -134,25 +140,28 @@
                                 </select>
                         </div>
 
-                        <div class="espaciado-form">
+                        <!-- ISBN -->
+                        <div class="formulario-libros-espaciado-form">
                             <label for="txt-isbn">ISBN</label>
                             <input type="text" id="txt-isbn" name="txt-isbn" placeholder="Introduzca el ISBN">
                         </div>
                     </div>
 
+                    <!-- Editorial -->
                     <div class="columna-der">
-                        <div class="espaciado-form">
+                        <div class="formulario-libros-espaciado-form">
                             <label for="txt-editorial">Editorial</label>
                             <input type="text" id="txt-editorial" name="txt-editorial" placeholder="Introduzca el nombre de la editorial">
                         </div>
 
-                        <div class="espaciado-form">
+                        <!-- Precio -->
+                        <div class="formulario-libros-espaciado-form">
                             <label for="number-precio">Precio</label>
                             <input type="number" id="number-precio" name="number-precio" placeholder="Introduzca el precio" step="0.01">
                         </div>
 
-
-                        <div class="espaciado-form">
+                        <!-- Premios -->
+                        <div class="formulario-libros-espaciado-form">
                             <label for="checkbox-premios">Premios (Opcional)</label>
                             <div id="formulario-libros-premios">
                                 <div class="premio-literatura">
@@ -186,10 +195,14 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Sinopsis -->
                 <div>
                     <label for="textarea-sinopsis">Sinopsis</label>
                     <textarea id="textarea-sinopsis" name="textarea-sinopsis" placeholder="Introduzca la sinopsis"></textarea>
                 </div>
+
+                <!-- Botón -->
                 <div class="btn-enviar">
                     <button type="button" id="btn-guardar" class="btn-guardar" name="btn-guardar">Guardar</button>
                 </div>
@@ -198,7 +211,7 @@
     </div>
 
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="../js/formulario_libros.js"></script>
+    <script src="/js/formulario_libros.js"></script>
 </body>
 
 </html>
