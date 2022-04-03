@@ -16,82 +16,82 @@ const formLibroValidacion = () => {
 
     let formLibroIncompleto = false;
 
-    // if (formLibroTitulo.value == "") {
-    //     formLibroIncompleto = true;
-    //     formLibroTitulo.classList.add('formulario-libros-incompleto');
-    // } else {
-    //     formLibroTitulo.classList.remove('formulario-libros-incompleto');
-    // };
+    if (formLibroTitulo.value == "") {
+        formLibroIncompleto = true;
+        formLibroTitulo.classList.add('formulario-libros-incompleto');
+    } else {
+        formLibroTitulo.classList.remove('formulario-libros-incompleto');
+    };
 
 
-    // if (formLibroFoto.value == "") {
-    //     formLibroIncompleto = true;
-    //     formLibroFoto.classList.add('formulario-libros-incompleto');
-    // } else {
-    //     formLibroFoto.classList.remove('formulario-libros-incompleto');
-    // };
+    if (formLibroFoto.value == "") {
+        formLibroIncompleto = true;
+        formLibroFoto.classList.add('formulario-libros-incompleto');
+    } else {
+        formLibroFoto.classList.remove('formulario-libros-incompleto');
+    };
 
 
-    // if (formLibroPublicacion.value == "") {
-    //     formLibroIncompleto = true;
-    //     formLibroPublicacion.classList.add('formulario-libros-incompleto');
-    // } else {
-    //     formLibroPublicacion.classList.remove('formulario-libros-incompleto');
-    // };
+    if (formLibroPublicacion.value == "") {
+        formLibroIncompleto = true;
+        formLibroPublicacion.classList.add('formulario-libros-incompleto');
+    } else {
+        formLibroPublicacion.classList.remove('formulario-libros-incompleto');
+    };
 
 
-    // if (formLibroGenero.value == 0) {
-    //     formLibroIncompleto = true;
-    //     formLibroGenero.classList.add('formulario-libros-incompleto');
-    // } else {
-    //     formLibroGenero.classList.remove('formulario-libros-incompleto');
-    // };
+    if (formLibroGenero.value == 0) {
+        formLibroIncompleto = true;
+        formLibroGenero.classList.add('formulario-libros-incompleto');
+    } else {
+        formLibroGenero.classList.remove('formulario-libros-incompleto');
+    };
 
 
-    // if (formLibroAutor.value == 0) {
-    //     formLibroIncompleto = true;
-    //     formLibroAutor.classList.add('formulario-libros-incompleto');
-    // } else {
-    //     formLibroAutor.classList.remove('formulario-libros-incompleto');
-    // };
+    if (formLibroAutor.value == 0) {
+        formLibroIncompleto = true;
+        formLibroAutor.classList.add('formulario-libros-incompleto');
+    } else {
+        formLibroAutor.classList.remove('formulario-libros-incompleto');
+    };
 
 
-    // if (formLibroISBN.value == "") {
-    //     formLibroIncompleto = true;
-    //     formLibroISBN.classList.add('formulario-libros-incompleto');
-    // } else {
-    //     formLibroISBN.classList.remove('formulario-libros-incompleto');
-    // };
+    if (formLibroISBN.value == "") {
+        formLibroIncompleto = true;
+        formLibroISBN.classList.add('formulario-libros-incompleto');
+    } else {
+        formLibroISBN.classList.remove('formulario-libros-incompleto');
+    };
 
 
-    // if (formLibroEditorial.value == "") {
-    //     formLibroIncompleto = true;
-    //     formLibroEditorial.classList.add('formulario-libros-incompleto');
-    // } else {
-    //     formLibroEditorial.classList.remove('formulario-libros-incompleto');
-    // };
+    if (formLibroEditorial.value == "") {
+        formLibroIncompleto = true;
+        formLibroEditorial.classList.add('formulario-libros-incompleto');
+    } else {
+        formLibroEditorial.classList.remove('formulario-libros-incompleto');
+    };
 
 
-    // if (formLibroPrecio.value == "") {
-    //     formLibroIncompleto = true;
-    //     formLibroPrecio.classList.add('formulario-libros-incompleto');
-    // } else {
-    //     formLibroPrecio.classList.remove('formulario-libros-incompleto');
-    // };
+    if (formLibroPrecio.value == "") {
+        formLibroIncompleto = true;
+        formLibroPrecio.classList.add('formulario-libros-incompleto');
+    } else {
+        formLibroPrecio.classList.remove('formulario-libros-incompleto');
+    };
 
-    // let formLibroPremioNobel = document.querySelectorAll('#formulario-libros-premios input[type=checkbox]:checked');
-    // const formLibroFechaNobel = document.querySelector('#formulario-libros-premios input[type=date]');
+    let formLibroPremioNobel = document.querySelectorAll('#formulario-libros-premios input[type=checkbox]:checked');
+    const formLibroFechaNobel = document.querySelector('#formulario-libros-premios input[type=date]');
 
-    // formLibroPremioNobel.forEach(check => {
-    //     if (check.value == 1) {
-    //         if (formLibroFechaNobel.value == "") {
-    //             formLibroIncompleto = true;
-    //             formLibroFechaNobel.classList.add('formulario-libros-incompleto');
-    //         } else {
-    //             formLibroFechaNobel.classList.remove('formulario-libros-incompleto');
-    //         };
-    //     }
-    // });
+    formLibroPremioNobel.forEach(check => {
+        if (check.value == 1) {
+            if (formLibroFechaNobel.value == "") {
+                formLibroIncompleto = true;
+                formLibroFechaNobel.classList.add('formulario-libros-incompleto');
+            } else {
+                formLibroFechaNobel.classList.remove('formulario-libros-incompleto');
+            };
+        }
+    });
 
 
     if (formLibroSinopsis.value == "") {

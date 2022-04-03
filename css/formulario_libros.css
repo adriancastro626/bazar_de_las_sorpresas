@@ -31,6 +31,11 @@ form h2 {
     display: flex;
 }
 
+.premio-literatura {
+    display: flex;
+    align-items: center;
+}
+
 
 /*Estilos Input*/
 
@@ -42,6 +47,7 @@ form label {
 input,
 select,
 textarea {
+    font-family: 'Asap', sans-serif;
     font-size: 15px;
     border: 3px solid rgb(109, 104, 117);
     background-color: #fed7ce;
@@ -55,6 +61,15 @@ textarea {
     padding: 0.1rem 0.75rem;
     height: 35px;
     width: 100%;
+}
+
+textarea {
+    padding-top: 0.50rem;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #000;
 }
 
 input[type="file"] {
@@ -72,11 +87,12 @@ input[type="number"] {
 
 input[type="date"] {
     height: 28px;
-    width: 100%;
+    width: 98%;
 }
 
 .premio-literatura input[type="date"] {
-    width: 270px;
+    margin-left: 10px;
+    width: 250px;
 }
 
 input[type="checkbox"] {
