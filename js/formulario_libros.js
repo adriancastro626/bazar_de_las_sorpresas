@@ -113,7 +113,7 @@ const formLibroValidacion = () => {
             'text': 'Por favor revise los campos resaltados',
         });
     } else {
-        formLibroImprimir()
+        formLibroImprimir();
         Swal.fire({
             'icon': 'success',
             'title': 'Libro registrado',

@@ -1,3 +1,5 @@
+/* Estilos generales */
+
 a {
     font-weight: bold;
     text-decoration: none;
@@ -19,11 +21,11 @@ button:hover[type="button"] {
     color: #000105;
 }
 
-.centrar {
+.lista-generos-tabla-centrar {
     text-align: center;
 }
 
-.ingresar-genero {
+.lista-generos-ingresar-input {
     height: 24px;
     text-align: center;
 }
@@ -53,13 +55,13 @@ form {
     margin-bottom: 20px;
 }
 
-.titulo-lista-genero {
+.lista-generos-tabla-titulo {
     margin-top: 60px;
     margin-bottom: 20px;
 }
 
 
-/*Tabla Generos*/
+/*Estilos Lista Géneros*/
 
 table {
     border-collapse: collapse;

@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menú Lateral</title>
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/estilos_general.css">
     <link rel="stylesheet" href="../css/lista_generos.css">
     <script src="https://kit.fontawesome.com/0db8cde7c4.js" crossorigin="anonymous"></script>
+    <title>Lista de Géneros Literarios</title>
 </head>
 
 <body>
@@ -72,55 +72,70 @@
 
         <!-- Contenido de la página -->
         <div class="pagina-contenido">
-            <div class="ingreso-genero">
-                <h1>Genero Literario</h1>
-                <h2>Ingresar Genero Literario</h2>
-                <form class="margen-top">
-                    <label for="txt-genero-literario">Genero literario</label>
-                    <input type="text" class="ingresar-genero"> <button type="button" id="btn-guardar " class="btn-guardar " name="btn-guardar ">Ingresar</button>
+
+            <div class="lista-generos">
+
+                <h1>Género Literario</h1>
+
+                <h2>Ingresar Género Literario</h2>
+
+                <form class="lista-generos-ingresar" id="lista-generos-ingresar">
+
+                    <label for="txt-ingresar-genero">Género literario</label>
+                    <input type="text" class="lista-generos-ingresar-input" id="txt-ingresar-genero" name="txt-ingresar-genero">
+
+                    <button type="button" id="btn-ingresar" class="btn-guardar" name="btn-ingresar">Ingresar</button>
+
                 </form>
-                <div class="lista-generos ">
-                    <h2 class="titulo-lista-genero ">Lista de Generos Literarios</h2>
-                    <table>
+
+                <div class="lista-generos-tabla">
+                    <h2 class="lista-generos-tabla-titulo">Lista de Géneros Literarios</h2>
+                    <table id="lista-generos-tabla">
+
+
+
                         <tr>
                             <td>Ciencia Ficción</td>
-                            <td class="centrar "><a href="# ">Modificar</a></td>
-                            <td class="centrar "><a href="# ">Eliminar</a></td>
+                            <td class="lista-generos-tabla-centrar"><a href="#" class="lista-generos-tabla-modificar">Modificar</a></td>
+                            <td class="lista-generos-tabla-centrar"><a href="#" class="lista-generos-tabla-eliminar">Eliminar</a></td>
                         </tr>
+
+
+
                         <tr>
                             <td>Misterio</td>
-                            <td class="centrar "><a href="# ">Modificar</a></td>
-                            <td class="centrar "><a href="# ">Eliminar</a></td>
+                            <td class="lista-generos-tabla-centrar"><a href="#" class="lista-generos-tabla-modificar">Modificar</a></td>
+                            <td class="lista-generos-tabla-centrar"><a href="#" class="lista-generos-tabla-eliminar">Eliminar</a></td>
                         </tr>
                         <tr>
                             <td>Infantil</td>
-                            <td class="centrar "><a href="# ">Modificar</a></td>
-                            <td class="centrar "><a href="# ">Eliminar</a></td>
+                            <td class="lista-generos-tabla-centrar"><a href="#" class="lista-generos-tabla-modificar">Modificar</a></td>
+                            <td class="lista-generos-tabla-centrar"><a href="#" class="lista-generos-tabla-eliminar">Eliminar</a></td>
                         </tr>
                         <tr>
                             <td>Poesía</td>
-                            <td class="centrar "><a href="# ">Modificar</a></td>
-                            <td class="centrar "><a href="# ">Eliminar</a></td>
+                            <td class="lista-generos-tabla-centrar"><a href="#" class="lista-generos-tabla-modificar">Modificar</a></td>
+                            <td class="lista-generos-tabla-centrar"><a href="#" class="lista-generos-tabla-eliminar">Eliminar</a></td>
                         </tr>
                         <tr>
-                            <td>Novela romántica</td>
-                            <td class="centrar "><a href="# ">Modificar</a></td>
-                            <td class="centrar "><a href="# ">Eliminar</a></td>
+                            <td>Novela</td>
+                            <td class="lista-generos-tabla-centrar"><a href="#" class="lista-generos-tabla-modificar">Modificar</a></td>
+                            <td class="lista-generos-tabla-centrar"><a href="#" class="lista-generos-tabla-eliminar">Eliminar</a></td>
                         </tr>
                         <tr>
                             <td>Biografías</td>
-                            <td class="centrar "><a href="# ">Modificar</a></td>
-                            <td class="centrar "><a href="# ">Eliminar</a></td>
+                            <td class="lista-generos-tabla-centrar"><a href="#" class="lista-generos-tabla-modificar">Modificar</a></td>
+                            <td class="lista-generos-tabla-centrar"><a href="#" class="lista-generos-tabla-eliminar">Eliminar</a></td>
                         </tr>
                         <tr>
                             <td>Historia</td>
-                            <td class="centrar "><a href="# ">Modificar</a></td>
-                            <td class="centrar "><a href="# ">Eliminar</a></td>
+                            <td class="lista-generos-tabla-centrar"><a href="#" class="lista-generos-tabla-modificar">Modificar</a></td>
+                            <td class="lista-generos-tabla-centrar"><a href="#" class="lista-generos-tabla-eliminar">Eliminar</a></td>
                         </tr>
                         <tr>
                             <td>Autoayuda</td>
-                            <td class="centrar "><a href="# ">Modificar</a></td>
-                            <td class="centrar "><a href="# ">Eliminar</a></td>
+                            <td class="lista-generos-tabla-centrar"><a href="#" class="lista-generos-tabla-modificar">Modificar</a></td>
+                            <td class="lista-generos-tabla-centrar"><a href="#" class="lista-generos-tabla-eliminar">Eliminar</a></td>
                         </tr>
                     </table>
                 </div>
@@ -128,7 +143,8 @@
         </div>
     </div>
 
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11 "></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/lista_generos.js"></script>
 </body>
 
 </html>
