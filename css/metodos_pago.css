@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Asap';
+}
+
+.formulario-metodos {
+    width: 400px;
+    height: 440px;
+    margin: 60px auto 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #fff;
+    box-shadow: 1px 2px 3px 0 rgba(0, 0, 0, .10);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 18px;
+    margin: 30px;
+}
+
+#cont-listar-metodos {
+    display: flex;
+    flex-direction: column;
+}
+
+.radio-metodo {
+    font-size: 14px;
+    margin-left: 30px;
+    margin-bottom: 10px;
+}
+
+#cont-listar-metodos input {
+    margin-right: 15px;
+}
+
+.cont-botones {
+    margin: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.btn-metodo-pago {
+    margin-left: 30px;
+    height: 30px;
+    width: 80px;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+#btn-atras {
+    background: #fff;
+    border: 1px solid #000;
+}
+
+#btn-continuar {
+    background: #B5838D;
+    border: 1px solid #B5838D;
+}
+
+
+/* Manejo de errores */
+
+#informacion-error {
+    font-size: 14px;
+    font-weight: bold;
+    color: #c0392b;
+    text-align: center;
+}
+
+.input-error {
+    border: 2px solid #c0392b;
+}

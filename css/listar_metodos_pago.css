@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Asap';
+}
+
+.formulario-metodos {
+    width: 400px;
+    height: 440px;
+    margin: 60px auto 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #fff;
+    box-shadow: 1px 2px 3px 0 rgba(0, 0, 0, .10);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 18px;
+    margin: 30px;
+}
+
+#cont-listar-metodos {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+}
+
+.cont-linea {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+}
+
+.cont-linea p {
+    margin-left: 20px;
+}
+
+.cont-agregar {
+    margin-left: 30px;
+}
+
+.btn-agregar {
+    background-color: #fff;
+    border: #fff;
+    color: #6D6875;
+    cursor: pointer;
+    margin: 0px;
+}
+
+.icono-eliminar {
+    background-color: #fff;
+    border: #fff;
+    color: #E5989B;
+    cursor: pointer;
+    margin: 0px;
+}
