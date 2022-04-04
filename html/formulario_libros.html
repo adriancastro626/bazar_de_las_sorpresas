@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width-devide-width, initial-scale=1.0">
+    <!-- Link del CSS reset -->
+    <link rel="stylesheet" href="../css/reset.css">
+    <!-- Script de FontAwesome -->
+    <script src="https://kit.fontawesome.com/0db8cde7c4.js" crossorigin="anonymous"></script>
+    <!-- Links de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asap:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Link del CSS -->
+    <link rel="stylesheet" href="css/menu-lateral.css">
+    <link rel="stylesheet" href="css/formulario_libros.css">
+    <title>Registro de Libros</title>
+</head>
+
+<body>
+
+    <div class="pagina-completa">
+
+        <!-- Menú lateral -->
+        <div class="menu-lateral">
+
+            <!-- Primera sección del menú lateral -->
+            <div class="menu-lateral-primero">
+                <div class="menu-lateral-arriba">
+                    <a href="pagina_principal.html"><i class="fa-solid fa-house" title="Icono para ir a la página principal"></i></a>
+                    <a href="inicio_sesion.html"><i class="fa-solid fa-lock" title="Icono para cerrar sesión en la cuenta"></i></a>
+                </div>
+                <div class="menu-lateral-usuario">
+                    <div class="menu-lateral-foto">
+                        <img src="img/foto-perfil.png" alt="Foto de perfil del usuario">
+                    </div>
+                    <p class="menu-lateral-nombre"></p>John Doe</p>
+                    <p class="menu-lateral-email">johndoe@mitienda.com</p>
+                </div>
+            </div>
+
+            <!-- Segunda sección del menú lateral -->
+            <div class="menu-lateral-segundo">
+
+                <!-- Primera lista -->
+                <div>
+                    <h2 class="menu-lateral-titulo">CUENTAS</h2>
+                    <nav class="menu-lateral-nav">
+                        <ul>
+                            <div class="menu-lateral-lista">
+                                <li><i class="fa-solid fa-user"></i><a href="pagina_sesion_iniciada.html">Perfil </a></li>
+                            </div>
+                            <div class="menu-lateral-lista">
+                                <li><i class="fa-solid fa-receipt"></i><a href="historial_compra.html">Historial de compras</a></li>
+                            </div>
+                            <div class="menu-lateral-lista">
+                                <li><i class="fa-solid fa-users"></i><a href="edicion_usuarios.html">Usuarios</a></li>
+                            </div>
+                        </ul>
+                    </nav>
+                </div>
+
+                <!-- Segunda lista -->
+                <div>
+                    <h2 class="menu-lateral-titulo">TIENDA</h2>
+                    <nav class="menu-lateral-nav">
+                        <ul>
+                            <div class="menu-lateral-lista">
+                                <li><i class="fa-solid fa-tag"></i><a href="parametros_sistema.html">Parámetros del sistema</a></li>
+                            </div>
+                            <div class="menu-lateral-lista menu-lateral-anidado" id="menu-lateral-desplegar-1">
+                                <li><i class="fa-solid fa-book-open"></i><a href="#menu-lateral-desplegar-1">Catálogo</a>
+                                    <ul>
+                                        <li><a href="lista_libros.html">Libros</a></li>
+                                        <li><a href="lista_autores.html">Autores</a></li>
+                                        <li><a href="lista_generos.html">Géneros literarios</a></li>
+                                    </ul>
+                                </li>
+                            </div>
+                            <div class="menu-lateral-lista menu-lateral-anidado" id="menu-lateral-desplegar-2">
+                                <li> <i class="fa-solid fa-newspaper"></i><a href="#menu-lateral-desplegar-2">Reportes</a>
+                                    <ul>
+                                        <li><a href="reportes_top10.html">Top 10</a></li>
+                                        <li><a href="reportes_desglose_ventas.html">Ventas</a></li>
+                                        <li><a href="reportes_descuentos.html">Descuentos</a></li>
+                                        <li><a href="reportes_socios_comerciales.html">Socios comerciales</a></li>
+                                    </ul>
+                                </li>
+                            </div>
+                            <div class="menu-lateral-lista">
+                                <li><i class="fa-solid fa-store"></i><a href="lista_socios.html">Socios comerciales</a></li>
+                            </div>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Formulario de libros -->
+        <div class="formulario-libros">
+
+            <div>
+                <h1>Formulario de Registro de Libros</h1>
+            </div>
+
+            <!-- Formulario -->
+            <form id="formulario-libros-completo">
+
+                <div class="formulario-libros-controles">
+
+                    <!-- Parte izquierda del formulario -->
+                    <div class="formulario-libros-izq">
+
+                        <div class="formulario-libros-izq-control">
+
+                            <label for="txt-titulo">Título del libro</label>
+                            <input type="text" id="txt-titulo" name="txt-titulo" placeholder="Introduzca el título">
+
+                        </div>
+
+
+                        <div class="formulario-libros-izq-control">
+
+                            <label for="file-foto">Adjuntar fotografía</label>
+                            <input type="file" id="file-foto" name="file-foto" multiple>
+
+                        </div>
+
+
+                        <div class="formulario-libros-izq-control">
+
+                            <label for="date-publicacion">Fecha de publicación</label>
+                            <input type="date" id="date-publicacion" name="date-publicacion">
+
+                        </div>
+
+
+                        <div class="formulario-libros-izq-control">
+
+                            <label for="select-genero">Género literario</label>
+                            <select id="select-genero" name="select-genero">
+                                <option value="0">Seleccione el género literario</option>
+                                <option value="1">Ciencia Ficción</option>
+                                <option value="2">Policiacos</option>
+                                <option value="3">Infantil</option>
+                                <option value="4">Poesía</option>
+                                <option value="5">Novela romántica</option>
+                                <option value="6">Biografías</option>
+                                <option value="7">Historia</option>
+                                <option value="8">Autoayuda</option>
+                            </select>
+
+                        </div>
+
+
+                        <div class="formulario-libros-izq-control">
+
+                            <label for="select-autor">Autor</label>
+                            <select id="select-autor" name="select-autor">
+                                <option value="0">Seleccione el autor</option>
+                                <option value="1">Isaac Asimov</option>
+                                <option value="2">Federico García Lorca</option>
+                                <option value="3">María Hesse</option>
+                                <option value="4">Paulo Coelho</option>
+                                <option value="5">Agatha Christie</option>
+                                <option value="6">Jane Austen</option>
+                                <option value="7">Joaquín Gutiérrez</option>
+                                <option value="8">Yuval Noah Harari</option>
+                            </select>
+
+                        </div>
+
+
+                        <div class="formulario-libros-izq-control">
+
+                            <label for="select-descuento">Descuento (Opcional)</label>
+                            <select id="select-descuento" name="select-descuento">
+                                <option value="0">Ninguno</option>
+                                <option value="1">Día de la madre</option>
+                                <option value="2">Libros de cuentos</option>
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Parte derecha del formulario -->
+                    <div class="formulario-libros-der">
+
+                        <div class="formulario-libros-der-control">
+
+                            <label for="txt-isbn">ISBN</label>
+                            <input type="text" id="txt-isbn" name="txt-isbn" placeholder="Introduzca el ISBN">
+
+                        </div>
+
+
+                        <div class="formulario-libros-der-control">
+
+                            <label for="txt-editorial">Editorial</label>
+                            <input type="text" id="txt-editorial" name="txt-editorial" placeholder="Introduzca el nombre de la editorial">
+
+                        </div>
+
+
+                        <div class="formulario-libros-der-control">
+
+                            <label for="number-precio">Precio</label>
+                            <input type="number" id="number-precio" name="number-precio" placeholder="Introduzca el precio" step="0.01">
+
+                        </div>
+
+
+                        <div class="formulario-libros-der-premio" id="checkbox-premio-nobel">
+
+                            <label for="checkbox-premios">Premios (Opcional)</label>
+                            <div>
+                                <input type="checkbox" id="checkbox-premios" name="checkbox-premios" value="1">Premio Nobel de Literatura
+                                <input type="date" id="checkbox-premios" name="checkbox-premios" placeholder="Ingrese el año" class="checkbox-premio-nobel">
+                            </div>
+                            <div>
+                                <input type="checkbox" id="checkbox-premios" name="checkbox-premios" value="2">Premio Príncipe de Asturias de las Letras
+                            </div>
+                            <div>
+                                <input type="checkbox" id="checkbox-premios" name="checkbox-premios" value="3">Premio Franz Kafka
+                            </div>
+                            <div>
+                                <input type="checkbox" id="checkbox-premios" name="checkbox-premios" value="4">Premio Hans Christian Andersen
+                            </div>
+                            <div>
+                                <input type="checkbox" id="checkbox-premios" name="checkbox-premios" value="5">Premio Man Booker Internacional
+                            </div>
+                            <div>
+                                <input type="checkbox" id="checkbox-premios" name="checkbox-premios" value="6">Premio Miguel de Cervantes
+                            </div>
+                            <div>
+                                <input type="checkbox" id="checkbox-premios" name="checkbox-premios" value="7">Premio Nadal
+                            </div>
+                            <div>
+                                <input type="checkbox" id="checkbox-premios" name="checkbox-premios" value="8">Otros
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Parte inferior del formulario -->
+                <div class="formulario-libros-inferior">
+                    <div class="formulario-libros-control-sinopsis">
+
+                        <label for="textarea-sinopsis">Sinopsis</label>
+                        <textarea id="textarea-sinopsis" name="textarea-sinopsis" placeholder="Introduzca la sinopsis"></textarea>
+
+                    </div>
+
+                    <div class="formulario-libros-control-boton">
+
+                        <button type="button" id="btn-guardar" class="btn-guardar" name="btn-guardar">Guardar</button>
+
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/formulario_libros.js"></script>
+</body>
+
+</html>
