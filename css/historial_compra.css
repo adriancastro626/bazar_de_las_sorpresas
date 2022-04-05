@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Asap';
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: 60px;
+}
+
+.tbl-compras,
+th,
+tr {
+    border: 1px solid black;
+}
+
+th {
+    font-size: 18px;
+    font-weight: 600;
+    color: #6D6875;
+    width: 160px;
+}
+
+.cont-linea {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.cont-pedido {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.cont-pedido i {
+    color: #B5838D;
+    /* background-color: #FFB4A2; */
+}
+
+.cont-linea-oculta {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 5px 5px;
+}
+
+.btn-comentar {
+    background-color: #fff;
+    border: #fff;
+    color: #B5838D;
+    cursor: pointer;
+}
