@@ -1,0 +1,17 @@
+                #sct-autores {
+                    display: flex;
+                    flex-direction: column;
+                }
+                
+                .titulo {
+                    font-family: 'Asap', sans-serif;
+                    font-size: 25px;
+                    font-weight: bold;
+                    text-align: center;
+                    background-color: #6D6875;
+                    color: #ffcdb2;
+                }
+                
+                th {
+                    text-align: left;
+                }

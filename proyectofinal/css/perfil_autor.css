@@ -1,6 +1,6 @@
 #cont-general {
     display: flex;
-    background: #E5989B;
+    background: white;
 }
 
 .cont-izquierdo {
@@ -23,15 +23,16 @@ h1 {
     font-weight: bold;
     font-size: 25px;
     text-align: center;
-    color: white;
+    color: #FFCDB2;
+    ;
 }
 
 .cont-izquierdo p {
     font-family: 'Asap', sans-serif;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 15px;
     text-align: left;
-    color: white;
+    color: #FFCDB2;
 }
 
 .titulo {

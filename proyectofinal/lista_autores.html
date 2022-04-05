@@ -6,23 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/lista_autores.css">
 </head>
 
 <body>
     <section id="sct-autores">
-        <div>
-            <button type="button" id="btn-agregar-autor">+</button>
-        </div>
-
+        <div class="titulo">Lista de Autores</div>
         <table id="tbl-libros">
             <thead>
                 <tr>
                     <th>Nombre</th>
                     <th>Apellido</th>
-                    <th>Género</th>
+                    <th>Nacionalidad</th>
                     <th>Fecha Nacimiento</th>
                     <th>Fecha Defunción</th>
                     <th>Biografía</th>
+
                 </tr>
             </thead>
             <tbody>
@@ -30,7 +29,11 @@
             </tbody>
 
         </table>
-
+        <div class="botones">
+            <button type="button" id="btn-agregar-autor">Agregar</button>
+            <button type="button" id="btn-editar-autor">Editar</button>
+            <button type="button" id="btn-eliminar-autor">Eliminar</button>
+        </div>
 
     </section>
     <script src="js/lista_autores.js"></script>
