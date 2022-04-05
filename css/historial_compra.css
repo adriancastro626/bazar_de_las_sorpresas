@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Asap';
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+
+/* Estilos de la tabla */
+
+
+/* Encabezado */
+
+th {
+    background-color: #FFB4A2;
+    font-size: 18px;
+    font-weight: 600;
+    color: #6D6875;
+    width: 160px;
+    border: 2px solid #fff;
+}
+
+.cont-encabezado {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 10px 10px;
+}
+
+
+/* Filas */
+
+.fila-padre {
+    background-color: #6D6875;
+    border: 2px solid #fff;
+    color: #FFB4A2;
+    font-weight: 600;
+}
+
+.cont-linea {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 10px 10px;
+}
+
+.cont-pedido {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+
+/* Estilos filas expandibles */
+
+.cont-linea-oculta {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 15px 15px;
+}
+
+.oculta {
+    display: none;
+}
+
+.cont-pedido i {
+    color: #FFCDB2;
+    margin-left: 10px;
+    margin-right: 50px;
+}
+
+
+/* .rotar45 {
+    transform: rotate(45deg);
+} */
+
+.coloreado {
+    color: #FFCDB2;
+}
+
+.btn-comentar {
+    background-color: #fff;
+    border: #fff;
+    color: #FFCDB2;
+    cursor: pointer;
+}
