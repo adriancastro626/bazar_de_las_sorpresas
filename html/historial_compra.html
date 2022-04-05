@@ -72,19 +72,47 @@
         <!-- Contenido de la página -->
         <div class="pagina-contenido">
             <h1>Historial de compras</h1>
-            <table class="tbl-compras">
+
+            <!-- Listado de compras -->
+
+            <table class="tbl-compras" id="tbl-compras">
                 <thead>
                     <tr>
-                        <th>Pedido #</th>
-                        <th>Fecha</th>
-                        <th>Costo</th>
-                        <th>Medio de pago</th>
-                        <th>Estado</th>
-                        <th>Entrega</th>
+                        <th>
+                            <div class="cont-encabezado">
+                                <p>Pedido #</p>
+                            </div>
+                        </th>
+                        <th>
+                            <div class="cont-encabezado">
+                                <p>Fecha</p>
+                            </div>
+                        </th>
+                        <th>
+                            <div class="cont-encabezado">
+                                <p>Costo</p>
+                            </div>
+                        </th>
+                        <th>
+                            <div class="cont-encabezado">
+                                <p>Medio de pago</p>
+                            </div>
+                        </th>
+                        <th>
+                            <div class="cont-encabezado">
+                                <p>Estado</p>
+                            </div>
+                        </th>
+                        <th>
+                            <div class="cont-encabezado">
+                                <p>Entrega</p>
+                            </div>
+                        </th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
+                    <!-- Fila tipo padre -->
+                    <tr class="fila-padre" data-hija="contenido-001">
                         <td>
                             <div class="cont-pedido">
                                 <i class="fa-solid fa-caret-right"></i>
@@ -118,7 +146,50 @@
                             </div>
                         </td>
                     </tr>
-                    <tr>
+                    <!-- Fila hija - oculta -->
+                    <tr class="fila-hija contenido-001 oculta">
+                        <td>
+                            <div class="cont-linea-oculta">
+                                <p>El Principio de Oz</p>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="cont-linea-oculta">
+                                <p>Connors R., Smith T., Hickman C.</p>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="cont-linea-oculta">
+                                <span>&#8353;</span>
+                                <p>13.000.00</p>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="cont-linea-oculta">
+                                <p>Calificación:</p>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="cont-linea-oculta">
+                                <i class="fa-solid fa-feather-pointed coloreado"></i>
+                                <i class="fa-solid fa-feather-pointed coloreado"></i>
+                                <i class="fa-solid fa-feather-pointed coloreado"></i>
+                                <i class="fa-solid fa-feather-pointed"></i>
+                                <i class="fa-solid fa-feather-pointed"></i>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="cont-linea-oculta">
+                                <button type="button" class="btn-comentar" id="icono-comentarios-1">
+                                    <span class="span-boton">
+                                        <i class="fa-solid fa-comment-medical fa-2x"></i>
+                                    </span>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- Fila tipo padre -->
+                    <tr class="fila-padre" data-hija="contenido-002">
                         <td>
                             <div class="cont-pedido">
                                 <i class="fa-solid fa-caret-right"></i>
@@ -133,7 +204,7 @@
                         <td>
                             <div class="cont-linea">
                                 <span>&#8353;</span>
-                                <p>18.000.00</p>
+                                <p>26.000.00</p>
                             </div>
                         </td>
                         <td>
@@ -152,8 +223,8 @@
                             </div>
                         </td>
                     </tr>
-                    <!-- Fila oculta -->
-                    <tr id="fila-oculta" class="fila-oculta">
+                    <!-- Fila hija - oculta -->
+                    <tr class="fila-hija contenido-002 oculta">
                         <td>
                             <div class="cont-linea-oculta">
                                 <p>El Resplandor</p>
@@ -167,7 +238,7 @@
                         <td>
                             <div class="cont-linea-oculta">
                                 <span>&#8353;</span>
-                                <p>18.000.00</p>
+                                <p>12.000.00</p>
                             </div>
                         </td>
                         <td>
@@ -177,8 +248,50 @@
                         </td>
                         <td>
                             <div class="cont-linea-oculta">
-                                <i class="fa-solid fa-feather-pointed"></i>
-                                <i class="fa-solid fa-feather-pointed"></i>
+                                <i class="fa-solid fa-feather-pointed coloreado"></i>
+                                <i class="fa-solid fa-feather-pointed coloreado"></i>
+                                <i class="fa-solid fa-feather-pointed coloreado"></i>
+                                <i class="fa-solid fa-feather-pointed coloreado"></i>
+                                <i class="fa-solid fa-feather-pointed coloreado"></i>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="cont-linea-oculta">
+                                <button type="button" class="btn-comentar" id="icono-comentarios">
+                                    <span class="span-boton">
+                                        <i class="fa-solid fa-comment-medical fa-2x"></i>
+                                    </span>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- Fila hija - oculta -->
+                    <tr class="fila-hija contenido-002 oculta">
+                        <td>
+                            <div class="cont-linea-oculta">
+                                <p>Misery</p>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="cont-linea-oculta">
+                                <p>Stephen King</p>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="cont-linea-oculta">
+                                <span>&#8353;</span>
+                                <p>14.000.00</p>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="cont-linea-oculta">
+                                <p>Calificación:</p>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="cont-linea-oculta">
+                                <i class="fa-solid fa-feather-pointed coloreado"></i>
+                                <i class="fa-solid fa-feather-pointed coloreado"></i>
                                 <i class="fa-solid fa-feather-pointed"></i>
                                 <i class="fa-solid fa-feather-pointed"></i>
                                 <i class="fa-solid fa-feather-pointed"></i>
@@ -200,6 +313,7 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://kit.fontawesome.com/3269682608.js" crossorigin="anonymous"></script>
+    <script src="../js/historial_compra.js"></script>
 </body>
 
 </html>
