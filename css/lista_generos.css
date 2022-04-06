@@ -94,3 +94,10 @@ tr:nth-child(even) a {
 tr:nth-child(even) a:hover {
     color: #FFFFFF;
 }
+
+
+/* Estilos de validacion */
+
+.lista-generos-incompleto {
+    border: 3px solid #ad3049 !important;
+}

@@ -144,3 +144,17 @@ button:hover[type="button"] {
 .parametros-ingresar-label {
     width: 220px;
 }
+
+
+/* Estilos de validacion */
+
+.parametros-incompleto {
+    border: 3px solid #ad3049;
+    color: #ad3049;
+    font-weight: bold;
+}
+
+.parametros-incompleto::placeholder {
+    color: #ad3049;
+    font-weight: bold;
+}

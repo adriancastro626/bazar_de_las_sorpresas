@@ -4,15 +4,19 @@ const listaGenerosIngresar = document.querySelector('#btn-ingresar');
 const listagenerosEliminar = document.querySelector('.lista-generos-tabla-eliminar');
 const listagenerosModificar = document.querySelector('.lista-generos-tabla-modificar');
 
+
 // Función de evento para ingresar géneros
 listaGenerosIngresar.addEventListener('click', () => {
 
     if (listaGenerosNuevo.value == "") {
+        listaGenerosNuevo.classList.add('lista-generos-incompleto');
         Swal.fire({
             'icon': 'error',
             'title': 'Por favor indique el género que desea ingresar',
         });
     } else {
+        listaGenerosNuevo.classList.remove('lista-generos-incompleto');
+
         // Impresión de los resultados
         console.log('Se ingresó el género', listaGenerosNuevo.value);
         Swal.fire({
@@ -21,6 +25,7 @@ listaGenerosIngresar.addEventListener('click', () => {
         }).then(() => {
             listaGenerosCompleto.reset();
         });
+
     }
 });
 
@@ -35,7 +40,8 @@ listagenerosEliminar.addEventListener('click', () => {
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
-        confirmButtonText: 'Si, eliminar'
+        confirmButtonText: 'Si, eliminar',
+        cancelButtonText: 'Cancelar',
     }).then((result) => {
         if (result.isConfirmed) {
             Swal.fire(
