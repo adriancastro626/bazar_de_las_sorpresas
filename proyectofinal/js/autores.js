@@ -21,7 +21,6 @@ let listaAutores = [{
     'Biografia': 'aqui va la biografía',
 }]; // json se sacan con alt 91, cada valor tiene una posición e iniciaen 0;
 
-
-for (let i = 0; i < listaAutores.length; i++) {
-    console.log(listaAutores[i]);
-}
+listaAutores.forEach(autor => {
+    console.log(autor.nombre);
+});

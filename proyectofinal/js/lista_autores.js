@@ -13,7 +13,7 @@ document.getElementById("btn-editar-autor").addEventListener('click', () => {
 document.getElementById("btn-eliminar-autor").addEventListener('click', () => {
     Swal.fire({
         'icon': 'warning',
-        'title': 'El usuario se ha eliminado',
+        'title': '¿Seguro que desea eliminar registro?',
         'text': 'Esta acción no se puede deshacer'
     });
 });
@@ -79,6 +79,12 @@ const mostrarDatos = () => {
     fila9.insertCell().innerText = "Colombia";
     fila9.insertCell().innerText = "6 de marzo 1927";
     fila9.insertCell().innerText = "17 de abril 2014";
+    let fila10 = cuerpoTabla.insertRow(); // CREO LA FILA
+    fila10.insertCell().innerText = "Gabriel";
+    fila10.insertCell().innerText = "García Marquez";
+    fila10.insertCell().innerText = "Colombia";
+    fila10.insertCell().innerText = "6 de marzo 1927";
+    fila10.insertCell().innerText = "17 de abril 2014";
 
 
 };

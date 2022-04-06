@@ -1,6 +1,8 @@
                 #sct-autores {
                     display: flex;
                     flex-direction: column;
+                    font-family: 'Asap', sans-serif;
+                    margin: 12%;
                 }
                 
                 .titulo {
@@ -14,4 +16,5 @@
                 
                 th {
                     text-align: left;
+                    font-family: 'Asap', sans-serif;
                 }
