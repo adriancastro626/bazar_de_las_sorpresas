@@ -75,8 +75,8 @@ p span {
 
 .equipo-arriba2 {
     display: flex;
-    margin-top: 60px;
     margin-bottom: 60px;
+    margin-top: 60px;
 }
 
 .equipo-nosotros-separador {
@@ -96,7 +96,7 @@ p span {
 }
 
 
-/*estilos del Modal Nosotros*/
+/*Estilos del Modal Nosotros*/
 
 h2 {
     font-size: 38px;
@@ -104,81 +104,15 @@ h2 {
     margin-bottom: 30px;
 }
 
-#adolfo {
-    background-color: #000105;
-    color: #fff;
-    position: fixed;
-    top: 0;
-    left: -100vw;
-    width: 100vw;
-    height: 100vh;
-    transition: all .5s;
-}
-
-#adolfo:target {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    left: 0;
-}
-
-#stephanie {
-    background-color: #000105;
-    color: #fff;
-    position: fixed;
-    top: 0;
-    left: -100vw;
-    width: 100vw;
-    height: 100vh;
-    transition: all .5s;
-}
-
-#stephanie:target {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    left: 0;
-}
-
-#adrian {
-    background-color: #000105;
-    color: #fff;
-    position: fixed;
-    top: 0;
-    left: -100vw;
-    width: 100vw;
-    height: 100vh;
-    transition: all .5s;
-}
-
-#adrian:target {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    left: 0;
-}
-
-#alejandro {
-    background-color: #000105;
-    color: #fff;
-    position: fixed;
-    top: 0;
-    left: -100vw;
-    width: 100vw;
-    height: 100vh;
-    transition: all .5s;
-}
-
-#alejandro:target {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    left: 0;
-}
-
+#adolfo,
+#stephanie,
+#adrian,
+#alejandro,
 #amanda {
-    background-color: #000105;
+    background-color: #6D6875;
     color: #fff;
+    display: flex;
+    flex-direction: column;
     position: fixed;
     top: 0;
     left: -100vw;
@@ -187,23 +121,42 @@ h2 {
     transition: all .5s;
 }
 
+#adolfo:target,
+#stephanie:target,
+#adrian:target,
+#alejandro:target,
 #amanda:target {
-    display: flex;
     align-items: center;
+    display: flex;
     justify-content: center;
     left: 0;
+}
+
+#adolfo img,
+#stephanie img,
+#adrian img,
+#alejandro img,
+#amanda img {
+    background-color: #fff;
+    border: 2px solid #FFB4A2;
+    border-radius: 6px;
+    box-shadow: 4px 4px 4px #FFB4A2;
+    padding: 30px;
+    margin-bottom: 30px;
+    width: 300px;
 }
 
 .equipo-nosotros-cerrar {
+    background-color: #FFB4A2;
+    color: #000105;
     display: flex;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 20px;
     position: absolute;
     top: 2px;
     right: 20px;
-    padding: 20px;
-    background-color: #FFB4A2;
-    color: #000105;
     text-decoration: none;
-    font-size: 20px;
 }
 
 .equipo-nosotros-parrafo {
