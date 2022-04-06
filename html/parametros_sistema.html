@@ -25,7 +25,7 @@
                     <a href="inicio_sesion.html"><i class="fa-solid fa-lock" title="Icono para cerrar sesión en la cuenta"></i></a>
                 </div>
                 <div class="menu-lateral-arriba-2">
-                    <img class="menu-lateral-foto-perfil" src="../img/foto-perfil.png" alt="Foto de Perfil del Usuario">
+                    <img class="menu-lateral-foto-perfil" src="../imgs/foto-perfil.png" alt="Foto de Perfil del Usuario">
                     <p class="menu-lateral-nombre-usuario">John Doe</p>
                     <p class="menu-lateral-email-usuario">johndoe@mitienda.com</p>
                 </div>
@@ -108,17 +108,28 @@
                 <div class="parametros-borde">
                     <h2>Ingresar Nueva Promoción</h2>
 
-                    <form class="parametros-ingresar" id="parametros-promocion">
+                    <form id="parametros-promocion">
 
-                        <div>
-                            <label for="txt-nombre-promo">Nombre de la promoción</label>
-                            <input type="text" class="txt-nombre-promo" id="txt-nombre-promo" name="txt-nombre-promo" placeholder="Introduzca el nombre de la promoción">
+                        <div class="parametros-ingresar-inputs">
+                            <div class="parametros-ingresar-inputs-todo">
+                                <div class="parametros-ingresar-label">
+                                    <label for="txt-nombre-promo">Nombre de la promoción</label>
+                                </div>
+                                <div>
+                                    <input type="text" class="txt-nombre-promo" id="txt-nombre-promo" name="txt-nombre-promo" placeholder="Introduzca el nombre de la promoción">
+                                </div>
+                            </div>
+
+                            <div class="parametros-ingresar-inputs-todo">
+                                <div class="parametros-ingresar-label">
+                                    <label for="number-porcentaje-promo">Porcentaje</label>
+                                </div>
+                                <div>
+                                    <input type="number" class="number-porcentaje-promo" id="number-porcentaje-promo" name="number-porcentaje-promo" placeholder="%">
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            <label for="number-porcentaje-promo">Porcentaje</label>
-                            <input type="number" class="number-porcentaje-promo" id="number-porcentaje-promo" name="number-porcentaje-promo" placeholder="%">
-                        </div>
-                        <div>
+                        <div class="parametros-boton">
                             <button type="button" id="btn-descuento" class="btn-descuento" name="btn-descuento">Agregar descuento</button>
                         </div>
 
@@ -130,28 +141,45 @@
                 <div class="parametros-borde">
                     <h2>Descuento Libro Fan</h2>
 
-                    <form class="parametros-ingresar" id="parametros-fan">
+                    <form id="parametros-fan">
 
-                        <div>
+                        <div class="parametros-ingresar-inputs">
+
                             <div>
-                                <p>Porcentaje de descuento actual: 15%</p>
+                                <div class="parametros-ingresar-inputs-todo">
+                                    <p>Porcentaje de descuento actual: 15%</p>
+                                </div>
+
+                                <div class="parametros-ingresar-inputs-todo">
+                                    <div class="parametros-ingresar-label">
+                                        <label for="number-porcentaje-fan">Porcentaje de descuento</label>
+                                    </div>
+
+                                    <div>
+                                        <input type="number" class="number-porcentaje-fan" id="number-porcentaje-fan" name="number-porcentaje-fan" placeholder="%">
+                                    </div>
+                                </div>
                             </div>
+
                             <div>
-                                <label for="number-porcentaje-fan">Porcentaje de descuento</label>
-                                <input type="number" class="number-porcentaje-fan" id="number-porcentaje-fan" name="number-porcentaje-fan" placeholder="%">
+                                <div class="parametros-ingresar-inputs-todo">
+                                    <p>Monto mínimo de compras actual: ¢10,000.00</p>
+                                </div>
+
+                                <div class="parametros-ingresar-inputs-todo">
+                                    <div class="parametros-ingresar-label">
+                                        <label for="number-compras-fan">Monto mínimo de compras</label>
+                                    </div>
+
+                                    <div>
+                                        <input type="number" class="number-compras-fan" id="number-compras-fan" name="number-compras-fan" placeholder="Monto">
+                                    </div>
+                                </div>
                             </div>
+
                         </div>
 
-                        <div>
-                            <div>
-                                <p>Monto mínimo de compras actual: ¢10,000.00</p>
-                            </div>
-                            <div>
-                                <label for="number-compras-fan">Monto mínimo de compras</label>
-                                <input type="number" class="number-compras-fan" id="number-compras-fan" name="number-compras-fan" placeholder="Monto">
-                            </div>
-                        </div>
-                        <div>
+                        <div class="parametros-boton">
                             <button type="button" id="btn-fan" class="btn-fan" name="btn-fan">Cambiar descuento</button>
                         </div>
 
@@ -163,18 +191,25 @@
                 <div class="parametros-borde">
                     <h2>Tasa de impuesto</h2>
 
-                    <form class="parametros-ingresar parametros-ingresar-imp" id="parametros-imp">
+                    <form id="parametros-imp">
 
-                        <div>
-                            <div>
-                                <p>Tasa de impuesto actual: 5%</p>
-                            </div>
-                            <div>
+                        <div class="parametros-ingresar-inputs-todo">
+                            <p>Tasa de impuesto actual: 5%</p>
+                        </div>
+
+
+                        <div class="parametros-ingresar-inputs-todo">
+                            <div class="parametros-ingresar-label">
                                 <label for="number-imp">Nueva tasa de impuesto</label>
+                            </div>
+
+                            <div>
                                 <input type="number" class="number-imp" id="number-imp" name="number-imp" placeholder="%">
                             </div>
                         </div>
-                        <div>
+
+
+                        <div class="parametros-boton">
                             <button type="button" id="btn-imp" class="btn-imp" name="btn-imp">Cambiar impuesto</button>
                         </div>
 
@@ -186,18 +221,23 @@
                 <div class="parametros-borde">
                     <h2>Correo para facturas</h2>
 
-                    <form class="parametros-ingresar parametros-ingresar-correo" id="parametros-correo">
+                    <form id="parametros-correo">
 
-                        <div>
-                            <div>
-                                <p>Correo electrónico actual: facturas@librofan.com</p>
-                            </div>
-                            <div>
+                        <div class="parametros-ingresar-inputs-todo">
+                            <p>Correo electrónico actual: facturas@librofan.com</p>
+                        </div>
+
+                        <div class="parametros-ingresar-inputs-todo">
+                            <div class="parametros-ingresar-label">
                                 <label for="email-nuevo-correo">Nuevo correo electrónico</label>
+                            </div>
+
+                            <div>
                                 <input type="email" class="email-nuevo-correo" id="email-nuevo-correo" name="email-nuevo-correo" placeholder="Introduzca el correo electrónico">
                             </div>
                         </div>
-                        <div>
+
+                        <div class="parametros-boton">
                             <button type="button" id="btn-correo" class="btn-correo" name="btn-correo">Cambiar correo</button>
                         </div>
 

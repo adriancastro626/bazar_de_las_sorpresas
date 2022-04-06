@@ -1,0 +1,213 @@
+/* Contenidos de información general */
+
+p span {
+    font-size: 22px;
+    line-height: 34px;
+}
+
+.equipo-nosotros-titulo {
+    text-align: center;
+}
+
+.equipo-nosotros {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 100px;
+    width: 100%;
+}
+
+.equipo-arriba1-img {
+    height: 280px;
+    width: 50%;
+}
+
+.equipo-arriba2-img {
+    margin-right: 60px;
+    width: 40%;
+}
+
+.equipo-arriba1-img1 {
+    width: 520px;
+}
+
+.equipo-arriba2-img2 {
+    width: 300px;
+}
+
+.equipo-nosotros-miembro {
+    background-color: #FFB4A2;
+    border-radius: 6px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 40px;
+    padding: 30px 20px;
+    transition: 0.4s;
+    width: 26%;
+}
+
+.equipo-nosotros-miembro:hover {
+    background-color: #6D6875;
+}
+
+.equipo-nosotros-miembro:hover span {
+    color: #ffffff;
+}
+
+.equipo-nosotros-miembro p {
+    font-size: 20px;
+    line-height: 40px;
+    margin-top: 20px;
+}
+
+.equipo-nosotros-miembro img {
+    width: 200px;
+}
+
+.equipo-nosotros-miembro span {
+    color: #6D6875;
+    font-size: 18px;
+}
+
+.equipo-arriba1 {
+    display: flex;
+}
+
+.equipo-arriba2 {
+    display: flex;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.equipo-nosotros-separador {
+    width: 5%;
+}
+
+.equipo-arriba-txt1 {
+    padding-right: 60px;
+    text-align: justify;
+    width: 50%;
+}
+
+.equipo-arriba-txt2 {
+    margin-bottom: 30px;
+    padding-top: 60px;
+    text-align: justify;
+}
+
+
+/*estilos del Modal Nosotros*/
+
+h2 {
+    font-size: 38px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+#adolfo {
+    background-color: #000105;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    width: 100vw;
+    height: 100vh;
+    transition: all .5s;
+}
+
+#adolfo:target {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+}
+
+#stephanie {
+    background-color: #000105;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    width: 100vw;
+    height: 100vh;
+    transition: all .5s;
+}
+
+#stephanie:target {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+}
+
+#adrian {
+    background-color: #000105;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    width: 100vw;
+    height: 100vh;
+    transition: all .5s;
+}
+
+#adrian:target {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+}
+
+#alejandro {
+    background-color: #000105;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    width: 100vw;
+    height: 100vh;
+    transition: all .5s;
+}
+
+#alejandro:target {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+}
+
+#amanda {
+    background-color: #000105;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    width: 100vw;
+    height: 100vh;
+    transition: all .5s;
+}
+
+#amanda:target {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+}
+
+.equipo-nosotros-cerrar {
+    display: flex;
+    position: absolute;
+    top: 2px;
+    right: 20px;
+    padding: 20px;
+    background-color: #FFB4A2;
+    color: #000105;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.equipo-nosotros-parrafo {
+    font-weight: 500;
+    text-align: justify;
+    width: 36%;
+}
