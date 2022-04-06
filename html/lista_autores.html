@@ -1,44 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/estilos_general.css">
+    <script src="https://kit.fontawesome.com/0db8cde7c4.js" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="../css/lista_autores.css">
+    <title>Registro Autor</title>
+
+
 </head>
 
 <body>
-    <section id="sct-autores">
-        <div class="titulo">Lista de Autores</div>
-        <table id="tbl-libros">
-            <thead>
-                <tr>
-                    <th>Nombre</th>
-                    <th>Apellido</th>
-                    <th>Nacionalidad</th>
-                    <th>Fecha Nacimiento</th>
-                    <th>Fecha Defunción</th>
+    <div class="pagina-con-menu-lateral">
 
+        <!-- Menú lateral -->
+        <div class="menu-lateral">
 
-                </tr>
-            </thead>
-            <tbody>
+            <!-- Primera sección del menú lateral -->
+            <div class="menu-lateral-arriba">
+                <div class="menu-lateral-arriba-1">
+                    <a href="pagina_principal.html"><i class="fa-solid fa-house" title="Icono para ir a la página principal"></i></a>
+                    <a href="inicio_sesion.html"><i class="fa-solid fa-lock" title="Icono para cerrar sesión en la cuenta"></i></a>
+                </div>
+                <div class="menu-lateral-arriba-2">
+                    <img class="menu-lateral-foto-perfil" src="../imgs/foto-perfil.png" alt="Foto de Perfil del Usuario">
+                    <p class="menu-lateral-nombre-usuario">John Doe</p>
+                    <p class="menu-lateral-email-usuario">johndoe@mitienda.com</p>
+                </div>
+            </div>
 
-            </tbody>
+            <!-- Segunda sección del menú lateral -->
+            <div class="menu-lateral-form">
 
-        </table>
-        <div class="botones">
-            <button type="button" id="btn-agregar-autor">Agregar</button>
-            <button type="button" id="btn-editar-autor">Editar</button>
-            <button type="button" id="btn-eliminar-autor">Eliminar</button>
+                <!-- Primera lista -->
+                <h2>Cuentas</h2>
+                <nav>
+                    <ul>
+                        <li><i class="fa-solid fa-user"></i><a href="pagina_sesion_iniciada.html">Perfil</a></li>
+                        <li><i class="fa-solid fa-receipt"></i><a href="historial_compra.html">Historial de compras</a></li>
+                        <li><i class="fa-solid fa-users"></i><a href="edicion_usuarios.html">Usuarios</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Segunda lista -->
+                <h2>Tienda</h2>
+                <nav>
+                    <ul id="menu-lateral-form">
+                        <li><i class="fa-solid fa-tag"></i><a href="parametros_sistema.html">Parámetros del sistema</a></li>
+                        <li class="transicion"><i class="fa-solid fa-book-open"></i><a href="#">Catálogo</a>
+                            <ul class="menu-lateral-submenu">
+                                <li><a href="lista_libros.html">Libros</a></li>
+                                <li><a href="lista_autores.html">Autores</a></li>
+                                <li><a href="lista_generos.html">Géneros literarios</a></li>
+                            </ul>
+                        </li>
+                        <li><i class="fa-solid fa-newspaper"></i><a href="#">Reportes</a>
+                            <ul class="menu-lateral-submenu">
+                                <li><a href="reportes_top10.html">Top 10</a></li>
+                                <li><a href="reportes_desglose_ventas.html">Ventas</a></li>
+                                <li><a href="reportes_descuentos.html">Descuentos</a></li>
+                                <li><a href="reportes_socios_comerciales.html">Socios comerciales</a></li>
+                            </ul>
+                        </li>
+                        <li><i class="fa-solid fa-store"></i><a href="lista_socios.html">Socios comerciales</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
 
-    </section>
+        <!-- Contenido de la página -->
+        <div class="pagina-contenido">
+            <section id="sct-autores">
+                <div class="titulo">Lista de Autores</div>
+                <table id="tbl-libros">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Nacionalidad</th>
+                            <th>Fecha Nacimiento</th>
+                            <th>Fecha Defunción</th>
+
+
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+
+                </table>
+                <div class="botones">
+                    <button type="button" id="btn-agregar-autor">Agregar</button>
+                    <button type="button" id="btn-editar-autor">Editar</button>
+                    <button type="button" id="btn-eliminar-autor">Eliminar</button>
+                </div>
+
+            </section>
+        </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../js/autores.js"></script>
     <script src="../js/lista_autores.js"></script>
+
 </body>
 
 </html>
