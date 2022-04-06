@@ -5,6 +5,22 @@ document.getElementById("btn-agregar-autor").addEventListener('click', () => {
 
 });
 
+document.getElementById("btn-editar-autor").addEventListener('click', () => {
+    window.location.href = "registro_autor.html";
+
+});
+
+document.getElementById("btn-eliminar-autor").addEventListener('click', () => {
+    Swal.fire({
+        'icon': 'warning',
+        'title': 'El usuario se ha eliminado',
+        'text': 'Esta acción no se puede deshacer'
+    });
+});
+
+
+
+
 const mostrarDatos = () => {
     cuerpoTabla.innerHTML = '';
     let fila = cuerpoTabla.insertRow(); // CREO LA FILA
@@ -14,6 +30,7 @@ const mostrarDatos = () => {
     fila.insertCell().innerText = "Colombia";
     fila.insertCell().innerText = "6 de marzo 1927";
     fila.insertCell().innerText = "17 de abril 2014";
+
     let fila2 = cuerpoTabla.insertRow(); // CREO LA FILA
     fila2.insertCell().innerText = "Gabriel";
     fila2.insertCell().innerText = "García Marquez";
