@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/estilos_general.css">
     <link rel="stylesheet" href="../css/lista_libros.css">
+    <link rel="stylesheet" href="../css/footer.css">
     <script src="https://kit.fontawesome.com/0db8cde7c4.js" crossorigin="anonymous"></script>
     <title>Lista de Libros</title>
 </head>
@@ -38,9 +39,9 @@
                 <h2>Cuentas</h2>
                 <nav>
                     <ul>
-                        <li><i class="fa-solid fa-user"></i><a href="pagina_sesion_iniciada.html">Perfil</a></li>
+                        <li><i class="fa-solid fa-user"></i><a href="editar_perfil.html">Perfil</a></li>
                         <li><i class="fa-solid fa-receipt"></i><a href="historial_compra.html">Historial de compras</a></li>
-                        <li><i class="fa-solid fa-users"></i><a href="edicion_usuarios.html">Usuarios</a></li>
+                        <li><i class="fa-solid fa-users"></i><a href="lista_usuarios.html">Usuarios</a></li>
                     </ul>
                 </nav>
 
@@ -91,9 +92,16 @@
                     <div>
                         <input type="checkbox" id="libro1" name="libro" class="titulos-libros">
                         <div class="plus">+</div>
-                        <label for="libro1" class="titulo">
-                        Sapiens. De animales a dioses <a href="#" class="editar-libro">Editar</a><a href="#" class="borrar-libro">Eliminar</a>
-                    </label>
+
+                        <!-- Cambio a iconos -->
+                        <label for="libro1" class="lista-libros-acordeon-titulo">
+                        Sapiens. De animales a dioses 
+                        <a href="#" class="editar-libro"><i class="fa-solid fa-pen-to-square fa-2x"></i></a>
+                        <a href="#" class="borrar-libro"><i class="fa-solid fa-trash-can fe-2x"></i></a>
+                        </label>
+                        <!-- Fin Cambio a iconos -->
+
+
                         <div class="lista-libros-contenido">
                             <table>
                                 <tr>
@@ -125,6 +133,17 @@
                                             capaces de liberar alguna vez nuestra conducta de la herencia del pasado? ¿Podemos hacer algo para influir en los siglos futuros?</p>
                                     </td>
                                 </tr>
+                                <!-- Boton visitar perfil de libro -->
+                                <tr>
+                                    <td class="vacio"></td>
+                                    <td class="vacio"></td>
+                                    <td>
+                                        <div class="lista-libros-enlace">
+                                            <a href="perfil_libro.html">Visitar perfil del libro</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <!-- Fin de Boton visitar perfil de libro -->
                             </table>
                         </div>
                     </div>
@@ -132,9 +151,9 @@
                     <div>
                         <input type="checkbox" id="libro2" name="libro" class="titulos-libros">
                         <div class="plus">+</div>
-                        <label for="libro2" class="titulo">
-                            Desgracia impeorable<a href="#" class="editar-libro">Editar</a><a href="#" class="borrar-libro">Eliminar</a>
-                    </label>
+                        <label for="libro2" class="lista-libros-acordeon-titulo">
+                            Desgracia impeorable<a href="#" class="editar-libro"><i class="fa-solid fa-pen-to-square fa-2x"></i></a><a href="#" class="borrar-libro"><i class="fa-solid fa-trash-can fe-2x"></i></a>
+                        </label>
                         <div class="lista-libros-contenido">
                             <table>
                                 <tr>
@@ -158,7 +177,16 @@
                                         <p>Publicada en 1972, "Desgracia impeorable" ocupa un lugar destacado dentro de obra de Peter Handke (1942), uno de los escritores actuales más importantes, polémicos y populares en lengua alemana. En el libro, escrito
                                             pocas semanas después del suicidio de su madre por una sobredosis de narcóticos, la angustia lleva al autor a profundizar en la memoria y encontrar para sus recuerdos formulaciones adecuadas. Y, en esta prosa
                                             cristalina, el relato preciso de la existencia de la madre (un mero salir adelante en que cobra fuerza la voluntad por dejar de ser «una» para convertirse en «ella»), construido sobre un recuerdo vivido intensamente,
-                                            se transforma en un ajuste de cuentas con la realidad, así como en una lúcida reflexión sobre la tarea del escritor.</p>
+                                            se transforma en un ajuste de cuentas con la realidad, así como en una lúcida reflexión sobre la tarea del escritor.<br>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="vacio"></td>
+                                    <td class="vacio"></td>
+                                    <td>
+                                        <div class="lista-libros-enlace">
+                                            <a href="#">Visitar perfil del libro</a>
+                                        </div>
                                     </td>
                                 </tr>
                             </table>
@@ -168,9 +196,9 @@
                     <div>
                         <input type="checkbox" id="libro3" name="libro" class="titulos-libros">
                         <div class="plus">+</div>
-                        <label for="libro3" class="titulo">
-                        Sonetos del amor oscuro<a href="#" class="editar-libro">Editar</a><a href="#" class="borrar-libro">Eliminar</a>
-                    </label>
+                        <label for="libro3" class="lista-libros-acordeon-titulo">
+                        Sonetos del amor oscuro<a href="#" class="editar-libro"><i class="fa-solid fa-pen-to-square fa-2x"></i></a><a href="#" class="borrar-libro"><i class="fa-solid fa-trash-can fe-2x"></i></a>
+                        </label>
                         <div class="lista-libros-contenido">
                             <table>
                                 <tr>
@@ -196,6 +224,15 @@
                                             verdadero motor creativo de estos sonetos.</p>
                                     </td>
                                 </tr>
+                                <tr>
+                                    <td class="vacio"></td>
+                                    <td class="vacio"></td>
+                                    <td>
+                                        <div class="lista-libros-enlace">
+                                            <a href="#">Visitar perfil del libro</a>
+                                        </div>
+                                    </td>
+                                </tr>
                             </table>
                         </div>
                     </div>
@@ -203,9 +240,9 @@
                     <div>
                         <input type="checkbox" id="libro4" name="libro" class="titulos-libros">
                         <div class="plus">+</div>
-                        <label for="libro4" class="titulo">
-                        Cocori<a href="#" class="editar-libro">Editar</a><a href="#" class="borrar-libro">Eliminar</a>
-                    </label>
+                        <label for="libro4" class="lista-libros-acordeon-titulo">
+                        Cocori<a href="#" class="editar-libro"><i class="fa-solid fa-pen-to-square fa-2x"></i></a><a href="#" class="borrar-libro"><i class="fa-solid fa-trash-can fe-2x"></i></a>
+                        </label>
                         <div class="lista-libros-contenido">
                             <table>
                                 <tr>
@@ -233,6 +270,15 @@
                                             se ha oscurecido, pues nunca ha visto personas que no sean de tez blanca. </p>
                                     </td>
                                 </tr>
+                                <tr>
+                                    <td class="vacio"></td>
+                                    <td class="vacio"></td>
+                                    <td>
+                                        <div class="lista-libros-enlace">
+                                            <a href="#">Visitar perfil del libro</a>
+                                        </div>
+                                    </td>
+                                </tr>
                             </table>
                         </div>
                     </div>
@@ -240,9 +286,9 @@
                     <div>
                         <input type="checkbox" id="libro5" name="libro" class="titulos-libros">
                         <div class="plus">+</div>
-                        <label for="libro5" class="titulo">
-                        Asesinato en el Orient Express<a href="#" class="editar-libro">Editar</a><a href="#" class="borrar-libro">Eliminar</a>
-                    </label>
+                        <label for="libro5" class="lista-libros-acordeon-titulo">
+                        Asesinato en el Orient Express<a href="#" class="editar-libro"><i class="fa-solid fa-pen-to-square fa-2x"></i></a><a href="#" class="borrar-libro"><i class="fa-solid fa-trash-can fe-2x"></i></a>
+                        </label>
                         <div class="lista-libros-contenido">
                             <table>
                                 <tr>
@@ -268,6 +314,15 @@
                                             trasluce un móvil concreto. Poirot aprovechará la situación para indagar entre los ocupantes del vagón, que a todas luces deberían ser los únicos posibles autores del crimen.</p>
                                     </td>
                                 </tr>
+                                <tr>
+                                    <td class="vacio"></td>
+                                    <td class="vacio"></td>
+                                    <td>
+                                        <div class="lista-libros-enlace">
+                                            <a href="#">Visitar perfil del libro</a>
+                                        </div>
+                                    </td>
+                                </tr>
                             </table>
                         </div>
                     </div>
@@ -277,6 +332,44 @@
             </div>
         </div>
     </div>
+
+    <div>
+        <footer>
+            <div class="footerParent">
+                <div class="footerChildUno">
+                    <h4>Quiénes Somos</h4>
+                    <div>
+                        <a href="pagina_producto.html">
+                            <p href="/nosotros.html">El Bazar de las Sorpresas</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="pagina_equipo.html">
+                            <p>Rasmus</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="footerChildDos">
+                    <h4>Mi Perfil</h4>
+                    <div>
+                        <a href="editar_perfil.html">
+                            <p>Perfil</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="/html/carrito_compras.html">
+                            <p>Carrito</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="footerChildTres">
+                    <h4>Contáctenos</h4>
+                    <p type="text ">Correo Electrónico</p>
+                    <p type="text ">contactanes@elbazardelassorpresas.com</p>
+                    <p href="text ">Teléfono 800-bazar</p>
+                </div>
+            </div>
+        </footer>
     </div>
 
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>

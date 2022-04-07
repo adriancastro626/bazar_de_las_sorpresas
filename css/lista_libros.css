@@ -27,20 +27,10 @@ form {
 }
 
 
-/*Estilos lista arriba*/
+/* Botones (incluye visitar perfil de libro) */
 
-.lista-libros-titulo {
-    margin-top: 60px;
-    margin-bottom: 20px;
-}
-
-.lista-libros-arriba {
-    align-items: flex-end;
-    display: flex;
-    justify-content: space-between;
-}
-
-.lista-libros-arriba a {
+.lista-libros-arriba a,
+.lista-libros-enlace a {
     background-color: #FFB4A2;
     border: none;
     border-radius: 6px;
@@ -55,6 +45,28 @@ form {
 .lista-libros-arriba a:hover {
     background-color: #fed7ce;
     color: #000105;
+}
+
+.lista-libros-enlace a:hover {
+    background-color: #58565d;
+    color: #ffffff;
+}
+
+
+/* Fin de Botones (incluye visitar perfil de libro) */
+
+
+/*Estilos lista arriba*/
+
+.lista-libros-titulo {
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+.lista-libros-arriba {
+    align-items: flex-end;
+    display: flex;
+    justify-content: space-between;
 }
 
 
@@ -85,6 +97,12 @@ tr {
     text-align: justify;
 }
 
+.lista-libros-enlace {
+    padding: 10px 0 20px 0;
+    text-decoration: none;
+    text-align: end;
+}
+
 
 /*Estilos de Acordeón*/
 
@@ -94,7 +112,7 @@ tr {
     width: 1100px;
 }
 
-.titulo {
+.lista-libros-acordeon-titulo {
     background: #6D6875;
     color: #FFCDB2;
     cursor: pointer;
@@ -102,7 +120,7 @@ tr {
     font-size: 18px;
     font-weight: bold;
     margin: 0;
-    padding: 10px 10px 10px 50px;
+    padding: 15px 10px 15px 50px;
     position: relative;
     width: 93%;
 }
@@ -124,6 +142,7 @@ tr {
 .titulos-libros:checked~.lista-libros-contenido {
     height: auto;
     opacity: 1;
+    z-index: 2;
 }
 
 .plus {
@@ -132,6 +151,7 @@ tr {
     font-size: 30px;
     line-height: 100%;
     margin-left: 10px;
+    padding-top: 6px;
     position: absolute;
     transition: .3s ease;
     z-index: 5;
@@ -156,19 +176,28 @@ tr {
     display: none;
 }
 
+
+/* Cambio a iconos */
+
 .editar-libro {
     color: #FFFFFF;
-    left: 84%;
+    left: 80%;
     position: absolute;
+    top: 15%;
 }
 
 .borrar-libro {
     color: #FFFFFF;
     left: 90%;
+    font-size: 30px;
     position: absolute;
+    top: 20%;
 }
 
 .editar-libro:hover,
 .borrar-libro:hover {
     color: #FFB4A2
 }
+
+
+/* Fin Cambio a iconos */

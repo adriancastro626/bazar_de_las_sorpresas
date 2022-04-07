@@ -95,6 +95,15 @@ p span {
     text-align: justify;
 }
 
+.foto-nosotros {
+    border-radius: 50%;
+}
+
+.foto-nosotros:hover {
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
 
 /*Estilos del Modal Nosotros*/
 
@@ -141,7 +150,7 @@ h2 {
     border: 2px solid #FFB4A2;
     border-radius: 6px;
     box-shadow: 4px 4px 4px #FFB4A2;
-    padding: 30px;
+    padding: 6px;
     margin-bottom: 30px;
     width: 300px;
 }
