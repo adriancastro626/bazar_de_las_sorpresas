@@ -28,6 +28,7 @@ const paginaSiguiente = () => {
     } else {
         navegar = 'metodo_envio_retiro.html';
     }
+    localStorage.setItem('metodoEnvio', navegar);
     return navegar;
 };
 

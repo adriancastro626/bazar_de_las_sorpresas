@@ -39,21 +39,18 @@ const definirNombreMetodo = (numeroTarjeta) => {
 mostrarMetodos();
 
 btnAtras.addEventListener('click', () => {
-    // PLACEHOLDER
-    // window.location.href = 'registro_metodo_pago.html'
-    Swal.fire({
-        'icon': 'info',
-        'title': 'Regresando a la página anterior',
-        'text': 'Ha presionado el botón Atrás.'
-    });
+    // window.location.href = localStorage.getItem('metodoEnvio');
+    // console.log(localStorage.getItem('metodoEnvio'));
+    window.location.href = 'metodo_envio_domicilio.html';
 });
 
 btnContinuar.addEventListener('click', () => {
-    // PLACEHOLDER
-    // window.location.href = 'seleccion_metodo_pago.html'
     Swal.fire({
         'icon': 'success',
-        'title': 'Continuar con la compra',
-        'text': 'Ha presionado el botón Continuar.'
+        'title': 'Compra exitosa !!!',
+        'text': 'Se ha efectuado la compra con éxito.'
+    }).then(() => {
+        window.open('factura.html', '_blank');
+        window.location.href = 'pagina_principal.html';
     });
 });
