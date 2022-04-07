@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/estilos_general.css">
     <script src="https://kit.fontawesome.com/0db8cde7c4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/footer.css">
 
     <link rel="stylesheet" href="../css/lista_autores.css">
     <title>Registro Autor</title>
@@ -75,6 +76,7 @@
 
         <!-- Contenido de la página -->
         <div class="pagina-contenido">
+            <button type="button" id="btn-agregar-autor">Agregar</button>
             <section id="sct-autores">
                 <div class="titulo">Lista de Autores</div>
                 <table id="tbl-libros">
@@ -85,6 +87,9 @@
                             <th>Nacionalidad</th>
                             <th>Fecha Nacimiento</th>
                             <th>Fecha Defunción</th>
+                            <th>Biografia</th>
+                            <th>Editar</th>
+                            <th>Eliminar</th>
 
 
                         </tr>
@@ -94,18 +99,55 @@
                     </tbody>
 
                 </table>
-                <div class="botones">
-                    <button type="button" id="btn-agregar-autor">Agregar</button>
-                    <button type="button" id="btn-editar-autor">Editar</button>
-                    <button type="button" id="btn-eliminar-autor">Eliminar</button>
-                </div>
+
 
             </section>
         </div>
     </div>
+
+    <div>
+        <footer>
+            <div class="footerParent">
+                <div class="footerChildUno">
+                    <h4>Quiénes Somos</h4>
+                    <div>
+                        <a href="pagina_producto.html">
+                            <p href="/nosotros.html">El Bazar de las Sorpresas</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="pagina_equipo.html">
+                            <p>Rasmus</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="footerChildDos">
+                    <h4>Mi Perfil</h4>
+                    <div>
+                        <a href="editar_perfil.html">
+                            <p>Perfil</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="/html/carrito_compras.html">
+                            <p>Carrito</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="footerChildTres">
+                    <h4>Contáctenos</h4>
+                    <p type="text ">Correo Electrónico</p>
+                    <p type="text ">contactanes@elbazardelassorpresas.com</p>
+                    <p href="text ">Teléfono 800-bazar</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../js/autores.js"></script>
     <script src="../js/lista_autores.js"></script>
+    <script src="https://kit.fontawesome.com/6247830b8c.js" crossorigin="anonymous"></script>
 
 </body>
 

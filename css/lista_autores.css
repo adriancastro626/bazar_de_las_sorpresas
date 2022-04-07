@@ -5,6 +5,10 @@
                     background-color: #ffcdb2;
                 }
                 
+                .paginacontenido {
+                    justify-content: space-around;
+                }
+                
                 .titulo {
                     font-family: 'Asap', sans-serif;
                     font-size: 25px;
@@ -17,4 +21,23 @@
                 th {
                     text-align: left;
                     font-family: 'Asap', sans-serif;
+                    font-weight: bold;
+                    font-family: 'Asap', sans-serif;
+                    background: #ffcdb2;
+                }
+                
+                .icono-eliminar {
+                    background-color: #fff;
+                    border: #fff;
+                    color: #E5989B;
+                    cursor: pointer;
+                    margin: 0px;
+                }
+                
+                #btn-agregar-autor {
+                    background: #FFB4A2;
+                    color: #6D6875;
+                    height: 40px;
+                    width: 150px;
+                    font-weight: bold;
                 }
