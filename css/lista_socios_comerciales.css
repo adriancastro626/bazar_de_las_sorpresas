@@ -1,0 +1,101 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url(../imgs/fondo-pastel.jpeg);
+}
+
+#titulo {
+    border: 1px solid black;
+    font-weight: bold;
+    text-align: center;
+    font-size: 24px;
+    background: #6d6875;
+    color: #ffcdb2;
+}
+
+.cont-control {
+    border: 1px solid black;
+    text-align: end;
+    background: #ffdbc8;
+}
+
+img {
+    max-width: 200px;
+    padding-left: 25%;
+}
+
+.primer-socio {
+    border: 1px solid black;
+    width: 400px;
+    height: 400px;
+    padding: 10px;
+}
+
+.segundo-socio {
+    border: 1px solid black;
+    width: 400px;
+    height: 400px;
+    padding: 10px;
+}
+
+.tercer-socio {
+    border: 1px solid black;
+    width: 400px;
+    height: 400px;
+    padding: 10px;
+}
+
+.cont-primera-fila {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+h4 {
+    font-size: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+p {
+    text-align: center;
+}
+
+#sct-socio-comercial {
+    border: 1px solid black;
+    width: 1517px;
+}
+
+.btn-oscuro {
+    background: #946C00;
+    color: #ffffff;
+    height: 30px;
+    width: 399px;
+    font-weight: bold;
+    border: 2px solid #946C00;
+}
+
+.btn-oscuro:hover {
+    background: #ddd0ab;
+    border: 2px solid #b4a16c;
+    color: #946C00;
+    cursor: pointer;
+}
+
+.btn-claro {
+    background: #8b0000;
+    color: #ffffff;
+    height: 30px;
+    width: 399px;
+    font-weight: bold;
+    border: 2px solid #8b0000;
+}
+
+.btn-claro:hover {
+    background: #ff9d9d;
+    border: 2px solid #8b0000;
+    color: #8b0000;
+    cursor: pointer;
+}
+
+
+/* btn-editar-socio */
