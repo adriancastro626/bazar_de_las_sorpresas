@@ -12,7 +12,7 @@ const validarCredenciales = () => {
     });
 
     if (ingresoCorrecto == true) {
-        window.location.href = 'homePage.html';
+        window.location.href = 'pagina_principal.html';
     } else {
 
     }

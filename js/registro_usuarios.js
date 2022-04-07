@@ -216,55 +216,16 @@ const validar = () => {
         Swal.fire({
             'icon': 'success',
             'title': 'El usuario ha sido registrado',
-            'text': 'Se enviará un correo electrónico'
+            'text': 'Le damos la bienvenida'
         }).then(() => {
-            window.location.href = 'inicioSesion.html';
+            window.location.href = 'inicio_sesion.html';
         });
     }
 
 };
 
 
-
-
-const imprimir = () => {
-    // let adjunto = inputAdjunto.value; // preguntar como se ve el adjunto y corregir error
-    let nombreUsuario = inputNombre.value;
-    let segundoNombre = inputSegundoNombre.value;
-    let primerApellido = inputPrimerApellido.value;
-    let segundoApellido = inputSegundoApellido.value;
-    let tipoIdentificacion = inputTipoIdentificacion.value;
-    let identificacion = inputIdentificacion.value;
-    let genero = inputGenero.value;
-    let otroGenero = inputOtroGenero.value;
-    let nacimiento = inputNacimiento.value;
-    let generoLiterario = inputGeneroLiterario.value;
-    let correo = inputCorreo.value;
-    let contrasenna = inputContrasenna.value;
-    let autores = inputAutores.value;
-    let direccion = inputDireccion.value;
-
-
-
-    console.log('El nombre del usuario es ', nombreUsuario);
-    console.log('El segundo nombre es ', segundoNombre);
-    console.log('El primer apellido es ', primerApellido)
-    console.log('El segundo apellido es ', segundoApellido);
-    console.log('El tipo de identificacion es ', tipoIdentificacion);
-    console.log('El numero de identificacion es ', identificacion);
-    console.log('El genero del usuario es ', genero);
-    console.log('El otro tipo de genero es ', otroGenero);
-    console.log('La fecha de nacimiento es ', nacimiento);
-    console.log('Los generos literarios favoritos son ', generoLiterario);
-    console.log('El correo electronico es ', correo);
-    console.log('La contraseña es ', contrasenna);
-    console.log('Los autores favoritos son ', autores);
-    console.log('La direccion exacta es ', direccion);
-
-};
-
 btnRegistrar.addEventListener('click', () => {
-    imprimir();
     validar();
 
 });
