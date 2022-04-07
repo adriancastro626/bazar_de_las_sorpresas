@@ -1,0 +1,248 @@
+/* Estilos generales */
+
+h1 {
+    font-size: 38px;
+    font-weight: bold;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.perfil-libro {
+    display: flex;
+}
+
+
+/* Estilos generales columna izquierda */
+
+.perfil-libro-columna-izq {
+    margin-right: 20px;
+    padding-right: 20px;
+    width: 26%;
+}
+
+.perfil-libro-columna-izq h2 {
+    font-size: 18px;
+}
+
+.perfil-libro-columna-izq p {
+    font-size: 16px;
+    padding-bottom: 10px;
+}
+
+
+/* Estilos slider columna izquierda */
+
+.perfil-libro-img {
+    border: 1px solid #fff;
+    height: 372px;
+    overflow: hidden;
+    width: 240px;
+}
+
+.perfil-libro-navegacion {
+    bottom: 5%;
+    display: flex;
+    left: 34.5%;
+    position: relative;
+}
+
+.perfil-libro-navegacion .barra {
+    background-color: #6D6875;
+    border: 2px solid #5f5b65;
+    box-shadow: 2px 2px 6px #888490, -2px -2px 6px #888490;
+    cursor: pointer;
+    height: 5px;
+    margin-left: 8px;
+    width: 10px;
+}
+
+.perfil-libro-navegacion .barra:hover {
+    background-color: azure;
+}
+
+input[type="radio"] {
+    position: absolute;
+    visibility: hidden;
+}
+
+.perfil-libro-slides {
+    display: flex;
+    height: 100%;
+    width: 500%;
+}
+
+.perfil-libro-image-libro {
+    transition: 0.4s ease;
+    width: 20%;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+#perfil-libro-btn1:checked~.perfil-libro-primero {
+    margin-left: 0;
+}
+
+#perfil-libro-btn2:checked~.perfil-libro-primero {
+    margin-left: -20%;
+}
+
+#perfil-libro-btn3:checked~.perfil-libro-primero {
+    margin-left: -40%;
+}
+
+
+/* Estilos información columna izquierda */
+
+.perfil-libro-info {
+    background-color: #FFB4A2;
+    padding: 5px 10px 10px 10px;
+    width: 220px;
+}
+
+
+/* Estilos generales columna derecha */
+
+.perfil-libro-columna-der {
+    width: 74%;
+}
+
+
+/* Estilos venta columna derecha */
+
+.perfil-libro-venta-carrito {
+    margin-top: 18px;
+}
+
+.perfil-libro-venta-carrito a {
+    background-color: #6D6875;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: bolder;
+    padding: 16px 20px;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+.perfil-libro-venta-carrito a:hover {
+    color: #FFB4A2;
+}
+
+.perfil-libro-venta-carrito i {
+    margin-right: 10px;
+}
+
+.perfil-libro-venta-descuento {
+    background-color: #fff0ec;
+    border: 1px solid #FFB4A2;
+    margin-right: 30px;
+    padding: 10px;
+    width: 20%;
+}
+
+.perfil-libro-venta-descuento h2 {
+    font-size: 16px;
+}
+
+.perfil-libro-venta-descuento p {
+    font-size: 16px;
+}
+
+.perfil-libro-venta-precio {
+    border: 1px solid #5f5b65;
+    margin-right: 5px;
+    padding: 10px;
+    width: 20%;
+}
+
+.perfil-libro-venta-precio h2 {
+    font-size: 16px;
+}
+
+.perfil-libro-venta-precio p {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.perfil-libro-venta {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+
+/* Estilos sinopsis columna derecha */
+
+.perfil-libro-sinopsis {
+    text-align: justify;
+}
+
+.perfil-libro-sinopsis p {
+    line-height: 150%;
+    padding: 10px 0 28px 0;
+}
+
+
+/*Estilos opiniones columna derecha*/
+
+.perfil-libro-opiniones-positivas {
+    color: #FFB4A2;
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 16px;
+    margin-bottom: 50px;
+}
+
+.perfil-libro-opiniones-positivas span {
+    color: #5f5b65;
+}
+
+.perfil-libro-opiniones-negativas {
+    color: #5f5b65;
+}
+
+.perfil-libro-calificacion {
+    color: #FFB4A2;
+    font-size: 20px;
+    margin-left: 20px;
+    padding-top: 10px;
+}
+
+.perfil-libro-opinion-foto {
+    background-color: #FFFFFF;
+    border: 4px solid #FFB4A2;
+    border-radius: 50%;
+    height: 20px;
+    padding: 6px;
+    width: 20px;
+}
+
+.perfil-libro-opinion-nombre {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 0 0 20px;
+}
+
+.perfil-libro-comentarios {
+    text-align: justify;
+    width: 784px;
+}
+
+.perfil-libro-opinion-usuario {
+    display: flex;
+    padding: 20px 0;
+}
+
+.perfil-libro-opinion {
+    margin: 30px 0;
+}
+
+.perfil-libro-opiniones-clientes {
+    margin-bottom: 18px;
+}

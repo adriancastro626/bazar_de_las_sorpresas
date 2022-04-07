@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/editar_perfil.css">
+    <title>Editar Perfil</title>
+</head>
+
+<body>
+    <div class="pagina-completa">
+        <div class="content-lateral">
+            <div class="barra-lateral">
+                <!-- Menú lateral -->
+                <div class="menu-lateral">
+
+                    <!-- Primera sección del menú lateral -->
+                    <div class="menu-lateral-primero">
+                        <div class="menu-lateral-arriba">
+                            <a href="pagina_principal.html"><i class="fa-solid fa-house" title="Icono para ir a la página principal"></i></a>
+                            <a href="inicio_sesion.html"><i class="fa-solid fa-lock" title="Icono para cerrar sesión en la cuenta"></i></a>
+                        </div>
+                        <div class="menu-lateral-usuario">
+                            <div class="menu-lateral-foto">
+                                <img src="/img/autores/user-avatar.png" alt="Foto de perfil del usuario">
+                            </div>
+                            <span class="menu-lateral-nombre" id="campo-nombre-lateral"></span>
+                            <div>
+                                <span class="menu-lateral-email" id="campo-correo-lateral"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Segunda sección del menú lateral -->
+                    <div class="menu-lateral-segundo">
+
+                        <!-- Primera lista -->
+                        <div>
+                            <h2 class="menu-lateral-titulo">CUENTAS</h2>
+                            <nav class="menu-lateral-nav">
+                                <ul>
+                                    <div class="menu-lateral-lista">
+                                        <li><i class="fa-solid fa-user"></i><a href="pagina_principal.html">Pagina Principal</a></li>
+                                    </div>
+                                    <div class="menu-lateral-lista">
+                                        <li><i class="fa-solid fa-receipt"></i><a href="historial_compra.html">Historial de compras</a></li>
+                                    </div>
+                                    <div class="menu-lateral-lista">
+                                        <li><i class="fa-solid fa-users"></i><a href="lista_usuarios.html">Usuarios</a></li>
+                                    </div>
+                                </ul>
+                            </nav>
+                        </div>
+
+                        <!-- Segunda lista -->
+                        <div>
+                            <h2 class="menu-lateral-titulo">TIENDA</h2>
+                            <nav class="menu-lateral-nav">
+                                <ul>
+                                    <div class="menu-lateral-lista">
+                                        <li><i class="fa-solid fa-tag"></i><a href="parametros_sistema.html">Parámetros del sistema</a></li>
+                                    </div>
+                                    <div class="menu-lateral-lista menu-lateral-anidado" id="menu-lateral-desplegar-1">
+                                        <li><i class="fa-solid fa-book-open"></i><a href="#menu-lateral-desplegar-1">Catálogo</a>
+                                            <ul>
+                                                <li><a href="lista_libros.html">Libros</a></li>
+                                                <li><a href="lista_autores.html">Autores</a></li>
+                                                <li><a href="lista_generos.html">Géneros literarios</a></li>
+                                            </ul>
+                                        </li>
+                                    </div>
+                                    <div class="menu-lateral-lista menu-lateral-anidado" id="menu-lateral-desplegar-2">
+                                        <li> <i class="fa-solid fa-newspaper"></i><a href="#menu-lateral-desplegar-2">Reportes</a>
+                                            <ul>
+                                                <li><a href="reportes_top10.html">Top 10</a></li>
+                                                <li><a href="reportes_desglose_ventas.html">Ventas</a></li>
+                                                <li><a href="reportes_descuentos.html">Descuentos</a></li>
+                                                <li><a href="reportes_socios_comerciales.html">Socios comerciales</a></li>
+                                            </ul>
+                                        </li>
+                                    </div>
+                                    <div class="menu-lateral-lista">
+                                        <li><i class="fa-solid fa-store"></i><a href="lista_socios.html">Socios comerciales</a></li>
+                                    </div>
+
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contenido">
+            <div>
+                <h1>Actualizar Perfil</h1>
+                <section id="sct-registro-usuarios">
+                    <form>
+
+                        <div class="parent">
+                            <div class="col-uno">
+                                <div class="cont-control">
+                                    <label for="txt-nombre">Nombre: </label>
+                                    <span id="campo-nombre"></span>
+                                </div>
+
+                                <div class="cont-control">
+                                    <label for="txt-segundoNombre">Segundo Nombre: </label>
+                                    <span id="campo-segundoNombre"></span>
+                                </div>
+
+                                <div class="cont-control">
+                                    <label for="txt-apellido">Primer Apellido: </label>
+                                    <span id="campo-apellido"></span>
+
+                                </div>
+
+                                <div class="cont-control">
+                                    <label for="txt-segundoApellido">Segundo Apellido: </label>
+                                    <span id="campo-segundoApellido"></span>
+
+                                </div>
+
+                                <div class="cont-control">
+                                    <label for="slt-tipo">Tipo de Identificación: </label>
+                                    <span id="campo-tipoIdentificacion"></span>
+                                </div>
+                                <div class="cont-control">
+                                    <label for="txt-identificacion">Número de Identificación: </label>
+                                    <span id="campo-numeroIdentificacion"></span>
+
+                                </div>
+
+
+                                <div class="cont-control">
+                                    <label for="slt-genero">Género: </label>
+
+                                    <span id="campo-genero"></span>
+
+
+                                </div>
+
+                                <div class="cont-control">
+                                    <label for="txt-otroGenero">Otro Genero: </label>
+                                    <span id="campo-otroGenero"></span>
+
+                                </div>
+                                <div class="cont-control">
+                                    <label for="txt-nacimiento">Fecha de nacimiento: </label>
+                                    <span id="campo-fechaNacimiento"></span>
+
+                                </div>
+                                <div class="cont-control">
+                                    <label for="slt-generoLiterario">Géneros Literarios Favoritos: </label>
+                                    <span id="campo-generoLiterario"></span>
+                                </div>
+                            </div>
+
+
+                            <div class="col-dos">
+                                <div class="cont-control">
+                                    <label for="txt-correo">Correo Electrónico: </label>
+                                    <span id="campo-correo"></span>
+
+                                </div>
+
+
+                                <div class="cont-control">
+                                    <label for="txt-contrasenna">Contraseña: </label>
+                                    <span id="campo-contrasenna"></span>
+
+                                </div>
+
+                                <div class="cont-control">
+                                    <label for="slt-autores">Autores Favoritos: </label>
+                                    <span id="campo-autor"></span>
+
+                                </div>
+
+
+
+
+                                <div class="cont-control">
+                                    <label for="slct-provincias">Provincia: </label>
+                                    <span id="campo-provincia"></span>
+
+                                </div>
+                                <div class="cont-control">
+                                    <label for="slct-cantones">Canton: </label>
+                                    <span id="campo-canton"></span>
+
+                                </div>
+                                <div class="cont-control">
+                                    <label for="slct-distritos">Distrito: </label>
+                                    <span id="campo-distrito"></span>
+
+                                </div>
+                                <div class="cont-control">
+                                    <label for="direccion-exacta">Dirección exacta: </label>
+                                    <span id="campo-direccion"></span>
+
+                                </div>
+                                <div class="cont-control">
+                                    <label for="txt-mapa">Seleccione Ubicación: </label>
+                                    <span id="campo-coordenadas"></span>
+
+                                </div>
+                                <div class="cont-control">
+                                    <label for="btn-foto">Actualizar Foto de Perfil: </label>
+                                    <span id="campo-foto"></span>
+
+                                    <button id="btn-foto" type="button" class="btn-oscuro">Seleccionar...</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+
+                </section>
+                <div>
+                    <button id="btn-guardar" type="button" class="btn-oscuro">Guardar</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <footer>
+
+        <div class="footerParent">
+            <div class="footerChildUno">
+                <h4>Quiénes Somos</h4>
+                <div>
+                    <a href="/nosotros.html">Nosotros</a>
+                </div>
+                <div>
+                    <a href="/libroFan.html">Libro Fan</a>
+                </div>
+            </div>
+
+            <div class="footerChildDos">
+                <h4>Mi Perfil</h4>
+                <div>
+                    <a href="editar_perfil.html">Perfil</a>
+                </div>
+                <div>
+                    <a href="/carrito.html">Carrito</a>
+                </div>
+            </div>
+
+            <div class="footerChildTres">
+                <h4>Contactanos</h4>
+                <p type="text ">Correo Electronico</p>
+                <p type="text ">bazar@bazar.com</p>
+                <p href="text ">Teléfono</p>
+                <p href="text ">800-bazar</p>
+
+            </div>
+        </div>
+
+    </footer>
+    <script src="/js/editar_perfil.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://kit.fontawesome.com/3269682608.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asap:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/carrito_compras.css">
+    <title>Carrito de compras</title>
+</head>
+
+<body>
+    <section id="sct-carrito-compras">
+        <div class="cont-carrito-compras">
+            <h1>Carrito de compras</h1>
+            <div class="cont-contenido-pago">
+                <div class="cont-items">
+                    <!-- Item 1 -->
+                    <div class="caja-exterior-item">
+                        <div class="caja-interior-izquierda">
+                            <img src="../imgs/el_nombre_del_viento.jpg" alt="Portada del libro, El Nombre del Viento">
+                        </div>
+                        <div class="caja-interior-media">
+                            <div class="cont-media-superior">
+                                <p class="parrafo-titulo">El Nombre del Viento</p>
+                                <p class="parrafo-autor">Patrick Rothfuss</p>
+                            </div>
+                            <div class="cont-media-inferior">
+                                <p class="parrafo-precio">
+                                    <span>&#8353;</span> 10000
+                                </p>
+                            </div>
+                        </div>
+                        <div class="caja-interior-derecha">
+                            <div class="cont-numero-items">
+                                <input type="number" id="input-cantidad" placeholder="0" min="0">
+                            </div>
+                            <button type="button" class="btn-eliminar" id="icono-eliminar-1">
+                                <span class="span-boton">
+                                    <i class="fa-solid fa-trash-can fa-2x"></i>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="caja-exterior-item">
+                        <div class="caja-interior-izquierda">
+                            <img src="../imgs/el_hombre_en_busca_de_sentido.jpg" alt="Portada del libro, El Hombre en Busca de Sentido">
+                        </div>
+                        <div class="caja-interior-media">
+                            <div class="cont-media-superior">
+                                <p class="parrafo-titulo">El Hombre en Busca de Sentido</p>
+                                <p class="parrafo-autor">Viktor Frankl</p>
+                            </div>
+                            <div class="cont-media-inferior">
+                                <p class="parrafo-precio">
+                                    <span>&#8353;</span> 4300
+                                </p>
+                            </div>
+                        </div>
+                        <div class="caja-interior-derecha">
+                            <div class="cont-numero-items">
+                                <input type="number" id="input-cantidad" placeholder="0" min="0">
+                            </div>
+                            <button type="button" class="btn-eliminar" id="icono-eliminar-2">
+                                <span class="span-boton">
+                                    <i class="fa-solid fa-trash-can fa-2x"></i>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="caja-exterior-item">
+                        <div class="caja-interior-izquierda">
+                            <img src="../imgs/cien_annos_de_soledad.jpg" alt="Portada del libro, Cien Años de Soledad">
+                        </div>
+                        <div class="caja-interior-media">
+                            <div class="cont-media-superior">
+                                <p class="parrafo-titulo">Cien Años de Soledad</p>
+                                <p class="parrafo-autor">Gabriel García Márquez</p>
+                            </div>
+                            <div class="cont-media-inferior">
+                                <p class="parrafo-precio">
+                                    <span>&#8353;</span> 7800
+                                </p>
+                            </div>
+                        </div>
+                        <div class="caja-interior-derecha">
+                            <div class="cont-numero-items">
+                                <input type="number" id="input-cantidad" placeholder="0" min="0">
+                            </div>
+                            <button type="button" class="btn-eliminar" id="icono-eliminar-3">
+                                <span class="span-boton">
+                                    <i class="fa-solid fa-trash-can fa-2x"></i>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="cont-informacion-pago">
+                    <h2>Monto a pagar</h2>
+                    <div class="cont-desglose">
+                        <p>Compras:</p>
+                        <div class="cont-monto">
+                            <span>&#8353;</span>
+                            <p id="indicador-compras">000 000.00</p>
+                        </div>
+                    </div>
+                    <div class="cont-desglose">
+                        <p>Envío:</p>
+                        <div class="cont-monto">
+                            <span>&#8353;</span>
+                            <p id="indicador-envio">000 000.00</p>
+                        </div>
+                    </div>
+                    <div class="cont-desglose">
+                        <p>Impuestos:</p>
+                        <div class="cont-monto">
+                            <span>&#8353;</span>
+                            <p id="indicador-impuestos">000 000.00</p>
+                        </div>
+                    </div>
+                    <div class="cont-desglose">
+                        <p id="p-total">Total:</p>
+                        <div class="cont-monto">
+                            <span>&#8353;</span>
+                            <p id="indicador-total">000 000.00</p>
+                        </div>
+                    </div>
+                    <div class="cont-botones-monto">
+                        <button type="button" id="btn-proceder-pago" class="btn-monto">Proceder con el pago</button>
+                        <button type="button" id="btn-seguir-comprando" class="btn-monto">Seguir comprando</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://kit.fontawesome.com/3269682608.js" crossorigin="anonymous"></script>
+    <script src="../js/lista_carrito.js"></script>
+    <script src="../js/carrito_compras.js"></script>
+</body>
+
+</html>
