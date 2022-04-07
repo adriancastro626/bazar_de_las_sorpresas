@@ -48,8 +48,8 @@ form {
 }
 
 .lista-libros-enlace a:hover {
-    background-color: green;
-    color: red;
+    background-color: #58565d;
+    color: #ffffff;
 }
 
 
@@ -142,6 +142,7 @@ tr {
 .titulos-libros:checked~.lista-libros-contenido {
     height: auto;
     opacity: 1;
+    z-index: 2;
 }
 
 .plus {
