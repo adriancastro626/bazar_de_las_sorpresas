@@ -58,6 +58,7 @@ const accion = () => {
         'title': 'Método eliminado!',
         'text': 'Se ha eliminado el método de pago.'
     });
+    // console.log('Calls');
 };
 
 const botonesEliminar = document.getElementsByName('boton-eliminar');

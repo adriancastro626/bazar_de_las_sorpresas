@@ -1,9 +1,9 @@
-const informacionError = document.getElementById('informacion-error');
 const inputNumeroTarjeta = document.getElementById('numero-tarjeta');
 const inputMes = document.getElementById('mes-expiracion');
 const inputAnno = document.getElementById('anno-expiracion');
 const inputCVV = document.getElementById('cvv');
 const inputNombre = document.getElementById('nombre-tarjetahabiente');
+const iconoTarjeta = document.getElementById('icono-tarjeta');
 const inputFavorito = document.getElementById('interruptor');
 const btnCancelar = document.getElementById('btn-cancelar');
 const btnAgregar = document.getElementById('btn-agregar');
@@ -54,10 +54,19 @@ const validar = () => {
 
     // PLACEHOLDER
     if (hayError) {
-        informacionError.innerHTML = 'Error: Revise los campos en rojo.';
+        Swal.fire({
+            'icon': 'warning',
+            'title': 'Información incompleta',
+            'text': 'Por favor revise los campos resaltados.'
+        });
     } else {
         if (errorTarjeta) {
-            informacionError.innerHTML = 'Error: Este sistema solo acepta tarjetas VISA o MasterCard.';
+            inputNumeroTarjeta.classList.add('input-error');
+            Swal.fire({
+                'icon': 'error',
+                'title': 'Tarjeta inválida',
+                'text': 'Este sistema solo acepta tarjetas VISA o MasterCard.'
+            });
         } else {
             navegar();
         }
@@ -82,15 +91,43 @@ const navegar = () => {
         'annoExpiracion': inputAnno.value,
         'favorito': inputFavorito.value
     });
-    window.location.href = 'seleccion_metodo_pago.html';
-    // Swal.fire({
-    //     'icon': 'success',
-    //     'title': 'Método de pago registrado',
-    //     'text': 'Se ha registrado un nuevo método de pago.'
-    // }).then(() => {
-    //     window.location.href = 'seleccion_metodo_pago.html'
-    // });
+    Swal.fire({
+        'icon': 'success',
+        'title': 'Método de pago registrado',
+        'text': 'Se ha registrado un nuevo método de pago.'
+    }).then(() => {
+        window.location.href = 'pagina_principal.html'
+    });
 };
+
+const tipoTarjeta = (numeroTarjeta) => {
+    if (numeroTarjeta.length > 0) {
+        if (numeroTarjeta.substr(0, 1) == '4') {
+            iconoTarjeta.className = '';
+            iconoTarjeta.classList.add('fa-brands');
+            iconoTarjeta.classList.add('fa-cc-visa');
+            iconoTarjeta.classList.add('fa-2x');
+            console.log('VISA');
+        } else if (numeroTarjeta.substr(0, 1) == '5') {
+            iconoTarjeta.className = '';
+            iconoTarjeta.classList.add('fa-brands');
+            iconoTarjeta.classList.add('fa-cc-mastercard');
+            iconoTarjeta.classList.add('fa-2x');
+            console.log('MasterCard');
+        } else {
+            inputNumeroTarjeta.classList.add('input-error');
+            iconoTarjeta.className = '';
+            iconoTarjeta.classList.add('fa-solid');
+            iconoTarjeta.classList.add('fa-credit-card');
+            iconoTarjeta.classList.add('fa-2x');
+            console.log('Otro');
+        }
+    }
+};
+
+inputNumeroTarjeta.addEventListener('keypress', () => {
+    tipoTarjeta(inputNumeroTarjeta.value)
+});
 
 btnAgregar.addEventListener('click', () => {
     validar();
@@ -98,5 +135,5 @@ btnAgregar.addEventListener('click', () => {
 
 btnCancelar.addEventListener('click', () => {
     // PLACEHOLDER
-    window.location.href = 'registro_metodo_pago.html';
+    window.location.href = 'editar_perfil.html';
 });
