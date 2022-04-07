@@ -1,16 +1,11 @@
-const radioEnvio = document.getElementsByName('radio-envio');
 const selectProvincias = document.getElementById('slct-provincias');
 const selectCantones = document.getElementById('slct-cantones');
 const selectDistritos = document.getElementById('slct-distritos');
-const selectProvinciasRetiro = document.getElementById('slct-provincias-retiro');
-const selectCantonesRetiro = document.getElementById('slct-cantones-retiro');
-const selectDistritosRetiro = document.getElementById('slct-distritos-retiro');
+const direccionExacta = document.getElementById('direccion-exacta');
 const btnAtras = document.getElementById('btn-atras');
 const btnContinuar = document.getElementById('btn-continuar');
 
 const url = 'https://ubicaciones.paginasweb.cr/';
-
-let domicilio = false;
 
 // Completar opciones de provincia, canton y distrito
 let listarSelect = (url, elemento) => {
@@ -43,31 +38,56 @@ const initMap = () => {
     });
 }
 
-const evaluarEntrega = () => {
-    if (radioEnvio[0].checked) {
-        Swal.fire({
-            'icon': 'success',
-            'title': 'Entrega a domicilio',
-            'text': 'Ha presionado el botón Continuar.'
-        });
+
+// Validación
+const validar = () => {
+    let hayError = false;
+
+    if (selectProvincias.value == '') {
+        hayError = true;
+        selectProvincias.classList.add('input-error');
     } else {
+        selectProvincias.classList.remove('input-error');
+    }
+
+    if (selectCantones.value == '') {
+        hayError = true;
+        selectCantones.classList.add('input-error');
+    } else {
+        selectCantones.classList.remove('input-error');
+    }
+
+    if (selectDistritos.value == '') {
+        hayError = true;
+        selectDistritos.classList.add('input-error');
+    } else {
+        selectDistritos.classList.remove('input-error');
+    }
+
+    if (direccionExacta.value == '') {
+        hayError = true;
+        direccionExacta.classList.add('input-error');
+    } else {
+        direccionExacta.classList.remove('input-error');
+    }
+
+    if (hayError) {
         Swal.fire({
-            'icon': 'success',
-            'title': 'Entrega a punto de retiro',
-            'text': 'Ha presionado el botón Continuar.'
+            'icon': 'warning',
+            'title': 'Información incompleta',
+            'text': 'Por favor revise los campos resaltados.'
         });
+        //json
+    } else {
+        window.location.href = 'metodos_pago.html'
     }
 };
 
+
 listarSelect(url + 'provincias.json', selectProvincias);
-listarSelect(url + 'provincias.json', selectProvinciasRetiro);
 
 selectProvincias.addEventListener('change', () => {
     listarSelect(url + 'provincia/' + selectProvincias.value + '/cantones.json', selectCantones);
-});
-
-selectProvinciasRetiro.addEventListener('change', () => {
-    listarSelect(url + 'provincia/' + selectProvinciasRetiro.value + '/cantones.json', selectCantonesRetiro);
 });
 
 selectCantones.addEventListener('change', () => {
@@ -77,17 +97,9 @@ selectCantones.addEventListener('change', () => {
 initMap();
 
 btnAtras.addEventListener('click', () => {
-    // PLACEHOLDER
-    // window.location.href = 'registro_metodo_pago.html'
-    Swal.fire({
-        'icon': 'info',
-        'title': 'Regresando a la página anterior',
-        'text': 'Ha presionado el botón Atrás.'
-    });
+    window.location.href = 'carrito_compras.html'
 });
 
 btnContinuar.addEventListener('click', () => {
-    // PLACEHOLDER
-    evaluarEntrega();
-
+    validar();
 });

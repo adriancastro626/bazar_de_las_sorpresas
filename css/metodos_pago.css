@@ -8,32 +8,36 @@ body {
 
 .formulario-metodos {
     width: 400px;
-    height: 440px;
+    height: auto;
     margin: 60px auto 0;
     border: 1px solid #ddd;
     border-radius: 6px;
-    background-color: #fff;
+    background-color: #6D6875;
     box-shadow: 1px 2px 3px 0 rgba(0, 0, 0, .10);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    color: #FFCDB2;
 }
 
 h1 {
+    font-size: 36px;
     font-weight: bold;
-    font-size: 18px;
-    margin: 30px;
+    margin-bottom: 60px;
+    text-align: center;
 }
 
 #cont-listar-metodos {
     display: flex;
     flex-direction: column;
+    margin: 20px 0 20px 0;
 }
 
 .radio-metodo {
     font-size: 14px;
     margin-left: 30px;
     margin-bottom: 10px;
+    accent-color: #B5838D;
 }
 
 #cont-listar-metodos input {

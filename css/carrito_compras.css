@@ -7,29 +7,24 @@ body {
 }
 
 .cont-carrito-compras {
-    width: 1000px;
+    width: 1200px;
     height: auto;
     margin: 60px auto 0;
-    border: 1px solid #ddd;
+    /* border: 1px solid #ddd; */
     border-radius: 6px;
     background-color: #fff;
-    box-shadow: 1px 2px 3px 0 rgba(0, 0, 0, .10);
+    /* box-shadow: 1px 2px 3px 0 rgba(0, 0, 0, .10); */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
 }
 
 h1 {
+    font-size: 36px;
     font-weight: bold;
-    font-size: 18px;
-    margin-top: 30px;
-    margin-left: 60px;
-    margin-right: 60px;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
+    text-align: center;
 }
-
-
-/* Sección de monto a pagar */
 
 h2 {
     font-weight: bold;
@@ -50,19 +45,43 @@ h2 {
     margin-bottom: 30px;
 }
 
-.cont-items {
-    /* border: 1px solid rgb(241, 14, 14); */
-    width: 600px;
-    height: auto;
+.cont-lateral-izquierdo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 450px;
 }
+
+
+/* Sección de método de envío */
+
+.cont-información-envio {
+    width: 240px;
+    height: 130px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    background-color: #6D6875;
+    color: #FFCDB2;
+}
+
+.cont-tipo-envio {
+    margin: 20px 20px;
+}
+
+.cont-tipo-envio input {
+    accent-color: #B5838D;
+}
+
+
+/* Sección de monto a pagar */
 
 .cont-informacion-pago {
     width: 240px;
     height: 280px;
-    border: 1px solid #000;
+    border: 1px solid #fff;
     border-radius: 20px;
-    background-color: #fff;
-    box-shadow: 1px 2px 3px 0 rgba(0, 0, 0, .10);
+    background-color: #6D6875;
+    color: #FFCDB2;
 }
 
 .cont-desglose {
@@ -114,8 +133,16 @@ h2 {
 
 /* Contenedor de lista de items */
 
+.cont-items {
+    /* border: 1px solid rgb(241, 14, 14); */
+    width: 800px;
+    height: auto;
+}
+
 .caja-exterior-item {
-    border: 1px solid #000;
+    background-color: #6D6875;
+    border: 1px solid #fff;
+    color: #FFCDB2;
     width: auto;
     height: 200px;
     display: flex;
@@ -123,7 +150,7 @@ h2 {
 }
 
 .caja-interior-izquierda {
-    width: 200px;
+    width: 300px;
     height: 200px;
     display: flex;
     justify-content: center;
@@ -141,7 +168,7 @@ h2 {
 }
 
 .caja-interior-media {
-    width: 200px;
+    width: 300px;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -200,8 +227,8 @@ h2 {
 }
 
 .btn-eliminar {
-    background-color: #fff;
-    border: #fff;
+    background-color: #6D6875;
+    border: #6D6875;
     color: #B5838D;
     margin: 20px;
 }
