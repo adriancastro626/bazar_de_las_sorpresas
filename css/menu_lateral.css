@@ -1,3 +1,97 @@
+
+/* Estilos Generales */
+
+.menu-lateral a {
+    color: #FFCDB2;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.menu-lateral a:hover {
+    color: #000105;
+}
+
+.menu-lateral h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.menu-lateral i {
+    color: #ffffff;
+    font-size: 30px;
+    height: 50px;
+    width: 50px;
+}
+
+.menu-lateral .menu-lateral-arriba i:hover {
+    color: #000105;
+    transition: 0.3s;
+}
+
+.menu-lateral ul {
+    margin-bottom: 30px;
+}
+
+
+/* Estilos del formulario*/
+
+.menu-lateral-arriba {
+    background-color: #FFB4A2;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    text-align: center;
+    -webkit-box-shadow: 0px 9px 10px -8px #000000;
+    box-shadow: 0px 9px 10px -8px #000000;
+}
+
+.menu-lateral-arriba,
+.menu-lateral .menu-lateral-form {
+    padding: 20px
+}
+
+.menu-lateral-email-usuario {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.fa-house {
+    margin-right: 140px;
+    margin-bottom: 10px;
+}
+
+.menu-lateral-foto-perfil {
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 50%;
+    height: 120px;
+    margin-bottom: 10px;
+    width: 120px;
+}
+
+#menu-lateral-form>li>ul {
+    display: none;
+}
+
+#menu-lateral-form>li:hover>ul {
+    display: block;
+}
+
+.menu-lateral-nombre-usuario {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.menu-lateral-submenu {
+    margin-left: 80px;
+}
+
+.menu-lateral-submenu a {
+    font-size: 16px;
+
 /* Estilos Generales */
 
 .menu-lateral a {
