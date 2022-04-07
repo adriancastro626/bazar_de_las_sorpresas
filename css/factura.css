@@ -1,0 +1,20 @@
+#cont-factura {
+    border: 3px solid #b5838d;
+    background: #fff;
+    padding-left: 10px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+body {
+    background: #f5e9e2;
+}

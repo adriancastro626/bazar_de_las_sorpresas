@@ -1,6 +1,6 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-image: url(../imgs/fondo-pastel.jpeg);
+    background: #ffdbc8;
 }
 
 #titulo {
@@ -25,6 +25,7 @@ img {
 
 .primer-socio {
     border: 1px solid black;
+    background: #e8aaac;
     width: 400px;
     height: 400px;
     padding: 10px;
@@ -32,6 +33,7 @@ img {
 
 .segundo-socio {
     border: 1px solid black;
+    background: #e8aaac;
     width: 400px;
     height: 400px;
     padding: 10px;
@@ -39,6 +41,7 @@ img {
 
 .tercer-socio {
     border: 1px solid black;
+    background: #e8aaac;
     width: 400px;
     height: 400px;
     padding: 10px;
