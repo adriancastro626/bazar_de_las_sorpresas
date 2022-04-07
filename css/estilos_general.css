@@ -1,3 +1,31 @@
+
+/*Google Fonts*/
+
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@400;600;700&display=swap');
+@import url('menu_lateral.css');
+html {
+    font-family: 'Asap', sans-serif;
+    font-size: 18px;
+}
+
+.pagina-con-menu-lateral {
+    display: flex;
+    height: 100%;
+}
+
+.pagina-contenido {
+    align-items: center;
+    margin: 0px auto;
+    padding: 80px 20px 20px 20px;
+    max-width: 1100px;
+    min-width: 1100px;
+}
+
+.menu-lateral {
+    background-color: #6D6875;
+    min-width: 300px;
+    min-height: 940px;
+
 /*Google Fonts*/
 
 @import url('https://fonts.googleapis.com/css2?family=Asap:wght@400;600;700&display=swap');

@@ -1,0 +1,169 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Asap', sans-serif;
+}
+
+.contenedor-img {
+    background-image: url('/img/inicio_sesion.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 60rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    padding: 20px;
+    text-align: center;
+    background-color: #5989BE;
+    height: 100px;
+}
+
+img {
+    height: 50px;
+    width: 50px;
+}
+
+.footerParent,
+.navParent {
+    display: flex;
+}
+
+.navUno {
+    text-align: center;
+}
+
+.navDos {
+    text-align: right;
+    text-decoration: none;
+}
+
+.footerChildUno,
+.footerChildDos,
+.footerChildTres {
+    width: 15%
+}
+
+footer {
+    padding: 20px;
+    background-color: #6D6875;
+}
+
+footer h4 {
+    font-weight: bold;
+}
+
+label {
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.75);
+    padding: 10px;
+    text-align: center;
+    width: 220px;
+}
+
+.contrasenna {
+    text-decoration: none;
+    color: white;
+}
+
+.contrasenna:hover {
+    color: black;
+    cursor: pointer;
+}
+
+.card {
+    height: 450px;
+    width: 300px;
+    backdrop-filter: blur(0.4rem);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0.6rem 0.5rem 0.5rem rgba(0, 0, 0, 0.6);
+    border-radius: 0.7rem;
+    text-align: center;
+    transition: transform .2s;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    backdrop-filter: blur(0.7rem);
+    cursor: pointer;
+}
+
+.card h1 {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.5rem;
+    margin-top: 2rem;
+}
+
+.card div {
+    color: rgba(255, 255, 255, 0.75);
+    padding: 0 1rem;
+}
+
+.card button {
+    padding: 0.5rem 1.5rem;
+    border-radius: 1rem;
+    border: none;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0.2rem 0.2rem 0.3rem rgba(0, 0, 0, 0.4);
+}
+
+#btn-registro {
+    padding: 10px;
+    border-radius: 1rem;
+    border: none;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0.2rem 0.2rem 0.3rem rgba(0, 0, 0, 0.4);
+}
+
+#btn-registro:hover {
+    background: rgba(255, 255, 255, 1);
+    cursor: pointer;
+}
+
+.card button:hover {
+    background: rgba(255, 255, 255, 1);
+    cursor: pointer;
+}
+
+#sct-ingreso-usuarios {
+    display: flex;
+}
+
+#sct-ingreso-usuarios form h1 {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.5rem;
+    margin-top: 2rem;
+}
+
+#sct-ingreso-usuarios form .cont-control {
+    margin-bottom: 25px;
+    margin-top: 2rem;
+}
+
+#sct-ingreso-usuarios form div {
+    color: rgba(255, 255, 255, 1);
+}
+
+.cont-control input,
+.cont-control select {
+    width: 150px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0.2rem 0.2rem 0.3rem rgba(0, 0, 0, 0.4);
+}
+
+.btn {
+    margin-top: 30px;
+}
+
+.lnk {
+    margin-top: 25px
+}

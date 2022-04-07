@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/lista_usuarios.css">
+    <title>Lista de Usuarios</title>
+</head>
+
+<body>
+    <div class="pagina-completa">
+        <div class="content-lateral">
+            <div class="barra-lateral">
+                <!-- Menú lateral -->
+                <div class="menu-lateral">
+
+                    <!-- Primera sección del menú lateral -->
+                    <div class="menu-lateral-primero">
+                        <div class="menu-lateral-arriba">
+                            <a href="pagina_principal.html"><i class="fa-solid fa-house" title="Icono para ir a la página principal"></i></a>
+                            <a href="inicio_sesion.html"><i class="fa-solid fa-lock" title="Icono para cerrar sesión en la cuenta"></i></a>
+                        </div>
+                        <div class="menu-lateral-usuario">
+                            <div class="menu-lateral-foto">
+                                <img src="/img/autores/user-avatar.png" alt="Foto de perfil del usuario">
+                            </div>
+                            <span class="menu-lateral-nombre" id="campo-nombre-lista"></span>
+                            <div>
+                                <span class="menu-lateral-email" id="campo-correo-lista"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Segunda sección del menú lateral -->
+                    <div class="menu-lateral-segundo">
+
+                        <!-- Primera lista -->
+                        <div>
+                            <h2 class="menu-lateral-titulo">CUENTAS</h2>
+                            <nav class="menu-lateral-nav">
+                                <ul>
+                                    <div class="menu-lateral-lista">
+                                        <li><i class="fa-solid fa-user"></i><a href="pagina_principal.html">Pagina Principal</a></li>
+                                    </div>
+                                    <div class="menu-lateral-lista">
+                                        <li><i class="fa-solid fa-receipt"></i><a href="historial_compra.html">Historial de compras</a></li>
+                                    </div>
+                                    <div class="menu-lateral-lista">
+                                        <li><i class="fa-solid fa-users"></i><a href="edicion_usuarios.html">Usuarios</a></li>
+                                    </div>
+                                </ul>
+                            </nav>
+                        </div>
+
+                        <!-- Segunda lista -->
+                        <div>
+                            <h2 class="menu-lateral-titulo">TIENDA</h2>
+                            <nav class="menu-lateral-nav">
+                                <ul>
+                                    <div class="menu-lateral-lista">
+                                        <li><i class="fa-solid fa-tag"></i><a href="parametros_sistema.html">Parámetros del sistema</a></li>
+                                    </div>
+                                    <div class="menu-lateral-lista menu-lateral-anidado" id="menu-lateral-desplegar-1">
+                                        <li><i class="fa-solid fa-book-open"></i><a href="#menu-lateral-desplegar-1">Catálogo</a>
+                                            <ul>
+                                                <li><a href="lista_libros.html">Libros</a></li>
+                                                <li><a href="lista_autores.html">Autores</a></li>
+                                                <li><a href="lista_generos.html">Géneros literarios</a></li>
+                                            </ul>
+                                        </li>
+                                    </div>
+                                    <div class="menu-lateral-lista menu-lateral-anidado" id="menu-lateral-desplegar-2">
+                                        <li> <i class="fa-solid fa-newspaper"></i><a href="#menu-lateral-desplegar-2">Reportes</a>
+                                            <ul>
+                                                <li><a href="reportes_top10.html">Top 10</a></li>
+                                                <li><a href="reportes_desglose_ventas.html">Ventas</a></li>
+                                                <li><a href="reportes_descuentos.html">Descuentos</a></li>
+                                                <li><a href="reportes_socios_comerciales.html">Socios comerciales</a></li>
+                                            </ul>
+                                        </li>
+                                    </div>
+                                    <div class="menu-lateral-lista">
+                                        <li><i class="fa-solid fa-store"></i><a href="lista_socios.html">Socios comerciales</a></li>
+                                    </div>
+
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-general">
+            <!-- Contenido de la página -->
+            <div class="pagina-contenido">
+                <h1>Lista de Usuarios</h1>
+
+                <!-- Listado de compras -->
+
+                <table class="tbl-compras" id="tbl-compras">
+                    <thead>
+                        <tr>
+                            <th>
+                                <div class="cont-encabezado">
+                                    <p>Nombre</p>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="cont-encabezado">
+                                    <p>Apellido</p>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="cont-encabezado">
+                                    <p>Correo</p>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="cont-encabezado">
+                                    <p>Identificacion</p>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="cont-encabezado">
+                                    <p>Provincia</p>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="cont-encabezado">
+                                    <p>Genero</p>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="cont-encabezado">
+                                    <p>Editar</p>
+                                </div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Fila tipo padre -->
+                        <tr class="fila-padre" data-hija="contenido-001">
+                            <td>
+                                <div class="cont-pedido">
+                                    <i class="fa-solid fa-caret-right"></i>
+                                    <p>Pablo</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cont-linea">
+                                    <p>Rodriguez</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cont-linea">
+                                    <p>pablo@gmail.com</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cont-linea">
+                                    <p>1-0987-0678</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cont-linea">
+                                    <p>San Jose</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cont-linea">
+                                    <p>Masculino</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cont-linea-oculta">
+                                    <button type="button" class="btn-comentar" id="icono-comentarios-1">
+                                    <span class="span-boton">
+                                        <i class="fa-solid fa-pen-to-square fa-2x"></i>
+                                    </span>
+                                </button>
+                                </div>
+                            </td>
+                        </tr>
+
+
+                        </tr>
+                        <!-- Fila tipo padre -->
+                        <tr class="fila-padre" data-hija="contenido-002">
+                            <td>
+                                <div class="cont-pedido">
+                                    <i class="fa-solid fa-caret-right"></i>
+                                    <p>Vanessa</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cont-linea">
+                                    <p>Cascante</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cont-linea">
+                                    <!-- <span>&#8353;</span> -->
+                                    <p>vanessa@gmail.com</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cont-linea">
+                                    <p>2-0365-0465</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cont-linea">
+                                    <p>Alajuela</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cont-linea">
+                                    <p>Femenino</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cont-linea-oculta">
+                                    <button type="button" class="btn-comentar" id="icono-comentarios">
+                                    <span class="span-boton">
+                                        <i class="fa-solid fa-pen-to-square fa-2x"></i>
+                                    </span>
+                                </button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    </div>
+    <footer>
+
+        <div class="footerParent">
+            <div class="footerChildUno">
+                <h4>Quiénes Somos</h4>
+                <div>
+                    <a href="/nosotros.html">Nosotros</a>
+                </div>
+                <div>
+                    <a href="/libroFan.html">Libro Fan</a>
+                </div>
+            </div>
+
+            <div class="footerChildDos">
+                <h4>Mi Perfil</h4>
+                <div>
+                    <a href="editar_perfil.html">Perfil</a>
+                </div>
+                <div>
+                    <a href="/carrito.html">Carrito</a>
+                </div>
+            </div>
+
+            <div class="footerChildTres">
+                <h4>Contactanos</h4>
+                <p type="text ">Correo Electronico</p>
+                <p type="text ">bazar@bazar.com</p>
+                <p href="text ">Teléfono</p>
+                <p href="text ">800-bazar</p>
+
+            </div>
+        </div>
+
+    </footer>
+    <script src="/js/lista_usuarios.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://kit.fontawesome.com/3269682608.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
