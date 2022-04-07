@@ -1,3 +1,6 @@
+// Elementos de la sección método de envío
+const radioEnvio = document.getElementsByName('radio-envio');
+
 // Elementos de la sección información de pago
 const indicadorCompras = document.getElementById('indicador-compras');
 const indicadorEnvio = document.getElementById('indicador-envio');
@@ -18,11 +21,35 @@ const actualizarLista = () => {
     });
 };
 
+const paginaSiguiente = () => {
+    let navegar;
+    if (radioEnvio[0].checked) {
+        navegar = 'metodo_envio_domicilio.html';
+    } else {
+        navegar = 'metodo_envio_retiro.html';
+    }
+    return navegar;
+};
+
 const notificarEliminacion = () => {
     Swal.fire({
-        'icon': 'warning',
-        'title': 'Ítem eliminado',
-        'text': 'Ha eliminado un ítem del carrito de compras.'
+        title: 'Estás seguro?',
+        text: "El libro se eliminará del carrito de compras.",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Si, eliminar',
+        cancelButtonText: 'Cancelar',
+    }).then((result) => {
+        if (result.isConfirmed) {
+            Swal.fire(
+                'Eliminado!',
+                'Se ha eliminado el libro del carrito de compras.',
+                'success'
+            )
+            console.log('Se eliminó el género');
+        }
     });
 };
 
@@ -42,15 +69,9 @@ btnEliminar3.addEventListener('click', () => {
 });
 
 btnPagar.addEventListener('click', () => {
-    // PLACEHOLDER
-    Swal.fire({
-        'icon': 'success',
-        'title': 'Compra exitosa!!! ',
-        'text': 'Su compra se ha efectuado con éxito.'
-    });
+    window.location.href = paginaSiguiente();
 });
 
 btnComprar.addEventListener('click', () => {
-    // PLACEHOLDER
-    window.location.href = 'carrito_compras.html'
+    window.location.href = 'pagina_principal.html';
 });
