@@ -18,3 +18,11 @@
                     text-align: left;
                     font-family: 'Asap', sans-serif;
                 }
+                
+                .icono-eliminar {
+                    background-color: #fff;
+                    border: #fff;
+                    color: #E5989B;
+                    cursor: pointer;
+                    margin: 0px;
+                }
