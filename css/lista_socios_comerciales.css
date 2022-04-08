@@ -1,6 +1,6 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #ffdbc8;
+    background: #f5e9e2;
 }
 
 #titulo {
@@ -10,6 +10,7 @@ body {
     font-size: 24px;
     background: #6d6875;
     color: #ffcdb2;
+    max-width: 100% !important;
 }
 
 .cont-control {
@@ -25,27 +26,30 @@ img {
 
 .primer-socio {
     border: 1px solid black;
-    background: #e8aaac;
-    width: 400px;
+    background: #f5e9e2;
+    width: 340px;
     height: 400px;
     padding: 10px;
 }
 
 .segundo-socio {
     border: 1px solid black;
-    background: #e8aaac;
-    width: 400px;
+    background: #f5e9e2;
+    width: 340px;
     height: 400px;
     padding: 10px;
 }
 
 .tercer-socio {
     border: 1px solid black;
-    background: #e8aaac;
-    width: 400px;
+    background: #f5e9e2;
+    width: 340px;
     height: 400px;
     padding: 10px;
 }
+
+
+/* e8aaac */
 
 .cont-primera-fila {
     display: flex;
@@ -65,36 +69,36 @@ p {
 
 #sct-socio-comercial {
     border: 1px solid black;
-    width: 1517px;
+    width: 100%;
 }
 
 .btn-oscuro {
-    background: #946C00;
+    background: #6d6875;
     color: #ffffff;
     height: 30px;
-    width: 399px;
+    width: 340px;
     font-weight: bold;
-    border: 2px solid #946C00;
+    border: 2px solid #6d6875;
 }
 
 .btn-oscuro:hover {
-    background: #ddd0ab;
-    border: 2px solid #b4a16c;
-    color: #946C00;
+    background: #b0a9bc;
+    border: 2px solid #6d6875;
+    color: #5a565f;
     cursor: pointer;
 }
 
 .btn-claro {
-    background: #8b0000;
+    background: #b5838d;
     color: #ffffff;
     height: 30px;
-    width: 399px;
+    width: 340px;
     font-weight: bold;
     border: 2px solid #8b0000;
 }
 
 .btn-claro:hover {
-    background: #ff9d9d;
+    background: #e8aaac;
     border: 2px solid #8b0000;
     color: #8b0000;
     cursor: pointer;
