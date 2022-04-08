@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asap:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/listar_metodos_pago.css">
+    <title>Listar métodos de pago</title>
+</head>
+
+<body>
+    <section id="sct-seleccion-metodo-pago">
+        <form class="formulario-metodos">
+            <h1>Métodos de pago</h1>
+            <div id="cont-listar-metodos">
+                <!-- Se agregan de forma dinámica los métodos de pago -->
+            </div>
+            <div class="cont-agregar">
+                <button type="button" class="btn-agregar" id="icono-agregar">
+                    <span class="span-boton">
+                        <i class="fa-solid fa-plus fa-xl"></i>
+                    </span>
+                </button>
+                <input type="text" disabled>
+            </div>
+        </form>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://kit.fontawesome.com/3269682608.js" crossorigin="anonymous"></script>
+    <script src="../js/lista_metodos.js"></script>
+    <script src="../js/listar_metodos_pago.js"></script>
+</body>
+
+</html>
