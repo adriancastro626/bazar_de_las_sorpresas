@@ -9,7 +9,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-image: url(../imgs/fondo-pastel.jpeg);
+    background: #ffdbc8;
     background-size: 100%;
     background-position: 80%;
 }
@@ -17,7 +17,8 @@ body {
 
 /* Borde del formulario */
 
-#edc-socio-comercial {
+
+/* #edc-socio-comercial {
     background-image: url(../imgs/fondo-formulario.jpeg);
     border: 3px solid #946C00;
     flex-direction: column;
@@ -26,10 +27,10 @@ body {
     padding: 5%;
     margin-left: auto;
     margin-right: auto;
-}
+} */
 
 #sct-registro-socio-comercial {
-    background-image: url(../imgs/fondo-formulario.jpeg);
+    background: #cb9ba5;
     border: 3px solid #946C00;
     flex-direction: column;
     width: 60%;
@@ -39,15 +40,17 @@ body {
     margin-right: auto;
 }
 
-#edc-socio-comercial form h1 {
+
+/* #edc-socio-comercial form h1 {
     font-size: 24px;
     font-weight: bold;
     text-align: center;
     margin-bottom: 100px;
-}
+} */
 
 #sct-registro-socio-comercial form h1 {
-    font-size: 24px;
+    font-size: 30px;
+    color: #ffece1;
     font-weight: bold;
     text-align: center;
     margin-bottom: 100px;
@@ -55,6 +58,9 @@ body {
 
 #sct-registro-socio-comercial form label {
     display: inline-block;
+    font-weight: bold;
+    font-size: 17px;
+    color: #6d6875;
     margin-bottom: 30px;
     width: 70%;
 }
@@ -72,18 +78,18 @@ body {
 }
 
 .btn-oscuro {
-    background: #946C00;
+    background: #6d6875;
     color: #ffffff;
     height: 30px;
     width: 150px;
     font-weight: bold;
-    border: 2px solid #946C00;
+    border: 2px solid #6d6875;
 }
 
 .btn-oscuro:hover {
-    background: #ddd0ab;
-    border: 2px solid #b4a16c;
-    color: #946C00;
+    background: #b0a9bc;
+    border: 2px solid #6d6875;
+    color: #5a565f;
     cursor: pointer;
 }
 
@@ -97,4 +103,8 @@ input:focus {
 
 .contenedor-img {
     background-image: url(../imgs/fondo-biblioteca.jpg);
+}
+
+#file-foto {
+    color: #ffece1;
 }

@@ -2,11 +2,19 @@ const btnEditar = document.getElementById('btn-editar-socio');
 const btnEliminar = document.getElementById('btn-eliminar-socio')
 
 btnEditar.addEventListener('click', () => {
-    console.log('Botón de editar socio comercial presionado');
+    Swal.fire({
+        'icon': 'info',
+        'title': 'Botón de editar seleccionado',
+        'text': 'Redirigiendo a la pagina de edición de socios'
+    });
 });
 
 btnEliminar.addEventListener('click', () => {
-    console.log('Botón de eliminar socio comercial presionado');
+    Swal.fire({
+        'icon': 'error',
+        'title': 'Socio Comercial Eliminado',
+
+    });
 });
 
 //.then(() => {

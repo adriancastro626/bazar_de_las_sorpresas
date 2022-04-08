@@ -1,0 +1,66 @@
+/* Inicio Footer */
+
+.footerParent {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.footerChildUno,
+.footerChildDos,
+.footerChildTres {
+    width: 15%
+}
+
+footer {
+    padding: 20px;
+    background-color: #6D6875;
+    color: #FFB4A2;
+    border: 1px solid #fff;
+}
+
+footer h4 {
+    font-weight: bold;
+    font-size: 25px;
+    text-decoration: underline;
+    margin-bottom: 30px;
+}
+
+footer p {
+    font-weight: bold;
+    text-align: left;
+    line-height: 30px;
+    font-size: 15px;
+}
+
+footer div {
+    padding: 5px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #FFB4A2;
+}
+
+.btn-uno,
+.btn-dos,
+.btn-tres {
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0.2rem 0.2rem 0.3rem rgba(0, 0, 0, 0.4);
+    font-size: 15px;
+    font-weight: bold;
+    width: 150%;
+}
+
+.btn-uno:hover,
+.btn-dos:hover,
+.btn-tres:hover {
+    background: rgba(255, 255, 255, 1);
+    cursor: pointer;
+}
+
+
+/* Fin footer */
