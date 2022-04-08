@@ -1,6 +1,5 @@
 body {
     font-family: 'Asap', sans-serif;
-    background-image: url(imgs/fondo-pastel.jpeg);
 }
 
 .cont-control {
@@ -38,11 +37,18 @@ table {
     font-family: 'Asap', sans-serif;
 }
 
-img {
-    max-width: 200px;
-    padding-left: 25%;
-}
-
 #total {
     font-weight: bold;
+}
+
+#total td {
+    padding: 12px 0;
+}
+
+thead th {
+    padding: 8px 0;
+}
+
+table tr td {
+    padding: 5px 0;
 }
