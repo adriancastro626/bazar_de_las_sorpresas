@@ -7,10 +7,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/lista_usuarios.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+
+
     <title>Lista de Usuarios</title>
 </head>
 
 <body>
+    <header>
+        <nav class="nav">
+            <div class="parentNav">
+                <a class="navUno" href="./pagina_principal.html">
+                    <img class="nav-img" src=" /imgs/logo.png" alt="Logo">
+                </a>
+                <a class="navDos" href="./registro_usuarios.html">
+                    <button id="btn-registro" class="btn-nav" type="button">Registrarse</button>
+                </a>
+            </div>
+        </nav>
+    </header>
     <div class="pagina-completa">
         <div class="content-lateral">
             <div class="barra-lateral">
@@ -25,7 +41,7 @@
                         </div>
                         <div class="menu-lateral-usuario">
                             <div class="menu-lateral-foto">
-                                <img src="/img/autores/user-avatar.png" alt="Foto de perfil del usuario">
+                                <img src="/imgs/autores/user-avatar.png" alt="Foto de perfil del usuario">
                             </div>
                             <span class="menu-lateral-nombre" id="campo-nombre-lista"></span>
                             <div>
@@ -43,13 +59,13 @@
                             <nav class="menu-lateral-nav">
                                 <ul>
                                     <div class="menu-lateral-lista">
-                                        <li><i class="fa-solid fa-user"></i><a href="pagina_principal.html">Pagina Principal</a></li>
+                                        <li><i class="fa-solid fa-user"></i><a href="/html/pagina_principal.html">Pagina Principal</a></li>
                                     </div>
                                     <div class="menu-lateral-lista">
-                                        <li><i class="fa-solid fa-receipt"></i><a href="historial_compra.html">Historial de compras</a></li>
+                                        <li><i class="fa-solid fa-receipt"></i><a href="/html/historial_compra.html">Historial de compras</a></li>
                                     </div>
                                     <div class="menu-lateral-lista">
-                                        <li><i class="fa-solid fa-users"></i><a href="lista_usuarios.html">Usuarios</a></li>
+                                        <li><i class="fa-solid fa-users"></i><a href="/html/lista_usuarios.html">Usuarios</a></li>
                                     </div>
                                 </ul>
                             </nav>
@@ -237,41 +253,46 @@
         </div>
     </div>
     </div>
-    <footer>
-
-        <div class="footerParent">
-            <div class="footerChildUno">
-                <h4>Quiénes Somos</h4>
-                <div>
-                    <a href="/nosotros.html">Nosotros</a>
+    <div>
+        <footer>
+            <div class="footerParent">
+                <div class="footerChildUno">
+                    <h4>Quiénes Somos</h4>
+                    <div>
+                        <a href="pagina_producto.html">
+                            <p>El Bazar de las Sorpresas</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="pagina_equipo.html">
+                            <p>Rasmus</p>
+                        </a>
+                    </div>
                 </div>
-                <div>
-                    <a href="/libroFan.html">Libro Fan</a>
+                <div class="footerChildDos">
+                    <h4>Mi Perfil</h4>
+                    <div>
+                        <a href="editar_perfil.html">
+                            <p>Perfil</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="/html/carrito_compras.html">
+                            <p>Carrito</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="footerChildTres">
+                    <h4>Contáctenos</h4>
+                    <p type="text ">Correo Electrónico</p>
+                    <p type="text ">contactanes@elbazardelassorpresas.com</p>
+                    <p type="text ">Teléfono 800-bazar</p>
                 </div>
             </div>
-
-            <div class="footerChildDos">
-                <h4>Mi Perfil</h4>
-                <div>
-                    <a href="editar_perfil.html">Perfil</a>
-                </div>
-                <div>
-                    <a href="/carrito.html">Carrito</a>
-                </div>
-            </div>
-
-            <div class="footerChildTres">
-                <h4>Contactanos</h4>
-                <p type="text ">Correo Electronico</p>
-                <p type="text ">bazar@bazar.com</p>
-                <p href="text ">Teléfono</p>
-                <p href="text ">800-bazar</p>
-
-            </div>
-        </div>
-
-    </footer>
+        </footer>
+    </div>
     <script src="/js/lista_usuarios.js"></script>
+    <script src="/js/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://kit.fontawesome.com/3269682608.js" crossorigin="anonymous"></script>
 </body>
