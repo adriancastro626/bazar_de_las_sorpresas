@@ -29,6 +29,7 @@ td {
     border: 1px solid #6D6875;
     padding: 8px;
     text-align: left;
+    vertical-align: middle;
 }
 
 tr a {
