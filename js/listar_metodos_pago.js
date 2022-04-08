@@ -49,11 +49,11 @@ const notificarAgregar = () => {
 };
 
 const accion = () => {
-    Swal.fire({
-        'icon': 'error',
-        'title': 'Método eliminado!',
-        'text': 'Se ha eliminado el método de pago.'
-    });
+    // Swal.fire({
+    //     'icon': 'error',
+    //     'title': 'Método eliminado!',
+    //     'text': 'Se ha eliminado el método de pago.'
+    // });
     // console.log('Calls');
 };
 
