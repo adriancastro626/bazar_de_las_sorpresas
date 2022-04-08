@@ -1,3 +1,4 @@
+
 const cuerpoTabla = document.querySelector("#tbl-libros tbody");
 // se usa selectores de css
 
@@ -78,6 +79,7 @@ const mostrarDatos = () => {
     });
 
 };
+
 
 
 

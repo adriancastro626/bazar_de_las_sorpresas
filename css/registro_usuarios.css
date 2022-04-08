@@ -1,5 +1,7 @@
 * {
     box-sizing: border-box;
+    scrollbar-color: transparent transparent;
+    scrollbar-width: 0px;
 }
 
 body {
@@ -9,6 +11,8 @@ body {
 
 #sct-registro-usuarios {
     display: flex;
+    margin-top: 100px;
+    margin-bottom: 120px;
 }
 
 .parent {
