@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/inicio_sesion.css">
     <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/header.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Asap:wght@400;600;700&display=swap" rel="stylesheet">
@@ -16,13 +17,13 @@
 
 <body>
     <header>
-        <nav>
+        <nav class="nav">
             <div class="parentNav">
                 <a class="navUno" href="./pagina_principal.html">
-                    <img src=" /imgs/logo.png" alt="Logo">
+                    <img class="nav-img" src=" /imgs/logo.png" alt="Logo">
                 </a>
                 <a class="navDos" href="./registro_usuarios.html">
-                    <button id="btn-registro" type="button">Registrarse</button>
+                    <button class="btn-nav" id="btn-registro" type="button">Registrarse</button>
                 </a>
             </div>
         </nav>
@@ -92,9 +93,9 @@
         </div>
 
     </footer>
-
-    <script src="/js/lista_usuarios.js"></script>
     <script src="/js/inicio_sesion.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/lista_usuarios.js"></script>
 </body>
 
 </html>

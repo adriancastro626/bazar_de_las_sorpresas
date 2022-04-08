@@ -7,13 +7,67 @@
 
 body {
     font-family: 'Asap', sans-serif;
-    background: #FFB4A2;
+    background: #dfcdc4;
 }
 
-nav h1 {
+
+/* Navbar */
+
+.nav {
+    text-align: center;
+    background-color: #B5838D;
+    height: 100px;
+}
+
+.txt-h1 {
     font-size: 30px;
     font-weight: bold;
 }
+
+.nav-img {
+    height: 100px;
+    width: 100px;
+}
+
+.navParent {
+    display: flex;
+    flex-direction: row;
+}
+
+.navUno {
+    float: center;
+    margin-right: 10%;
+}
+
+.navDos {
+    float: left;
+    text-decoration: none;
+    margin-left: 20px;
+    margin-top: 25px;
+}
+
+.navTres {
+    float: right;
+    text-decoration: none;
+    margin-top: -70px;
+    margin-right: 20px;
+}
+
+.btn-nav {
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0.2rem 0.2rem 0.3rem rgba(0, 0, 0, 0.4);
+}
+
+.btn-nav:hover {
+    background: rgba(255, 255, 255, 1);
+    cursor: pointer;
+}
+
+
+/*Fin Navbar */
 
 
 /* Inicio de Carousel */
@@ -111,14 +165,14 @@ li {
     position: relative;
     flex: 0 0 100%;
     width: 100%;
-    background-color: #FFB4A2;
+    background-color: #dfcdc4;
     counter-increment: item;
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
 .carousel__slide:nth-child(even) {
-    background-color: #FFB4A2;
+    background-color: #dfcdc4;
 }
 
 img {
@@ -279,7 +333,8 @@ img {
 
 .btn-uno:hover,
 .btn-dos:hover,
-.btn-tres:hover {
+.btn-tres:hover,
+.exp-btn:hover {
     background: rgba(255, 255, 255, 1);
     cursor: pointer;
 }
@@ -399,4 +454,28 @@ img {
     box-shadow: 0.6rem 0.5rem 0.5rem rgba(0, 0, 0, 0.6);
     text-align: left;
     transition: transform .2s;
+}
+
+.expolorador-txt {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 30px;
+}
+
+.exp-bar {
+    height: 40px;
+    width: 300px;
+    border: none;
+}
+
+.exp-btn {
+    height: 40px;
+    width: 90px;
+    border: none;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0.2rem 0.2rem 0.3rem rgba(0, 0, 0, 0.4);
+    font-size: 15px;
+    font-weight: bold;
 }

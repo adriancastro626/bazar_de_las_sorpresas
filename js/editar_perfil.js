@@ -1,7 +1,6 @@
 let usuarioConectado = JSON.parse(localStorage.getItem('usuarioConectado'));
 
-const inputNombre = document.getElementById('campo-nombre');
-const btnActualizar = document.getElementById('icono-actualizar');
+
 document.getElementById('campo-nombre-lateral').textContent = usuarioConectado.nombre;
 document.getElementById('campo-correo-lateral').textContent = usuarioConectado.correo;
 document.getElementById('campo-nombre').textContent = usuarioConectado.nombre;
@@ -27,7 +26,8 @@ document.getElementById('campo-foto').textContent = usuarioConectado.foto;
 
 /*<span id="campo-nombre"></span>*/
 
-
+const inputNombre = document.getElementById('campo-nombre');
+const btnActualizar = document.getElementById('btn-actualizar');
 
 const actualizar = () => {
 
@@ -52,7 +52,7 @@ const actualizar = () => {
         Swal.fire({
             'icon': 'success',
             'title': 'Perfil Actualizado',
-            'text': 'Los cambios se han hecho con exito'
+            'text': 'Los cambios se han guardado con exito'
         }).then(() => {
             window.location.href = 'editar_perfil.html';
         });

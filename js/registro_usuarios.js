@@ -180,13 +180,13 @@ const validar = () => {
         inputAutores.classList.remove('input-error');
     }
 
-    if (inputDireccion.value == '') {
+    // if (inputDireccion.value == '') {
 
-        hayError = true;
-        inputDireccion.classList.add('input-error');
-    } else {
-        inputDireccion.classList.remove('input-error');
-    }
+    //     hayError = true;
+    //     inputDireccion.classList.add('input-error');
+    // } else {
+    //     inputDireccion.classList.remove('input-error');
+    // }
 
     // if (inputMapa.value == '') {
 
@@ -208,15 +208,14 @@ const validar = () => {
         Swal.fire({
             'icon': 'warning',
             'title': 'El usuario no se puede registrar',
-            'text': 'Por favor revise los campos resaltados'
+            'text': 'Complete todos los espacios'
         });
 
     } else {
-        imprimir();
         Swal.fire({
             'icon': 'success',
             'title': 'El usuario ha sido registrado',
-            'text': 'Le damos la bienvenida'
+            'text': 'El Bazar de las Sorpresas'
         }).then(() => {
             window.location.href = 'inicio_sesion.html';
         });
