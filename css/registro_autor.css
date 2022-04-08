@@ -23,12 +23,12 @@ body {
 
 #sct-registro-autor form {
     padding: 5%;
-    width: 50%;
+    width: 75%;
     background-color: #6D6875;
 }
 
 #sct-registro-autor form .cont-control {
-    margin-bottom: 25px;
+    margin-bottom: 35px;
     display: flex;
     justify-content: space-between;
     align-items: center;

@@ -12,8 +12,7 @@ const mostrarDatos = () => {
         // creo los botones
         let botonBiografia = document.createElement("button");
         botonBiografia.textContent = "Perfil"
-        let spanBiografia = document.createElement("span");
-        let iconoBiografia = document.createElement("i");
+
 
         let botonEditar = document.createElement("button");
         let spanEditar = document.createElement("span");
@@ -46,6 +45,8 @@ const mostrarDatos = () => {
         spanEditar.appendChild(iconoEditar);
         botonEditar.appendChild(spanEditar);
 
+
+
         let fila = cuerpoTabla.insertRow(); // CREO LA FILA
         fila.insertCell().innerText = elemento.nombre;
         fila.insertCell().innerText = elemento.apellido;
@@ -57,41 +58,27 @@ const mostrarDatos = () => {
         fila.insertCell().appendChild(botonBiografia);
         fila.insertCell().appendChild(botonEditar);
         fila.insertCell().appendChild(botonEliminar);
+        botonBiografia.addEventListener("click", () => {
+            window.location.href = "perfil_autor.html";
+        })
+
+        botonEditar.addEventListener("click", () => {
+            window.location.href = "registro_autor.html";
+        })
+
+        botonEliminar.addEventListener("click", () => {
+            Swal.fire({
+                'icon': 'error',
+                'title': 'Método eliminado!',
+                'text': 'Se ha eliminado el método de pago.'
+            });
+        })
 
     });
 
 };
 
 
-const botonesEliminar = document.getElementsByName('boton-eliminar');
-const botonesEditar = document.getElementsByName('boton-editar');
-const botonesBiografia = document.getElementsByName('boton-biografia');
 
-const accion = () => {
-    Swal.fire({
-        'icon': 'error',
-        'title': 'Método eliminado!',
-        'text': 'Se ha eliminado el método de pago.'
-    });
-};
-
-const formulario = () => {
-    window.location.href = "registro_autor.html";
-};
-const perfilautor = () => {
-    window.location.href = "perfil_autor.html";
-};
-
-botonesEliminar.forEach(boton => {
-    boton.addEventListener('click', accion());
-});
-
-botonesEditar.forEach(boton => {
-    boton.addEventListener('click', formulario());
-});
-
-botonesBiografia.forEach(boton => {
-    boton.addEventListener('click', perfilautor());
-});
 
 mostrarDatos();
