@@ -4,10 +4,10 @@
 
 body {
     font-family: 'Asap', sans-serif;
+    background-color: #FFB4A2;
 }
 
 .contenedor-img {
-    background-image: url('/img/recuperar_contrasenna.jpeg');
     background-size: cover;
     background-position: center;
     height: 50rem;
@@ -17,53 +17,14 @@ body {
     align-items: center;
 }
 
-nav {
-    padding: 20px;
-    text-align: center;
-    background-color: #5989BE;
-    height: 100px;
-}
-
-img {
-    height: 50px;
-    width: 50px;
-}
-
-.footerParent,
-.navParent {
-    display: flex;
-}
-
-.navUno {
-    text-align: center;
-}
-
-.navDos {
-    text-align: right;
-    text-decoration: none;
-}
-
-.footerChildUno,
-.footerChildDos,
-.footerChildTres {
-    width: 15%
-}
-
-footer {
-    padding: 20px;
-    background-color: #6D6875;
-}
-
-footer h4 {
-    font-weight: bold;
-}
-
 label {
     display: inline-block;
     color: rgba(255, 255, 255, 0.75);
     padding: 10px;
     text-align: center;
-    width: 220px;
+    width: 400px;
+    font-size: 20px;
+    line-height: 30px;
 }
 
 .contrasenna {
@@ -77,10 +38,10 @@ label {
 }
 
 .card {
-    height: 350px;
-    width: 300px;
+    height: 450px;
+    width: 500px;
     backdrop-filter: blur(0.4rem);
-    background: rgba(255, 255, 255, 0.1);
+    background: #6D6875;
     box-shadow: 0.6rem 0.5rem 0.5rem rgba(0, 0, 0, 0.6);
     border-radius: 0.7rem;
     text-align: center;
@@ -97,20 +58,15 @@ p {
     padding-bottom: 20px;
 }
 
-.card h1 {
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 1.5rem;
-    margin-top: 2rem;
-}
-
 .card div {
     color: rgba(255, 255, 255, 0.75);
     padding: 0 1rem;
+    margin-top: 200px;
 }
 
 .card button {
     padding: 0.5rem 1.5rem;
-    border-radius: 1rem;
+    border-radius: 6px;
     border: none;
     background: rgba(255, 255, 255, 0.7);
     box-shadow: 0.2rem 0.2rem 0.3rem rgba(0, 0, 0, 0.4);
@@ -140,8 +96,9 @@ p {
 
 #sct-ingreso-usuarios form h1 {
     color: rgba(255, 255, 255, 0.9);
-    font-size: 1.5rem;
-    margin-top: 2rem;
+    font-size: 30px;
+    margin-top: 5rem;
+    font-weight: bold;
 }
 
 #sct-ingreso-usuarios form .cont-control {
@@ -155,8 +112,8 @@ p {
 
 .cont-control input,
 .cont-control select {
-    width: 250px;
-    height: 30px;
+    width: 400px;
+    height: 40px;
     border-radius: 5px;
     border: none;
     text-align: center;
@@ -166,6 +123,7 @@ p {
 
 .btn {
     margin-top: 30px;
+    font-size: 30px;
 }
 
 .lnk {

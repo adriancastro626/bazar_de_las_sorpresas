@@ -7,7 +7,7 @@ body {
 }
 
 .contenedor-img {
-    background-image: url('/img/inicio_sesion.jpg');
+    background-color: #FFCDB2;
     background-size: cover;
     background-position: center;
     height: 60rem;
@@ -17,50 +17,53 @@ body {
     align-items: center;
 }
 
+
+/* Navbar */
+
 nav {
     padding: 20px;
     text-align: center;
-    background-color: #5989BE;
-    height: 100px;
+    background-color: #B5838D;
+    height: 170px;
 }
 
-img {
-    height: 50px;
-    width: 50px;
+nav img {
+    height: 120px;
+    width: 120px;
 }
 
-.footerParent,
 .navParent {
     display: flex;
 }
 
 .navUno {
-    text-align: center;
+    float: center;
 }
 
 .navDos {
-    text-align: right;
+    float: right;
     text-decoration: none;
 }
 
-.footerChildUno,
-.footerChildDos,
-.footerChildTres {
-    width: 15%
+.btn-nav {
+    padding: 10px;
+    border-radius: 1rem;
+    border: none;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0.2rem 0.2rem 0.3rem rgba(0, 0, 0, 0.4);
 }
 
-footer {
-    padding: 20px;
-    background-color: #6D6875;
+.btn-nav:hover {
+    background: rgba(255, 255, 255, 1);
+    cursor: pointer;
 }
 
-footer h4 {
-    font-weight: bold;
-}
+
+/*Fin Navbar */
 
 label {
     display: inline-block;
-    color: rgba(255, 255, 255, 0.75);
+    color: #FFB4A2;
     padding: 10px;
     text-align: center;
     width: 220px;
@@ -68,7 +71,7 @@ label {
 
 .contrasenna {
     text-decoration: none;
-    color: white;
+    color: #FFB4A2;
 }
 
 .contrasenna:hover {
@@ -78,9 +81,9 @@ label {
 
 .card {
     height: 450px;
-    width: 300px;
+    width: 500px;
     backdrop-filter: blur(0.4rem);
-    background: rgba(255, 255, 255, 0.1);
+    background: #6D6875;
     box-shadow: 0.6rem 0.5rem 0.5rem rgba(0, 0, 0, 0.6);
     border-radius: 0.7rem;
     text-align: center;
@@ -93,12 +96,6 @@ label {
     cursor: pointer;
 }
 
-.card h1 {
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 1.5rem;
-    margin-top: 2rem;
-}
-
 .card div {
     color: rgba(255, 255, 255, 0.75);
     padding: 0 1rem;
@@ -106,7 +103,7 @@ label {
 
 .card button {
     padding: 0.5rem 1.5rem;
-    border-radius: 1rem;
+    border-radius: 6px;
     border: none;
     background: rgba(255, 255, 255, 0.7);
     box-shadow: 0.2rem 0.2rem 0.3rem rgba(0, 0, 0, 0.4);
@@ -135,7 +132,8 @@ label {
 }
 
 #sct-ingreso-usuarios form h1 {
-    color: rgba(255, 255, 255, 0.9);
+    padding-top: 20px;
+    color: #FFB4A2;
     font-size: 1.5rem;
     margin-top: 2rem;
 }
@@ -151,7 +149,7 @@ label {
 
 .cont-control input,
 .cont-control select {
-    width: 150px;
+    width: 250px;
     height: 30px;
     border-radius: 5px;
     border: none;

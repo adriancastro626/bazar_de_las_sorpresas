@@ -16,7 +16,7 @@ body {
     background-color: #6D6875;
     list-style: none;
     width: 300px;
-    height: 950px;
+    height: 1175px;
 }
 
 .menu-lateral li {
@@ -150,18 +150,86 @@ ul {
     display: flex;
 }
 
-.col-uno,
-.col-dos {
+#sct-registro-usuarios form {
+    height: 950px;
     width: 100%;
+    /* backdrop-filter: blur(0.4rem); */
+    background: #6D6875;
+    box-shadow: 0.6rem 0.5rem 0.5rem rgba(0, 0, 0, 0.6);
+    border-radius: 0.7rem;
+    text-align: center;
+    transition: transform .2s;
+    margin: 50px;
 }
 
-h1 {
-    text-align: center;
+
+/* form:hover {
+    transform: scale(1.1);
+    backdrop-filter: blur(0.7rem);
+    cursor: pointer;
+} */
+
+#sct-registro-usuarios form h1 {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 10rem;
+    margin-bottom: 2rem;
 }
 
-button {
-    margin-bottom: 20px;
+#sct-registro-usuarios form .cont-control {
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#sct-registro-usuarios form label {
+    display: inline-block;
+    color: white;
+    padding: 0 2rem;
     text-align: center;
+    width: 270px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.col-uno,
+.col-dos,
+.col-tres,
+.col-cuatro {
+    width: 25%;
+}
+
+.mapa {
+    width: 250px;
+    height: 35px;
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+.cont-control span,
+.cont-control textarea {
+    width: 200px;
+    height: 35px;
+    color: white;
+    align-items: left;
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+}
+
+#btn {
+    padding: 10px;
+    border-radius: 1rem;
+    border: none;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0.2rem 0.2rem 0.3rem rgba(0, 0, 0, 0.4);
+}
+
+#btn:hover {
+    background: rgba(255, 255, 255, 1);
+    cursor: pointer;
 }
 
 .btn-oscuro {
@@ -170,7 +238,7 @@ button {
     border: none;
     background: rgba(255, 255, 255, 0.7);
     box-shadow: 0.2rem 0.2rem 0.3rem rgba(0, 0, 0, 0.4);
-    text-align: center;
+    margin-top: 25px;
 }
 
 .btn-oscuro:hover {
@@ -178,50 +246,7 @@ button {
     cursor: pointer;
 }
 
-form {
-    height: 750px;
-    width: 900px;
-    backdrop-filter: blur(0.4rem);
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 0.7rem;
-    text-align: center;
-    transition: transform .2s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.contenido {
-    margin-top: 2%;
-    margin-left: 20%;
-}
-
-#sct-registro-usuarios form .cont-control {
-    margin-bottom: 25px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 20px;
-    width: 500px;
-}
-
-#sct-registro-usuarios form label {
-    display: inline-block;
-    color: black;
-    text-align: left;
-    font-weight: bold;
-}
-
-#sct-registro-usuarios form span {
-    display: inline-block;
-    color: black;
-    text-align: left;
-    width: 100px;
-    padding: px;
-}
-
 .contenedor-img {
-    background-image: url('../img/editar_perfil.jpg');
     background-size: cover;
     background-position: center;
     height: 100%;
@@ -231,38 +256,9 @@ form {
     align-items: center;
 }
 
-
-/* Inicio Footer */
-
-.footerParent {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.footerChildUno,
-.footerChildDos,
-.footerChildTres {
-    width: 15%
-}
-
-footer {
-    padding: 20px;
+.btn-comentar {
     background-color: #6D6875;
+    border: #fff;
+    color: #FFCDB2;
+    cursor: pointer;
 }
-
-footer h4 {
-    font-weight: bold;
-}
-
-footer p {
-    font-weight: bold;
-    text-align: left;
-}
-
-footer div {
-    padding: 5px;
-}
-
-
-/* Fin footer */

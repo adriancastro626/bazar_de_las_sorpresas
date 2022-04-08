@@ -1,5 +1,9 @@
 let usuarioConectado = JSON.parse(localStorage.getItem('usuarioConectado'));
 
+const inputNombre = document.getElementById('campo-nombre');
+const btnActualizar = document.getElementById('icono-actualizar');
+document.getElementById('campo-nombre-lateral').textContent = usuarioConectado.nombre;
+document.getElementById('campo-correo-lateral').textContent = usuarioConectado.correo;
 document.getElementById('campo-nombre').textContent = usuarioConectado.nombre;
 document.getElementById('campo-segundoNombre').textContent = usuarioConectado.segundoNombre;
 document.getElementById('campo-apellido').textContent = usuarioConectado.apellido;
@@ -19,12 +23,11 @@ document.getElementById('campo-distrito').textContent = usuarioConectado.distrit
 document.getElementById('campo-direccion').textContent = usuarioConectado.direccion;
 document.getElementById('campo-coordenadas').textContent = usuarioConectado.coordenadas;
 document.getElementById('campo-foto').textContent = usuarioConectado.foto;
-document.getElementById('campo-nombre-lateral').textContent = usuarioConectado.nombre;
-document.getElementById('campo-correo-lateral').textContent = usuarioConectado.correo;
 
 
-const inputNombre = document.getElementById('campo-nombre');
-const btnActualizar = document.getElementById('btn-guardar');
+/*<span id="campo-nombre"></span>*/
+
+
 
 const actualizar = () => {
 

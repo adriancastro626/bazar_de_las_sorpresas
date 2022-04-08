@@ -7,61 +7,13 @@
 
 body {
     font-family: 'Asap', sans-serif;
-    background: #FFCDB2;
+    background: #FFB4A2;
 }
 
-
-/* Navbar */
-
-nav {
-    padding: 20px;
-    text-align: center;
-    background-color: #5989BE;
-    height: 100px;
+nav h1 {
+    font-size: 30px;
+    font-weight: bold;
 }
-
-nav img {
-    height: 50px;
-    width: 50px;
-}
-
-.navParent {
-    display: flex;
-}
-
-.navUno {
-    float: left;
-}
-
-.navDos {
-    float: right;
-    text-decoration: none;
-}
-
-nav form input[type=text] {
-    float: center;
-    padding: 8px;
-    border: none;
-    margin-top: 1px;
-    margin-right: 16px;
-    font-size: 17px;
-}
-
-#btn-exp {
-    padding: 10px;
-    border-radius: 1rem;
-    border: none;
-    background: rgba(255, 255, 255, 0.7);
-    box-shadow: 0.2rem 0.2rem 0.3rem rgba(0, 0, 0, 0.4);
-}
-
-#btn-exp:hover {
-    background: rgba(255, 255, 255, 1);
-    cursor: pointer;
-}
-
-
-/*Fin Navbar */
 
 
 /* Inicio de Carousel */
@@ -138,10 +90,8 @@ li {
 .carousel {
     display: block;
     margin: 0px auto;
-    filter: drop-shadow(0 0 10px #0003);
     perspective: 100px;
-    width: 700px;
-    height: 550px;
+    height: 1000px;
 }
 
 .carousel__viewport {
@@ -161,12 +111,14 @@ li {
     position: relative;
     flex: 0 0 100%;
     width: 100%;
-    background-color: #FFCDB2;
+    background-color: #FFB4A2;
     counter-increment: item;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .carousel__slide:nth-child(even) {
-    background-color: #FFCDB2;
+    background-color: #FFB4A2;
 }
 
 img {
@@ -285,51 +237,14 @@ img {
 /* Fin de Carousel */
 
 
-/* Inicio Footer */
-
-.footerParent {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.footerChildUno,
-.footerChildDos,
-.footerChildTres {
-    width: 15%
-}
-
-footer {
-    padding: 20px;
-    background-color: #6D6875;
-}
-
-footer h4 {
-    font-weight: bold;
-}
-
-
-/* Fin footer */
-
-
 /* Inicio BTNS-BAR */
 
 .btns-explorar {
     display: flex;
     align-items: center;
-    justify-content: center;
-    background-color: #FFB4A2;
-    height: 4rem;
-}
-
-.btn-uno,
-.btn-dos,
-.btn-tres {
-    width: 10%
-}
-
-.espacio {
-    height: 4rem;
+    justify-content: space-evenly;
+    background-color: #B5838D;
+    height: 5rem;
 }
 
 
@@ -340,11 +255,33 @@ footer h4 {
 
 .top10 {
     color: rgba(255, 255, 255, 0.9);
-    font-size: 1.5rem;
+    font-size: 40px;
     margin-top: 2rem;
     text-align: center;
-    height: 2rem;
-    background-color: #FFB4A2;
+    height: 4rem;
+    background-color: #B5838D;
+    font-weight: bold;
+    padding: 10px 0px;
+}
+
+.btn-uno,
+.btn-dos,
+.btn-tres {
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0.2rem 0.2rem 0.3rem rgba(0, 0, 0, 0.4);
+    font-size: 15px;
+    font-weight: bold;
+    width: 150%;
+}
+
+.btn-uno:hover,
+.btn-dos:hover,
+.btn-tres:hover {
+    background: rgba(255, 255, 255, 1);
+    cursor: pointer;
 }
 
 .cards {
@@ -363,6 +300,7 @@ footer h4 {
     border-radius: calc(var(--curve) * 1px);
     overflow: hidden;
     text-decoration: none;
+    box-shadow: 5px 10px 6px black;
 }
 
 .card__image {
@@ -422,13 +360,13 @@ footer h4 {
 
 .card__thumb {
     flex-shrink: 0;
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
 }
 
 .card__title {
-    font-size: 1rem;
+    font-size: 30px;
     margin: 0 0 .3em;
     color: #fff;
 }
@@ -451,7 +389,7 @@ footer h4 {
     padding: 0 2em 2em;
     margin: 0;
     color: #fff;
-    font-family: "MockFlowFont";
+    font-size: 20px;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
@@ -459,6 +397,6 @@ footer h4 {
     backdrop-filter: blur(0.4rem);
     background: rgba(255, 255, 255, 0.1);
     box-shadow: 0.6rem 0.5rem 0.5rem rgba(0, 0, 0, 0.6);
-    text-align: center;
+    text-align: left;
     transition: transform .2s;
 }
