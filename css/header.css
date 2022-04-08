@@ -1,31 +1,31 @@
 /* Navbar */
 
-​ .nav {
+.nav {
     padding: 20px;
     text-align: center;
     background-color: #B5838D;
     height: 170px;
 }
 
-​ .nav-img {
+.nav-img {
     height: 120px;
     width: 120px;
 }
 
-​ .navParent {
+.navParent {
     display: flex;
 }
 
-​ .navUno {
+.navUno {
     float: center;
 }
 
-​ .navDos {
+.navDos {
     float: right;
     text-decoration: none;
 }
 
-​ .btn-nav {
+.btn-nav {
     padding: 10px;
     border-radius: 1rem;
     border: none;
@@ -33,7 +33,10 @@
     box-shadow: 0.2rem 0.2rem 0.3rem rgba(0, 0, 0, 0.4);
 }
 
-​ .btn-nav:hover {
+.btn-nav:hover {
     background: rgba(255, 255, 255, 1);
     cursor: pointer;
 }
+
+
+/*Fin Navbar */
