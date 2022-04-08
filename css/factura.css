@@ -1,18 +1,21 @@
 #cont-factura {
     border: 3px solid #b5838d;
     background: #fff;
-    padding-left: 10px;
-    width: 50%;
+    padding: 20px;
+    width: 90%;
+    height: 95%;
     margin-left: auto;
     margin-right: auto;
 }
 
 h1 {
     text-align: center;
+    font-weight: bold;
 }
 
 h3 {
     text-align: center;
+    font-weight: bold;
 }
 
 body {

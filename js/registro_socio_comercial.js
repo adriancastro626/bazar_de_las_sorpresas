@@ -98,7 +98,7 @@ const validar = () => {
             'title': 'Socio Comercial Registrado',
             'text': 'Añadido a lista de socios comerciales'
         }).then(() => {
-            window.location.href = 'lista_socios_comerciales.html';
+            window.location.href = 'lista_socios.html';
         });
 
     }
