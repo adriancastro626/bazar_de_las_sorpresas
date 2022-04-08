@@ -5,89 +5,245 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/estilos_general.css">
+    <script src="https://kit.fontawesome.com/0db8cde7c4.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/factura.css">
+    <link rel="stylesheet" href="../css/Footer.css">
     <title>Factura Impresa</title>
 </head>
-<section id="cont-factura">
-    <form>
-        <h1>Bazar De Las Sorpresas</h1>
-        <div class="cont-cedula-juridica">
-            <h4>Cédula Jurídica: 3-101-074154</h4>
-        </div>
-        <div class="cont-direccion">
-            <a>Cartago, Tejar, Costado Suroeste De La Iglesia Católica Inmaculáda Concepción</a>
-        </div>
-        <div class="cont-telefono">
-            <a>Teléfono: 25529168</a>
-        </div>
-        <div class="cont-recibo">
-            <h4>*Recibo de Compra*</h4>
-        </div>
-        <div class="cont-numero-recibo">
-            <a>Recibo No.583694</a>
-        </div>
-        <div class="cont-transaccion">
-            <a>Transacción. 903856330576</a>
-        </div>
-        <div class="cont-fecha">
-            <a>Fecha: 30-03-2022</a>
-        </div>
-        <div class="cont- linea">
-            <hr>
-        </div>
-        <div class="cont-cedula-cliente">
-            <a>Cédula: 305420784</a>
-        </div>
-        <div class="cont-nombre-cliente">
-            <a>SR(a): Vanessa Pérez Aguilar</a>
-        </div>
-        <div class="cont-direccion-cliente">
-            <a>Dirección: Cartago, Tejar, del colegio Elías Leiva 100m Norte casa mano derecha color vino</a>
-        </div>
-        <div class="cont-telefono-cliente">
-            <a>Teléfono: 82746352</a>
-        </div>
-        <div class="cont-espacio">
-            <br><br><br>
-        </div>
-        <div class="cont-cuenta-cliente">
-            <a>Cuenta: 83097011*****</a>
-        </div>
-        <div class="cont-producto">
-            <a>Nombre Producto: Libro Harry Potter</a>
-        </div>
-        <div class="cont-precio-base">
-            <a>Precio Base: ₡11,900.00</a>
-        </div>
-        <div class="cont-iva">
-            <a>Iva: ₡1,547.00</a>
-        </div>
-        <div class="cont-descuento">
-            <a>Descuento Total: ₡2,100.00</a>
-        </div>
-        <div class="cont-total">
-            <a>Total: ₡13,447.00</a>
-        </div>
-        <div class="cont- linea">
-            <hr>
-        </div>
-        <div class="cont- linea">
-            <a>Monto Cancelado: ₡13,447.00</a>
-        </div>
-        <div class="cont- linea">
-            <hr>
-        </div>
-        <div class="cont-final">
-            <h3>*Gracias por su Compra*</h3>
-        </div>
-
-
-
-    </form>
-</section>
 
 <body>
+    <header>
+        <nav class="nav">
+            <div class="parentNav">
+                <a class="navUno" href="./pagina_principal.html">
+                    <img class="nav-img" src=" /img/logo.png" alt="Logo">
+                </a>
+                <a class="navDos" href="./pagina_principal.html">
+                    <button class="btn-nav" id="btn-registro" type="button">Cerrar Sesión</button>
+                </a>
+            </div>
+        </nav>
+    </header>
+    <div class="pagina-con-menu-lateral">
 
+        <!-- Menú lateral -->
+        <div class="menu-lateral">
+
+            <!-- Primera sección del menú lateral -->
+            <div class="menu-lateral-arriba">
+                <div class="menu-lateral-arriba-1">
+                    <a href="pagina_principal.html"><i class="fa-solid fa-house" title="Icono para ir a la página principal"></i></a>
+                    <a href="inicio_sesion.html"><i class="fa-solid fa-lock" title="Icono para cerrar sesión en la cuenta"></i></a>
+                </div>
+                <div class="menu-lateral-arriba-2">
+                    <img class="menu-lateral-foto-perfil" src="../imgs/foto-perfil.png" alt="Foto de Perfil del Usuario">
+                    <p class="menu-lateral-nombre-usuario">John Doe</p>
+                    <p class="menu-lateral-email-usuario">johndoe@mitienda.com</p>
+                </div>
+            </div>
+
+            <!-- Segunda sección del menú lateral -->
+            <div class="menu-lateral-form">
+
+                <!-- Primera lista -->
+                <h2>Cuentas</h2>
+                <nav>
+                    <ul>
+                        <li><i class="fa-solid fa-user"></i><a href="editar_perfil.html">Perfil</a></li>
+                        <li><i class="fa-solid fa-receipt"></i><a href="historial_compra.html">Historial de compras</a></li>
+                        <li><i class="fa-solid fa-users"></i><a href="lista_usuarios.html">Usuarios</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Segunda lista -->
+                <h2>Tienda</h2>
+                <nav>
+                    <ul id="menu-lateral-form">
+                        <li><i class="fa-solid fa-tag"></i><a href="parametros_sistema.html">Parámetros del sistema</a></li>
+                        <li class="transicion"><i class="fa-solid fa-book-open"></i><a href="#">Catálogo</a>
+                            <ul class="menu-lateral-submenu">
+                                <li><a href="lista_libros.html">Libros</a></li>
+                                <li><a href="lista_autores.html">Autores</a></li>
+                                <li><a href="lista_generos.html">Géneros literarios</a></li>
+                            </ul>
+                        </li>
+                        <li><i class="fa-solid fa-newspaper"></i><a href="#">Reportes</a>
+                            <ul class="menu-lateral-submenu">
+                                <li><a href="reportes_top10.html">Top 10</a></li>
+                                <li><a href="reportes_desglose_ventas.html">Ventas</a></li>
+                                <li><a href="reportes_descuentos.html">Descuentos</a></li>
+                                <li><a href="reportes_socios_comerciales.html">Socios comerciales</a></li>
+                            </ul>
+                        </li>
+                        <li><i class="fa-solid fa-store"></i><a href="lista_socios.html">Socios comerciales</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Contenido de la página -->
+        <div class="pagina-contenido">
+            <section id="cont-factura">
+                <form>
+                    <br>
+                    <h1>Bazar De Las Sorpresas</h1>
+                    <br>
+                    <div class="cont-cedula-juridica">
+                        <br>
+                        <h4>Cédula Jurídica: 3-101-074154</h4>
+                        <br>
+                    </div>
+                    <div class="cont-direccion">
+                        <br>
+                        <a>Cartago, Tejar, Costado Suroeste De La Iglesia Católica Inmaculáda Concepción</a>
+                        <br>
+                    </div>
+                    <div class="cont-telefono">
+                        <br>
+                        <a>Teléfono: 25529168</a>
+                        <br>
+                    </div>
+                    <div class="cont-recibo">
+                        <br>
+                        <h4>*Recibo de Compra*</h4>
+                        <br>
+                    </div>
+                    <div class="cont-numero-recibo">
+                        <br>
+                        <a>Recibo No.583694</a>
+                        <br>
+                    </div>
+                    <div class="cont-transaccion">
+                        <br>
+                        <a>Transacción. 903856330576</a>
+                        <br>
+                    </div>
+                    <div class="cont-fecha">
+                        <br>
+                        <a>Fecha: 30-03-2022</a>
+                        <br>
+                    </div>
+                    <div class="cont- linea">
+                        <hr>
+                    </div>
+                    <div class="cont-cedula-cliente">
+                        <br>
+                        <a>Cédula: 305420784</a>
+                        <br>
+                    </div>
+                    <div class="cont-nombre-cliente">
+                        <br>
+                        <a>SR(a): Vanessa Pérez Aguilar</a>
+                        <br>
+                    </div>
+                    <div class="cont-direccion-cliente">
+                        <br>
+                        <a>Dirección: Cartago, Tejar, del colegio Elías Leiva 100m Norte casa mano derecha color vino</a>
+                        <br>
+                    </div>
+                    <div class="cont-telefono-cliente">
+                        <br>
+                        <a>Teléfono: 82746352</a>
+                        <br>
+                    </div>
+                    <div class="cont-espacio">
+                        <br><br><br>
+                    </div>
+                    <div class="cont-cuenta-cliente">
+                        <br>
+                        <a>Cuenta: 83097011*****</a>
+                        <br>
+                    </div>
+                    <div class="cont-producto">
+                        <br>
+                        <a>Nombre Producto: Libro Harry Potter</a>
+                        <br>
+                    </div>
+                    <div class="cont-precio-base">
+                        <br>
+                        <a>Precio Base: ₡11,900.00</a>
+                        <br>
+                    </div>
+                    <div class="cont-iva">
+                        <br>
+                        <a>Iva: ₡1,547.00</a>
+                        <br>
+                    </div>
+                    <div class="cont-descuento">
+                        <br>
+                        <a>Descuento Total: ₡2,100.00</a>
+                        <br>
+                    </div>
+                    <div class="cont-total">
+                        <br>
+                        <a>Total: ₡13,447.00</a>
+                        <br>
+                    </div>
+                    <div class="cont- linea">
+                        <hr>
+                    </div>
+                    <div class="cont- linea">
+                        <br>
+                        <a>Monto Cancelado: ₡13,447.00</a>
+                        <br>
+                    </div>
+                    <div class="cont- linea">
+                        <hr>
+                    </div>
+                    <div class="cont-final">
+                        <br>
+                        <h3>*Gracias por su Compra*</h3>
+                        <br>
+                    </div>
+
+
+
+                </form>
+            </section>
+        </div>
+    </div>
+    <div>
+        <footer>
+            <div class="footerParent">
+                <div class="footerChildUno">
+                    <h4>Quiénes Somos</h4>
+                    <div>
+                        <a href="pagina_producto.html">
+                            <p href="/nosotros.html">El Bazar de las Sorpresas</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="pagina_equipo.html">
+                            <p>Rasmus</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="footerChildDos">
+                    <h4>Mi Perfil</h4>
+                    <div>
+                        <a href="editar_perfil.html">
+                            <p>Perfil</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="/html/carrito_compras.html">
+                            <p>Carrito</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="footerChildTres">
+                    <h4>Contáctenos</h4>
+                    <p type="text ">Correo Electrónico</p>
+                    <p type="text ">contactanes@elbazardelassorpresas.com</p>
+                    <p href="text ">Teléfono 800-bazar</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>

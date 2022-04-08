@@ -1,6 +1,6 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #f5e9e2;
+    background: #ffffff;
 }
 
 #titulo {
@@ -19,14 +19,14 @@ body {
     background: #ffdbc8;
 }
 
-img {
+.cont-primera-fila img {
     max-width: 200px;
-    padding-left: 25%;
+    padding-left: 23%;
 }
 
 .primer-socio {
     border: 1px solid black;
-    background: #f5e9e2;
+    background: #ffffff;
     width: 340px;
     height: 400px;
     padding: 10px;
@@ -34,7 +34,7 @@ img {
 
 .segundo-socio {
     border: 1px solid black;
-    background: #f5e9e2;
+    background: #ffffff;
     width: 340px;
     height: 400px;
     padding: 10px;
@@ -42,7 +42,7 @@ img {
 
 .tercer-socio {
     border: 1px solid black;
-    background: #f5e9e2;
+    background: #ffffff;
     width: 340px;
     height: 400px;
     padding: 10px;
@@ -98,6 +98,22 @@ p {
 }
 
 .btn-claro:hover {
+    background: #e8aaac;
+    border: 2px solid #8b0000;
+    color: #8b0000;
+    cursor: pointer;
+}
+
+.btn-socio {
+    background: #b5838d;
+    color: #ffffff;
+    height: 30px;
+    width: 340px;
+    font-weight: bold;
+    border: 2px solid #8b0000;
+}
+
+.btn-socio:hover {
     background: #e8aaac;
     border: 2px solid #8b0000;
     color: #8b0000;
