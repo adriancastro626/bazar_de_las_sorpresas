@@ -25,6 +25,7 @@
                     font-family: 'Asap', sans-serif;
                     background: #ffcdb2;
                     padding: 15px 0;
+                    text-align: center;
                 }
                 
                 .icono-eliminar {
@@ -35,21 +36,53 @@
                     margin: 0px;
                 }
                 
+                #btn-agregar-autor,
+                .biografia {
+                    color: #6D6875;
+                    font-weight: bold;
+                    border-radius: 6px;
+                    font-size: 15px;
+                }
+                
                 #btn-agregar-autor {
                     background: #FFB4A2;
                     color: #6D6875;
                     height: 40px;
                     width: 150px;
-                    font-weight: bold;
                     margin-bottom: 30px;
-                    border-radius: 6px;
-                    font-size: 15px;
                 }
                 
                 tr {
                     height: 40px;
                 }
                 
-                .tbl-libros {
-                    padding-left: 10px;
+                #tbl-libros {
+                    text-align: center;
+                }
+                
+                .biografia {
+                    background-color: #636069;
+                    color: #FFB4A2;
+                    padding: 4px 10px;
+                }
+                
+                .biografia:hover {
+                    background-color: #fed7ce;
+                    color: #000105;
+                    border: 2px solid #000105;
+                }
+                
+                #btn-agregar-autor:hover {
+                    background-color: #000105;
+                    color: #fed7ce;
+                    border: 2px solid #fed7ce;
+                }
+                
+                .icono-eliminar {
+                    background-color: #ffcdb2;
+                    font-size: 25px;
+                }
+                
+                .icono-editar {
+                    font-size: 20px;
                 }

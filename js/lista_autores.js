@@ -24,6 +24,7 @@ const mostrarDatos = () => {
 
         // le doy estilos
 
+        botonBiografia.classList.add('biografia');
         iconoEliminar.classList.add('fa-solid');
         iconoEliminar.classList.add('fa-trash-can');
         iconoEliminar.classList.add('fa-1l');
