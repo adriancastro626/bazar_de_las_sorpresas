@@ -5,15 +5,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/estilos_general.css">
     <script src="https://kit.fontawesome.com/0db8cde7c4.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/reportes_top10.css">
     <link rel="stylesheet" href="../css/Footer.css">
-    <title>Reporte Top 10 Libros</title>
+    <title>descuento-reportes</title>
 </head>
 
 <body>
+    <header>
+        <nav class="nav">
+            <div class="parentNav">
+                <a class="navUno" href="./pagina_principal.html">
+                    <img class="nav-img" src=" /img/logo.png" alt="Logo">
+                </a>
+                <a class="navDos" href="./pagina_principal.html">
+                    <button class="btn-nav" id="btn-registro" type="button">Cerrar Sesión</button>
+                </a>
+            </div>
+        </nav>
+    </header>
     <div class="pagina-con-menu-lateral">
 
         <!-- Menú lateral -->
@@ -26,9 +39,13 @@
                     <a href="inicio_sesion.html"><i class="fa-solid fa-lock" title="Icono para cerrar sesión en la cuenta"></i></a>
                 </div>
                 <div class="menu-lateral-arriba-2">
-                    <img class="menu-lateral-foto-perfil" src="../imgs/foto-perfil.png" alt="Foto de Perfil del Usuario">
-                    <p class="menu-lateral-nombre-usuario">John Doe</p>
-                    <p class="menu-lateral-email-usuario">johndoe@mitienda.com</p>
+                    <div>
+                        <img class="menu-lateral-foto-perfil" src="../imgs/foto-perfil.png" alt="Foto de Perfil del Usuario">
+                    </div>
+                    <span class="menu-lateral-nombre-usuario" id="campo-nombre-lateral"></span>
+                    <div>
+                        <span class="menu-lateral-email-usuario" id="campo-correo-lateral"></span>
+                    </div>
                 </div>
             </div>
 
@@ -77,7 +94,7 @@
                 <form>
                     <div id="titulo">
                         <br>
-                        <h1>Sección de Reportes Top 10</h1>
+                        <h1>Sección de Reportes</h1>
                         <br>
                     </div>
                     <div class="cont-control">
@@ -90,13 +107,99 @@
                     </div>
                     <div id="monto-top10">
                         <br>
-                        <h2>Monto de Ventas Brutas del Top 10 Libros: ₡15,920,640.00</h2>
+                        <h2>Reporte de Descuentos</h2>
                         <br>
                     </div>
-                    <div id="cont-img">
-                        <br>
-                        <img src="../imgs/CapturaTop10.PNG" alt="img-top10" class="img">
-                    </div>
+                    <section id="desgloce-ventas">
+                        <table>
+                            <thead>
+                                <th>Nombre</th>
+                                <th>Precio de Venta</th>
+                                <th>Cantidad</th>
+                                <th>Descuento Oferta 10%</th>
+                                <th>Descuento Libro Fan 15%</th>
+                            </thead>
+
+                            <tr>
+                                <td>Harry Potter</td>
+                                <td>₡14,000.00</td>
+                                <td>1</td>
+                                <td>₡0.00</td>
+                                <td>₡2,100.00</td>
+
+                            </tr>
+                            <tr>
+                                <td>Los Juegos del Hambre</td>
+                                <td>₡16,000.00</td>
+                                <td>1</td>
+                                <td>₡1,600.00</td>
+                                <td>₡0.00</td>
+                            </tr>
+                            <tr>
+                                <td>After</td>
+                                <td>₡12,000.00</td>
+                                <td>1</td>
+                                <td>₡0.00</td>
+                                <td>₡1,800.00</td>
+                            </tr>
+                            <tr>
+                                <td>Gadsby</td>
+                                <td>₡10,000.00</td>
+                                <td>1</td>
+                                <td>₡1,000.00</td>
+                                <td>₡0.00</td>
+                            </tr>
+                            <tr>
+                                <td>Bajo la Misma Estrella</td>
+                                <td>₡11,000.00</td>
+                                <td>1</td>
+                                <td>₡0.00</td>
+                                <td>₡1,650.00</td>
+                            </tr>
+                            <tr>
+                                <td>Juego de Tronos</td>
+                                <td>₡13,000.00</td>
+                                <td>1</td>
+                                <td>₡1,300.00</td>
+                                <td>₡0.00</td>
+                            </tr>
+                            <tr>
+                                <td>El Principito</td>
+                                <td>₡15,000.00</td>
+                                <td>1</td>
+                                <td>₡0.00</td>
+                                <td>₡2,250.00</td>
+                            </tr>
+                            <tr>
+                                <td>A dos metros de ti</td>
+                                <td>₡18,000.00</td>
+                                <td>1</td>
+                                <td>₡1,800.00</td>
+                                <td>₡0.00</td>
+                            </tr>
+                            <tr>
+                                <td>Yo antes de ti</td>
+                                <td>₡9,500.00</td>
+                                <td>1</td>
+                                <td>₡0.00</td>
+                                <td>₡1,425.00</td>
+                            </tr>
+                            <tr>
+                                <td>Invisible</td>
+                                <td>₡17,000.00</td>
+                                <td>1</td>
+                                <td>₡1,700.00</td>
+                                <td>₡0.00</td>
+                            </tr>
+                            <tr id="total">
+                                <td>TOTAL</td>
+                                <td>₡135,500.00</td>
+                                <td>10</td>
+                                <td>₡7,400.00</td>
+                                <td>₡9,225.00</td>
+                            </tr>
+                        </table>
+                    </section>
 
                 </form>
 
@@ -142,6 +245,7 @@
             </div>
         </footer>
     </div>
+    <script src="/js/editar_perfil.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
