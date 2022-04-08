@@ -10,6 +10,7 @@
     <script src="https://kit.fontawesome.com/0db8cde7c4.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/reportes_desglose_ventas.css">
     <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/header.css">
 
     <title>Reporte de Ventas</title>
 
@@ -17,6 +18,19 @@
 </head>
 
 <body>
+    <header>
+        <nav class="nav">
+            <div class="parentNav">
+                <a class="navUno" href="pagina_principal.html">
+                    <img class="nav-img" src="../imgs/logo.png" alt="Logo">
+                </a>
+                <a class="navDos" href="pagina_principal.html">
+                    <button class="btn-nav" id="btn-registro" type="button">Cerrar Sesión</button>
+                </a>
+            </div>
+        </nav>
+    </header>
+
     <div class="pagina-con-menu-lateral">
 
         <!-- Menú lateral -->
@@ -42,9 +56,9 @@
                 <h2>Cuentas</h2>
                 <nav>
                     <ul>
-                        <li><i class="fa-solid fa-user"></i><a href="pagina_sesion_iniciada.html">Perfil</a></li>
+                        <li><i class="fa-solid fa-user"></i><a href="editar_perfil.html">Perfil</a></li>
                         <li><i class="fa-solid fa-receipt"></i><a href="historial_compra.html">Historial de compras</a></li>
-                        <li><i class="fa-solid fa-users"></i><a href="edicion_usuarios.html">Usuarios</a></li>
+                        <li><i class="fa-solid fa-users"></i><a href="lista_usuarios.html">Usuarios</a></li>
                     </ul>
                 </nav>
 
