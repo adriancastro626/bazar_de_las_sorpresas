@@ -40,9 +40,13 @@
                     <a href="inicio_sesion.html"><i class="fa-solid fa-lock" title="Icono para cerrar sesión en la cuenta"></i></a>
                 </div>
                 <div class="menu-lateral-arriba-2">
-                    <img class="menu-lateral-foto-perfil" src="../imgs/foto-perfil.png" alt="Foto de Perfil del Usuario">
-                    <p class="menu-lateral-nombre-usuario">John Doe</p>
-                    <p class="menu-lateral-email-usuario">johndoe@mitienda.com</p>
+                    <div>
+                        <img class="menu-lateral-foto-perfil" src="../imgs/foto-perfil.png" alt="Foto de Perfil del Usuario">
+                    </div>
+                    <span class="menu-lateral-nombre-usuario" id="campo-nombre-lateral"></span>
+                    <div>
+                        <span class="menu-lateral-email-usuario" id="campo-correo-lateral"></span>
+                    </div>
                 </div>
             </div>
 
@@ -102,7 +106,7 @@
                             </div>
                             <div class="cont-media-inferior">
                                 <p class="parrafo-precio">
-                                    <span>&#8353;</span> 10,000.00
+                                    <span>&#8353;</span> 10000
                                 </p>
                             </div>
                         </div>
@@ -129,7 +133,7 @@
                             </div>
                             <div class="cont-media-inferior">
                                 <p class="parrafo-precio">
-                                    <span>&#8353;</span> 4,300.00
+                                    <span>&#8353;</span> 4300
                                 </p>
                             </div>
                         </div>
@@ -156,7 +160,7 @@
                             </div>
                             <div class="cont-media-inferior">
                                 <p class="parrafo-precio">
-                                    <span>&#8353;</span> 7,800.00
+                                    <span>&#8353;</span> 7800
                                 </p>
                             </div>
                         </div>
@@ -192,28 +196,28 @@
                             <p>Compras:</p>
                             <div class="cont-monto">
                                 <span>&#8353;</span>
-                                <p id="indicador-compras">000,000.00</p>
+                                <p id="indicador-compras">000 000.00</p>
                             </div>
                         </div>
                         <div class="cont-desglose">
                             <p>Envío:</p>
                             <div class="cont-monto">
                                 <span>&#8353;</span>
-                                <p id="indicador-envio">000,000.00</p>
+                                <p id="indicador-envio">000 000.00</p>
                             </div>
                         </div>
                         <div class="cont-desglose">
                             <p>Impuestos:</p>
                             <div class="cont-monto">
                                 <span>&#8353;</span>
-                                <p id="indicador-impuestos">000,000.00</p>
+                                <p id="indicador-impuestos">000 000.00</p>
                             </div>
                         </div>
                         <div class="cont-desglose">
                             <p id="p-total">Total:</p>
                             <div class="cont-monto">
                                 <span>&#8353;</span>
-                                <p id="indicador-total">000,000.00</p>
+                                <p id="indicador-total">000 000.00</p>
                             </div>
                         </div>
                         <div class="cont-botones-monto">
@@ -269,6 +273,7 @@
     <script src="https://kit.fontawesome.com/3269682608.js" crossorigin="anonymous"></script>
     <script src="../js/lista_carrito.js"></script>
     <script src="../js/carrito_compras.js"></script>
+    <script src="/js/editar_perfil.js"></script>
 </body>
 
 </html>
