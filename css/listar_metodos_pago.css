@@ -1,0 +1,58 @@
+.formulario-metodos {
+    width: 350px;
+    height: 250px;
+    margin: 60px auto 0;
+    border-radius: 0.7rem;
+    background-color: #6D6875;
+    box-shadow: 0.6rem 0.5rem 0.5rem rgba(0, 0, 0, 0.6);
+    transition: transform .2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 90px;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: -10rem;
+    margin-bottom: 2rem;
+}
+
+#cont-listar-metodos {
+    text-align: center;
+    margin-left: 46%;
+    color: white;
+}
+
+.cont-linea {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+}
+
+.cont-linea p {
+    margin-left: 20px;
+}
+
+.cont-agregar {
+    margin-left: 30px;
+}
+
+.btn-agregar {
+    background-color: #fff;
+    border: #fff;
+    color: #6D6875;
+    cursor: pointer;
+    margin: 0px;
+}
+
+.icono-eliminar {
+    background-color: #fff;
+    border: #fff;
+    color: #E5989B;
+    cursor: pointer;
+    margin: 0px;
+}

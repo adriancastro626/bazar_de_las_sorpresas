@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/inicio_sesion.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asap:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Inicio de Sesion</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="parentNav">
+                <a class="navUno" href="./pagina_principal.html">
+                    <img src=" /imgs/logo.png" alt="Logo">
+                </a>
+                <a class="navDos" href="./registro_usuarios.html">
+                    <button id="btn-registro" type="button">Registrarse</button>
+                </a>
+            </div>
+        </nav>
+    </header>
+    <div class="contenedor-img">
+        <section id="sct-ingreso-usuarios">
+            <div class="card ">
+                <form>
+                    <h1>Inicio de Sesión</h1>
+                    <div class="cont-control ">
+                        <label for="txt-usuario">Usuario</label>
+                        <input id="txt-usuario" type="text" placeholder="Usuario">
+                    </div>
+                    <div class="cont-control">
+                        <label for="txt-contrasenna">Constraseña</label>
+                        <input id="txt-contrasenna" type="password" placeholder="Contraseña">
+                    </div>
+                    <div class="cont-control lnk">
+                        <a class="contrasenna" href="./recuperar_contrasenna.html">¿Olvido su Constraseña?</a>
+                    </div>
+                    <div class="cont-control btn">
+                        <button id="btn-ingresar" type="button" class="btn-oscuro">Ingresar</button>
+                    </div>
+
+                </form>
+            </div>
+        </section>
+    </div>
+    <footer>
+
+        <div class="footerParent">
+            <div class="footerChildUno">
+                <h4>Quiénes Somos</h4>
+                <div>
+                    <a href="pagina_producto.html">
+                        <p href="/nosotros.html">El Bazar de las Sorpresas</p>
+                    </a>
+                </div>
+                <div>
+                    <a href="pagina_equipo.html">
+                        <p>Rasmus</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footerChildDos">
+                <h4>Mi Perfil</h4>
+                <div>
+                    <a href="editar_perfil.html">
+                        <p>Perfil</p>
+                    </a>
+                </div>
+                <div>
+                    <a href="/html/carrito_compras.html">
+                        <p>Carrito</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footerChildTres">
+                <h4>Contáctenos</h4>
+                <p type="text ">Correo Electrónico</p>
+                <p type="text ">contactanes@elbazardelassorpresas.com</p>
+                <p type="text ">Teléfono 800-bazar</p>
+
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="/js/lista_usuarios.js"></script>
+    <script src="/js/inicio_sesion.js"></script>
+</body>
+
+</html>

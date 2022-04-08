@@ -1,0 +1,48 @@
+body {
+    font-family: 'Asap', sans-serif;
+    background-image: url(imgs/fondo-pastel.jpeg);
+}
+
+.cont-control {
+    border: 1px solid black;
+    text-align: end;
+    background: #ffdbc8;
+}
+
+#titulo {
+    border: 1px solid black;
+    text-align: center;
+    font-size: 24px;
+    background: #6d6875;
+    color: #ffcdb2;
+    font-weight: bold;
+}
+
+#reporte-ventas {
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px;
+}
+
+#desgloce-ventas th {
+    font-weight: bold;
+    font-family: 'Asap', sans-serif;
+    text-align: center;
+    background-color: #6d6875;
+    color: #ffcdb2;
+}
+
+table {
+    text-align: center;
+    width: 100%;
+    font-family: 'Asap', sans-serif;
+}
+
+img {
+    max-width: 200px;
+    padding-left: 25%;
+}
+
+#total {
+    font-weight: bold;
+}
