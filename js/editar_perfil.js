@@ -1,4 +1,5 @@
 let usuarioConectado = JSON.parse(localStorage.getItem('usuarioConectado'));
+const perfilModificar = document.querySelector('.span-boton');
 
 
 document.getElementById('campo-nombre-lateral').textContent = usuarioConectado.nombre;
@@ -20,8 +21,8 @@ document.getElementById('campo-provincia').textContent = usuarioConectado.provin
 document.getElementById('campo-canton').textContent = usuarioConectado.canton;
 document.getElementById('campo-distrito').textContent = usuarioConectado.distrito;
 document.getElementById('campo-direccion').textContent = usuarioConectado.direccion;
-document.getElementById('campo-coordenadas').textContent = usuarioConectado.coordenadas;
-document.getElementById('campo-foto').textContent = usuarioConectado.foto;
+// document.getElementById('campo-coordenadas').textContent = usuarioConectado.coordenadas;
+// document.getElementById('campo-foto').textContent = usuarioConectado.foto;
 
 
 /*<span id="campo-nombre"></span>*/
@@ -62,5 +63,22 @@ const actualizar = () => {
 
 btnActualizar.addEventListener('click', () => {
     actualizar();
+
+});
+
+
+// icono-actualizar
+
+// Función de evento para modificar datos
+
+perfilModificar.addEventListener('click', () => {
+
+    console.log('Permitiendo la modificación de la información del perfil');
+    Swal.fire({
+        'icon': 'success',
+        'title': 'Modificar perfil',
+    }).then(() => {
+        listaGenerosCompleto.reset();
+    });
 
 });
