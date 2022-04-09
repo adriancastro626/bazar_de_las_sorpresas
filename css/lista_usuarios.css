@@ -23,6 +23,18 @@ body {
     margin-left: 10%;
 }
 
+
+/* Inicio */
+
+.pagina-contenido {
+    padding-top: 0 !important;
+    padding-left: 60px !important;
+    max-width: 1500px !important;
+}
+
+
+/* Fin */
+
 h1 {
     font-size: 30px;
     font-weight: bolder;

@@ -39,12 +39,27 @@ body {
 } */
 
 #sct-registro-usuarios form h1 {
-    color: rgba(255, 255, 255, 0.9);
+    color: #FFB4A2;
+    /*Steph*/
     font-size: 50px;
     font-weight: bold;
     margin-top: 10rem;
     margin-bottom: 2rem;
 }
+
+
+/* Inicio */
+
+.sct-registro-usuarios-titulo {
+    padding: 30px 0;
+}
+
+.seleccion-metodo-pago {
+    padding-bottom: 30px;
+}
+
+
+/* Fin */
 
 #sct-registro-usuarios form .cont-control {
     margin-bottom: 25px;
