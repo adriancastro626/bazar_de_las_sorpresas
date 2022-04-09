@@ -1,6 +1,6 @@
 const btnRegistrar = document.getElementById('btn-registrar');
 const inputAdjunto = document.getElementById('txt-adjunto');
-const inputNombre = document.getElementById('txt-nombre');
+const inputNombreR = document.getElementById('txt-nombre');
 const inputApellido = document.getElementById('txt-apellido');
 const listaGenero = document.getElementById("slt-genero");
 const fechaNacimiento = document.getElementById("txt-nacimiento");
@@ -12,12 +12,12 @@ const validar = () => {
 
     let hayError = false;
 
-    if (inputNombre.value == '') {
+    if (inputNombreR.value == '') {
 
         hayError = true;
-        inputNombre.classList.add('input-error');
+        inputNombreR.classList.add('input-error');
     } else {
-        inputNombre.classList.remove('input-error');
+        inputNombreR.classList.remove('input-error');
     }
 
 
@@ -74,7 +74,7 @@ const validar = () => {
 
 const imprimir = () => {
     let adjunto = inputAdjunto.value; // preguntar como se ve el adjunto y corregir error
-    let nombreAutor = inputNombre.value;
+    let nombreAutor = inputNombreR.value;
     let apellidoAutor = inputApellido.value;
     let generoAutor = listaGenero.value;
     let nacimientoAutor = fechaNacimiento.value;
