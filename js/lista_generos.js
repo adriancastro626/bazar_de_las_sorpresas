@@ -1,8 +1,8 @@
 const listaGenerosCompleto = document.querySelector('#lista-generos-ingresar');
 const listaGenerosNuevo = document.querySelector('#txt-ingresar-genero');
 const listaGenerosIngresar = document.querySelector('#btn-ingresar');
-const listagenerosEliminar = document.querySelector('.lista-generos-tabla-eliminar');
-const listagenerosModificar = document.querySelector('.lista-generos-tabla-modificar');
+const listaGenerosEliminar = document.querySelector('.lista-generos-tabla-eliminar');
+const listaGenerosModificar = document.querySelector('.lista-generos-tabla-modificar');
 
 
 // Función de evento para ingresar géneros
@@ -31,7 +31,7 @@ listaGenerosIngresar.addEventListener('click', () => {
 
 
 // Función de evento para eliminar géneros
-listagenerosEliminar.addEventListener('click', () => {
+listaGenerosEliminar.addEventListener('click', () => {
 
     Swal.fire({
         title: 'Estás seguro?',
@@ -57,9 +57,15 @@ listagenerosEliminar.addEventListener('click', () => {
 
 // Función de evento para modificar géneros
 
-listagenerosModificar.addEventListener('click', () => {
+listaGenerosModificar.addEventListener('click', () => {
 
     console.log('Permitiendo la modificación del género literario');
+    Swal.fire({
+        'icon': 'success',
+        'title': 'Modificar género',
+    }).then(() => {
+        listaGenerosCompleto.reset();
+    });
 
 });
 
