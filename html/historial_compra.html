@@ -41,9 +41,13 @@
                     <a href="inicio_sesion.html"><i class="fa-solid fa-lock" title="Icono para cerrar sesión en la cuenta"></i></a>
                 </div>
                 <div class="menu-lateral-arriba-2">
-                    <img class="menu-lateral-foto-perfil" src="../imgs/foto-perfil.png" alt="Foto de Perfil del Usuario">
-                    <p class="menu-lateral-nombre-usuario">John Doe</p>
-                    <p class="menu-lateral-email-usuario">johndoe@mitienda.com</p>
+                    <div>
+                        <img class="menu-lateral-foto-perfil" src="../imgs/foto-perfil.png" alt="Foto de Perfil del Usuario">
+                    </div>
+                    <span class="menu-lateral-nombre-usuario" id="campo-nombre-lateral"></span>
+                    <div>
+                        <span class="menu-lateral-email-usuario" id="campo-correo-lateral"></span>
+                    </div>
                 </div>
             </div>
 
@@ -144,7 +148,7 @@
                         <td>
                             <div class="cont-linea">
                                 <span>&#8353;</span>
-                                <p>13.000.00</p>
+                                <p>13,000.00</p>
                             </div>
                         </td>
                         <td>
@@ -178,7 +182,7 @@
                         <td>
                             <div class="cont-linea-oculta">
                                 <span>&#8353;</span>
-                                <p>13.000.00</p>
+                                <p>13,000.00</p>
                             </div>
                         </td>
                         <td>
@@ -370,6 +374,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://kit.fontawesome.com/3269682608.js" crossorigin="anonymous"></script>
     <script src="../js/historial_compra.js"></script>
+    <script src="/js/editar_perfil.js"></script>
 </body>
 
 </html>

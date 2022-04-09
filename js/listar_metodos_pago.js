@@ -45,11 +45,7 @@ const definirNombreMetodo = (numeroTarjeta) => {
 
 // Alertas
 const notificarAgregar = () => {
-    Swal.fire({
-        'icon': 'info',
-        'title': 'Agregar un método de pago',
-        'text': 'Va agregar un nuevo método de pago.'
-    });
+    window.location.href = 'registro_metodo_pago.html'
 };
 
 const accion = () => {

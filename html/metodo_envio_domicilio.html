@@ -41,9 +41,13 @@
                     <a href="inicio_sesion.html"><i class="fa-solid fa-lock" title="Icono para cerrar sesión en la cuenta"></i></a>
                 </div>
                 <div class="menu-lateral-arriba-2">
-                    <img class="menu-lateral-foto-perfil" src="../imgs/foto-perfil.png" alt="Foto de Perfil del Usuario">
-                    <p class="menu-lateral-nombre-usuario">John Doe</p>
-                    <p class="menu-lateral-email-usuario">johndoe@mitienda.com</p>
+                    <div>
+                        <img class="menu-lateral-foto-perfil" src="../imgs/foto-perfil.png" alt="Foto de Perfil del Usuario">
+                    </div>
+                    <span class="menu-lateral-nombre-usuario" id="campo-nombre-lateral"></span>
+                    <div>
+                        <span class="menu-lateral-email-usuario" id="campo-correo-lateral"></span>
+                    </div>
                 </div>
             </div>
 
@@ -166,6 +170,7 @@
             </div>
         </footer>
     </div>
+    <script src="/js/editar_perfil.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRmganvykFdvqjaVFviJSOnA6rGwG9IjM&callback=initMap&v=weekly" async></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://kit.fontawesome.com/3269682608.js" crossorigin="anonymous"></script>

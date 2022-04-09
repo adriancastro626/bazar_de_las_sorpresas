@@ -4,16 +4,17 @@
     padding: 20px;
     text-align: center;
     background-color: #B5838D;
-    height: 170px;
+    height: 100px;
 }
 
 .nav-img {
-    height: 120px;
-    width: 120px;
+    height: 100px;
+    width: 100px;
 }
 
 .navParent {
     display: flex;
+    flex-direction: row;
 }
 
 .navUno {
@@ -36,9 +37,7 @@
 .btn-nav:hover {
     background: rgba(255, 255, 255, 1);
     cursor: pointer;
-
 }
 
 
 /*Fin Navbar */
-

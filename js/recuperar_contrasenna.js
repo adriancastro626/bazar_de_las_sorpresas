@@ -17,7 +17,7 @@ const recuperar = () => {
         Swal.fire({
             'icon': 'warning',
             'title': 'Ingrese un correo valido',
-            'text': 'Por favor revise los campos resaltados'
+            'text': ''
         });
 
     } else {
@@ -32,20 +32,7 @@ const recuperar = () => {
 
 };
 
-const imprimir = () => {
-    // let adjunto = inputAdjunto.value; // preguntar como se ve el adjunto y corregir error
-    let nombreCorreo = inputCorreoRecuperar.value;
-
-
-
-    console.log('El nombre del usuario es ', nombreCorreo);
-
-
-};
-
-
 btnRecuperar.addEventListener('click', () => {
-    imprimir();
     recuperar();
 
 });
