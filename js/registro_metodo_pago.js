@@ -2,7 +2,7 @@ const inputNumeroTarjeta = document.getElementById('numero-tarjeta');
 const inputMes = document.getElementById('mes-expiracion');
 const inputAnno = document.getElementById('anno-expiracion');
 const inputCVV = document.getElementById('cvv');
-const inputNombre = document.getElementById('nombre-tarjetahabiente');
+const inputTarjetahabiente = document.getElementById('nombre-tarjetahabiente');
 const iconoTarjeta = document.getElementById('icono-tarjeta');
 const inputFavorito = document.getElementById('interruptor');
 const btnCancelar = document.getElementById('btn-cancelar');
@@ -45,11 +45,11 @@ const validar = () => {
         inputCVV.classList.remove('input-error');
     }
 
-    if (inputNombre.value == '') {
+    if (inputTarjetahabiente.value == '') {
         hayError = true;
-        inputNombre.classList.add('input-error');
+        inputTarjetahabiente.classList.add('input-error');
     } else {
-        inputNombre.classList.remove('input-error');
+        inputTarjetahabiente.classList.remove('input-error');
     }
 
     // PLACEHOLDER
@@ -86,7 +86,7 @@ const navegar = () => {
     verificarFavorito();
     listaMetodos.push({
         'numeroTarjeta': inputNumeroTarjeta.value,
-        'nombre': inputNombre.value,
+        'nombre': inputTarjetahabiente.value,
         'mesExpiracion': inputMes.value,
         'annoExpiracion': inputAnno.value,
         'favorito': inputFavorito.value
@@ -96,7 +96,7 @@ const navegar = () => {
         'title': 'Método de pago registrado',
         'text': 'Se ha registrado un nuevo método de pago.'
     }).then(() => {
-        window.location.href = 'pagina_principal.html'
+        window.location.href = 'editar_perfil.html'
     });
 };
 

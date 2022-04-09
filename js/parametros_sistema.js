@@ -16,6 +16,10 @@ const parametrosCorreoCompleto = document.querySelector('#parametros-correo');
 const parametrosCorreo = document.querySelector('#email-nuevo-correo');
 const parametrosCorreoBoton = document.querySelector('#btn-correo');
 
+const listaPromosEliminar = document.querySelector('.parametros-tabla-eliminar');
+const listaPromosModificar = document.querySelector('.parametros-tabla-modificar');
+
+
 
 
 // Función de evento para ingresar promociones
@@ -148,4 +152,47 @@ parametrosCorreoBoton.addEventListener('click', () => {
         });
 
     };
+});
+
+
+
+// Función de evento para eliminar promociones
+listaPromosEliminar.addEventListener('click', () => {
+
+    Swal.fire({
+        title: 'Estás seguro?',
+        text: "No serás capaz de recuperar la información.",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Si, eliminar',
+        cancelButtonText: 'Cancelar',
+    }).then((result) => {
+        if (result.isConfirmed) {
+            Swal.fire(
+                'Eliminado!',
+                'La información ha sido eliminada.',
+                'success'
+            )
+            console.log('Se eliminó la promoción');
+        }
+    })
+});
+
+
+
+
+// Función de evento para modificar promociones
+
+listaPromosModificar.addEventListener('click', () => {
+
+    console.log('Permitiendo la modificación de la promoción');
+    Swal.fire({
+        'icon': 'success',
+        'title': 'Modificar género',
+    }).then(() => {
+        listaGenerosCompleto.reset();
+    });
+
 });
