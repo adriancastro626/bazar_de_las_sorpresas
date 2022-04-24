@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Asap', sans-serif;
+    color: #FFCDB2;
+}
+
+#sct-registro-autor {
+    display: flex;
+    background-color: white;
+    justify-content: center;
+}
+
+#sct-registro-autor form h1 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 35px;
+    color: #FFB4A2;
+}
+
+#sct-registro-autor form {
+    padding: 5%;
+    width: 50%;
+    background-color: #6D6875;
+}
+
+#sct-registro-autor form .cont-control {
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#sct-registro-autor form label {
+    display: inline-block;
+    width: 40%;
+    font-weight: bold;
+}
+
+.cont-control input,
+.cont-control select {
+    width: 220px;
+    height: 35px;
+    color: #B5838D;
+}
+
+.cont-control textarea {
+    color: #B5838D;
+}
+
+.btn-oscuro {
+    background: #FFB4A2;
+    color: #6D6875;
+    height: 40px;
+    width: 150px;
+    font-weight: bold;
+}
+
+.btn-oscuro:hover {
+    background: #E5989B;
+    border: 2px solid #E5989B;
+    cursor: pointer;
+}
+
+input {
+    outline: none;
+}
+
+.input-error {
+    border: 2px solid #c44569;
+}

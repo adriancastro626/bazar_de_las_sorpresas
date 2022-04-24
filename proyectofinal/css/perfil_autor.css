@@ -1,0 +1,47 @@
+#cont-general {
+    display: flex;
+    background: white;
+}
+
+.cont-izquierdo {
+    width: 20%;
+    background: #6D6875;
+}
+
+.cont-derecho {
+    width: 90%;
+}
+
+.foto-autor img {
+    width: 75%;
+    height: 75%;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Asap', sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    color: #FFCDB2;
+    ;
+}
+
+.cont-izquierdo p {
+    font-family: 'Asap', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: left;
+    color: #FFCDB2;
+}
+
+.titulo {
+    background: #6D6875;
+}
+
+.cont-derecho p {
+    font-family: 'Asap', sans-serif;
+    font-size: 15px;
+    margin: 30px;
+    line-height: 3rem;
+}
