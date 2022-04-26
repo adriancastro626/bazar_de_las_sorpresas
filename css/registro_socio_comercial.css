@@ -33,7 +33,7 @@ body {
     background: #6d6875;
     border: 3px solid #cb9ba5;
     flex-direction: column;
-    width: 60%;
+    width: 70%;
     justify-content: center;
     padding: 5%;
     margin-left: auto;
@@ -63,27 +63,54 @@ body {
     color: #ffece1;
     margin-bottom: 30px;
     width: 70%;
+    padding-top: 10px;
+}
+
+#direccion-exacta label {
+    padding-top: 30px !important;
 }
 
 #sct-registro-socio-comercial form .cont-control {
-    margin-bottom: 15px;
     display: flex;
-    align-items: center;
+    margin-bottom: 15px;
+    background-color: green;
 }
 
-.cont-control input,
-.cont-control select {
-    width: 220px;
+.cont-control input[type="date"] {
     height: 35px;
+    width: 400px;
+}
+
+.cont-control input[type="text"] {
+    height: 35px;
+    width: 400px;
+}
+
+#slct-cantones,
+#slct-distritos {
+    height: 35px;
+    width: 401px;
+}
+
+#slct-provincias {
+    height: 35px;
+    width: 401px;
+}
+
+.cont-control textarea {
+    height: 150px;
+    margin-bottom: 15px;
+    width: 401px;
 }
 
 .btn-oscuro {
     background: #c44569;
-    color: #ffffff;
-    height: 30px;
-    width: 150px;
-    font-weight: bold;
     border: 2px solid #cb9ba5;
+    color: #ffffff;
+    font-weight: bold;
+    height: 30px;
+    margin-top: 20px;
+    width: 150px;
 }
 
 .btn-oscuro:hover {
