@@ -8,7 +8,6 @@
 /* Tipo de letra */
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: #ffffff;
     background-size: 100%;
     background-position: 80%;
@@ -31,9 +30,8 @@ body {
 
 #sct-registro-socio-comercial {
     background: #6d6875;
-    border: 3px solid #cb9ba5;
     flex-direction: column;
-    width: 70%;
+    width: 90%;
     justify-content: center;
     padding: 5%;
     margin-left: auto;
@@ -49,8 +47,8 @@ body {
 } */
 
 #sct-registro-socio-comercial form h1 {
+    color: #FFB4A2;
     font-size: 30px;
-    color: #ffece1;
     font-weight: bold;
     text-align: center;
     margin-bottom: 100px;
@@ -59,65 +57,82 @@ body {
 #sct-registro-socio-comercial form label {
     display: inline-block;
     font-weight: bold;
-    font-size: 17px;
-    color: #ffece1;
+    font-size: 20px;
+    color: #FFCDB2;
     margin-bottom: 30px;
-    width: 70%;
     padding-top: 10px;
+    width: 70%;
 }
 
-#direccion-exacta label {
-    padding-top: 30px !important;
+#cont-direccion-exacta label {
+    margin-bottom: 0 !important;
 }
 
 #sct-registro-socio-comercial form .cont-control {
     display: flex;
     margin-bottom: 15px;
-    background-color: green;
 }
 
-.cont-control input[type="date"] {
+.cont-control input[type="date"],
+.cont-control input[type="text"] {
+    background-color: #fed7ce;
+    font-size: 15px;
     height: 35px;
+    padding-left: 5px;
     width: 400px;
 }
 
-.cont-control input[type="text"] {
+.cont-control input[type="file"] {
+    font-size: 16px;
     height: 35px;
+    margin-top: 10px;
     width: 400px;
 }
 
 #slct-cantones,
-#slct-distritos {
-    height: 35px;
-    width: 401px;
-}
-
+#slct-distritos,
 #slct-provincias {
+    background-color: #fed7ce;
+    font-size: 15px;
     height: 35px;
     width: 401px;
 }
 
 .cont-control textarea {
+    background-color: #fed7ce;
+    font-size: 15px;
     height: 150px;
     margin-bottom: 15px;
-    width: 401px;
+    width: 100%;
+}
+
+.cont-control div {
+    width: 100%;
+}
+
+#file-foto {
+    color: #fed7ce;
+}
+
+input::placeholder {
+    color: #6D6875 !important;
 }
 
 .btn-oscuro {
-    background: #c44569;
-    border: 2px solid #cb9ba5;
-    color: #ffffff;
-    font-weight: bold;
+    background-color: #FFB4A2;
+    border: none;
+    border-radius: 6px;
+    color: #636069;
+    font-size: 16px;
+    font-weight: 600;
     height: 30px;
     margin-top: 20px;
     width: 150px;
 }
 
 .btn-oscuro:hover {
-    background: #cb9ba5;
-    border: 2px solid #c44569;
-    color: #c44569;
-    cursor: pointer;
+    background-color: #fed7ce;
+    color: #000105;
 }
 
 input:focus {
@@ -125,13 +140,13 @@ input:focus {
 }
 
 .input-error {
-    border: 2px solid #c44569;
+    border: 3px solid #ad3049;
+    color: #ad3049;
+    font-size: 18px;
+    font-weight: bold;
 }
 
-.contenedor-img {
-    background-image: url(../imgs/fondo-biblioteca.jpg);
-}
-
-#file-foto {
-    color: #ffece1;
+.input-error::placeholder {
+    color: #ad3049;
+    font-weight: bold;
 }
