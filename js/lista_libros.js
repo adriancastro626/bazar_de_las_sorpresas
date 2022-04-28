@@ -6,7 +6,7 @@ const listagenerosModificar = document.querySelector('.editar-libro');
 listaLibrosEliminar.addEventListener('click', () => {
 
     Swal.fire({
-        title: 'Estás seguro?',
+        title: '¿Estás seguro?',
         text: "No serás capaz de recuperar la información.",
         icon: 'warning',
         showCancelButton: true,
@@ -17,7 +17,7 @@ listaLibrosEliminar.addEventListener('click', () => {
     }).then((result) => {
         if (result.isConfirmed) {
             Swal.fire(
-                'Eliminado!',
+                'Eliminado',
                 'La información ha sido eliminada.',
                 'success'
             )
