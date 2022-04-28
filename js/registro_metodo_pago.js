@@ -96,7 +96,7 @@ const navegar = () => {
         'title': 'Método de pago registrado',
         'text': 'Se ha registrado un nuevo método de pago.'
     }).then(() => {
-        window.location.href = 'pagina_principal.html'
+        window.location.href = 'editar_perfil.html'
     });
 };
 

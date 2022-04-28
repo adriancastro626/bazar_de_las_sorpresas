@@ -48,16 +48,13 @@ body {
     padding: 10px;
 }
 
-
-/* e8aaac */
-
 .cont-primera-fila {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
 
-h4 {
+.sct-socio-comercial h4 {
     font-size: 15px;
     text-align: center;
     font-weight: bold;
