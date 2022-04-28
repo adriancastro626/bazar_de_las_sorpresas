@@ -10,25 +10,31 @@ body {
 }
 
 #sct-registro-usuarios {
-    display: flex;
+    /* display: flex; */
+    /* flex-direction: column; */
     margin-top: 100px;
     margin-bottom: 120px;
+    padding-bottom: 20px
 }
 
 .parent {
     display: flex;
+    justify-content: space-around;
+    min-width: 1100px;
+    padding-bottom: 40px;
 }
 
 #sct-registro-usuarios form {
-    height: 550px;
-    width: 100%;
-    /* backdrop-filter: blur(0.4rem); */
+    align-items: center;
     background: #6D6875;
     box-shadow: 0.6rem 0.5rem 0.5rem rgba(0, 0, 0, 0.6);
     border-radius: 0.7rem;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-width: 1200px;
     transition: transform .2s;
-    margin: 50px;
+    /* margin: 50px 100px; */
+    /* height: 550px; */
 }
 
 
@@ -39,10 +45,12 @@ body {
 } */
 
 #sct-registro-usuarios form h1 {
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 1.5rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    color: #FFB4A2;
+    margin-bottom: 60px;
+    padding-top: 60px;
+    font-size: 38px;
+    font-weight: bold;
+    text-align: center;
 }
 
 #sct-registro-usuarios form .cont-control {
@@ -53,18 +61,25 @@ body {
 }
 
 #sct-registro-usuarios form label {
-    display: inline-block;
-    color: white;
-    padding: 0 2rem;
-    text-align: left;
-    width: 220px;
+    font-size: 18px;
+    font-weight: bold;
+    /* display: inline-block; */
+    color: #FFCDB2;
+    padding-bottom: 10px;
+    /* text-align: left; */
+    width: 210px;
 }
 
-.col-uno,
-.col-dos,
-.col-tres,
-.col-cuatro {
-    width: 25%;
+.columna {
+    display: flex;
+    flex-direction: column;
+}
+
+form h3 {
+    font-size: 30px;
+    padding: 20px 0 25px 25px;
+    text-align: center !important;
+    color: #FFF;
 }
 
 .mapa {
@@ -75,15 +90,50 @@ body {
 }
 
 .cont-control input,
-.cont-control select,
-.cont-control textarea {
-    width: 220px;
+.cont-control select {
     height: 35px;
-    color: black;
-    margin-right: 2rem;
     align-items: right;
-    border-radius: 5px;
-    border: none;
+    border: 3px solid rgb(109, 104, 117);
+    border-radius: 6px;
+    font-size: 15px;
+    padding-left: 10px;
+    width: 280px;
+}
+
+
+/* .cont-control input {
+    width: 280px;
+}
+
+.cont-control select {
+    width: 280px;
+} */
+
+.direccion textarea {
+    height: 120px;
+    align-items: right;
+    border: 3px solid rgb(109, 104, 117);
+    border-radius: 6px;
+    font-size: 15px;
+    padding-left: 9px;
+    width: 97%;
+}
+
+.direccion {
+    display: flex;
+    flex-direction: column;
+    min-width: 1100px;
+    padding: 0 0 40px 40px;
+}
+
+input[type="number"],
+input[type="date"],
+input[type="text"],
+input[type="email"],
+input[type="password"],
+.cont-control select,
+.direccion textarea {
+    background-color: #fed7ce;
 }
 
 #btn {
@@ -100,7 +150,7 @@ body {
 }
 
 .btn-oscuro {
-    padding: 0.5rem 1.5rem;
+    margin: 30px auto;
     border-radius: 5px;
     border: none;
     background: rgba(255, 255, 255, 0.7);
