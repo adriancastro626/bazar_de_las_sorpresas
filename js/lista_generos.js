@@ -21,7 +21,7 @@ listaGenerosIngresar.addEventListener('click', () => {
         console.log('Se ingresó el género', listaGenerosNuevo.value);
         Swal.fire({
             'icon': 'success',
-            'title': 'Género registrado',
+            'title': 'Género literario registrado',
         }).then(() => {
             listaGenerosCompleto.reset();
         });
@@ -34,7 +34,7 @@ listaGenerosIngresar.addEventListener('click', () => {
 listaGenerosEliminar.addEventListener('click', () => {
 
     Swal.fire({
-        title: 'Estás seguro?',
+        title: '¿Estás seguro?',
         text: "No serás capaz de recuperar la información.",
         icon: 'warning',
         showCancelButton: true,
@@ -45,11 +45,11 @@ listaGenerosEliminar.addEventListener('click', () => {
     }).then((result) => {
         if (result.isConfirmed) {
             Swal.fire(
-                'Eliminado!',
+                'Eliminado',
                 'La información ha sido eliminada.',
                 'success'
             )
-            console.log('Se eliminó el género');
+            console.log('Se eliminó el género literario');
         }
     })
 });
