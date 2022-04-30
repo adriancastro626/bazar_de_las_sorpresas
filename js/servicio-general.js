@@ -66,6 +66,4 @@ const eliminarDatos = async(endpoint, _id) => {
             text: error
         });
     });
-
-
 };

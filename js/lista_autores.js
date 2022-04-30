@@ -1,15 +1,21 @@
-
-const cuerpoTabla = document.querySelector("#tbl-libros tbody");
-// se usa selectores de css
+const cuerpoTabla = document.querySelector("#tbl-autores tbody");
+// 
+let lista = [];
 
 document.getElementById("btn-agregar-autor").addEventListener('click', () => {
     window.location.href = "registro_autor.html";
 
 });
 
+const inicializar = async() => {
+
+    lista = await obtenerDatos('listar-autores');
+    mostrarDatos();
+};
+
 const mostrarDatos = () => {
     cuerpoTabla.innerHTML = '';
-    listaAutores.forEach(elemento => {
+    lista.forEach(autor => {
         // creo los botones
         let botonBiografia = document.createElement("button");
         botonBiografia.textContent = "Perfil"
@@ -48,14 +54,15 @@ const mostrarDatos = () => {
         botonEditar.appendChild(spanEditar);
 
 
-
         let fila = cuerpoTabla.insertRow(); // CREO LA FILA
-        fila.insertCell().innerText = elemento.nombre;
-        fila.insertCell().innerText = elemento.apellido;
-        // NOMBRO LA FILA Y SUMA COLUMNAS
-        fila.insertCell().innerText = elemento.nacionalidad;
-        fila.insertCell().innerText = elemento.FechaNacimiento;
-        fila.insertCell().innerText = elemento.FechaDefunción;
+
+        fila.insertCell().innerText = autor.nombre;
+        fila.insertCell().innerText = autor.apellido;
+        fila.insertCell().innerText = autor.nacionalidad;
+        fila.insertCell().innerText = autor.nacimientoAutor;
+        fila.insertCell().innerText = autor.defuncionAutor;
+        fila.insertCell().innerText = autor.bibliografia;
+
 
         fila.insertCell().appendChild(botonBiografia);
         fila.insertCell().appendChild(botonEditar);
@@ -78,10 +85,12 @@ const mostrarDatos = () => {
 
     });
 
+
 };
 
 
 
 
 
-mostrarDatos();
+
+inicializar();

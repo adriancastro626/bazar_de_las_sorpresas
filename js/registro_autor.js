@@ -57,14 +57,16 @@ const validar = () => {
         });
 
     } else {
+        /* imprimir();
+         Swal.fire({
+             'icon': 'success',
+             'title': 'El autor ha sido registrado',
+             'text': 'Se enviará un correo electrónico'
+         }).then(() => {
+             window.location.href = 'lista_autores.html';
+         });*/
+        registrarAutor();
         imprimir();
-        Swal.fire({
-            'icon': 'success',
-            'title': 'El autor ha sido registrado',
-            'text': 'Se enviará un correo electrónico'
-        }).then(() => {
-            window.location.href = 'lista_autores.html';
-        });
     }
 
 };
@@ -76,7 +78,7 @@ const imprimir = () => {
     let adjunto = inputAdjunto.value; // preguntar como se ve el adjunto y corregir error
     let nombreAutor = inputNombreR.value;
     let apellidoAutor = inputApellido.value;
-    let generoAutor = listaGenero.value;
+    let nacionalidad = listaGenero.value;
     let nacimientoAutor = fechaNacimiento.value;
     let defuncionAutor = fechaDefuncion.value;
     let biografiaAutor = inputBiografia.value;
@@ -86,12 +88,29 @@ const imprimir = () => {
     console.log('La foto esta contenida el siguiente adjunto', adjunto);
     console.log('El nombre del autor es', nombreAutor);
     console.log('El apellido del autor es', apellidoAutor);
-    console.log('El genero del autor es', generoAutor)
+    //    console.log('El genero del autor es', generoAutor)
+    console.log('La nacionalidad del autor es', nacionalidad);
     console.log('El autor nacio en ', nacimientoAutor);
     console.log('El autor fallecio en', defuncionAutor);
     console.log("Esta es la biografia del autor", biografiaAutor);
 
 };
+
+const registrarAutor = () => {
+    let data = {
+
+        "adjunto": inputAdjunto.value,
+        "nombre": inputNombreR.value,
+        "apellido": inputApellido.value,
+        "nacionalidad": listaGenero.value,
+        "nacimientoAutor": fechaNacimiento.value,
+        "defuncionAutor": fechaDefuncion.value,
+        "bibliografia": inputBiografia.value
+
+
+    };
+    registrarDatos('registrar-autor', data, 'lista_autores.html');
+}
 
 btnRegistrar.addEventListener('click', () => {
     imprimir();
