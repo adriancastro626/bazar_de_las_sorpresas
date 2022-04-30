@@ -2,25 +2,37 @@ const obtenerMetodos = document.getElementById('cont-listar-metodos');
 const btnAtras = document.getElementById('btn-atras');
 const btnContinuar = document.getElementById('btn-continuar');
 
+let listaMetodos = [];
+let usuarioConectado = JSON.parse(localStorage.getItem('usuarioConectado'));
+
+const inicializar = async() => {
+    listaMetodos = await obtenerDatos('listar-tarjetas');
+    mostrarMetodos(listaMetodos);
+};
+
 const mostrarMetodos = () => {
     let contador = 0;
+    // let filtro = usuarioConectado.correo;
+    let filtro = "prueba@gmail.com";
 
     listaMetodos.forEach(metodo => {
-        let nombreMetodo = definirNombreMetodo(metodo.numeroTarjeta);
-        let radioLabel = document.createElement('label');
-        let radioInput = document.createElement('input');
+        if (metodo.correousuario.includes(filtro)) {
+            let nombreMetodo = definirNombreMetodo(metodo.numtarjeta);
+            let radioLabel = document.createElement('label');
+            let radioInput = document.createElement('input');
 
-        radioInput.type = 'radio';
-        radioInput.name = 'seleccion-metodo';
-        radioInput.id = 'radio-' + nombreMetodo;
-        radioInput.value = toString(contador + 1);
-        radioInput.classList.add('radio-metodo');
-        metodo.favorito ? radioInput.checked = true : radioInput.checked = false;
+            radioInput.type = 'radio';
+            radioInput.name = 'seleccion-metodo';
+            radioInput.id = 'radio-' + nombreMetodo;
+            radioInput.value = toString(contador + 1);
+            radioInput.classList.add('radio-metodo');
+            metodo.favorito ? radioInput.checked = true : radioInput.checked = false;
 
-        radioLabel.appendChild(radioInput);
-        radioLabel.appendChild(document.createTextNode(nombreMetodo));
+            radioLabel.appendChild(radioInput);
+            radioLabel.appendChild(document.createTextNode(nombreMetodo));
 
-        obtenerMetodos.appendChild(radioLabel);
+            obtenerMetodos.appendChild(radioLabel);
+        }
     });
 };
 
@@ -35,8 +47,6 @@ const definirNombreMetodo = (numeroTarjeta) => {
 
     return nombreMetodo;
 };
-
-mostrarMetodos();
 
 btnAtras.addEventListener('click', () => {
     // window.location.href = localStorage.getItem('metodoEnvio');
@@ -54,3 +64,5 @@ btnContinuar.addEventListener('click', () => {
         window.location.href = 'pagina_principal.html';
     });
 });
+
+inicializar();

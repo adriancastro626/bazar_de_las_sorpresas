@@ -100,28 +100,28 @@
                     <label for="interruptor"></label>
                 </div>
                 <div class="cont-control">
-                    <!-- <label for="numero-tarjeta">Numero de tarjeta</label> -->
+                    <label for="numero-tarjeta">Numero de tarjeta</label>
                     <input id="numero-tarjeta" type="text" placeholder="Numero de tarjeta VISA o MasterCard">
                 </div>
                 <div class="cont-control">
-                    <!-- <label for="nombre-tarjetahabiente">Nombre</label> -->
+                    <label for="nombre-tarjetahabiente">Nombre</label>
                     <input id="nombre-tarjetahabiente" type="text" placeholder="Nombre del tarjetahabiente">
                 </div>
                 <div class="parametros-medio">
-                    <div class="cont-control">
-                        <!-- <label for="mes-expiracion">Mes de expiración</label> -->
-                        <input id="mes-expiracion" type="text" placeholder="MM">
+                    <div class="cont-control-m">
+                        <label for="mes-expiracion">Mes</label>
+                        <input id="mes-expiracion" type="number" placeholder="MM">
                     </div>
-                    <div class="cont-control">
-                        <!-- <label for="anno-expiracion">Año de expiración</label> -->
-                        <input id="anno-expiracion" type="text" placeholder="YYYY">
+                    <div class="cont-control-m">
+                        <label for="anno-expiracion">Año</label>
+                        <input id="anno-expiracion" type="number" placeholder="YYYY">
                     </div>
-                    <div class="cont-control">
-                        <!-- <label for="cvv">CVV</label> -->
+                    <div class="cont-control-m">
+                        <label for="cvv">CVV</label>
                         <input id="cvv" type="password" placeholder="CVV">
                     </div>
-                    <div class="cont-control">
-                        <i id="icono-tarjeta" class="fa-solid fa-credit-card fa-2x"></i>
+                    <div class="cont-control-m">
+                        <i id="icono-tarjeta" class="fa-solid fa-credit-card fa-3x"></i>
                     </div>
                 </div>
                 <div class="cont-botones">
@@ -171,10 +171,13 @@
             </div>
         </footer>
     </div>
-    <script src="/js/editar_perfil.js"></script>
+    <!-- 1. Cargar bibliotecas externas -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://kit.fontawesome.com/3269682608.js" crossorigin="anonymous"></script>
-    <script src="../js/lista_metodos.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- 2. Enlazar el servicio general que comunica con el servidor -->
+    <script src="../js/servicio-general.js"></script>
+    <!-- 3. Enlazar los controladores de la página -->
     <script src="../js/registro_metodo_pago.js"></script>
 </body>
 
