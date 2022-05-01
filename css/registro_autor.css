@@ -4,65 +4,87 @@
 
 body {
     font-family: 'Asap', sans-serif;
-    color: #FFCDB2;
 }
 
 #sct-registro-autor {
     display: flex;
     background-color: white;
-    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
 }
 
 #sct-registro-autor form h1 {
-    font-size: 24px;
+    color: #FFB4A2;
+    font-size: 30px;
     font-weight: bold;
     text-align: center;
-    margin-bottom: 35px;
-    color: #FFB4A2;
+    margin-bottom: 100px;
 }
 
 #sct-registro-autor form {
     padding: 5%;
-    width: 75%;
+    width: 100%;
     background-color: #6D6875;
 }
 
 #sct-registro-autor form .cont-control {
-    margin-bottom: 35px;
+    margin-bottom: 15px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 10px 20px;
 }
 
 #sct-registro-autor form label {
     display: inline-block;
-    width: 40%;
     font-weight: bold;
+    font-size: 20px;
+    color: #FFCDB2;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    width: 70%;
 }
 
-.cont-control input,
+.cont-control input[type="date"],
+.cont-control input[type="text"],
 .cont-control select {
-    width: 220px;
+    background-color: #fed7ce;
+    padding-left: 5px;
     height: 35px;
-    color: #B5838D;
+    font-size: 15px;
+    width: 400px;
 }
 
 .cont-control textarea {
-    color: #B5838D;
+    background-color: #fed7ce;
+    font-size: 15px;
+    height: 150px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.cont-control input[type="file"] {
+    color: #fed7ce;
+    font-size: 16px;
+    height: 35px;
+    margin-top: 10px;
+    width: 400px;
 }
 
 .btn-oscuro {
-    background: #FFB4A2;
-    color: #6D6875;
-    height: 40px;
+    background-color: #FFB4A2;
+    border: none;
+    border-radius: 6px;
+    color: #636069;
+    font-size: 16px;
+    font-weight: 600;
+    height: 30px;
+    margin: 20px 0 0 20px;
     width: 150px;
-    font-weight: bold;
 }
 
 .btn-oscuro:hover {
-    background: #E5989B;
-    border: 2px solid #E5989B;
-    cursor: pointer;
+    background-color: #fed7ce;
+    color: #000105;
 }
 
 input {
@@ -70,5 +92,13 @@ input {
 }
 
 .input-error {
-    border: 2px solid #c44569;
+    border: 3px solid #ad3049;
+    color: #ad3049;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.input-error::placeholder {
+    color: #ad3049;
+    font-weight: bold;
 }

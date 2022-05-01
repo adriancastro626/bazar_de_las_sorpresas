@@ -5,6 +5,8 @@ const inputNombre = document.getElementById('txt-nombre');
 const inputProvincias = document.getElementById('slct-provincias');
 const inputCantones = document.getElementById('slct-cantones');
 const inputDistritos = document.getElementById('slct-distritos');
+const inputDireccion = document.getElementById('direccion-exacta');
+// const inputFoto = document.getElementById('file-foto');
 
 
 let selectProvincias = document.getElementById('slct-provincias');
@@ -84,6 +86,20 @@ const validar = () => {
         inputNombre.classList.remove('input-error')
     }
 
+    if (inputDireccion.value == '') {
+        hayError = true;
+        inputDireccion.classList.add('input-error')
+    } else {
+        inputDireccion.classList.remove('input-error')
+    }
+
+    // if (inputFoto.value == '') {
+    //     hayError = true;
+    //     inputFoto.classList.add('input-error')
+    // } else {
+    //     inputFoto.classList.remove('input-error')
+    // }
+
     if (hayError == true) {
         Swal.fire({
             'icon': 'warning',
@@ -98,7 +114,7 @@ const validar = () => {
             'title': 'Socio Comercial Registrado',
             'text': 'Añadido a lista de socios comerciales'
         }).then(() => {
-            window.location.href = 'lista_socios.html';
+            window.location.href = 'lista_socios_comerciales.html';
         });
 
     }
@@ -116,7 +132,6 @@ const imprimir = () => {
 
 
 
-
     console.log('El nombre del socio comercial es', Nombre);
     console.log('La cédula jurídica es', Cedula);
     console.log('La fecha de inicio de relación comercial es', Fecha);
@@ -130,5 +145,4 @@ const imprimir = () => {
 
 btnRegistrar.addEventListener('click', () => {
     validar();
-
 });

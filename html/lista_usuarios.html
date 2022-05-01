@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/lista_usuarios.css">
-    <link rel="stylesheet" href="/css/estilos_general.css">
-    <link rel="stylesheet" href="/css/menu_lateral.css">
+    <link rel="stylesheet" href="../css/estilos_general.css">
+    <link rel="stylesheet" href="../css/menu_lateral.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
 
@@ -21,7 +21,7 @@
         <nav class="nav">
             <div class="parentNav">
                 <a class="navUno" href="./pagina_principal.html">
-                    <img class="nav-img" src=" /imgs/logo.png" alt="Logo">
+                    <img class="nav-img" src=" ../imgs/logo.png" alt="Logo">
                 </a>
                 <a class="navDos" href="./registro_usuarios.html">
                     <button id="btn-registro" class="btn-nav" type="button">Registrarse</button>
@@ -57,7 +57,7 @@
                 <nav>
                     <ul>
                         <li><i class="fa-solid fa-user"></i><a href="editar_perfil.html">Perfil</a></li>
-                        <li><i class="fa-solid fa-receipt"></i><a href="historial_compra.html">Historial de compras</a></li>
+                        <li><i class="fa-solid fa-receipt"></i><a href="historial_compra.html">Historial de usuarios</a></li>
                         <li><i class="fa-solid fa-users"></i><a href="lista_usuarios.html">Usuarios</a></li>
                     </ul>
                 </nav>
@@ -91,10 +91,13 @@
             <!-- Contenido de la página -->
             <div class="pagina-contenido">
                 <h1>Lista de Usuarios</h1>
+                <div>
+                    <label for="txt-filtro">Filtrar</label>
+                    <input type="text" id="txt-filtro">
+                </div>
 
-                <!-- Listado de compras -->
-
-                <table class="tbl-compras" id="tbl-compras">
+                <!-- Listado de usuarios -->
+                <table class="tbl-usuarios" id="tbl-usuarios">
                     <thead>
                         <tr>
                             <th>
@@ -135,99 +138,6 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <!-- Fila tipo padre -->
-                        <tr class="fila-padre" data-hija="contenido-001">
-                            <td>
-                                <div class="cont-pedido">
-                                    <p>Pablo</p>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="cont-linea">
-                                    <p>Rodriguez</p>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="cont-linea">
-                                    <p>pablo@gmail.com</p>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="cont-linea">
-                                    <p>1-0987-0678</p>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="cont-linea">
-                                    <p>San Jose</p>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="cont-linea">
-                                    <p>Masculino</p>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="cont-linea-oculta">
-                                    <a href="/html/editar_perfil.html">
-                                        <button type="button" class="btn-comentar" id="icono-comentarios-1">
-                                    <span class="span-boton">
-                                        <i class="fa-solid fa-pen-to-square fa-2x"></i>
-                                    </span>
-                                </button>
-                                    </a>
-                                </div>
-                            </td>
-                        </tr>
-
-
-                        </tr>
-                        <!-- Fila tipo padre -->
-                        <tr class="fila-padre" data-hija="contenido-002">
-                            <td>
-                                <div class="cont-pedido">
-
-                                    <p>Vanessa</p>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="cont-linea">
-                                    <p>Cascante</p>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="cont-linea">
-                                    <!-- <span>&#8353;</span> -->
-                                    <p>vanessa@gmail.com</p>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="cont-linea">
-                                    <p>2-0365-0465</p>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="cont-linea">
-                                    <p>Alajuela</p>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="cont-linea">
-                                    <p>Femenino</p>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="cont-linea-oculta">
-                                    <a href="/html/editar_perfil.html">
-                                        <button type="button" class="btn-comentar" id="icono-comentarios">
-                                    <span class="span-boton">
-                                        <i class="fa-solid fa-pen-to-square fa-2x"></i>
-                                    </span>
-                                </button>
-                                    </a>
-                                </div>
-                            </td>
-                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -258,7 +168,7 @@
                         </a>
                     </div>
                     <div>
-                        <a href="/html/carrito_compras.html">
+                        <a href="/html/carrito_usuarios.html">
                             <p>Carrito</p>
                         </a>
                     </div>
@@ -272,11 +182,11 @@
             </div>
         </footer>
     </div>
-    <script src="/js/editar_perfil.js"></script>
-    <script src="/js/lista_usuarios.js"></script>
-    <script src="/js/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://kit.fontawesome.com/3269682608.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/js/servicio-general.js"></script>
+    <script src="/js/lista_usuarios.js"></script>
+    <!-- <script src="/js/index.js"></script> -->
 </body>
 
 </html>

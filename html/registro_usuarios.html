@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/registro_usuarios.css">
-    <link rel="stylesheet" href="/css/footer.css">
-    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/registro_usuarios.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/header.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Asap:wght@400;600;700&display=swap" rel="stylesheet">
@@ -22,7 +22,7 @@
             <div class="parentNav">
                 <div class="logo-navUno">
                     <a class="navUno" href="./pagina_principal.html">
-                        <img class="nav-img" src=" /imgs/logo.png" alt="Logo">
+                        <img class="nav-img" src="../imgs/logo.png" alt="Logo">
                     </a>
                 </div>
                 <a class="navDos " href="./inicio_sesion.html">
@@ -35,18 +35,18 @@
         <section id="sct-registro-usuarios">
             <form>
                 <h1>Registro de Usuario</h1>
+                <h3>Información personal</h3>
+
                 <div class="parent">
-                    <div class="col-uno">
+                    <div class="columna">
                         <div class="cont-control">
-                            <label for="txt-nombre">Nombre</label>
+                            <label for="txt-nombre">Primer Nombre</label>
                             <input id="txt-nombre" type="text">
                         </div>
-
                         <div class="cont-control">
                             <label for="txt-segundoNombre">Segundo Nombre</label>
                             <input id="txt-segundoNombre" type="text">
                         </div>
-
                         <div class="cont-control">
                             <label for="txt-apellido">Primer Apellido</label>
                             <input id="txt-apellido" type="text">
@@ -58,6 +58,13 @@
                         </div>
 
                         <div class="cont-control">
+                            <label for="txt-nacimiento">Fecha de nacimiento</label>
+                            <input id="txt-nacimiento" type="date">
+                        </div>
+                    </div>
+
+                    <div class="columna">
+                        <div class="cont-control">
                             <label for="slt-tipo">Tipo de Identificación</label>
                             <select id="slt-tipo">
                             <option value="">-- Seleccione el tipo de Identificación --</option>
@@ -68,11 +75,9 @@
                             </select>
                         </div>
                         <div class="cont-control">
-                            <label for="txt-identificacion">Ingrese Número de Identificación</label>
+                            <label for="txt-identificacion">Número de Identificación</label>
                             <input id="txt-identificacion" type="text" placeholder="Número de Identificación">
                         </div>
-                    </div>
-                    <div class="col-dos">
                         <div class="cont-control">
                             <label for="slt-genero">Seleccione su Género</label>
                             <select id="slt-genero">
@@ -82,34 +87,20 @@
                             <option value="3">Otro - Especifique</option>
                             </select>
                         </div>
-
                         <div class="cont-control">
                             <label for="txt-otroGenero">Especifique</label>
                             <input id="txt-otroGenero" type="text" placeholder="Especifique Género">
                         </div>
                         <div class="cont-control">
-                            <label for="txt-nacimiento">Fecha de nacimiento</label>
-                            <input id="txt-nacimiento" type="date">
-                        </div>
-                        <div class="cont-control">
-                            <label for="slt-generoLiterario">Seleccione Género Literario</label>
-                            <select id="slt-generoLiterario">
-                                 <option value="">-- Seleccione Género Literario --</option>
-                                 <!-- Inicio -->
-                                <option value="1">Ciencia Ficción</option>
-                                <option value="2">Policiacos</option>
-                                <option value="3">Infantil</option>
-                                <option value="4">Poesía</option>
-                                <option value="5">Novela</option>
-                                <option value="6">Biografías</option>
-                                <option value="7">Historia</option>
-                                <option value="8">Autoayuda</option>
-                                <!-- Fin -->
-                            </select>
+                            <label for="btn-foto">Foto de Perfil</label>
+                            <input type="file" id="btn-foto" name="file-foto" multiple>
                         </div>
                     </div>
+                </div>
 
-                    <div class="col-tres">
+                <div class="parent">
+                    <div class="columna">
+                        <h3>Información de Inicio de Sesión</h3>
                         <div class="cont-control">
                             <label for="txt-correo">Correo Electrónico</label>
                             <input id="txt-correo" type="email" placeholder="Ingrese Correo Electrónico">
@@ -118,7 +109,6 @@
                             <label for="txt-confirmacionCorreo">Confirme su Correo Electrónico</label>
                             <input id="txt-confirmacionCorreo" type="email" placeholder="Ingrese Correo Electrónico">
                         </div>
-
                         <div class="cont-control">
                             <label for="txt-contrasenna">Contraseña</label>
                             <input id="txt-contrasenna" type="password">
@@ -127,11 +117,27 @@
                             <label for="txt-confirmacion">Confirmacion</label>
                             <input id="txt-confirmacion" type="password">
                         </div>
+                    </div>
+                    <div class="columna">
+                        <h3>Preferencias</h3>
                         <div class="cont-control">
-                            <label for="slt-autores">Seleccione Autores Favoritos</label>
+                            <label for="slt-generoLiterario">Género Literario</label>
+                            <select id="slt-generoLiterario">
+                                     <option value="">-- Géneros Literarios --</option>
+                                    <option value="1">Ciencia Ficción</option>
+                                    <option value="2">Policiacos</option>
+                                    <option value="3">Infantil</option>
+                                    <option value="4">Poesía</option>
+                                    <option value="5">Novela</option>
+                                    <option value="6">Biografías</option>
+                                    <option value="7">Historia</option>
+                                    <option value="8">Autoayuda</option>
+                                </select>
+                        </div>
+                        <div class="cont-control">
+                            <label for="slt-autores">Autores</label>
                             <select id="slt-autores">
                                 <option value="">-- Seleccione Autores Favoritos --</option>
-                                <!-- Inicio -->
                                 <option value="1">Isaac Asimov</option>
                                 <option value="2">Federico García Lorca</option>
                                 <option value="3">María Hesse</option>
@@ -140,13 +146,14 @@
                                 <option value="6">Jane Austen</option>
                                 <option value="7">Joaquín Gutiérrez</option>
                                 <option value="8">Yuval Noah Harari</option>
-                                <!-- Fin -->
                             </select>
                         </div>
-
                     </div>
+                </div>
 
-                    <div class="col-cuatro">
+                <h3>Dirección</h3>
+                <div class="parent">
+                    <div class="columna">
                         <div class="cont-control">
                             <label for="slct-provincias">Provincia:</label>
                             <select name="provincias" id="slct-provincias">
@@ -165,10 +172,8 @@
                                 <option value="">-- Seleccione un distrito --</option>
                             </select>
                         </div>
-                        <div class="cont-control">
-                            <label for="direccion-exacta">Dirección exacta:</label>
-                            <textarea name="direccion-exacta" id="direccion-exacta" cols="30" rows="10"></textarea>
-                        </div>
+                    </div>
+                    <div class="columna">
                         <div class="cont-control">
                             <label for="txt-mapa">Seleccione Ubicación</label>
                             <div class="mapa">
@@ -176,11 +181,11 @@
                                     allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                             </div>
                         </div>
-                        <div class="cont-control">
-                            <label for="btn-foto">Subir Foto de Perfil</label>
-                            <input type="file" id="file-foto" name="file-foto" multiple>
-                        </div>
                     </div>
+                </div>
+                <div class="direccion">
+                    <label for="direccion-exacta">Dirección exacta:</label>
+                    <textarea name="direccion-exacta" id="direccion-exacta" cols="30" rows="10"></textarea>
                 </div>
                 <div>
                     <button id="btn-registrar" type="button" class="btn-oscuro">Registrar</button>
@@ -227,9 +232,14 @@
         </footer>
     </div>
 
-    <script src="/js/registro_usuarios.js "></script>
+    <!-- 1. Cargar bibliotecas externas -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- 2. Enlazar el servicio general que comunica con el servidor -->
+    <script src="../js/servicio-general.js"></script>
 
+    <!-- Enlazar los controladores de la página -->
+    <script src="../js/registro_usuarios.js"></script>
 </body>
 
 </html>
