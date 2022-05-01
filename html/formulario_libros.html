@@ -106,15 +106,23 @@
                         </div>
 
                         <!-- Adjuntos -->
-                        <div class="formulario-libros-espaciado-form">
-                            <label for="file-foto">Adjuntar fotografía</label>
-                            <input type="file" id="file-foto" name="file-foto" multiple>
+                        <div class="formulario-libros-espaciado-form formulario-libros-adjuntos">
+                            <div>
+                                <label for="btn-portada">Portada del libro</label>
+                                <img id="subir-portada">
+                                <button type="button" id="btn-portada">Subir foto</button>
+                            </div>
+                            <div>
+                                <label for="btn-contraportada">Contraportada del libro</label>
+                                <img id="subir-contraportada">
+                                <button type="button" id="btn-contraportada">Subir foto</button>
+                            </div>
                         </div>
 
-                        <!-- Fecha de publicación -->
+                        <!-- Año de publicación -->
                         <div class="formulario-libros-espaciado-form">
-                            <label for="date-publicacion">Fecha de publicación</label>
-                            <input type="date" id="date-publicacion" name="date-publicacion">
+                            <label for="date-publicacion">Año de publicación</label>
+                            <input type="number" placeholder="Introduzca el año de publicación" id="date-publicacion" name="date-publicacion">
                         </div>
 
                         <!-- Género literario -->
@@ -156,16 +164,6 @@
                             </select>
                         </div>
 
-                        <!-- Descuentos -->
-                        <div class="formulario-libros-espaciado-form">
-                            <label for="select-descuento">Descuento (Opcional)</label>
-                            <select id="select-descuento" name="select-descuento">
-                                    <option value="0">Ninguno</option>
-                                    <option value="1">Día de la madre</option>
-                                    <option value="2">Libros de cuentos</option>
-                                </select>
-                        </div>
-
                         <!-- ISBN -->
                         <div class="formulario-libros-espaciado-form">
                             <label for="txt-isbn">ISBN</label>
@@ -186,6 +184,16 @@
                             <input type="number" id="number-precio" name="number-precio" placeholder="Introduzca el precio" step="0.01">
                         </div>
 
+                        <!-- Descuentos -->
+                        <div class="formulario-libros-espaciado-form">
+                            <label for="select-descuento">Descuento (Opcional)</label>
+                            <select id="select-descuento" name="select-descuento">
+                                    <option value="0">Ninguno</option>
+                                    <option value="1">Día de la madre</option>
+                                    <option value="2">Libros de cuentos</option>
+                                </select>
+                        </div>
+
                         <!-- Premios -->
                         <div class="formulario-libros-espaciado-form">
                             <label for="checkbox-premios">Premios (Opcional)</label>
@@ -194,7 +202,7 @@
                                     <div id="formulario-libros-premios-nobel">
                                         <input type="checkbox" name="checkbox-premios" value="1">Premio Nobel de Literatura
                                     </div>
-                                    <input type="date" name="checkbox-premios" placeholder="Ingrese el año" class="checkbox-premio-nobel">
+                                    <input type="number" placeholder="Año en que ganó el Nobel" name="checkbox-premios" class="checkbox-premio-nobel">
                                 </div>
                                 <div>
                                     <input type="checkbox" name="checkbox-premios" value="2">Premio Príncipe de Asturias de las Letras
@@ -275,9 +283,12 @@
         </footer>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/informacion_libros.js"></script>
+    <script src="../js/img-libros.js"></script>
     <script src="../js/formulario_libros.js"></script>
-    <script src="../js/editar_perfil.js"></script>
 </body>
 
 </html>
