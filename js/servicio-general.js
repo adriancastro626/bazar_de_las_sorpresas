@@ -68,3 +68,23 @@ const eliminarDatos = async(endpoint, _id) => {
         });
     });
 };
+
+const obtenerElemento = async(endpoint) => {
+    let url = `http://localhost:3000/api/${endpoint}`;
+    let elemento;
+    await axios({
+            'url': url,
+            'method': 'get',
+            'responseType': 'json'
+        })
+        .then(response => {
+            elemento = response.data.libro;
+        }).catch(error => {
+            Swal.fire({
+                icon: 'error',
+                text: error
+            });
+        });
+
+    return elemento;
+};
