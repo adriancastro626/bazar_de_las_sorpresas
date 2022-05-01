@@ -1,4 +1,30 @@
-const listaLibrosEliminar = document.querySelector('.borrar-libro');
+'use strict';
+
+const cuerpoTabla = document.querySelector('#tbl-libros tbody');
+let listaLibros = [];
+
+const inicializarLista = async() => {
+    listaLibros = await obtenerListaLibros('/listar-libros');
+    mostrarTabla();
+};
+
+const mostrarTabla = async() => {
+    cuerpoTabla.innerHTML = '';
+
+    listaLibros.forEach(libro => {
+        let fila = cuerpoTabla.insertRow();
+
+        fila.insertCell().innerText = libro.titulo;
+        fila.insertCell().innerText = libro.editorial;
+        fila.insertCell().innerText = libro.publicacion;
+        fila.insertCell().innerText = libro.autor;
+    });
+};
+
+inicializarLista();
+
+
+/*const listaLibrosEliminar = document.querySelector('.borrar-libro');
 const listagenerosModificar = document.querySelector('.editar-libro');
 
 
@@ -39,7 +65,6 @@ listagenerosModificar.addEventListener('click', () => {
         listaGenerosCompleto.reset();
     });
 
-=======
 const listaLibrosEliminar = document.querySelector('.borrar-libro');
 const listagenerosModificar = document.querySelector('.editar-libro');
 
@@ -81,3 +106,5 @@ listagenerosModificar.addEventListener('click', () => {
         listaGenerosCompleto.reset();
     });
 });
+
+});*/

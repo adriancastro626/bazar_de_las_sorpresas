@@ -92,13 +92,7 @@ input[type="number"] {
     width: 96%;
 }
 
-input[type="date"] {
-    height: 28px;
-    width: 96%;
-    padding-left: 12px;
-}
-
-.premio-literatura input[type="date"] {
+.premio-literatura input[type="number"] {
     margin-left: 10px;
     width: 250px;
 }
@@ -143,6 +137,30 @@ button:focus {
 
 textarea {
     height: 200px;
+}
+
+.formulario-libros-adjuntos {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    max-width: 450px;
+}
+
+.formulario-libros-adjuntos div {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario-libros-adjuntos img {
+    margin: 10px 0;
+    max-height: 200px;
+    max-width: 200px;
+    text-align: center;
+}
+
+.formulario-libros-adjuntos button {
+    width: 150px;
 }
 
 

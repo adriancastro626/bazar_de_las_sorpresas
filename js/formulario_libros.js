@@ -1,7 +1,10 @@
+'use strict';
+
 // Variables
 const formLibroCompleto = document.querySelector('#formulario-libros-completo');
 const formLibroTitulo = document.querySelector('#txt-titulo');
-const formLibroFoto = document.querySelector('#file-foto');
+const formLibroPortada = document.querySelector('#subir-portada');
+const formLibroContraportada = document.querySelector('#subir-contraportada');
 const formLibroPublicacion = document.querySelector('#date-publicacion');
 const formLibroGenero = document.querySelector('#select-genero');
 const formLibroAutor = document.querySelector('#select-autor');
@@ -27,11 +30,18 @@ const formLibroValidacion = () => {
     };
 
     // Adjuntos
-    if (formLibroFoto.value == "") {
+    if (formLibroPortada.src == "") {
         formLibroIncompleto = true;
-        formLibroFoto.classList.add('formulario-libros-incompleto');
+        formLibroPortada.classList.add('formulario-libros-incompleto');
     } else {
-        formLibroFoto.classList.remove('formulario-libros-incompleto');
+        formLibroPortada.classList.remove('formulario-libros-incompleto');
+    };
+
+    if (formLibroContraportada.src == "") {
+        formLibroIncompleto = true;
+        formLibroContraportada.classList.add('formulario-libros-incompleto');
+    } else {
+        formLibroContraportada.classList.remove('formulario-libros-incompleto');
     };
 
     // Fecha de publicación
@@ -84,7 +94,7 @@ const formLibroValidacion = () => {
 
     // Premios
     let formLibroPremioNobel = document.querySelectorAll('#formulario-libros-premios input[type=checkbox]:checked');
-    const formLibroFechaNobel = document.querySelector('#formulario-libros-premios input[type=date]');
+    const formLibroFechaNobel = document.querySelector('#formulario-libros-premios input[type=number]');
 
     formLibroPremioNobel.forEach(check => {
         if (check.value == 1) {
@@ -113,12 +123,30 @@ const formLibroValidacion = () => {
             'text': 'Por favor revise los campos resaltados',
         });
     } else {
+
+        let libro = {
+            titulo: formLibroTitulo.value,
+            editorial: formLibroEditorial.value,
+            portada: formLibroPortada.src,
+            contraportada: formLibroContraportada.src,
+            precio: formLibroPrecio.value,
+            publicacion: formLibroPublicacion.value,
+            genero: formLibroGenero.value,
+            autor: formLibroAutor.value,
+            descuento: formLibroDescuento.value,
+            isbn: formLibroISBN.value,
+            premios: formLibroPremioNobel.value,
+            sipnosis: formLibroSinopsis.value
+        };
+
+        registrarDatos(libro, '/registrar-libro');
+
         formLibroImprimir();
         Swal.fire({
             'icon': 'success',
             'title': 'Libro registrado',
         }).then(() => {
-            formLibroCompleto.reset();
+            window.location.href = 'lista_libros.html';
         });
     }
 
@@ -129,7 +157,9 @@ const formLibroImprimir = () => {
 
     console.log('El título es', formLibroTitulo.value);
 
-    console.log('Los nombres de las fotos adjunta son', formLibroFoto.value);
+    console.log('El enlace de la portada es ', formLibroPortada.src);
+
+    console.log('El enlace de la portada es ', formLibroContraportada.src);
 
     console.log('La fecha de publicación es', formLibroPublicacion.value);
 
@@ -161,3 +191,18 @@ formLibroGuardar.addEventListener('click', () => {
     formLibroValidacion();
 
 });
+
+
+//Delimitación de cantidad de caracteres de la fecha
+let caracteresAnnoNobel = document.querySelector('#formulario-libros-premios input[type=number]');
+caracteresAnnoNobel.addEventListener('input', function() {
+    if (this.value.length > 4)
+        this.value = this.value.slice(0, 4);
+})
+
+
+let caracteresAnnoPublicacion = document.querySelector('#date-publicacion');
+caracteresAnnoPublicacion.addEventListener('input', function() {
+    if (this.value.length > 4)
+        this.value = this.value.slice(0, 4);
+})
