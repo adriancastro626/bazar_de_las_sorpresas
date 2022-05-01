@@ -15,15 +15,19 @@
 h1 {
     color: white;
     text-align: center;
-    font-size: 50px;
+    /* font-size: 50px; */
+    font-size: 24px;
     font-weight: bold;
-    margin-top: -10rem;
-    margin-bottom: 2rem;
+    /* margin-top: -10rem; */
+    /* margin-bottom: 2rem; */
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 #cont-listar-metodos {
     text-align: center;
-    margin-left: 46%;
+    /* margin-left: 46%; */
+    margin-left: 20px;
     color: white;
 }
 

@@ -9,7 +9,7 @@ const registrarDatos = async(endpoint, data, redireccion) => {
     }).then(response => {
         Swal.fire({
             'icon': 'success',
-            'title': 'Felicidades',
+            'title': 'Operación completada',
             'text': response.data.msj
         }).then(() => {
             window.location.href = redireccion;
@@ -56,7 +56,8 @@ const eliminarDatos = async(endpoint, _id) => {
     }).then(response => {
         Swal.fire({
             'icon': 'success',
-            'title': response.data.msj
+            'title': 'Operación completada',
+            'text': response.data.msj
         }).then(() => {
             window.location.reload();
         });
@@ -66,4 +67,24 @@ const eliminarDatos = async(endpoint, _id) => {
             text: error
         });
     });
+};
+
+const obtenerElemento = async(endpoint) => {
+    let url = `http://localhost:3000/api/${endpoint}`;
+    let elemento;
+    await axios({
+            'url': url,
+            'method': 'get',
+            'responseType': 'json'
+        })
+        .then(response => {
+            elemento = response.data.libro;
+        }).catch(error => {
+            Swal.fire({
+                icon: 'error',
+                text: error
+            });
+        });
+
+    return elemento;
 };
