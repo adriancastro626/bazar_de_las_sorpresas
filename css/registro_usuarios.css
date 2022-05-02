@@ -171,3 +171,23 @@ input[type="password"],
     justify-content: center;
     align-items: center;
 }
+
+.input-error {
+    border: 2px solid #c0392b;
+}
+
+
+/* Estilos de validacion */
+
+.input-error,
+.input-error input[type="date"] {
+    border: 3px solid #ad3049 !important;
+    color: #ad3049;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.input-error::placeholder {
+    color: #ad3049;
+    font-weight: bold;
+}

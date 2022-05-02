@@ -54,8 +54,6 @@ selectCantones.addEventListener('change', () => {
 
 //Registro de Usuario
 
-
-
 const validar = () => {
 
     let hayError = false;
@@ -180,29 +178,37 @@ const validar = () => {
         inputAutores.classList.remove('input-error');
     }
 
-    // if (inputDireccion.value == '') {
+    if (inputDireccion.value == '') {
 
-    //     hayError = true;
-    //     inputDireccion.classList.add('input-error');
-    // } else {
-    //     inputDireccion.classList.remove('input-error');
-    // }
+        hayError = true;
+        inputDireccion.classList.add('input-error');
+    } else {
+        inputDireccion.classList.remove('input-error');
+    }
 
-    // if (inputMapa.value == '') {
+    if (selectProvincias.value == '') {
 
-    //     hayError = true;
-    //     inputMapa.classList.add('input-error');
-    // } else {
-    //     inputMapa.classList.remove('input-error');
-    // }
+        hayError = true;
+        selectProvincias.classList.add('input-error');
+    } else {
+        selectProvincias.classList.remove('input-error');
+    }
 
-    // if (inputFoto.value == '') {
+    if (selectCantones.value == '') {
 
-    //     hayError = true;
-    //     inputFoto.classList.add('input-error');
-    // } else {
-    //     inputFoto.classList.remove('input-error');
-    // }
+        hayError = true;
+        selectCantones.classList.add('input-error');
+    } else {
+        selectCantones.classList.remove('input-error');
+    }
+
+    if (selectDistritos.value == '') {
+
+        hayError = true;
+        selectDistritos.classList.add('input-error');
+    } else {
+        selectDistritos.classList.remove('input-error');
+    }
 
     if (hayError == true) {
         Swal.fire({
@@ -212,19 +218,38 @@ const validar = () => {
         });
 
     } else {
-        Swal.fire({
-            'icon': 'success',
-            'title': 'El usuario ha sido registrado',
-            'text': 'El Bazar de las Sorpresas'
-        }).then(() => {
-            window.location.href = 'inicio_sesion.html';
-        });
+        registrarUsuario();
     }
 
 };
 
+// Back-end Base de Datos
+
+const registrarUsuario = () => {
+    let data = {
+        "primernombre": inputNombre.value,
+        "segundonombre": inputSegundoNombre.value,
+        "primerapellido": inputPrimerApellido.value,
+        "segundoapellido": inputSegundoApellido.value,
+        "fechanacimiento": inputNacimiento.value,
+        "tipoidentificacion": inputTipoIdentificacion.value,
+        "numeroidentificacion": inputIdentificacion.value,
+        "genero": inputGenero.value,
+        "otrogenero": inputOtroGenero.value,
+        "foto": inputFoto.value,
+        "correousuario": inputCorreo.value,
+        "contrasenna": inputContrasenna.value,
+        "generoliterario": inputGeneroLiterario.value,
+        "autorfav": inputAutores.value,
+        "provincia": selectProvincias.value,
+        "canton": selectCantones.value,
+        "distrito": selectDistritos.value,
+        "direccion": inputDireccion.value
+
+    };
+    registrarDatos('registrar-usuario', data, 'inicio_sesion.html');
+};
 
 btnRegistrar.addEventListener('click', () => {
     validar();
-
 });

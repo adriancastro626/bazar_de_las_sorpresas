@@ -1,12 +1,13 @@
-const inputUsuario = document.getElementById('txt-usuario');
-const inputContrasenna = document.getElementById('txt-contrasenna');
+const inputValidarUsuario = document.getElementById('txt-usuario');
+const inputValidarContrasenna = document.getElementById('txt-contrasenna');
+const btnIngresar = document.getElementById('btn-ingresar');
 
 
 
 const validarCredenciales = () => {
     let ingresoCorrecto = false;
     listaUsuarios.forEach(usuario => {
-        if ((usuario.correo == inputUsuario.value) && (usuario.contrasenna == inputContrasenna.value)) {
+        if ((usuario.correo == inputValidarUsuario.value) && (usuario.contrasenna == inputValidarContrasenna.value)) {
             ingresoCorrecto = true;
             localStorage.setItem('usuarioConectado', JSON.stringify(usuario));
         }
@@ -22,9 +23,7 @@ const validarCredenciales = () => {
 
 document.getElementById('btn-ingresar').addEventListener('click', validarCredenciales)
 
-const inputValidarUsuario = document.getElementById('txt-usuario');
-const inputValidarContrasenna = document.getElementById('txt-contrasenna');
-const btnIngresar = document.getElementById('btn-ingresar');
+
 
 
 const validar = () => {
@@ -35,8 +34,12 @@ const validar = () => {
 
         hayError = true;
         inputValidarUsuario.classList.add('input-error');
+        inputValidarContrasenna.classList.add('input-error');
+
     } else {
         inputValidarUsuario.classList.remove('input-error');
+        inputValidarContrasenna.classList.remove('input-error');
+
     }
 
     if (hayError == true) {
