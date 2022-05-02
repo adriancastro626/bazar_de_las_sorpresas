@@ -1,0 +1,239 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Asap';
+}
+
+.cont-carrito-compras {
+    /* width: 1200px; */
+    width: 70%;
+    height: auto;
+    margin: 60px auto 0;
+    /* border: 1px solid #ddd; */
+    border-radius: 6px;
+    background-color: #fff;
+    /* box-shadow: 1px 2px 3px 0 rgba(0, 0, 0, .10); */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 20px;
+}
+
+.cont-contenido-pago {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-bottom: 30px;
+}
+
+.cont-lateral-izquierdo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 450px;
+    width: 30%;
+}
+
+
+/* Sección de método de envío */
+
+.cont-información-envio {
+    /* width: 240px; */
+    height: 130px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    background-color: #6D6875;
+    color: #FFCDB2;
+}
+
+.cont-tipo-envio {
+    margin: 20px 20px;
+}
+
+.cont-tipo-envio input {
+    accent-color: #B5838D;
+}
+
+
+/* Sección de monto a pagar */
+
+.cont-informacion-pago {
+    /* width: 240px; */
+    height: 280px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    background-color: #6D6875;
+    color: #FFCDB2;
+}
+
+.cont-desglose {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+
+.cont-monto {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#p-total {
+    font-weight: bold;
+}
+
+.cont-botones-monto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 10%;
+    height: 80px;
+}
+
+.btn-monto {
+    height: 30px;
+    /* width: 200px; */
+    width: 90%;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+#btn-seguir-comprando {
+    background: #fff;
+    border: 1px solid #6D6875;
+}
+
+#btn-proceder-pago {
+    background: #B5838D;
+    border: 1px solid #B5838D;
+}
+
+
+/* Contenedor de lista de items */
+
+.cont-items {
+    /* border: 1px solid rgb(241, 14, 14); */
+    /* width: 800px; */
+    width: 66%;
+    height: auto;
+}
+
+.caja-exterior-item {
+    background-color: #6D6875;
+    border: 1px solid #fff;
+    color: #FFCDB2;
+    width: auto;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+}
+
+.caja-interior-izquierda {
+    width: 300px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.caja-interior-izquierda img {
+    width: auto;
+    height: 160px;
+}
+
+.parrafo-titulo {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.caja-interior-media {
+    width: 300px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.parrafo-autor,
+.parrafo-precio {
+    font-size: 16px;
+}
+
+.cont-media-inferior {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.caja-interior-derecha {
+    width: 200px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.cont-numero-items {
+    width: 60px;
+    height: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+#input-cantidad {
+    width: 50px;
+    height: 24px;
+    border-radius: 6px;
+    border: #fff;
+    position: relative;
+    cursor: pointer;
+    transition: 0.5s;
+    box-shadow: 0 0 10px #B5838D;
+}
+
+#input-cantidad::-webkit-inner-spin-button,
+#input-cantidad::-webkit-outer-spin-button {
+    opacity: 1;
+}
+
+.btn-eliminar {
+    background-color: #6D6875;
+    border: #6D6875;
+    color: #B5838D;
+    margin: 20px;
+}

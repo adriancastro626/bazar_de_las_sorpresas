@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/estilos_general.css">
+    <link rel="stylesheet" href="../css/parametros_sistema.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <script src="https://kit.fontawesome.com/0db8cde7c4.js" crossorigin="anonymous"></script>
+    <title>Parámetros del sistema</title>
+</head>
+
+<body>
+
+    <header>
+        <nav class="nav">
+            <div class="parentNav">
+                <a class="navUno" href="pagina_principal.html">
+                    <img class="nav-img" src="../imgs/logo.png" alt="Logo">
+                </a>
+                <a class="navDos" href="pagina_principal.html">
+                    <button class="btn-nav" id="btn-registro" type="button">Cerrar Sesión</button>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="pagina-con-menu-lateral">
+
+        <!-- Menú lateral -->
+        <div class="menu-lateral">
+
+            <!-- Primera sección del menú lateral -->
+            <div class="menu-lateral-arriba">
+                <div class="menu-lateral-arriba-1">
+                    <a href="pagina_principal.html"><i class="fa-solid fa-house" title="Icono para ir a la página principal"></i></a>
+                    <a href="inicio_sesion.html"><i class="fa-solid fa-lock" title="Icono para cerrar sesión en la cuenta"></i></a>
+                </div>
+                <div class="menu-lateral-arriba-2">
+                    <div>
+                        <img class="menu-lateral-foto-perfil" src="../imgs/foto-perfil.png" alt="Foto de Perfil del Usuario">
+                    </div>
+                    <span class="menu-lateral-nombre-usuario" id="campo-nombre-lateral"></span>
+                    <div>
+                        <span class="menu-lateral-email-usuario" id="campo-correo-lateral"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Segunda sección del menú lateral -->
+            <div class="menu-lateral-form">
+
+                <!-- Primera lista -->
+                <h2>Cuentas</h2>
+                <nav>
+                    <ul>
+                        <li><i class="fa-solid fa-user"></i><a href="editar_perfil.html">Perfil</a></li>
+                        <li><i class="fa-solid fa-receipt"></i><a href="historial_compra.html">Historial de compras</a></li>
+                        <li><i class="fa-solid fa-users"></i><a href="lista_usuarios.html">Usuarios</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Segunda lista -->
+                <h2>Tienda</h2>
+                <nav>
+                    <ul id="menu-lateral-form">
+                        <li><i class="fa-solid fa-tag"></i><a href="parametros_sistema.html">Parámetros del sistema</a></li>
+                        <li class="transicion"><i class="fa-solid fa-book-open"></i><a href="#">Catálogo</a>
+                            <ul class="menu-lateral-submenu">
+                                <li><a href="lista_libros.html">Libros</a></li>
+                                <li><a href="lista_autores.html">Autores</a></li>
+                                <li><a href="lista_generos.html">Géneros literarios</a></li>
+                            </ul>
+                        </li>
+                        <li><i class="fa-solid fa-newspaper"></i><a href="#">Reportes</a>
+                            <ul class="menu-lateral-submenu">
+                                <li><a href="reportes_top10.html">Top 10</a></li>
+                                <li><a href="reportes_desglose_ventas.html">Ventas</a></li>
+                                <li><a href="reportes_descuentos.html">Descuentos</a></li>
+                                <li><a href="reportes_socios_comerciales.html">Socios comerciales</a></li>
+                            </ul>
+                        </li>
+                        <li><i class="fa-solid fa-store"></i><a href="lista_socios.html">Socios comerciales</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Contenido de la página -->
+
+        <div class="pagina-contenido">
+
+            <div class="parametros-sistema">
+                <h1>Parámetros del sistema</h1>
+
+                <!-- Lista promociones -->
+                <div class="parametros-tabla-completa">
+                    <h2>Lista de Promociones</h2>
+                    <table id="parametros-tabla">
+
+                        <tr>
+                            <td>Día de la Madre - 15%</td>
+                            <td class="parametros-tabla-centrar"><a href="#" class="parametros-tabla-modificar"><i class="fa-solid fa-pen-to-square fa-2x"></i></a></td>
+                            <td class="parametros-tabla-centrar"><a href="#" class="parametros-tabla-eliminar"><i class="fa-solid fa-trash-can fa-2x"></a></td>
+                        </tr>
+
+                        <tr>
+                            <td>Navidad - 5%</td>
+                            <td class="parametros-tabla-centrar"><a href="#" class="parametros-tabla-modificar"><i class="fa-solid fa-pen-to-square fa-2x"></i></a></td>
+                            <td class="parametros-tabla-centrar"><a href="#" class="parametros-tabla-eliminar"><i class="fa-solid fa-trash-can fa-2x"></a></td>
+                        </tr>
+
+                        <tr>
+                            <td>Libros infantiles - 10%</td>
+                            <td class="parametros-tabla-centrar"><a href="#" class="parametros-tabla-modificar"><i class="fa-solid fa-pen-to-square fa-2x"></i></a></td>
+                            <td class="parametros-tabla-centrar"><a href="#" class="parametros-tabla-eliminar"><i class="fa-solid fa-trash-can fa-2x"></a></td>
+                        </tr>
+
+                    </table>
+                </div>
+
+
+                <!-- Agregar promoción -->
+                <div class="parametros-borde">
+                    <h2>Ingresar Nueva Promoción</h2>
+
+                    <form id="parametros-promocion">
+
+                        <div class="parametros-ingresar-inputs">
+                            <div class="parametros-ingresar-inputs-todo">
+                                <div class="parametros-ingresar-label">
+                                    <label for="txt-nombre-promo">Nombre de la promoción</label>
+                                </div>
+                                <div>
+                                    <input type="text" class="txt-nombre-promo" id="txt-nombre-promo" name="txt-nombre-promo" placeholder="Introduzca el nombre de la promoción">
+                                </div>
+                            </div>
+
+                            <div class="parametros-ingresar-inputs-todo">
+                                <div class="parametros-ingresar-label">
+                                    <label for="number-porcentaje-promo">Porcentaje</label>
+                                </div>
+                                <div>
+                                    <input type="number" class="number-porcentaje-promo" id="number-porcentaje-promo" name="number-porcentaje-promo" placeholder="%">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="parametros-boton">
+                            <button type="button" id="btn-descuento" class="btn-descuento" name="btn-descuento">Agregar descuento</button>
+                        </div>
+
+                    </form>
+                </div>
+
+
+                <!-- Libro Fan -->
+                <div class="parametros-borde">
+                    <h2>Descuento Libro Fan</h2>
+
+                    <form id="parametros-fan">
+
+                        <div class="parametros-ingresar-inputs">
+
+                            <div>
+                                <div class="parametros-ingresar-inputs-todo">
+                                    <p>Porcentaje de descuento actual: 15%</p>
+                                </div>
+
+                                <div class="parametros-ingresar-inputs-todo">
+                                    <div class="parametros-ingresar-label">
+                                        <label for="number-porcentaje-fan">Porcentaje de descuento</label>
+                                    </div>
+
+                                    <div>
+                                        <input type="number" class="number-porcentaje-fan" id="number-porcentaje-fan" name="number-porcentaje-fan" placeholder="%">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="parametros-ingresar-inputs-todo">
+                                    <p>Monto mínimo de compras actual: ¢10,000.00</p>
+                                </div>
+
+                                <div class="parametros-ingresar-inputs-todo">
+                                    <div class="parametros-ingresar-label">
+                                        <label for="number-compras-fan">Monto mínimo de compras</label>
+                                    </div>
+
+                                    <div>
+                                        <input type="number" class="number-compras-fan" id="number-compras-fan" name="number-compras-fan" placeholder="Monto">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="parametros-boton">
+                            <button type="button" id="btn-fan" class="btn-fan" name="btn-fan">Cambiar descuento</button>
+                        </div>
+
+                    </form>
+                </div>
+
+
+                <!-- Tasa de impuesto -->
+                <div class="parametros-borde">
+                    <h2>Tasa de impuesto</h2>
+
+                    <form id="parametros-imp">
+
+                        <div class="parametros-ingresar-inputs-todo">
+                            <p>Tasa de impuesto actual: 5%</p>
+                        </div>
+
+
+                        <div class="parametros-ingresar-inputs-todo">
+                            <div class="parametros-ingresar-label">
+                                <label for="number-imp">Nueva tasa de impuesto</label>
+                            </div>
+
+                            <div>
+                                <input type="number" class="number-imp" id="number-imp" name="number-imp" placeholder="%">
+                            </div>
+                        </div>
+
+
+                        <div class="parametros-boton">
+                            <button type="button" id="btn-imp" class="btn-imp" name="btn-imp">Cambiar impuesto</button>
+                        </div>
+
+                    </form>
+                </div>
+
+
+                <!-- Correo para facturas -->
+                <div class="parametros-borde">
+                    <h2>Correo para facturas</h2>
+
+                    <form id="parametros-correo">
+
+                        <div class="parametros-ingresar-inputs-todo">
+                            <p>Correo electrónico actual: facturas@elbazardelassorpresas.com</p>
+                        </div>
+
+                        <div class="parametros-ingresar-inputs-todo">
+                            <div class="parametros-ingresar-label">
+                                <label for="email-nuevo-correo">Nuevo correo electrónico</label>
+                            </div>
+
+                            <div>
+                                <input type="email" class="email-nuevo-correo" id="email-nuevo-correo" name="email-nuevo-correo" placeholder="Introduzca el correo electrónico">
+                            </div>
+                        </div>
+
+                        <div class="parametros-boton">
+                            <button type="button" id="btn-correo" class="btn-correo" name="btn-correo">Cambiar correo</button>
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <footer>
+            <div class="footerParent">
+                <div class="footerChildUno">
+                    <h4>Quiénes Somos</h4>
+                    <div>
+                        <a href="pagina_producto.html">
+                            <p href="/nosotros.html">El Bazar de las Sorpresas</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="pagina_equipo.html">
+                            <p>Rasmus</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="footerChildDos">
+                    <h4>Mi Perfil</h4>
+                    <div>
+                        <a href="editar_perfil.html">
+                            <p>Perfil</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="/html/carrito_compras.html">
+                            <p>Carrito</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="footerChildTres">
+                    <h4>Contáctenos</h4>
+                    <p type="text ">Correo Electrónico</p>
+                    <p type="text ">contactanes@elbazardelassorpresas.com</p>
+                    <p href="text ">Teléfono 800-bazar</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/parametros_sistema.js"></script>
+    <script src="/js/editar_perfil.js"></script>
+
+</body>
+
+</html>

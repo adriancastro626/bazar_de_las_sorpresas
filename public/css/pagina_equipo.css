@@ -1,0 +1,175 @@
+/* Contenidos de información general */
+
+p span {
+    font-size: 22px;
+    line-height: 34px;
+}
+
+.equipo-nosotros-titulo {
+    text-align: center;
+}
+
+.equipo-nosotros {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 100px;
+    width: 100%;
+}
+
+.equipo-arriba1-img {
+    height: 280px;
+    width: 50%;
+}
+
+.equipo-arriba2-img {
+    margin-right: 60px;
+    width: 40%;
+}
+
+.equipo-arriba1-img1 {
+    width: 520px;
+}
+
+.equipo-arriba2-img2 {
+    width: 300px;
+}
+
+.equipo-nosotros-miembro {
+    background-color: #FFB4A2;
+    border-radius: 6px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 40px;
+    padding: 30px 20px;
+    transition: 0.4s;
+    width: 26%;
+}
+
+.equipo-nosotros-miembro:hover {
+    background-color: #6D6875;
+}
+
+.equipo-nosotros-miembro:hover span {
+    color: #ffffff;
+}
+
+.equipo-nosotros-miembro p {
+    font-size: 20px;
+    line-height: 40px;
+    margin-top: 20px;
+}
+
+.equipo-nosotros-miembro img {
+    width: 200px;
+}
+
+.equipo-nosotros-miembro span {
+    color: #6D6875;
+    font-size: 18px;
+}
+
+.equipo-arriba1 {
+    display: flex;
+}
+
+.equipo-arriba2 {
+    display: flex;
+    margin-bottom: 60px;
+    margin-top: 60px;
+}
+
+.equipo-nosotros-separador {
+    width: 5%;
+}
+
+.equipo-arriba-txt1 {
+    padding-right: 60px;
+    text-align: justify;
+    width: 50%;
+}
+
+.equipo-arriba-txt2 {
+    margin-bottom: 30px;
+    padding-top: 60px;
+    text-align: justify;
+}
+
+.foto-nosotros {
+    border-radius: 50%;
+}
+
+.foto-nosotros:hover {
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+
+/*Estilos del Modal Nosotros*/
+
+h2 {
+    font-size: 38px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+#adolfo,
+#stephanie,
+#adrian,
+#alejandro,
+#amanda {
+    background-color: #6D6875;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    width: 100vw;
+    height: 100vh;
+    transition: all .5s;
+}
+
+#adolfo:target,
+#stephanie:target,
+#adrian:target,
+#alejandro:target,
+#amanda:target {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    left: 0;
+}
+
+#adolfo img,
+#stephanie img,
+#adrian img,
+#alejandro img,
+#amanda img {
+    background-color: #fff;
+    border: 2px solid #FFB4A2;
+    border-radius: 6px;
+    box-shadow: 4px 4px 4px #FFB4A2;
+    padding: 6px;
+    margin-bottom: 30px;
+    width: 300px;
+}
+
+.equipo-nosotros-cerrar {
+    background-color: #FFB4A2;
+    color: #000105;
+    display: flex;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 20px;
+    position: absolute;
+    top: 2px;
+    right: 20px;
+    text-decoration: none;
+}
+
+.equipo-nosotros-parrafo {
+    font-weight: 500;
+    text-align: justify;
+    width: 36%;
+}

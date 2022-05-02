@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/recuperar_contrasenna.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asap:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Recuperar Contraseña</title>
+</head>
+
+<body>
+    <header>
+        <nav class="nav">
+            <div class="parentNav">
+                <a class="navUno" href="./pagina_principal.html">
+                    <img class="nav-img" src="../imgs/logo.png" alt="Logo">
+                </a>
+                <a class="navDos" href="./registro_usuarios.html">
+                    <button id="btn-registro" type="button">Registrarse</button>
+                </a>
+            </div>
+        </nav>
+    </header>
+    <div class="contenedor-img">
+        <section id="sct-ingreso-usuarios">
+            <div class="card ">
+                <form>
+                    <h1>¿Olvido su Contraseña?</h1>
+                    <div class="cont-control">
+                        <label for="txt-usuario"><p>Por favor introduzca su correo electronico, para recibir un enlace de reestablecimiento de contraseña.</p></label>
+                        <input id="txt-correo-recuperar" type="email" placeholder="Correo">
+                    </div>
+
+                    <div class="cont-control btn">
+                        <button id="btn-recuperar" type="button" class="btn-oscuro">Enviar</button>
+                    </div>
+
+                </form>
+            </div>
+        </section>
+    </div>
+    <div>
+        <footer>
+            <div class="footerParent">
+                <div class="footerChildUno">
+                    <h4>Quiénes Somos</h4>
+                    <div>
+                        <a href="pagina_producto.html">
+                            <p href="/nosotros.html">El Bazar de las Sorpresas</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="pagina_equipo.html">
+                            <p>Rasmus</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="footerChildDos">
+                    <h4>Mi Perfil</h4>
+                    <div>
+                        <a href="editar_perfil.html">
+                            <p>Perfil</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="/html/carrito_compras.html">
+                            <p>Carrito</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="footerChildTres">
+                    <h4>Contáctenos</h4>
+                    <p type="text ">Correo Electrónico</p>
+                    <p type="text ">contactanes@elbazardelassorpresas.com</p>
+                    <p href="text ">Teléfono 800-bazar</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../js/recuperar_contrasenna.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+
+</html>

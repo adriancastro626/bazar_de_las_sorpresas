@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/estilos_general.css">
+    <link rel="stylesheet" href="../css/pagina_equipo.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <script src="https://kit.fontawesome.com/0db8cde7c4.js" crossorigin="anonymous"></script>
+    <title>Equipo de trabajo</title>
+</head>
+
+<body>
+    <header>
+        <nav class="nav">
+            <div class="parentNav">
+                <a class="navUno" href="pagina_principal.html">
+                    <img class="nav-img" src="../imgs/logo.png" alt="Logo">
+                </a>
+                <a class="navDos" href="pagina_principal.html">
+                    <button class="btn-nav" id="btn-registro" type="button">Cerrar Sesión</button>
+                </a>
+            </div>
+        </nav>
+    </header>
+    <div class="pagina-con-menu-lateral">
+
+        <!-- Menú lateral -->
+        <div class="menu-lateral">
+
+            <!-- Primera sección del menú lateral -->
+            <div class="menu-lateral-arriba">
+                <div class="menu-lateral-arriba-1">
+                    <a href="pagina_principal.html"><i class="fa-solid fa-house" title="Icono para ir a la página principal"></i></a>
+                    <a href="inicio_sesion.html"><i class="fa-solid fa-lock" title="Icono para cerrar sesión en la cuenta"></i></a>
+                </div>
+                <div class="menu-lateral-arriba-2">
+                    <div>
+                        <img class="menu-lateral-foto-perfil" src="../imgs/foto-perfil.png" alt="Foto de Perfil del Usuario">
+                    </div>
+                    <span class="menu-lateral-nombre-usuario" id="campo-nombre-lateral"></span>
+                    <div>
+                        <span class="menu-lateral-email-usuario" id="campo-correo-lateral"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Segunda sección del menú lateral -->
+            <div class="menu-lateral-form">
+
+                <!-- Primera lista -->
+                <h2>Cuentas</h2>
+                <nav>
+                    <ul>
+                        <li><i class="fa-solid fa-user"></i><a href="editar_perfil.html">Perfil</a></li>
+                        <li><i class="fa-solid fa-receipt"></i><a href="historial_compra.html">Historial de compras</a></li>
+                        <li><i class="fa-solid fa-users"></i><a href="lista_usuarios.html">Usuarios</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Segunda lista -->
+                <h2>Tienda</h2>
+                <nav>
+                    <ul id="menu-lateral-form">
+                        <li><i class="fa-solid fa-tag"></i><a href="parametros_sistema.html">Parámetros del sistema</a></li>
+                        <li class="transicion"><i class="fa-solid fa-book-open"></i><a href="#">Catálogo</a>
+                            <ul class="menu-lateral-submenu">
+                                <li><a href="lista_libros.html">Libros</a></li>
+                                <li><a href="lista_autores.html">Autores</a></li>
+                                <li><a href="lista_generos.html">Géneros literarios</a></li>
+                            </ul>
+                        </li>
+                        <li><i class="fa-solid fa-newspaper"></i><a href="#">Reportes</a>
+                            <ul class="menu-lateral-submenu">
+                                <li><a href="reportes_top10.html">Top 10</a></li>
+                                <li><a href="reportes_desglose_ventas.html">Ventas</a></li>
+                                <li><a href="reportes_descuentos.html">Descuentos</a></li>
+                                <li><a href="reportes_socios_comerciales.html">Socios comerciales</a></li>
+                            </ul>
+                        </li>
+                        <li><i class="fa-solid fa-store"></i><a href="lista_socios.html">Socios comerciales</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Contenido de la página -->
+        <div class="pagina-contenido">
+
+            <!-- Información general -->
+            <div class="equipo-arriba1">
+                <div class="equipo-arriba-txt1">
+                    <h2>Su sitio web es una inversión en el éxito de su negocio</h2>
+                    <p><span> Rasmus es una empresa conformada por 5 estudiantes de informática con la intención de innovar y liderar en diseño y desarrollo web, por medio de la sólida combinación entre diseño inteligente y talento técnico.</span></p>
+                </div>
+                <div class="equipo-arriba1-img">
+                    <img class="equipo-arriba1-img1" src="../imgs/nosotros_01.png" alt="Imagen de trabajo en equipo 1">
+                </div>
+            </div>
+
+            <div class="equipo-arriba2">
+                <div class="equipo-arriba2-img">
+                    <img class="equipo-arriba2-img2" src="../imgs/nosotros_02.png" alt="Imagen de trabajo en equipo 2">
+                </div>
+                <div>
+                    <div class="equipo-arriba-txt2">
+                        <p><span>Creamos experiencias de usuario respaldadas por la mejor tecnología y un enfoque en usabilidad y accesibilidad.</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nosotros -->
+            <h2 class="equipo-nosotros-titulo">Nuestro Equipo</h2>
+
+            <div class="equipo-nosotros">
+
+                <!-- Primer miembro del equipo -->
+                <div class="equipo-nosotros-miembro">
+                    <a class="equipo-nosotros-boton" href="#adolfo"><img class="foto-nosotros" src="../imgs/adolfo_perfil.jpg" alt=""></a>
+                    <div id="adolfo">
+                        <img src="../imgs/adolfo_equipo.jpg" alt="Foto del miembro del equipo">
+                        <a class="equipo-nosotros-cerrar" href="#cerrar">X</a>
+                        <p class="equipo-nosotros-parrafo">
+                            ❖ Ingeniero de Aplicaciones en la industria de semiconductores en NI<br> ❖ Estudiante de Maestría en Ingeniería de Software<br> ❖ Tiene experiencia en diseño y desarrollo de sistemas para automatización de mediciones en validación
+                            y producción, en la industria de semiconductores. Se caracteriza por siempre buscar soluciones a partir de hecho lógicos y por su liderazgo. Sus pasatiempos son leer, el senderismo,y los videojuegos.
+                        </p>
+                    </div>
+                    <p>
+                        Adolfo José Fernández Castro<br><span>Coordinador General</span>
+                    </p>
+                </div>
+
+                <div class="equipo-nosotros-separador"></div>
+
+                <!-- Segundo miembro del equipo -->
+                <div class="equipo-nosotros-miembro">
+                    <a class="equipo-nosotros-boton" href="#stephanie"><img class="foto-nosotros" src="../imgs/stephanie_perfil.jpg" alt=""></a>
+                    <div id="stephanie">
+                        <img src="../imgs/stephanie_equipo.jpg" alt="Foto del miembro del equipo">
+                        <a class="equipo-nosotros-cerrar" href="#cerrar">X</a>
+                        <p class="equipo-nosotros-parrafo">
+                            ❖ Support Operations Analyst en Amazon<br> ❖ Estudiante del Técnico en Desarrollo Web<br> ❖ Tiene experiencia en desarrollo de páginas web, soporte de software y hardware, y más de 10 años de servicio al cliente en diversos
+                            ámbitos. Se caracteriza ser metódica y analítica, y trabaja enfocada a resultados. Sus pasatiempos son los videojuegos, tejer y leer.
+                        </p>
+                    </div>
+                    <p>
+                        <p>Stephanie Pizarro Loaiza<br><span>Coordinadora de Desarollo</span></p>
+                </div>
+
+                <div class="equipo-nosotros-separador"></div>
+
+                <!-- Tercer miembro del equipo -->
+                <div class="equipo-nosotros-miembro">
+                    <a class="equipo-nosotros-boton" href="#adrian"><img class="foto-nosotros" src="../imgs/adrian_perfil.jpg" alt=""></a>
+                    <div id="adrian">
+                        <img src="../imgs/adrian_equipo.jpg" alt="Foto del miembro del equipo">
+                        <a class="equipo-nosotros-cerrar" href="#cerrar">X</a>
+                        <p class="equipo-nosotros-parrafo">
+                            ❖ Technical Account Manager en integraciones de APIs en Amazon<br> ❖ Estudiante del Técnico en Desarrollo de Software<br> ❖ Tiene experiencia en desarrollo web, incluyendo integraciones de APIs. Se caracteriza por ser proactivo
+                            y creativo, con enfoque a la experiencia del usuario. Sus pasatiempos son la naturaleza, los deportes extremos, leer y resolver problemas de lógica.
+                        </p>
+                    </div>
+                    <p>
+                        <p>Adrián Castro Aguilar<br><span>Coordinador de Calidad</span></p>
+                </div>
+
+                <!-- Cuarto miembro del equipo -->
+                <div class="equipo-nosotros-miembro">
+                    <a class="equipo-nosotros-boton" href="#alejandro"><img class="foto-nosotros" src="../imgs/alejandro_perfil.jpg" alt=""></a>
+                    <div id="alejandro">
+                        <img src="../imgs/alejandro_equipo.jpg" alt="Foto del miembro del equipo">
+                        <a class="equipo-nosotros-cerrar" href="#cerrar">X</a>
+                        <p class="equipo-nosotros-parrafo">
+                            ❖ Estudiante de Bachillerato en Ingeniería de Software.<br> ❖Tiene experiencia en diseño web, emprendedurismo y capacitador de blockchain. Se caracteriza por ser creativo, tiene facilidad de trabajar en equipos y resolver problemas.
+                            Sus pasatiempos son viajar, hacer actividades al aire libre, los deportes, tocar piano, dibujar y la fotografía.
+                        </p>
+                    </div>
+                    <p>
+                        <p>Luis Alejandro Valverde Coto<br><span>Coordinador de Soporte</span></p>
+                </div>
+
+                <div class="equipo-nosotros-separador"></div>
+
+                <!-- Quinto miembro del equipo -->
+                <div class="equipo-nosotros-miembro">
+                    <a class="equipo-nosotros-boton" href="#amanda"><img class="foto-nosotros" src="../imgs/amanda_perfil.jpg" alt=""></a>
+                    <div id="amanda">
+                        <img src="../imgs/amanda_equipo.jpg" alt="Foto del miembro del equipo">
+                        <a class="equipo-nosotros-cerrar" href="#cerrar">X</a>
+                        <p class="equipo-nosotros-parrafo">
+                            ❖Project Manager en BTIS<br> ❖Estudiante de la Maestría en Ingeniería de Software<br> ❖Tiene experiencia como PO en equipos de desarrollo, dirección de proyectos y consultorías de mejora, estudios de cargas de trabajo, análisis
+                            estadísticos y estructuración de sistemas de gestión de calidad. Se caracteriza por sus habilidades blandas para el trabajo en equipo y su capacidad de análisis y lógica. Sus pasatiempos son pasear, la música, la natación y
+                            el esquí.
+                        </p>
+                    </div>
+                    <p>
+                        <p>Amanda Bermúdez Méndez<br><span>Coordinadora de Soporte</span></p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div>
+        <footer>
+            <div class="footerParent">
+                <div class="footerChildUno">
+                    <h4>Quiénes Somos</h4>
+                    <div>
+                        <a href="pagina_producto.html">
+                            <p href="/nosotros.html">El Bazar de las Sorpresas</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="pagina_equipo.html">
+                            <p>Rasmus</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="footerChildDos">
+                    <h4>Mi Perfil</h4>
+                    <div>
+                        <a href="editar_perfil.html">
+                            <p>Perfil</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="/html/carrito_compras.html">
+                            <p>Carrito</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="footerChildTres">
+                    <h4>Contáctenos</h4>
+                    <p type="text ">Correo Electrónico</p>
+                    <p type="text ">contactanes@elbazardelassorpresas.com</p>
+                    <p href="text ">Teléfono 800-bazar</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="/js/editar_perfil.js"></script>
+
+</body>
+
+</html>
