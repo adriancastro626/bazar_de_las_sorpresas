@@ -8,6 +8,9 @@ const inputFavorito = document.getElementById('interruptor');
 const btnCancelar = document.getElementById('btn-cancelar');
 const btnAgregar = document.getElementById('btn-agregar');
 
+let usuarioConectado = JSON.parse(localStorage.getItem('usuarioConectado'));
+let fechaActual = new Date();
+
 const validar = () => {
     let hayError = false;
     let errorTarjeta = false;
@@ -16,33 +19,46 @@ const validar = () => {
         hayError = true;
         inputNumeroTarjeta.classList.add('input-error');
     } else {
-        if (inputNumeroTarjeta.value.substr(0, 1) == '4' || inputNumeroTarjeta.value.substr(0, 1) == '5') {
-            inputNumeroTarjeta.classList.remove('input-error');
-        } else {
+        if (inputNumeroTarjeta.value.substr(0, 1) != '4' && inputNumeroTarjeta.value.substr(0, 1) != '5') {
             errorTarjeta = true;
-            inputNumeroTarjeta.classList.remove('input-error');
+            inputNumeroTarjeta.classList.add('input-error');
+        } else {
+            if (inputNumeroTarjeta.value.length < 13 || inputNumeroTarjeta.value.length > 18) {
+                hayError = true;
+                inputNumeroTarjeta.classList.add('input-error');
+            } else {
+                inputNumeroTarjeta.classList.remove('input-error');
+            }
         }
     }
 
-    if (inputMes.value == '') {
-        hayError = true;
-        inputMes.classList.add('input-error');
-    } else {
-        inputMes.classList.remove('input-error');
-    }
-
-    if (inputAnno.value == '') {
+    if (inputAnno.value < fechaActual.getFullYear()) {
         hayError = true;
         inputAnno.classList.add('input-error');
     } else {
-        inputAnno.classList.remove('input-error');
+        if ((inputAnno.value == fechaActual.getFullYear()) && (inputMes.value < (fechaActual.getMonth() + 1))) {
+            hayError = true;
+            inputMes.classList.add('input-error');
+        } else {
+            inputAnno.classList.remove('input-error');
+            if (inputMes.value < 1 || inputMes.value > 12) {
+                hayError = true;
+                inputMes.classList.add('input-error');
+            } else {
+                inputMes.classList.remove('input-error');
+            }
+        }
     }
 
     if (inputCVV.value == '') {
         hayError = true;
         inputCVV.classList.add('input-error');
     } else {
-        inputCVV.classList.remove('input-error');
+        if (inputCVV.value.length < 3 || inputCVV.value.length > 4) {
+            inputCVV.classList.add('input-error');
+        } else {
+            inputCVV.classList.remove('input-error');
+        }
     }
 
     if (inputTarjetahabiente.value == '') {
@@ -56,7 +72,7 @@ const validar = () => {
     if (hayError) {
         Swal.fire({
             'icon': 'warning',
-            'title': 'Información incompleta',
+            'title': 'Información incorrecta',
             'text': 'Por favor revise los campos resaltados.'
         });
     } else {
@@ -68,36 +84,33 @@ const validar = () => {
                 'text': 'Este sistema solo acepta tarjetas VISA o MasterCard.'
             });
         } else {
-            navegar();
+            registrarMetodo();
         }
     }
 };
 
-// PLACEHOLDER
-const verificarFavorito = () => {
-    if (inputFavorito.value) {
-        listaMetodos.forEach(metodo => {
-            metodo.favorito = false;
-        });
-    }
-};
+// PLACEHOLDER - Modificar no será evaluado
+// const verificarFavorito = () => {
+//     if (inputFavorito.value) {
+//         listaMetodos.forEach(metodo => {
+//             metodo.favorito = false;
+//         });
+//     }
+// };
 
-const navegar = () => {
-    verificarFavorito();
-    listaMetodos.push({
-        'numeroTarjeta': inputNumeroTarjeta.value,
-        'nombre': inputTarjetahabiente.value,
-        'mesExpiracion': inputMes.value,
-        'annoExpiracion': inputAnno.value,
-        'favorito': inputFavorito.value
-    });
-    Swal.fire({
-        'icon': 'success',
-        'title': 'Método de pago registrado',
-        'text': 'Se ha registrado un nuevo método de pago.'
-    }).then(() => {
-        window.location.href = 'editar_perfil.html'
-    });
+const registrarMetodo = () => {
+    // verificarFavorito();
+    let metodo = {
+        // "correousuario": usuarioConectado.correo,
+        "correousuario": "prueba@gmail.com",
+        "numtarjeta": inputNumeroTarjeta.value,
+        "nombretarjeta": inputTarjetahabiente.value,
+        "mes": inputMes.value,
+        "anno": inputAnno.value,
+        "cvc": inputCVV.value,
+        "favorito": inputFavorito.checked
+    };
+    registrarDatos('registrar-tarjeta', metodo, 'editar_perfil.html');
 };
 
 const tipoTarjeta = (numeroTarjeta) => {
@@ -107,20 +120,17 @@ const tipoTarjeta = (numeroTarjeta) => {
             iconoTarjeta.classList.add('fa-brands');
             iconoTarjeta.classList.add('fa-cc-visa');
             iconoTarjeta.classList.add('fa-2x');
-            console.log('VISA');
         } else if (numeroTarjeta.substr(0, 1) == '5') {
             iconoTarjeta.className = '';
             iconoTarjeta.classList.add('fa-brands');
             iconoTarjeta.classList.add('fa-cc-mastercard');
             iconoTarjeta.classList.add('fa-2x');
-            console.log('MasterCard');
         } else {
             inputNumeroTarjeta.classList.add('input-error');
             iconoTarjeta.className = '';
             iconoTarjeta.classList.add('fa-solid');
             iconoTarjeta.classList.add('fa-credit-card');
             iconoTarjeta.classList.add('fa-2x');
-            console.log('Otro');
         }
     }
 };

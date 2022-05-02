@@ -93,7 +93,7 @@
         <div class="cont-carrito-compras">
             <h1>Carrito de compras</h1>
             <div class="cont-contenido-pago">
-                <div class="cont-items">
+                <div class="cont-items" id="cont-items">
                     <!-- Item 1 -->
                     <div class="caja-exterior-item">
                         <div class="caja-interior-izquierda">
@@ -105,9 +105,7 @@
                                 <p class="parrafo-autor">Patrick Rothfuss</p>
                             </div>
                             <div class="cont-media-inferior">
-                                <p class="parrafo-precio">
-                                    <span>&#8353;</span> 10,000.00
-                                </p>
+                                <p class="parrafo-precio"> &#8353; 10000.00 </p>
                             </div>
                         </div>
                         <div class="caja-interior-derecha">
@@ -269,11 +267,14 @@
             </div>
         </footer>
     </div>
+    <!-- 1. Cargar bibliotecas externas -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://kit.fontawesome.com/3269682608.js" crossorigin="anonymous"></script>
-    <script src="../js/lista_carrito.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- 2. Enlazar el servicio general que comunica con el servidor -->
+    <script src="../js/servicio-general.js"></script>
+    <!-- 3. Enlazar los controladores de la página -->
     <script src="../js/carrito_compras.js"></script>
-    <script src="../js/editar_perfil.js"></script>
 </body>
 
 </html>

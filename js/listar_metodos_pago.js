@@ -1,32 +1,50 @@
 const obtenerMetodos = document.getElementById('cont-listar-metodos');
 const btnAgregar = document.getElementById('icono-agregar');
 
-// Puebla la lista de métodos con los datos del JSON
+let listaMetodos = [];
+let usuarioConectado = JSON.parse(localStorage.getItem('usuarioConectado'));
+
+const inicializar = async() => {
+    listaMetodos = await obtenerDatos('listar-tarjetas');
+    mostrarMetodos(listaMetodos);
+};
+
+// Puebla la lista de métodos con los datos de la base de datos
 const mostrarMetodos = () => {
+    // let filtro = usuarioConectado.correo;
+    let filtro = "prueba@gmail.com";
+
     listaMetodos.forEach(metodo => {
-        let nombreMetodo = definirNombreMetodo(metodo.numeroTarjeta);
-        // Define los componentes del HTML por método de pago
-        let contenerdorLinea = document.createElement('div');
-        let elemento = document.createElement('p');
-        let botonEliminar = document.createElement('button');
-        let spanEliminar = document.createElement('span');
-        let iconoEliminar = document.createElement('i');
+        if (metodo.correousuario.includes(filtro)) {
+            let nombreMetodo = definirNombreMetodo(metodo.numtarjeta);
+            // Define los componentes del HTML por método de pago
+            let contenerdorLinea = document.createElement('div');
+            let elemento = document.createElement('p');
+            let botonEliminar = document.createElement('button');
+            let spanEliminar = document.createElement('span');
+            let iconoEliminar = document.createElement('i');
 
-        // Otorga carácteristicas y clases a los elementos del HTML
-        elemento.textContent = nombreMetodo;
-        iconoEliminar.classList.add('fa-xmark');
-        iconoEliminar.classList.add('fa-solid');
-        iconoEliminar.classList.add('fa-xl');
-        botonEliminar.classList.add('icono-eliminar');
-        botonEliminar.name = 'boton-eliminar';
-        contenerdorLinea.classList.add('cont-linea');
+            // Otorga carácteristicas y clases a los elementos del HTML
+            elemento.textContent = nombreMetodo;
+            iconoEliminar.classList.add('fa-xmark');
+            iconoEliminar.classList.add('fa-solid');
+            iconoEliminar.classList.add('fa-xl');
+            botonEliminar.classList.add('icono-eliminar');
+            botonEliminar.name = 'boton-eliminar';
+            contenerdorLinea.classList.add('cont-linea');
 
-        // Establece la jerarquía entre los elementos
-        spanEliminar.appendChild(iconoEliminar);
-        botonEliminar.appendChild(spanEliminar);
-        contenerdorLinea.appendChild(botonEliminar);
-        contenerdorLinea.appendChild(elemento);
-        obtenerMetodos.appendChild(contenerdorLinea);
+            // Detecta cuando se presiona el botón eliminar
+            botonEliminar.addEventListener('click', () => {
+                eliminarDatos('eliminar-tarjeta', metodo._id);
+            });
+
+            // Establece la jerarquía entre los elementos
+            spanEliminar.appendChild(iconoEliminar);
+            botonEliminar.appendChild(spanEliminar);
+            contenerdorLinea.appendChild(botonEliminar);
+            contenerdorLinea.appendChild(elemento);
+            obtenerMetodos.appendChild(contenerdorLinea);
+        }
     });
 };
 
@@ -43,30 +61,9 @@ const definirNombreMetodo = (numeroTarjeta) => {
     return nombreMetodo;
 };
 
-// Alertas
-const notificarAgregar = () => {
-    window.location.href = 'registro_metodo_pago.html'
-};
-
-const accion = () => {
-    // Swal.fire({
-    //     'icon': 'error',
-    //     'title': 'Método eliminado!',
-    //     'text': 'Se ha eliminado el método de pago.'
-    // });
-    // console.log('Calls');
-};
-
-const botonesEliminar = document.getElementsByName('boton-eliminar');
-
-mostrarMetodos();
-
+// Agregar nuevo método de pago
 btnAgregar.addEventListener('click', () => {
-    // PLACEHOLDER
-    notificarAgregar();
+    window.location.href = 'registro_metodo_pago.html';
 });
 
-// Crea un escucha de eventos por botón
-botonesEliminar.forEach(boton => {
-    boton.addEventListener('click', accion());
-});
+inicializar();

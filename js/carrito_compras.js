@@ -9,16 +9,105 @@ const indicadorTotal = document.getElementById('indicador-total');
 const btnPagar = document.getElementById('btn-proceder-pago');
 const btnComprar = document.getElementById('btn-seguir-comprando');
 
-// Elementos de items del carrito
-const btnEliminar1 = document.getElementById('icono-eliminar-1');
-const btnEliminar2 = document.getElementById('icono-eliminar-2');
-const btnEliminar3 = document.getElementById('icono-eliminar-3');
+// Elementos de la lista de compras
+const contenedorExterno = document.getElementById('cont-items');
 
-// PLACEHOLDER: Actualizar lista del carrito
-const actualizarLista = () => {
+// Variables
+let listaCarrito = [];
+let usuarioConectado = JSON.parse(localStorage.getItem('usuarioConectado'));
+
+const mostrarMetodos = () => {
+    // let filtro = usuarioConectado.correo;
+    let filtro = "prueba@gmail.com";
+
     listaCarrito.forEach(item => {
+        if (item.correoUsuario.includes(filtro)) {
 
-    });
+            // libro = consultarLibro(item.isbncarrito);
+            // console.log(libro);
+
+            // Crear elementos HTML
+            let contenedorItem = document.createElement('div');
+            let contenedorItemInteriorIzquierdo = document.createElement('div');
+            let contenedorImagen = document.createElement('img');
+            let contenedorItemInteriorMedio = document.createElement('div');
+            let contenedorMedioSuperior = document.createElement('div');
+            let pTitulo = document.createElement('p');
+            let pAutor = document.createElement('p');
+            let contenedorMedioInferior = document.createElement('div');
+            let pPrecio = document.createElement('p');
+            let contenedorItemInteriorDerecho = document.createElement('div');
+            let contenedorNumeroItems = document.createElement('div');
+            let cantidadItems = document.createElement('input');
+            let botonEliminar = document.createElement('button');
+            let sBotonEliminar = document.createElement('span');
+            let iconoEliminar = document.createElement('i');
+
+            // Dar propiedades a los elementos HTML
+            contenedorItem.classList.add('caja-exterior-item');
+            contenedorItemInteriorIzquierdo.classList.add('caja-interior-izquierda');
+            // contenedorImagen.src = libro.fotos; // Agregar indice de la foto
+            contenedorImagen.src = '../imgs/el_nombre_del_viento.jpg';
+            // contenedorImagen.alt = `Portada del libro: ${libro.titulo}`;
+            contenedorImagen.alt = 'Portada del libro: El Nombre del Viento';
+            contenedorItemInteriorMedio.classList.add('caja-interior-media');
+            contenedorMedioSuperior.classList.add('cont-media-superior');
+            pTitulo.classList.add('parrafo-titulo');
+            // pTitulo.textContent = libro.titulo;
+            pTitulo.textContent = 'El Nombre del Viento';
+            pAutor.classList.add('parrafo-autor');
+            // pAutor.textContent = libro.autor;
+            pAutor.textContent = 'Patrick Rothfuss';
+            contenedorMedioInferior.classList.add('cont-media-inferior');
+            pPrecio.classList.add('parrafo-precio');
+            // pPrecio.textContent = `&#8353; ${libro.precio}`;
+            pPrecio.textContent = '₡ 10000.00';
+            contenedorItemInteriorDerecho.classList.add('caja-interior-derecha');
+            contenedorNumeroItems.classList.add('cont-numero-items');
+            cantidadItems.type = 'number';
+            // cantidadItems.placeholder = item.cantidadcarrito;
+            cantidadItems.placeholder = '1';
+            cantidadItems.min = '1';
+            cantidadItems.id = 'input-cantidad';
+            botonEliminar.classList.add('btn-eliminar');
+            sBotonEliminar.classList.add('span-boton');
+            iconoEliminar.classList.add('fa-solid');
+            iconoEliminar.classList.add('fa-trash-can');
+            iconoEliminar.classList.add('fa-2x');
+
+            // Dar jerarquía a los elementos HTML
+            contenedorNumeroItems.appendChild(cantidadItems);
+            contenedorItemInteriorDerecho.appendChild(contenedorNumeroItems);
+            sBotonEliminar.appendChild(iconoEliminar);
+            botonEliminar.appendChild(sBotonEliminar);
+            contenedorItemInteriorDerecho.appendChild(botonEliminar);
+            contenedorMedioInferior.appendChild(pPrecio);
+            contenedorMedioSuperior.appendChild(pTitulo);
+            contenedorMedioSuperior.appendChild(pAutor);
+            contenedorItemInteriorMedio.appendChild(contenedorMedioSuperior);
+            contenedorItemInteriorMedio.appendChild(contenedorMedioInferior);
+            contenedorItemInteriorIzquierdo.appendChild(contenedorImagen);
+            contenedorItem.appendChild(contenedorItemInteriorIzquierdo);
+            contenedorItem.appendChild(contenedorItemInteriorMedio);
+            contenedorItem.appendChild(contenedorItemInteriorDerecho);
+            contenedorExterno.appendChild(contenedorItem);
+
+            // Detecta cuando se presiona el botón eliminar
+            // botonEliminar.addEventListener('click', () => {
+            //     eliminarDatos('eliminar-carrito', item._id);
+            // });
+        }
+    })
+};
+
+const inicializar = async() => {
+    listaCarrito = await obtenerDatos('mostrar-carrito');
+    console.log(listaCarrito);
+    mostrarMetodos(listaCarrito);
+};
+
+const consultarLibro = async(isbn) => {
+    libro = await obtenerElemento(`/obtener-libro-isbn/${isbn}`);
 };
 
 const paginaSiguiente = () => {
@@ -32,6 +121,8 @@ const paginaSiguiente = () => {
     return navegar;
 };
 
+
+//PLACEHOLDER
 const notificarEliminacion = () => {
     Swal.fire({
         title: 'Estás seguro?',
@@ -54,21 +145,6 @@ const notificarEliminacion = () => {
     });
 };
 
-btnEliminar1.addEventListener('click', () => {
-    // PLACEHOLDER
-    notificarEliminacion();
-});
-
-btnEliminar2.addEventListener('click', () => {
-    // PLACEHOLDER
-    notificarEliminacion();
-});
-
-btnEliminar3.addEventListener('click', () => {
-    // PLACEHOLDER
-    notificarEliminacion();
-});
-
 btnPagar.addEventListener('click', () => {
     window.location.href = paginaSiguiente();
 });
@@ -76,3 +152,5 @@ btnPagar.addEventListener('click', () => {
 btnComprar.addEventListener('click', () => {
     window.location.href = 'pagina_principal.html';
 });
+
+inicializar();
