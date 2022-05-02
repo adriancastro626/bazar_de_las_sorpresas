@@ -32,6 +32,7 @@ const formLibroValidacion = () => {
     // Adjuntos
     if (formLibroPortada.src == "") {
         formLibroIncompleto = true;
+        formLibroPortada.src = "../imgs/adjunte_foto.PNG";
         formLibroPortada.classList.add('formulario-libros-incompleto');
     } else {
         formLibroPortada.classList.remove('formulario-libros-incompleto');
@@ -39,6 +40,7 @@ const formLibroValidacion = () => {
 
     if (formLibroContraportada.src == "") {
         formLibroIncompleto = true;
+        formLibroContraportada.src = "../imgs/adjunte_foto.PNG";
         formLibroContraportada.classList.add('formulario-libros-incompleto');
     } else {
         formLibroContraportada.classList.remove('formulario-libros-incompleto');
