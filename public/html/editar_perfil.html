@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/editar_perfil.css">
+    <link rel="stylesheet" href="../css/menu_lateral.css">
+    <link rel="stylesheet" href="../css/estilos_general.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/listar_metodos_pago.css">
+    <title>Editar Perfil</title>
+</head>
+
+<body>
+    <header>
+        <nav class="nav">
+            <div class="parentNav">
+                <a class="navUno" href="./pagina_principal.html">
+                    <img class="nav-img" src="../imgs/logo.png" alt="Logo">
+                </a>
+                <a class="navDos" href="./pagina_principal.html">
+                    <button class="btn-nav" id="btn-registro" type="button">Cerrar Sesión</button>
+                </a>
+            </div>
+        </nav>
+    </header>
+    <div class="pagina-completa">
+        <!-- Menú lateral -->
+        <div class="menu-lateral">
+
+            <!-- Primera sección del menú lateral -->
+            <div class="menu-lateral-arriba">
+                <div class="menu-lateral-arriba-1">
+                    <a href="pagina_principal.html"><i class="fa-solid fa-house" title="Icono para ir a la página principal"></i></a>
+                    <a href="inicio_sesion.html"><i class="fa-solid fa-lock" title="Icono para cerrar sesión en la cuenta"></i></a>
+                </div>
+                <div class="menu-lateral-arriba-2">
+                    <div>
+                        <img class="menu-lateral-foto-perfil" src="../imgs/foto-perfil.png" alt="Foto de Perfil del Usuario">
+                    </div>
+                    <span class="menu-lateral-nombre-usuario" id="campo-nombre-lateral"></span>
+                    <div>
+                        <span class="menu-lateral-email-usuario" id="campo-correo-lateral"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Segunda sección del menú lateral -->
+            <div class="menu-lateral-form">
+
+                <!-- Primera lista -->
+                <h2>Cuentas</h2>
+                <nav>
+                    <ul>
+                        <li><i class="fa-solid fa-user"></i><a href="editar_perfil.html">Perfil</a></li>
+                        <li><i class="fa-solid fa-receipt"></i><a href="historial_compra.html">Historial de compras</a></li>
+                        <li><i class="fa-solid fa-users"></i><a href="lista_usuarios.html">Usuarios</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Segunda lista -->
+                <h2>Tienda</h2>
+                <nav>
+                    <ul id="menu-lateral-form">
+                        <li><i class="fa-solid fa-tag"></i><a href="parametros_sistema.html">Parámetros del sistema</a></li>
+                        <li class="transicion"><i class="fa-solid fa-book-open"></i><a href="#">Catálogo</a>
+                            <ul class="menu-lateral-submenu">
+                                <li><a href="lista_libros.html">Libros</a></li>
+                                <li><a href="lista_autores.html">Autores</a></li>
+                                <li><a href="lista_generos.html">Géneros literarios</a></li>
+                            </ul>
+                        </li>
+                        <li><i class="fa-solid fa-newspaper"></i><a href="#">Reportes</a>
+                            <ul class="menu-lateral-submenu">
+                                <li><a href="reportes_top10.html">Top 10</a></li>
+                                <li><a href="reportes_desglose_ventas.html">Ventas</a></li>
+                                <li><a href="reportes_descuentos.html">Descuentos</a></li>
+                                <li><a href="reportes_socios_comerciales.html">Socios comerciales</a></li>
+                            </ul>
+                        </li>
+                        <li><i class="fa-solid fa-store"></i><a href="lista_socios.html">Socios comerciales</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="contenido">
+            <div>
+                <section id="sct-registro-usuarios">
+                    <form>
+                        <h1 class="sct-registro-usuarios-titulo">Actualizar Perfil</h1>
+                        <div class="parent">
+                            <div class="col-uno">
+                                <div class="cont-control">
+                                    <label for="txt-nombre">Nombre</label>
+                                    <span id="campo-nombre"></span>
+                                    <button type="button" class="btn-comentar" id="icono-actualizar">
+                                        <span class="span-boton">
+                                            <i class="fa-solid fa-pen-to-square fa-2x"></i>
+                                        </span>
+                                    </button>
+                                </div>
+
+                                <div class="cont-control">
+                                    <label for="txt-segundoNombre">Segundo Nombre</label>
+                                    <span id="campo-segundoNombre"></span>
+                                    <button type="button" class="btn-comentar" id="icono-actualizar">
+                                        <span class="span-boton">
+                                            <i class="fa-solid fa-pen-to-square fa-2x"></i>
+                                        </span>
+                                    </button>
+                                </div>
+
+                                <div class="cont-control">
+                                    <label for="txt-apellido">Primer Apellido</label>
+                                    <span id="campo-apellido"></span>
+                                    <button type="button" class="btn-comentar" id="icono-actualizar">
+                                        <span class="span-boton">
+                                            <i class="fa-solid fa-pen-to-square fa-2x"></i>
+                                        </span>
+                                    </button>
+                                </div>
+
+                                <div class="cont-control">
+                                    <label for="txt-segundoApellido">Segundo Apellido</label>
+                                    <span id="campo-segundoApellido"></span>
+                                    <button type="button" class="btn-comentar" id="icono-actualizar">
+                                        <span class="span-boton">
+                                            <i class="fa-solid fa-pen-to-square fa-2x"></i>
+                                        </span>
+                                    </button>
+                                </div>
+                                <div class="cont-control">
+                                    <label for="slt-tipo">Tipo de Identificación</label>
+                                    <span id="campo-tipoIdentificacion"></span>
+                                    <button type="button" class="btn-comentar" id="icono-actualizar">
+                                        <span class="span-boton">
+                                            <i class="fa-solid fa-pen-to-square fa-2x"></i>
+                                        </span>
+                                    </button>
+                                </div>
+                                <div class="cont-control">
+                                    <label for="txt-identificacion">Ingrese Número de Identificación</label>
+                                    <span id="campo-numeroIdentificacion"></span>
+                                    <button type="button" class="btn-comentar" id="icono-actualizar">
+                                        <span class="span-boton">
+                                            <i class="fa-solid fa-pen-to-square fa-2x"></i>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-dos">
+                                <div class="cont-control">
+                                    <label for="slt-genero">Seleccione su Género</label>
+                                    <span id="campo-genero"></span>
+                                    <button type="button" class="btn-comentar" id="icono-actualizar">
+                                        <span class="span-boton">
+                                            <i class="fa-solid fa-pen-to-square fa-2x"></i>
+                                        </span>
+                                    </button>
+                                </div>
+
+                                <div class="cont-control">
+                                    <label for="txt-otroGenero">Especifique</label>
+                                    <span id="campo-otroGenero"></span>
+                                    <button type="button" class="btn-comentar" id="icono-actualizar">
+                                        <span class="span-boton">
+                                            <i class="fa-solid fa-pen-to-square fa-2x"></i>
+                                        </span>
+                                    </button>
+
+                                </div>
+                                <div class="cont-control">
+                                    <label for="txt-nacimiento">Fecha de nacimiento</label>
+                                    <span id="campo-fechaNacimiento"></span>
+                                    <button type="button" class="btn-comentar" id="icono-actualizar">
+                                        <span class="span-boton">
+                                            <i class="fa-solid fa-pen-to-square fa-2x"></i>
+                                        </span>
+                                    </button>
+
+                                </div>
+                                <div class="cont-control">
+                                    <label for="slt-generoLiterario">Seleccione Género Literario</label>
+                                    <span id="campo-generoLiterario"></span>
+                                    <button type="button" class="btn-comentar" id="icono-actualizar">
+                                        <span class="span-boton">
+                                            <i class="fa-solid fa-pen-to-square fa-2x"></i>
+                                        </span>
+                                    </button>
+
+                                </div>
+                            </div>
+
+                            <div class="col-tres">
+                                <div class="cont-control">
+                                    <label for="txt-correo">Correo Electrónico</label>
+                                    <span id="campo-correo"></span>
+                                    <button type="button" class="btn-comentar" id="icono-actualizar">
+                                        <span class="span-boton">
+                                            <i class="fa-solid fa-pen-to-square fa-2x"></i>
+                                        </span>
+                                    </button>
+
+                                </div>
+                                <div class="cont-control">
+                                    <label for="txt-contrasenna">Contraseña</label>
+                                    <span id="campo-contrasenna"></span>
+                                    <button type="button" class="btn-comentar" id="icono-actualizar">
+                                        <span class="span-boton">
+                                            <i class="fa-solid fa-pen-to-square fa-2x"></i>
+                                        </span>
+                                    </button>
+
+                                </div>
+
+                                <div class="cont-control">
+                                    <label for="slt-autores">Seleccione Autores Favoritos</label>
+                                    <span id="campo-autor"></span>
+                                    <button type="button" class="btn-comentar" id="icono-actualizar">
+                                        <span class="span-boton">
+                                            <i class="fa-solid fa-pen-to-square fa-2x"></i>
+                                        </span>
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-cuatro">
+                                <div class="cont-control">
+                                    <label for="slct-provincias">Provincia:</label>
+                                    <span id="campo-provincia"></span>
+                                    <button type="button" class="btn-comentar" id="icono-actualizar">
+                                        <span class="span-boton">
+                                            <i class="fa-solid fa-pen-to-square fa-2x"></i>
+                                        </span>
+                                    </button>
+
+                                </div>
+                                <div class="cont-control">
+                                    <label for="slct-cantones">Canton:</label>
+                                    <span id="campo-canton"></span>
+                                    <button type="button" class="btn-comentar" id="icono-actualizar">
+                                        <span class="span-boton">
+                                            <i class="fa-solid fa-pen-to-square fa-2x"></i>
+                                        </span>
+                                    </button>
+
+                                </div>
+                                <div class="cont-control">
+                                    <label for="slct-distritos">Distrito:</label>
+                                    <span id="campo-distrito"></span>
+                                    <button type="button" class="btn-comentar" id="icono-actualizar">
+                                        <span class="span-boton">
+                                            <i class="fa-solid fa-pen-to-square fa-2x"></i>
+                                        </span>
+                                    </button>
+
+                                </div>
+                                <div class="cont-control">
+                                    <label for="direccion-exacta">Dirección exacta:</label>
+                                    <span id="campo-direccion"></span>
+                                    <button type="button" class="btn-comentar" id="icono-actualizar">
+                                        <span class="span-boton">
+                                            <i class="fa-solid fa-pen-to-square fa-2x"></i>
+                                        </span>
+                                    </button>
+
+                                </div>
+                                <div class="cont-control">
+                                    <label for="txt-mapa">Seleccione Ubicación</label>
+                                    <div class="mapa">
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15716.957693189064!2d-84.2172889!3d9.997071349999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2scr!4v1649369411565!5m2!1ses!2scr" width="200" height="100" style="border:0;"
+                                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                    </div>
+                                    <button type="button" class="btn-comentar" id="icono-actualizar">
+                                        <span class="span-boton">
+                                            <i id="btn-editar" class="fa-solid fa-pen-to-square fa-2x"></i>
+                                        </span>
+                                    </button>
+                                </div>
+                                <div class="cont-control">
+                                    <label for="btn-foto">Cambiar Foto de Perfil</label>
+                                    <input type="file" id="file-foto" name="file-foto" multiple>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="seleccion-metodo-pago">
+                            <section id="sct-seleccion-metodo-pago">
+                                <form class="formulario-metodos">
+                                    <h1>Métodos de pago</h1>
+                                    <div class="lista" id="cont-listar-metodos">
+                                        <!-- Se agregan de forma dinámica los métodos de pago -->
+                                    </div>
+                                    <div class="cont-agregar">
+                                        <button type="button" class="btn-agregar" id="icono-agregar">
+                                            <span class="span-boton">
+                                                <i class="fa-solid fa-plus fa-xl"></i>
+                                            </span>
+                                        </button>
+                                        <input type="text" disabled>
+                                    </div>
+                                </form>
+                            </section>
+                            <div>
+                                <button id="btn-actualizar" type="button" class="btn-oscuro">Guardar</button>
+                            </div>
+                        </div>
+
+                    </form>
+                </section>
+
+            </div>
+        </div>
+
+    </div>
+    <footer>
+
+        <div class="footerParent">
+            <div class="footerChildUno">
+                <h4>Quiénes Somos</h4>
+                <div>
+                    <a href="/nosotros.html">Nosotros</a>
+                </div>
+                <div>
+                    <a href="/libroFan.html">Libro Fan</a>
+                </div>
+            </div>
+
+            <div class="footerChildDos">
+                <h4>Mi Perfil</h4>
+                <div>
+                    <a href="editar_perfil.html">Perfil</a>
+                </div>
+                <div>
+                    <a href="/html/carrito_compras.html">Carrito</a>
+                </div>
+            </div>
+
+            <div class="footerChildTres">
+                <h4>Contactanos</h4>
+                <p type="text ">Correo Electronico</p>
+                <p type="text ">bazar@bazar.com</p>
+                <p type="text ">Teléfono</p>
+                <p type="text ">800-bazar</p>
+
+            </div>
+        </div>
+
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/editar_perfil.js"></script>
+    <script src="../js/lista_metodos.js"></script>
+    <script src="../js/listar_metodos_pago.js"></script>
+    <script src="https://kit.fontawesome.com/3269682608.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,148 @@
+/* Estilos Generales */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Asap', sans-serif;
+}
+
+.pagina-completa {
+    display: flex;
+}
+
+
+/*Datos de Usuario*/
+
+.parent {
+    display: flex;
+}
+
+#sct-registro-usuarios form {
+    height: 100%;
+    width: 100%;
+    /* backdrop-filter: blur(0.4rem); */
+    background: #6D6875;
+    box-shadow: 0.6rem 0.5rem 0.5rem rgba(0, 0, 0, 0.6);
+    border-radius: 0.7rem;
+    text-align: center;
+    transition: transform .2s;
+    margin: 100px;
+}
+
+
+/* form:hover {
+    transform: scale(1.1);
+    backdrop-filter: blur(0.7rem);
+    cursor: pointer;
+} */
+
+#sct-registro-usuarios form h1 {
+    color: #FFB4A2;
+    /*Steph*/
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 10rem;
+    margin-bottom: 2rem;
+}
+
+
+/* Inicio */
+
+.sct-registro-usuarios-titulo {
+    padding: 30px 0;
+}
+
+.seleccion-metodo-pago {
+    padding-bottom: 30px;
+}
+
+
+/* Fin */
+
+#sct-registro-usuarios form .cont-control {
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#sct-registro-usuarios form label {
+    display: inline-block;
+    color: white;
+    padding: 0 2rem;
+    text-align: left;
+    width: 270px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.col-uno,
+.col-dos,
+.col-tres,
+.col-cuatro {
+    width: 25%;
+}
+
+.mapa {
+    width: 250px;
+    height: 35px;
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+.cont-control span,
+.cont-control textarea {
+    width: 200px;
+    height: 35px;
+    color: white;
+    align-items: left;
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+}
+
+#btn {
+    padding: 10px;
+    border-radius: 1rem;
+    border: none;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0.2rem 0.2rem 0.3rem rgba(0, 0, 0, 0.4);
+}
+
+#btn:hover {
+    background: rgba(255, 255, 255, 1);
+    cursor: pointer;
+}
+
+.btn-oscuro {
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+    border: none;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0.2rem 0.2rem 0.3rem rgba(0, 0, 0, 0.4);
+    margin-top: 25px;
+}
+
+.btn-oscuro:hover {
+    background: rgba(255, 255, 255, 1);
+    cursor: pointer;
+}
+
+.contenedor-img {
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-comentar {
+    background-color: #6D6875;
+    border: #fff;
+    color: #FFCDB2;
+    cursor: pointer;
+}

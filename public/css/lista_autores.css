@@ -1,0 +1,89 @@
+#sct-autores {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Asap', sans-serif;
+    background-color: #ffcdb2;
+}
+
+.paginacontenido {
+    justify-content: space-around;
+}
+
+.titulo {
+    font-family: 'Asap', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #6D6875;
+    color: #ffcdb2;
+}
+
+th {
+    text-align: left;
+    font-family: 'Asap', sans-serif;
+    font-weight: bold;
+    font-family: 'Asap', sans-serif;
+    background: #ffcdb2;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.icono-eliminar {
+    background-color: #fff;
+    border: #fff;
+    color: #E5989B;
+    cursor: pointer;
+    margin: 0px;
+}
+
+#btn-agregar-autor,
+.biografia {
+    color: #6D6875;
+    font-weight: bold;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+#btn-agregar-autor {
+    background: #FFB4A2;
+    color: #636069;
+    font-size: 16px;
+    font-weight: 600;
+    height: 40px;
+    margin-bottom: 30px;
+    /* width: 150px; */
+}
+
+tr {
+    height: 40px;
+}
+
+#tbl-libros {
+    text-align: center;
+}
+
+.biografia {
+    background-color: #636069;
+    color: #FFB4A2;
+    padding: 4px 10px;
+}
+
+.biografia:hover {
+    background-color: #fed7ce;
+    color: #000105;
+}
+
+#btn-agregar-autor:hover {
+    background-color: #fed7ce;
+    color: #000105;
+    border: 2px solid #fed7ce;
+}
+
+.icono-eliminar {
+    background-color: #ffcdb2;
+    font-size: 25px;
+}
+
+.icono-editar {
+    font-size: 20px;
+}

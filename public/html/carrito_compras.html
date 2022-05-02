@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/estilos_general.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asap:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/carrito_compras.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <title>Carrito de compras</title>
+</head>
+
+<body>
+    <header>
+        <nav class="nav">
+            <div class="parentNav">
+                <a class="navUno" href="../pagina_principal.html">
+                    <img class="nav-img" src="../imgs/logo.png" alt="Logo">
+                </a>
+                <a class="navDos" href="../pagina_principal.html">
+                    <button class="btn-nav" id="btn-registro" type="button">Cerrar Sesión</button>
+                </a>
+            </div>
+        </nav>
+    </header>
+    <div class="pagina-con-menu-lateral">
+        <!-- Menú lateral -->
+        <div class="menu-lateral">
+
+            <!-- Primera sección del menú lateral -->
+            <div class="menu-lateral-arriba">
+                <div class="menu-lateral-arriba-1">
+                    <a href="pagina_principal.html"><i class="fa-solid fa-house" title="Icono para ir a la página principal"></i></a>
+                    <a href="inicio_sesion.html"><i class="fa-solid fa-lock" title="Icono para cerrar sesión en la cuenta"></i></a>
+                </div>
+                <div class="menu-lateral-arriba-2">
+                    <div>
+                        <img class="menu-lateral-foto-perfil" src="../imgs/foto-perfil.png" alt="Foto de Perfil del Usuario">
+                    </div>
+                    <span class="menu-lateral-nombre-usuario" id="campo-nombre-lateral"></span>
+                    <div>
+                        <span class="menu-lateral-email-usuario" id="campo-correo-lateral"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Segunda sección del menú lateral -->
+            <div class="menu-lateral-form">
+
+                <!-- Primera lista -->
+                <h2>Cuentas</h2>
+                <nav>
+                    <ul>
+                        <li><i class="fa-solid fa-user"></i><a href="editar_perfil.html">Perfil</a></li>
+                        <li><i class="fa-solid fa-receipt"></i><a href="historial_compra.html">Historial de compras</a></li>
+                        <li><i class="fa-solid fa-users"></i><a href="lista_usuarios.html">Usuarios</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Segunda lista -->
+                <h2>Tienda</h2>
+                <nav>
+                    <ul id="menu-lateral-form">
+                        <li><i class="fa-solid fa-tag"></i><a href="parametros_sistema.html">Parámetros del sistema</a></li>
+                        <li class="transicion"><i class="fa-solid fa-book-open"></i><a href="#">Catálogo</a>
+                            <ul class="menu-lateral-submenu">
+                                <li><a href="lista_libros.html">Libros</a></li>
+                                <li><a href="lista_autores.html">Autores</a></li>
+                                <li><a href="lista_generos.html">Géneros literarios</a></li>
+                            </ul>
+                        </li>
+                        <li><i class="fa-solid fa-newspaper"></i><a href="#">Reportes</a>
+                            <ul class="menu-lateral-submenu">
+                                <li><a href="reportes_top10.html">Top 10</a></li>
+                                <li><a href="reportes_desglose_ventas.html">Ventas</a></li>
+                                <li><a href="reportes_descuentos.html">Descuentos</a></li>
+                                <li><a href="reportes_socios_comerciales.html">Socios comerciales</a></li>
+                            </ul>
+                        </li>
+                        <li><i class="fa-solid fa-store"></i><a href="lista_socios.html">Socios comerciales</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Contenido de la página -->
+        <div class="cont-carrito-compras">
+            <h1>Carrito de compras</h1>
+            <div class="cont-contenido-pago">
+                <div class="cont-items" id="cont-items">
+                    <!-- Item 1 -->
+                    <div class="caja-exterior-item">
+                        <div class="caja-interior-izquierda">
+                            <img src="../imgs/el_nombre_del_viento.jpg" alt="Portada del libro, El Nombre del Viento">
+                        </div>
+                        <div class="caja-interior-media">
+                            <div class="cont-media-superior">
+                                <p class="parrafo-titulo">El Nombre del Viento</p>
+                                <p class="parrafo-autor">Patrick Rothfuss</p>
+                            </div>
+                            <div class="cont-media-inferior">
+                                <p class="parrafo-precio"> &#8353; 10000.00 </p>
+                            </div>
+                        </div>
+                        <div class="caja-interior-derecha">
+                            <div class="cont-numero-items">
+                                <input type="number" id="input-cantidad" placeholder="0" min="0">
+                            </div>
+                            <button type="button" class="btn-eliminar" id="icono-eliminar-1">
+                                <span class="span-boton">
+                                    <i class="fa-solid fa-trash-can fa-2x"></i>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="caja-exterior-item">
+                        <div class="caja-interior-izquierda">
+                            <img src="../imgs/el_hombre_en_busca_de_sentido.jpg" alt="Portada del libro, El Hombre en Busca de Sentido">
+                        </div>
+                        <div class="caja-interior-media">
+                            <div class="cont-media-superior">
+                                <p class="parrafo-titulo">El Hombre en Busca de Sentido</p>
+                                <p class="parrafo-autor">Viktor Frankl</p>
+                            </div>
+                            <div class="cont-media-inferior">
+                                <p class="parrafo-precio">
+                                    <span>&#8353;</span> 4,300.00
+                                </p>
+                            </div>
+                        </div>
+                        <div class="caja-interior-derecha">
+                            <div class="cont-numero-items">
+                                <input type="number" id="input-cantidad" placeholder="0" min="0">
+                            </div>
+                            <button type="button" class="btn-eliminar" id="icono-eliminar-2">
+                                <span class="span-boton">
+                                    <i class="fa-solid fa-trash-can fa-2x"></i>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="caja-exterior-item">
+                        <div class="caja-interior-izquierda">
+                            <img src="../imgs/cien_annos_de_soledad.jpg" alt="Portada del libro, Cien Años de Soledad">
+                        </div>
+                        <div class="caja-interior-media">
+                            <div class="cont-media-superior">
+                                <p class="parrafo-titulo">Cien Años de Soledad</p>
+                                <p class="parrafo-autor">Gabriel García Márquez</p>
+                            </div>
+                            <div class="cont-media-inferior">
+                                <p class="parrafo-precio">
+                                    <span>&#8353;</span> 7,800.00
+                                </p>
+                            </div>
+                        </div>
+                        <div class="caja-interior-derecha">
+                            <div class="cont-numero-items">
+                                <input type="number" id="input-cantidad" placeholder="0" min="0">
+                            </div>
+                            <button type="button" class="btn-eliminar" id="icono-eliminar-3">
+                                <span class="span-boton">
+                                    <i class="fa-solid fa-trash-can fa-2x"></i>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="cont-lateral-izquierdo">
+                    <div class="cont-información-envio">
+                        <h2>Tipo de envío</h2>
+                        <div class="cont-tipo-envio">
+                            <div>
+                                <input type="radio" id="btn-domicilio" name="radio-envio" value="0" checked>
+                                <label for="btn-domicilio">Domicilio</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="btn-retiro" name="radio-envio" value="1">
+                                <label for="btn-retiro">Punto de retiro</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cont-informacion-pago">
+                        <h2>Monto a pagar</h2>
+                        <div class="cont-desglose">
+                            <p>Compras:</p>
+                            <div class="cont-monto">
+                                <span>&#8353;</span>
+                                <p id="indicador-compras">000,000.00</p>
+                            </div>
+                        </div>
+                        <div class="cont-desglose">
+                            <p>Envío:</p>
+                            <div class="cont-monto">
+                                <span>&#8353;</span>
+                                <p id="indicador-envio">000,000.00</p>
+                            </div>
+                        </div>
+                        <div class="cont-desglose">
+                            <p>Impuestos:</p>
+                            <div class="cont-monto">
+                                <span>&#8353;</span>
+                                <p id="indicador-impuestos">000,000.00</p>
+                            </div>
+                        </div>
+                        <div class="cont-desglose">
+                            <p id="p-total">Total:</p>
+                            <div class="cont-monto">
+                                <span>&#8353;</span>
+                                <p id="indicador-total">000,000.00</p>
+                            </div>
+                        </div>
+                        <div class="cont-botones-monto">
+                            <button type="button" id="btn-proceder-pago" class="btn-monto">Proceder con el pago</button>
+                            <button type="button" id="btn-seguir-comprando" class="btn-monto">Seguir comprando</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <div>
+        <footer>
+            <div class="footerParent">
+                <div class="footerChildUno">
+                    <h4>Quiénes Somos</h4>
+                    <div>
+                        <a href="pagina_producto.html">
+                            <p href="/nosotros.html">El Bazar de las Sorpresas</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="pagina_equipo.html">
+                            <p>Rasmus</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="footerChildDos">
+                    <h4>Mi Perfil</h4>
+                    <div>
+                        <a href="editar_perfil.html">
+                            <p>Perfil</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="carrito_compras.html">
+                            <p>Carrito</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="footerChildTres">
+                    <h4>Contáctenos</h4>
+                    <p type="text ">Correo Electrónico</p>
+                    <p type="text ">contactanes@elbazardelassorpresas.com</p>
+                    <p href="text ">Teléfono 800-bazar</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- 1. Cargar bibliotecas externas -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://kit.fontawesome.com/3269682608.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- 2. Enlazar el servicio general que comunica con el servidor -->
+    <script src="../servicesJS/servicio-general.js"></script>
+    <!-- 3. Enlazar los controladores de la página -->
+    <script src="../controllerJS/carrito_compras.js"></script>
+</body>
+
+</html>

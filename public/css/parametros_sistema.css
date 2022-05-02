@@ -1,0 +1,159 @@
+/* Estilos generales */
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 22px;
+    font-weight: bold;
+    padding-bottom: 30px;
+}
+
+.parametros-sistema {
+    margin: 20px 0 50px 0;
+}
+
+
+/* Estilos de lista promociones*/
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td {
+    border: 1px solid #6D6875;
+    padding: 8px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+tr a {
+    color: #6D6875;
+}
+
+tr a:hover {
+    color: #FFB4A2;
+}
+
+tr:nth-child(even) {
+    background-color: #6D6875;
+    color: #FFCDB2;
+}
+
+tr:nth-child(even) a {
+    color: #FFCDB2;
+}
+
+tr:nth-child(even) a:hover {
+    color: #FFFFFF;
+}
+
+.parametros-tabla-centrar {
+    text-align: center;
+}
+
+.parametros-tabla-completa {
+    margin: 80px 0;
+}
+
+
+/* Parametros de formularios */
+
+form {
+    margin-bottom: 20px;
+}
+
+form p {
+    margin-bottom: 20px;
+}
+
+label {
+    padding-right: 5px;
+}
+
+input {
+    background-color: #fed7ce;
+    border: 3px solid rgb(109, 104, 117);
+    border-radius: 6px;
+    font-size: 15px;
+    min-height: 24px;
+    padding-left: 10px;
+    width: 290px;
+}
+
+input::placeholder {
+    color: #6D6875;
+}
+
+a {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+button[type="button"] {
+    background-color: #FFB4A2;
+    border: none;
+    border-radius: 6px;
+    color: #636069;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 10px 0;
+    padding: 6px 10px;
+    transition: 0.3s;
+}
+
+button:hover[type="button"] {
+    background-color: #fed7ce;
+    color: #000105;
+}
+
+.parametros-borde {
+    border: 4px solid #636069;
+    border-radius: 6px;
+    background-color: #6D6875;
+    box-shadow: 2px 2px 4px #6D6875;
+    color: #FFCDB2;
+    font-weight: bold;
+    margin: 10px 0 10px 0;
+    padding: 20px 0 0 5px;
+    min-width: 1100px;
+}
+
+.parametros-boton {
+    padding: 25px 0 0 20px;
+}
+
+.parametros-ingresar-inputs {
+    display: flex;
+}
+
+.parametros-ingresar-inputs-todo {
+    align-items: center;
+    display: flex;
+    margin-right: 10px;
+    width: 535px;
+    padding-left: 5px;
+}
+
+.parametros-ingresar-label {
+    width: 220px;
+}
+
+
+/* Estilos de validacion */
+
+.parametros-incompleto {
+    border: 3px solid #ad3049;
+    color: #ad3049;
+    font-weight: bold;
+}
+
+.parametros-incompleto::placeholder {
+    color: #ad3049;
+    font-weight: bold;
+}
