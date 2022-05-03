@@ -149,7 +149,7 @@ textarea {
 /* Estilos de validacion */
 
 .formulario-libros-incompleto,
-.formulario-libros-incompleto input[type=date] {
+.formulario-libros-incompleto input[type="date"] {
     border: 3px solid #ad3049;
     color: #ad3049;
     font-size: 18px;
