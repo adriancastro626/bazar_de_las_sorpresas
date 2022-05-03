@@ -23,7 +23,7 @@ const mostrarMetodos = () => {
     listaCarrito.forEach(item => {
         if (item.correoUsuario.includes(filtro)) {
 
-            // libro = consultarLibro(item.isbncarrito);
+            libro = consultarLibro(item.isbncarrito);
             // console.log(libro);
 
             // Crear elementos HTML
@@ -46,22 +46,22 @@ const mostrarMetodos = () => {
             // Dar propiedades a los elementos HTML
             contenedorItem.classList.add('caja-exterior-item');
             contenedorItemInteriorIzquierdo.classList.add('caja-interior-izquierda');
-            // contenedorImagen.src = libro.fotos; // Agregar indice de la foto
-            contenedorImagen.src = '../imgs/el_nombre_del_viento.jpg';
-            // contenedorImagen.alt = `Portada del libro: ${libro.titulo}`;
-            contenedorImagen.alt = 'Portada del libro: El Nombre del Viento';
+            contenedorImagen.src = libro.fotos; // Agregar indice de la foto
+            // contenedorImagen.src = '../imgs/el_nombre_del_viento.jpg';
+            contenedorImagen.alt = `Portada del libro: ${libro.titulo}`;
+            // contenedorImagen.alt = 'Portada del libro: El Nombre del Viento';
             contenedorItemInteriorMedio.classList.add('caja-interior-media');
             contenedorMedioSuperior.classList.add('cont-media-superior');
             pTitulo.classList.add('parrafo-titulo');
-            // pTitulo.textContent = libro.titulo;
-            pTitulo.textContent = 'El Nombre del Viento';
+            pTitulo.textContent = libro.titulo;
+            // pTitulo.textContent = 'El Nombre del Viento';
             pAutor.classList.add('parrafo-autor');
-            // pAutor.textContent = libro.autor;
-            pAutor.textContent = 'Patrick Rothfuss';
+            pAutor.textContent = libro.autor;
+            // pAutor.textContent = 'Patrick Rothfuss';
             contenedorMedioInferior.classList.add('cont-media-inferior');
             pPrecio.classList.add('parrafo-precio');
-            // pPrecio.textContent = `&#8353; ${libro.precio}`;
-            pPrecio.textContent = '₡ 10000.00';
+            pPrecio.textContent = `₡ ${libro.precio}`;
+            // pPrecio.textContent = '₡ 10000.00';
             contenedorItemInteriorDerecho.classList.add('caja-interior-derecha');
             contenedorNumeroItems.classList.add('cont-numero-items');
             cantidadItems.type = 'number';
@@ -108,6 +108,7 @@ const inicializar = async() => {
 
 const consultarLibro = async(isbn) => {
     libro = await obtenerElemento(`/obtener-libro-isbn/${isbn}`);
+    console.log(libro);
 };
 
 const paginaSiguiente = () => {
