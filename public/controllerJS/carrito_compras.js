@@ -112,13 +112,15 @@ const consultarLibro = async(isbn) => {
 };
 
 const paginaSiguiente = () => {
-    let navegar;
+    let navegar = { 'tipo': '', 'url': '' };
     if (radioEnvio[0].checked) {
-        navegar = 'metodo_envio_domicilio.html';
+        navegar.url = 'metodo_envio_domicilio.html';
+        navegar.tipo = 'Domicilio';
     } else {
-        navegar = 'metodo_envio_retiro.html';
+        navegar.url = 'metodo_envio_retiro.html';
+        navegar.tipo = 'Punto Retiro';
     }
-    localStorage.setItem('metodoEnvio', navegar);
+    localStorage.setItem('tipoEntrega', JSON.stringify(navegar));
     return navegar;
 };
 
@@ -147,7 +149,7 @@ const notificarEliminacion = () => {
 };
 
 btnPagar.addEventListener('click', () => {
-    window.location.href = paginaSiguiente();
+    window.location.href = paginaSiguiente().url;
 });
 
 btnComprar.addEventListener('click', () => {

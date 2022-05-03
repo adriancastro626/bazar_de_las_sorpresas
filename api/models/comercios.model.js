@@ -7,7 +7,7 @@ const schemaComercio = new mongoose.Schema({
     provinciacomercio: { type: String, required: true },
     cantoncomercio: { type: String, required: true },
     distritocomercio: { type: String, required: true },
-    direccioncomercio: { type: Number, required: true },
+    direccioncomercio: { type: String, required: true },
     fotocomercio: { type: String, required: true }
 });
 
