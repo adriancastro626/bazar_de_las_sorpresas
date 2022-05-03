@@ -62,13 +62,46 @@ const mostrarDatos = () => {
         fila.insertCell().innerText = autor.nacimientoAutor;
         fila.insertCell().innerText = autor.defuncionAutor;
         fila.insertCell().innerText = autor.bibliografia;
+        fila.insertCell().innerText = autor.adjunto;
 
 
         fila.insertCell().appendChild(botonBiografia);
         fila.insertCell().appendChild(botonEditar);
         fila.insertCell().appendChild(botonEliminar);
         botonBiografia.addEventListener("click", () => {
-            window.location.href = "perfil_autor.html";
+            let NombreAutor = '';
+
+            let fechanacimiento = '';
+
+            let fechadefuncion = '';
+
+            let nacionalidad = '';
+
+            let biografia = '';
+
+            let adjunto = '';
+
+            let apellido = '';
+
+            let indice = botonBiografia.parentNode.parentNode.rowIndex;
+
+            NombreAutor = document.getElementById('tbl-autores').rows[indice].cells[0].innerHTML
+            apellido = document.getElementById('tbl-autores').rows[indice].cells[1].innerHTML
+
+            fechanacimiento = document.getElementById('tbl-autores').rows[indice].cells[3].innerHTML
+
+            fechadefuncion = document.getElementById('tbl-autores').rows[indice].cells[4].innerHTML
+
+            nacionalidad = document.getElementById('tbl-autores').rows[indice].cells[2].innerHTML
+
+            biografia = document.getElementById('tbl-autores').rows[indice].cells[5].innerHTML
+
+            adjunto = document.getElementById('tbl-autores').rows[indice].cells[6].innerHTML
+
+
+
+            obtenerDatosTabla(NombreAutor, fechanacimiento, fechadefuncion, nacionalidad, biografia, apellido, adjunto);
+
         })
 
         botonEditar.addEventListener("click", () => {
@@ -90,7 +123,13 @@ const mostrarDatos = () => {
 
 
 
+function obtenerDatosTabla(nombre, fechanacimiento, fechadefuncion, nacionalidad, biografia, apellido, adjunto) {
 
+
+
+    location.href = "perfil_autor.html?nombre=" + encodeURI(nombre) + '&fechanacimiento=' + encodeURI(fechanacimiento) + '&fechadefuncion=' + encodeURI(fechadefuncion) + '&nacionalidad=' + encodeURI(nacionalidad) + '&biografia=' + encodeURI(biografia) + '&apellido=' + encodeURI(apellido) + '&adjunto=' + encodeURI(adjunto);
+
+};
 
 
 inicializar();

@@ -6,6 +6,7 @@ const listaGenero = document.getElementById("slt-genero");
 const fechaNacimiento = document.getElementById("txt-nacimiento");
 const fechaDefuncion = document.getElementById("txt-defuncion");
 const inputBiografia = document.getElementById("txt-biografia");
+const input_foto = document.querySelector('#user-photo');
 
 
 const validar = () => {
@@ -75,7 +76,6 @@ const validar = () => {
 
 
 const imprimir = () => {
-    let adjunto = inputAdjunto.value; // preguntar como se ve el adjunto y corregir error
     let nombreAutor = inputNombreR.value;
     let apellidoAutor = inputApellido.value;
     let nacionalidad = listaGenero.value;
@@ -85,7 +85,7 @@ const imprimir = () => {
 
 
 
-    console.log('La foto esta contenida el siguiente adjunto', adjunto);
+
     console.log('El nombre del autor es', nombreAutor);
     console.log('El apellido del autor es', apellidoAutor);
     //    console.log('El genero del autor es', generoAutor)
@@ -99,13 +99,14 @@ const imprimir = () => {
 const registrarAutor = () => {
     let data = {
 
-        "adjunto": inputAdjunto.value,
+        "adjunto": input_foto.src,
         "nombre": inputNombreR.value,
         "apellido": inputApellido.value,
         "nacionalidad": listaGenero.value,
         "nacimientoAutor": fechaNacimiento.value,
         "defuncionAutor": fechaDefuncion.value,
-        "bibliografia": inputBiografia.value
+        "bibliografia": inputBiografia.value,
+
 
 
     };
