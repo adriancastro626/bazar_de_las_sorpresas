@@ -65,7 +65,7 @@ router.delete('/eliminar-libro', (req, res) => {
 // http://localhost:3000/api/obtener-libro-isbn
 router.get('/obtener-libro-isbn/:isbn', (req, res) => {
     let isbn = req.params.isbn;
-    Libro.find({ isbn: isbn }, (error, libroBD) => {
+    Libro.findOne({ isbn: isbn }, (error, libroBD) => {
         if (error) {
             return res.json({
                 msj: "No se encontró un libro que considiera con el ISBN.",

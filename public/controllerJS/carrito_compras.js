@@ -13,18 +13,24 @@ const btnComprar = document.getElementById('btn-seguir-comprando');
 const contenedorExterno = document.getElementById('cont-items');
 
 // Variables
+let compras = 0;
+let envio = 0;
+let impuesto = 0;
+let total = 0;
 let listaCarrito = [];
 let usuarioConectado = JSON.parse(localStorage.getItem('usuarioConectado'));
 
-const mostrarMetodos = () => {
+const mostrarMetodos = async() => {
     // let filtro = usuarioConectado.correo;
     let filtro = "prueba@gmail.com";
+    compras = 0;
 
-    listaCarrito.forEach(item => {
-        if (item.correoUsuario.includes(filtro)) {
+    for (let i = 0; i < listaCarrito.length; i++) {
+        // listaCarrito.forEach(async(item) => {
+        if (listaCarrito[i].correoUsuario.includes(filtro)) {
 
-            libro = consultarLibro(item.isbncarrito);
-            // console.log(libro);
+            let libro = await obtenerElemento(`obtener-libro-isbn/${listaCarrito[i].isbncarrito}`);
+            compras = compras + libro.precio;
 
             // Crear elementos HTML
             let contenedorItem = document.createElement('div');
@@ -46,7 +52,7 @@ const mostrarMetodos = () => {
             // Dar propiedades a los elementos HTML
             contenedorItem.classList.add('caja-exterior-item');
             contenedorItemInteriorIzquierdo.classList.add('caja-interior-izquierda');
-            contenedorImagen.src = libro.fotos; // Agregar indice de la foto
+            contenedorImagen.src = libro.fotos;
             // contenedorImagen.src = '../imgs/el_nombre_del_viento.jpg';
             contenedorImagen.alt = `Portada del libro: ${libro.titulo}`;
             // contenedorImagen.alt = 'Portada del libro: El Nombre del Viento';
@@ -93,23 +99,21 @@ const mostrarMetodos = () => {
             contenedorExterno.appendChild(contenedorItem);
 
             // Detecta cuando se presiona el botón eliminar
-            // botonEliminar.addEventListener('click', () => {
-            //     eliminarDatos('eliminar-carrito', item._id);
-            // });
+            botonEliminar.addEventListener('click', () => {
+                notificarEliminacion();
+            });
         }
-    })
+
+        actualizarPago();
+    }
 };
 
 const inicializar = async() => {
     listaCarrito = await obtenerDatos('mostrar-carrito');
-    console.log(listaCarrito);
     mostrarMetodos(listaCarrito);
 };
 
-const consultarLibro = async(isbn) => {
-    libro = await obtenerElemento(`/obtener-libro-isbn/${isbn}`);
-    console.log(libro);
-};
+
 
 const paginaSiguiente = () => {
     let navegar = { 'tipo': '', 'url': '' };
@@ -124,8 +128,6 @@ const paginaSiguiente = () => {
     return navegar;
 };
 
-
-//PLACEHOLDER
 const notificarEliminacion = () => {
     Swal.fire({
         title: 'Estás seguro?',
@@ -139,13 +141,28 @@ const notificarEliminacion = () => {
     }).then((result) => {
         if (result.isConfirmed) {
             Swal.fire(
-                'Eliminado!',
-                'Se ha eliminado el libro del carrito de compras.',
-                'success'
-            )
-            console.log('Se eliminó el género');
+                    'Eliminado!',
+                    'Se ha eliminado el libro del carrito de compras.',
+                    'success'
+                )
+                // eliminarDatos('eliminar-carrito', item._id);
         }
     });
+};
+
+const actualizarPago = () => {
+    impuesto = 0.13 * compras; // Actualizar con parámetro de la base de datos.
+
+    if (radioEnvio[0].checked) {
+        envio = 2000.00; //Tomar parámetro de la base de datos
+    } else {
+        envio = 0.00;
+    }
+
+    indicadorCompras.textContent = `₡ ${compras}`;
+    indicadorEnvio.textContent = `₡ ${envio}`;
+    indicadorImpuestos.textContent = `₡ ${impuesto}`;
+    indicadorTotal.textContent = `₡ ${compras + envio + impuesto}`;
 };
 
 btnPagar.addEventListener('click', () => {
@@ -155,5 +172,9 @@ btnPagar.addEventListener('click', () => {
 btnComprar.addEventListener('click', () => {
     window.location.href = 'pagina_principal.html';
 });
+
+// radioEnvio.addEventListener('change', () => {
+//     actualizarPago();
+// });
 
 inicializar();
