@@ -39,7 +39,7 @@ listagenerosModificar.addEventListener('click', () => {
         listaGenerosCompleto.reset();
     });
 });
-=======
+
 'use strict';
 
 const cuerpoTabla = document.querySelector('#tbl-libros tbody');

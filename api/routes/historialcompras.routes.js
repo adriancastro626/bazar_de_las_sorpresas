@@ -9,6 +9,8 @@ router.post('/registrar-historial', (req, res) => {
         correousuario: req.body.correousuario,
         metodopago: req.body.metodopago,
         nombrelibro: req.body.nombrelibro,
+        autor: req.body.autor,
+        numeropedido: req.body.numeropedido,
         isbnhistorial: req.body.isbnhistorial,
         fechacompra: req.body.fechacompra,
         costo: req.body.costo,

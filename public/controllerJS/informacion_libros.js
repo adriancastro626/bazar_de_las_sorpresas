@@ -22,7 +22,7 @@ const obtenerListaLibros = async(pendPoint) => {
         method: 'get',
         url: url
     }).then(response => {
-        listaDatos = response.data.lista;
+        listaDatos = response.data.libros;
     });
 
     return listaDatos;

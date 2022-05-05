@@ -23,21 +23,28 @@ let listarSelect = (url, elemento) => {
 };
 
 // Inicializar mapa
-const initMap = () => {
-    // The location of Uluru
-    const costarica = { lat: 9.936220, lng: -84.107337 };
-    // The map, centered at Uluru
-    const mapa = new google.maps.Map(document.getElementById("mapa"), {
-        zoom: 10,
-        center: costarica,
-    });
-    // The marker, positioned at Uluru
-    const marker = new google.maps.Marker({
-        position: costarica,
-        map: mapa,
-    });
+mapboxgl.accessToken = 'pk.eyJ1IjoiZ2FoZWVsIiwiYSI6ImNsMnB1MjdhZDJvcHMzanNiaTdybTR0MXIifQ.R9Uyo4zTtxYTkqjcLJ-7gw';
+const coordinates = document.getElementById('coordinates');
+const map = new mapboxgl.Map({
+    container: 'mapa', // container ID
+    style: 'mapbox://styles/mapbox/streets-v11', // style URL
+    center: [-84.107337, 9.936220], // starting position [lng, lat] -74.5, 40
+    zoom: 9 // starting zoom
+});
+
+const marker = new mapboxgl.Marker({
+        draggable: true
+    })
+    .setLngLat([-84.107337, 9.936220])
+    .addTo(map);
+
+function onDragEnd() {
+    const lngLat = marker.getLngLat();
+    coordinates.style.display = 'block';
+    coordinates.innerHTML = `Longitude: ${lngLat.lng}<br />Latitude: ${lngLat.lat}`;
 }
 
+marker.on('dragend', onDragEnd);
 
 // Validación
 const validar = () => {
@@ -77,7 +84,6 @@ const validar = () => {
             'title': 'Información incompleta',
             'text': 'Por favor revise los campos resaltados.'
         });
-        //json
     } else {
         window.location.href = 'metodos_pago.html'
     }
@@ -93,8 +99,6 @@ selectProvincias.addEventListener('change', () => {
 selectCantones.addEventListener('change', () => {
     listarSelect(url + 'provincia/' + selectProvincias.value + '/canton/' + selectCantones.value + '/distritos.json', selectDistritos);
 });
-
-initMap();
 
 btnAtras.addEventListener('click', () => {
     window.location.href = 'carrito_compras.html'
