@@ -1,3 +1,5 @@
+'use strict';
+
 const listaGenerosCompleto = document.querySelector('#lista-generos-ingresar');
 const listaGenerosNuevo = document.querySelector('#txt-ingresar-genero');
 const listaGenerosIngresar = document.querySelector('#btn-ingresar');
@@ -15,6 +17,12 @@ listaGenerosIngresar.addEventListener('click', () => {
             'title': 'Por favor indique el género que desea ingresar',
         });
     } else {
+        let genero = {
+            nombregenero: listaGenerosNuevo.value
+        };
+
+        registrarGenero(genero, '/registrar-generoliterario')
+
         listaGenerosNuevo.classList.remove('lista-generos-incompleto');
 
         // Impresión de los resultados
@@ -23,7 +31,7 @@ listaGenerosIngresar.addEventListener('click', () => {
             'icon': 'success',
             'title': 'Género literario registrado',
         }).then(() => {
-            listaGenerosCompleto.reset();
+            window.location.href = 'lista_generos.html';
         });
 
     }
