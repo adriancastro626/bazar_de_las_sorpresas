@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/lista_usuarios.css">
+    <link rel="stylesheet" href="../css/estilos_general.css">
+    <link rel="stylesheet" href="../css/menu_lateral.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+
+
+    <title>Lista de Usuarios</title>
+</head>
+
+<body>
+    <header>
+        <nav class="nav">
+            <div class="parentNav">
+                <a class="navUno" href="./pagina_principal.html">
+                    <img class="nav-img" src=" ../imgs/logo.png" alt="Logo">
+                </a>
+                <a class="navDos" href="./registro_usuarios.html">
+                    <button id="btn-registro" class="btn-nav" type="button">Registrarse</button>
+                </a>
+            </div>
+        </nav>
+    </header>
+    <div class="pagina-completa">
+        <div class="menu-lateral">
+
+            <!-- Primera sección del menú lateral -->
+            <div class="menu-lateral-arriba">
+                <div class="menu-lateral-arriba-1">
+                    <a href="pagina_principal.html"><i class="fa-solid fa-house" title="Icono para ir a la página principal"></i></a>
+                    <a href="inicio_sesion.html"><i class="fa-solid fa-lock" title="Icono para cerrar sesión en la cuenta"></i></a>
+                </div>
+                <div class="menu-lateral-arriba-2">
+                    <div>
+                        <img class="menu-lateral-foto-perfil" src="../imgs/foto-perfil.png" alt="Foto de Perfil del Usuario">
+                    </div>
+                    <span class="menu-lateral-nombre-usuario" id="campo-nombre-lateral"></span>
+                    <div>
+                        <span class="menu-lateral-email-usuario" id="campo-correo-lateral"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Segunda sección del menú lateral -->
+            <div class="menu-lateral-form">
+
+                <!-- Primera lista -->
+                <h2>Cuentas</h2>
+                <nav>
+                    <ul>
+                        <li><i class="fa-solid fa-user"></i><a href="editar_perfil.html">Perfil</a></li>
+                        <li><i class="fa-solid fa-receipt"></i><a href="historial_compra.html">Historial de usuarios</a></li>
+                        <li><i class="fa-solid fa-users"></i><a href="lista_usuarios.html">Usuarios</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Segunda lista -->
+                <h2>Tienda</h2>
+                <nav>
+                    <ul id="menu-lateral-form">
+                        <li><i class="fa-solid fa-tag"></i><a href="parametros_sistema.html">Parámetros del sistema</a></li>
+                        <li class="transicion"><i class="fa-solid fa-book-open"></i><a href="#">Catálogo</a>
+                            <ul class="menu-lateral-submenu">
+                                <li><a href="lista_libros.html">Libros</a></li>
+                                <li><a href="lista_autores.html">Autores</a></li>
+                                <li><a href="lista_generos.html">Géneros literarios</a></li>
+                            </ul>
+                        </li>
+                        <li><i class="fa-solid fa-newspaper"></i><a href="#">Reportes</a>
+                            <ul class="menu-lateral-submenu">
+                                <li><a href="reportes_top10.html">Top 10</a></li>
+                                <li><a href="reportes_desglose_ventas.html">Ventas</a></li>
+                                <li><a href="reportes_descuentos.html">Descuentos</a></li>
+                                <li><a href="reportes_socios_comerciales.html">Socios comerciales</a></li>
+                            </ul>
+                        </li>
+                        <li><i class="fa-solid fa-store"></i><a href="lista_socios.html">Socios comerciales</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="content-general">
+            <!-- Contenido de la página -->
+            <div class="pagina-contenido">
+                <h1>Lista de Usuarios</h1>
+                <div>
+                    <label for="txt-filtro">Filtrar</label>
+                    <input type="text" id="txt-filtro">
+                </div>
+
+                <!-- Listado de usuarios -->
+                <table class="tbl-usuarios" id="tbl-usuarios">
+                    <thead>
+                        <tr>
+                            <th>
+                                <div class="cont-encabezado">
+                                    <p>Nombre</p>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="cont-encabezado">
+                                    <p>Apellido</p>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="cont-encabezado">
+                                    <p>Correo</p>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="cont-encabezado">
+                                    <p>Identificacion</p>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="cont-encabezado">
+                                    <p>Provincia</p>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="cont-encabezado">
+                                    <p>Genero</p>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="cont-encabezado">
+                                    <p>Editar</p>
+                                </div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div>
+        <footer>
+            <div class="footerParent">
+                <div class="footerChildUno">
+                    <h4>Quiénes Somos</h4>
+                    <div>
+                        <a href="pagina_producto.html">
+                            <p>El Bazar de las Sorpresas</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="pagina_equipo.html">
+                            <p>Rasmus</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="footerChildDos">
+                    <h4>Mi Perfil</h4>
+                    <div>
+                        <a href="editar_perfil.html">
+                            <p>Perfil</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="/html/carrito_usuarios.html">
+                            <p>Carrito</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="footerChildTres">
+                    <h4>Contáctenos</h4>
+                    <p type="text ">Correo Electrónico</p>
+                    <p type="text ">contactanes@elbazardelassorpresas.com</p>
+                    <p type="text ">Teléfono 800-bazar</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/public/servicesJS/servicio-general.js"></script>
+    <script src="/public/controllerJS/lista_usuarios.js"></script>
+    <!-- <script src="/js/index.js"></script> -->
+</body>
+
+</html>

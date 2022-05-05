@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/reset.css">
+    <link rel="stylesheet" href="/public/css/registro_usuarios.css">
+    <link rel="stylesheet" href="/public/css/footer.css">
+    <link rel="stylesheet" href="/public/css/header.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asap:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Registro Usuario</title>
+
+</head>
+
+<body>
+    <header>
+        <nav class="nav">
+            <div class="parentNav">
+                <div class="logo-navUno">
+                    <a class="navUno" href="./pagina_principal.html">
+                        <img class="nav-img" src="../imgs/logo.png" alt="Logo">
+                    </a>
+                </div>
+                <a class="navDos " href="./inicio_sesion.html">
+                    <button class="btn-nav" id="btn-registro" type="button">Iniciar Sesión</button>
+                </a>
+            </div>
+        </nav>
+    </header>
+    <div class="contenedor-img ">
+        <section id="sct-registro-usuarios">
+            <form>
+                <h1>Registro de Usuario</h1>
+                <h3>Información personal</h3>
+
+                <div class="parent">
+                    <div class="columna">
+                        <div class="cont-control">
+                            <label for="txt-nombre">Primer Nombre</label>
+                            <input id="txt-nombre" type="text">
+                        </div>
+                        <div class="cont-control">
+                            <label for="txt-segundoNombre">Segundo Nombre</label>
+                            <input id="txt-segundoNombre" type="text">
+                        </div>
+                        <div class="cont-control">
+                            <label for="txt-apellido">Primer Apellido</label>
+                            <input id="txt-apellido" type="text">
+                        </div>
+
+                        <div class="cont-control">
+                            <label for="txt-segundoApellido">Segundo Apellido</label>
+                            <input id="txt-segundoApellido" type="text">
+                        </div>
+
+                        <div class="cont-control">
+                            <label for="txt-nacimiento">Fecha de nacimiento</label>
+                            <input id="txt-nacimiento" type="date">
+                        </div>
+                    </div>
+
+                    <div class="columna">
+                        <div class="cont-control">
+                            <label for="slt-tipo">Tipo de Identificación</label>
+                            <select id="slt-tipo">
+                            <option value="">-- Seleccione el tipo de Identificación --</option>
+                            <option value="1">Cédula de Identidad</option>
+                            <option value="2">DIMEX</option>
+                            <option value="3">NITE</option>
+                            <option value="4">DIDI</option>
+                            </select>
+                        </div>
+                        <div class="cont-control">
+                            <label for="txt-identificacion">Número de Identificación</label>
+                            <input id="txt-identificacion" type="text" placeholder="Número de Identificación">
+                        </div>
+                        <div class="cont-control">
+                            <label for="slt-genero">Seleccione su Género</label>
+                            <select id="slt-genero">
+                            <option value="">-- Seleccione el tipo de Género --</option>
+                            <option value="1">Femenino</option>
+                            <option value="2">Masculino</option>
+                            <option value="3">Otro - Especifique</option>
+                            </select>
+                        </div>
+                        <div class="cont-control">
+                            <label for="txt-otroGenero">Especifique</label>
+                            <input id="txt-otroGenero" type="text" placeholder="Especifique Género">
+                        </div>
+                        <div class="cont-control">
+                            <label for="btn-foto">Foto de Perfil</label>
+                            <input type="file" id="btn-foto" name="file-foto" multiple>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="parent">
+                    <div class="columna">
+                        <h3>Información de Inicio de Sesión</h3>
+                        <div class="cont-control">
+                            <label for="txt-correo">Correo Electrónico</label>
+                            <input id="txt-correo" type="email" placeholder="Ingrese Correo Electrónico">
+                        </div>
+                        <div class="cont-control">
+                            <label for="txt-confirmacionCorreo">Confirme su Correo Electrónico</label>
+                            <input id="txt-confirmacionCorreo" type="email" placeholder="Ingrese Correo Electrónico">
+                        </div>
+                        <div class="cont-control">
+                            <label for="txt-contrasenna">Contraseña</label>
+                            <input id="txt-contrasenna" type="password">
+                        </div>
+                        <div class="cont-control">
+                            <label for="txt-confirmacion">Confirmacion</label>
+                            <input id="txt-confirmacion" type="password">
+                        </div>
+                    </div>
+                    <div class="columna">
+                        <h3>Preferencias</h3>
+                        <div class="cont-control">
+                            <label for="slt-generoLiterario">Género Literario</label>
+                            <select id="slt-generoLiterario">
+                                     <option value="">-- Géneros Literarios --</option>
+                                    <option value="1">Ciencia Ficción</option>
+                                    <option value="2">Policiacos</option>
+                                    <option value="3">Infantil</option>
+                                    <option value="4">Poesía</option>
+                                    <option value="5">Novela</option>
+                                    <option value="6">Biografías</option>
+                                    <option value="7">Historia</option>
+                                    <option value="8">Autoayuda</option>
+                                </select>
+                        </div>
+                        <div class="cont-control">
+                            <label for="slt-autores">Autores</label>
+                            <select id="slt-autores">
+                                <option value="">-- Seleccione Autores Favoritos --</option>
+                                <option value="1">Isaac Asimov</option>
+                                <option value="2">Federico García Lorca</option>
+                                <option value="3">María Hesse</option>
+                                <option value="4">Paulo Coelho</option>
+                                <option value="5">Agatha Christie</option>
+                                <option value="6">Jane Austen</option>
+                                <option value="7">Joaquín Gutiérrez</option>
+                                <option value="8">Yuval Noah Harari</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Dirección</h3>
+                <div class="parent">
+                    <div class="columna">
+                        <div class="cont-control">
+                            <label for="slct-provincias">Provincia:</label>
+                            <select name="provincias" id="slct-provincias">
+                            <option value="">-- Seleccione una provincia --</option>
+                        </select>
+                        </div>
+                        <div class="cont-control">
+                            <label for="slct-cantones">Canton:</label>
+                            <select name="cantones" id="slct-cantones">
+                            <option value="">-- Seleccione un canton --</option>
+                        </select>
+                        </div>
+                        <div class="cont-control">
+                            <label for="slct-distritos">Distrito:</label>
+                            <select name="distritos" id="slct-distritos">
+                                <option value="">-- Seleccione un distrito --</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="columna">
+                        <div class="cont-control">
+                            <label for="txt-mapa">Seleccione Ubicación</label>
+                            <div class="mapa" id="txt-mapa">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15716.957693189064!2d-84.2172889!3d9.997071349999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2scr!4v1649369411565!5m2!1ses!2scr" width="200" height="100" style="border:0;"
+                                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="direccion">
+                    <label for="direccion-exacta">Dirección exacta:</label>
+                    <textarea name="direccion-exacta" id="direccion-exacta" cols="30" rows="10"></textarea>
+                </div>
+                <div>
+                    <button id="btn-registrar" type="button" class="btn-oscuro">Registrar</button>
+                </div>
+            </form>
+        </section>
+    </div>
+    <div>
+        <footer>
+            <div class="footerParent">
+                <div class="footerChildUno">
+                    <h4>Quiénes Somos</h4>
+                    <div>
+                        <a href="pagina_producto.html">
+                            <p href="/nosotros.html">El Bazar de las Sorpresas</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="pagina_equipo.html">
+                            <p>Rasmus</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="footerChildDos">
+                    <h4>Mi Perfil</h4>
+                    <div>
+                        <a href="editar_perfil.html">
+                            <p>Perfil</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="/html/carrito_compras.html">
+                            <p>Carrito</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="footerChildTres">
+                    <h4>Contáctenos</h4>
+                    <p type="text ">Correo Electrónico</p>
+                    <p type="text ">contactanes@elbazardelassorpresas.com</p>
+                    <p href="text ">Teléfono 800-bazar</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    <!-- 1. Cargar bibliotecas externas -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- 2. Enlazar el servicio general que comunica con el servidor -->
+    <script src="/public/servicesJS/servicio-general.js"></script>
+
+    <!-- Enlazar los controladores de la página -->
+    <script src="/public/controllerJS/registro_usuarios.js"></script>
+</body>
+
+</html>
