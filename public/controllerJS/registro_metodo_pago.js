@@ -68,7 +68,6 @@ const validar = () => {
         inputTarjetahabiente.classList.remove('input-error');
     }
 
-    // PLACEHOLDER
     if (hayError) {
         Swal.fire({
             'icon': 'warning',

@@ -2,8 +2,9 @@ const mongoose = require('mongoose');
 
 const schemaHistorial = new mongoose.Schema({
     correousuario: { type: String },
-    metodopago: { type: Number },
+    metodopago: { type: String },
     nombrelibro: { type: String },
+    autor: { type: String },
     numeropedido: { type: Number },
     isbnhistorial: { type: Number },
     fechacompra: { type: Date },
