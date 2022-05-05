@@ -63,5 +63,9 @@ app.use('/api', require('./routes/metodospago.routes'));
 app.use('/api', require('./routes/parametros.routes'));
 app.use('/api', require('./routes/usuarios.routes'));
 app.use('/api', require('./routes/ventas.routes'));
+app.use('/api', require('./routes/promociones.routes'));
+app.use('/api', require('./routes/descuentolibrofan.routes'));
+app.use('/api', require('./routes/impuesto.routes'));
+app.use('/api', require('./routes/correofactura.routes'));
 
 //http://localhost:3000

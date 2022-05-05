@@ -32,7 +32,7 @@ router.post('/registrar-libro', (req, res) => {
 
 // http://localhost:3000/api/listar-libros
 router.get('/listar-libros', (req, res) => {
-    Libro.find((error, lista) => {
+    Libro.find((error, libros) => {
         if (error) {
             res.json({
                 msj: 'No se pudo mostrar los Libros',
@@ -40,7 +40,7 @@ router.get('/listar-libros', (req, res) => {
             });
         } else {
             res.json({
-                lista
+                libros
             });
         }
     });

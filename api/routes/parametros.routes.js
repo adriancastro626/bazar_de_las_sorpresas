@@ -6,12 +6,7 @@ const Parametros = require('../models/parametros.model');
 // http://localhost:3000/api/registrar-parametros
 router.post('/registrar-parametros', (req, res) => {
     let nuevoParametro = new Parametros({
-        nombrepromocion: req.body.nombrepromocion,
-        procentajepromocion: req.body.procentajepromocion,
-        descuentolibrofan: req.body.descuentolibrofan,
-        minimocompra: req.body.minimocompra,
-        tasaimpuesto: req.body.tasaimpuesto,
-        correoadmin: req.body.correoadmin
+     
     });
 
     nuevoParametro.save(error => {
@@ -30,7 +25,7 @@ router.post('/registrar-parametros', (req, res) => {
 
 // http://localhost:3000/api/listar-parametros
 router.get('/listar-parametros', (req, res) => {
-    Parametros.find((error, lista) => {
+    Parametros.find((error, promociones) => {
         if (error) {
             res.json({
                 msj: 'No se pudo listar los Parametros',
@@ -38,7 +33,8 @@ router.get('/listar-parametros', (req, res) => {
             });
         } else {
             res.json({
-                lista
+                msj: 'Correo retornado correctamente',
+                promociones
             });
         }
     });
