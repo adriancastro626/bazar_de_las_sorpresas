@@ -55,12 +55,16 @@ const mostrarDatos = () => {
 
 
         let fila = cuerpoTabla.insertRow(); // CREO LA FILA
+        var nacimiento = moment(autor.nacimientoAutor).format("MM/DD/YYYY"); // CREO LA FILA
+        var defuncion = moment(autor.defuncionAutor).format("MM/DD/YYYY"); // CREO LA FILA
+
+
 
         fila.insertCell().innerText = autor.nombre;
         fila.insertCell().innerText = autor.apellido;
         fila.insertCell().innerText = autor.nacionalidad;
-        fila.insertCell().innerText = autor.nacimientoAutor;
-        fila.insertCell().innerText = autor.defuncionAutor;
+        fila.insertCell().innerText = nacimiento;
+        fila.insertCell().innerText = defuncion;
         fila.insertCell().innerText = autor.bibliografia;
         fila.insertCell().innerText = autor.adjunto;
 
