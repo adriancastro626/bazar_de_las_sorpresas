@@ -17,7 +17,7 @@ const inputContrasenna = document.getElementById('txt-contrasenna');
 const inputConfirmacionContrasenna = document.getElementById('txt-confirmacion');
 const inputAutores = document.getElementById('slt-autores');
 const inputDireccion = document.getElementById('direccion-exacta');
-const inputMapa = document.getElementById('mapa');
+const inputMapa = document.getElementById('txt-mapa');
 const inputFoto = document.getElementById('btn-foto');
 const btnRegistrar = document.getElementById('btn-registrar');
 

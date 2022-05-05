@@ -43,6 +43,8 @@ const mostrarDatos = () => {
 
             // Celda para los botones
             let celdaBotones = fila.insertCell();
+
+            // Boton para Eliminar
             let botonEliminar = document.createElement('button');
             botonEliminar.classList.add('btn-eliminar');
             botonEliminar.type = 'button';
@@ -52,6 +54,17 @@ const mostrarDatos = () => {
                 eliminarDatos('eliminar-usuario', usuario._id);
             });
 
+            // Boton para Editar
+            let botonEditar = document.createElement('button');
+            botonEditar.classList.add('btn-editar');
+            botonEditar.type = 'button';
+            botonEditar.textContent = 'Editar';
+            celdaBotones.appendChild(botonEditar);
+            botonEditar.addEventListener('click', () => {
+                window.location.href = 'editar_perfil.html';
+            });
+
+            celdaBotones.appendChild(botonEditar);
             celdaBotones.appendChild(botonEliminar);
 
         }

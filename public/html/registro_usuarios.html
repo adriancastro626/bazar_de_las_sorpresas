@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/registro_usuarios.css">
-    <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="/public/css/reset.css">
+    <link rel="stylesheet" href="/public/css/registro_usuarios.css">
+    <link rel="stylesheet" href="/public/css/footer.css">
+    <link rel="stylesheet" href="/public/css/header.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Asap:wght@400;600;700&display=swap" rel="stylesheet">
@@ -176,7 +176,7 @@
                     <div class="columna">
                         <div class="cont-control">
                             <label for="txt-mapa">Seleccione Ubicación</label>
-                            <div class="mapa">
+                            <div class="mapa" id="txt-mapa">
                                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15716.957693189064!2d-84.2172889!3d9.997071349999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2scr!4v1649369411565!5m2!1ses!2scr" width="200" height="100" style="border:0;"
                                     allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                             </div>
@@ -237,10 +237,10 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <!-- 2. Enlazar el servicio general que comunica con el servidor -->
-    <script src="../js/servicio-general.js"></script>
+    <script src="/public/servicesJS/servicio-general.js"></script>
 
     <!-- Enlazar los controladores de la página -->
-    <script src="../js/registro_usuarios.js"></script>
+    <script src="/public/controllerJS/registro_usuarios.js"></script>
 </body>
 
 </html>
