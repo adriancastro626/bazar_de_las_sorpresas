@@ -87,3 +87,16 @@ tr {
 .icono-editar {
     font-size: 20px;
 }
+
+.pagina-contenido {
+    max-width: 1300px !important;
+    min-width: 1300px !important;
+}
+
+td {
+    text-align: center;
+}
+
+.esconder {
+    display: none;
+}

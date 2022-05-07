@@ -115,13 +115,21 @@ const mostrarDatos = () => {
         botonEliminar.addEventListener("click", () => {
             Swal.fire({
                 'icon': 'error',
-                'title': 'Método eliminado!',
-                'text': 'Se ha eliminado el método de pago.'
+                'title': '¿Esta seguro que desea elminar el registro?',
+                'text': 'Esta acción es irreversible.'
             });
         })
 
     });
+    numFilas = cuerpoTabla.rows.length
+    for (let i = 0; i < numFilas; i++) {
 
+        celdaBiografia = cuerpoTabla.rows[i].cells[5];
+        celdaBiografia.style.display = 'none';
+
+        celdaFoto = cuerpoTabla.rows[i].cells[6];
+        celdaFoto.style.display = 'none';
+    }
 
 };
 
