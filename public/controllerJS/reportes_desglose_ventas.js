@@ -1,5 +1,5 @@
 const cuerpoTabla = document.querySelector("#tbl-ventas tbody");
-const botonBuscar = document.getElementById('#btn-Buscar');
+const botonBuscar = document.getElementById('btn-Buscar');
 const inputInicio = document.querySelector('#txt-fecha-inicio');
 const inputFin = document.querySelector('#txt-fecha-salida');
 // 
