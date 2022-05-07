@@ -14,7 +14,8 @@ router.post('/registrar-ventas', (req, res) => {
         descuento: req.body.descuento,
         grantotal: req.body.grantotal,
         descuentolibrofan: req.body.descuentolibrofan,
-        nombrelibro: req.body.nombrelibro
+        nombrelibro: req.body.nombrelibro,
+        sociocomercial: req.body.nombrelibro
     });
 
     nuevaVenta.save(error => {

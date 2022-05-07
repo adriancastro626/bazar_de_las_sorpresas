@@ -9,8 +9,8 @@ const schemaVentas = new mongoose.Schema({
     descuento: { type: Number },
     grantotal: { type: Number },
     descuentolibrofan: { type: Number },
-    nombrelibro: { type: String }
-
+    nombrelibro: { type: String },
+    sociocomercial: { type: String }
 });
 
 module.exports = new mongoose.model('Ventas', schemaVentas, 'ventas');
