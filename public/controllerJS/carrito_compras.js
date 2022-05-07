@@ -17,8 +17,6 @@ let compras = 0;
 let envio = 0;
 let impuesto = 0;
 let total = 0;
-let entrega = '';
-let isbn = [];
 let listaCarrito = [];
 let usuarioConectado = JSON.parse(localStorage.getItem('usuarioConectado'));
 
@@ -28,9 +26,11 @@ const mostrarMetodos = async() => {
     compras = 0;
 
     for (let i = 0; i < listaCarrito.length; i++) {
+        // listaCarrito.forEach(async(item) => {
         if (listaCarrito[i].correoUsuario.includes(filtro)) {
 
             let libro = await obtenerElemento(`obtener-libro-isbn/${listaCarrito[i].isbncarrito}`);
+            compras = compras + libro.precio;
 
             // Crear elementos HTML
             let contenedorItem = document.createElement('div');
@@ -71,13 +71,10 @@ const mostrarMetodos = async() => {
             contenedorItemInteriorDerecho.classList.add('caja-interior-derecha');
             contenedorNumeroItems.classList.add('cont-numero-items');
             cantidadItems.type = 'number';
-            cantidadItems.value = listaCarrito[i].cantidadcarrito;
+            // cantidadItems.placeholder = item.cantidadcarrito;
+            cantidadItems.placeholder = '1';
             cantidadItems.min = '1';
-            cantidadItems.name = 'input-cantidad';
             cantidadItems.id = 'input-cantidad';
-            cantidadItems.setAttribute('valor-anterior', listaCarrito[i].cantidadcarrito);
-            cantidadItems.setAttribute('isbn', libro.isbn);
-            cantidadItems.setAttribute('precio', libro.precio);
             botonEliminar.classList.add('btn-eliminar');
             sBotonEliminar.classList.add('span-boton');
             iconoEliminar.classList.add('fa-solid');
@@ -105,31 +102,6 @@ const mostrarMetodos = async() => {
             botonEliminar.addEventListener('click', () => {
                 notificarEliminacion();
             });
-
-            // Detecta actualizaciones en el numero de libros
-            cantidadItems.addEventListener('change', () => {
-                let itemPrecio = cantidadItems.getAttribute('precio');
-                let cantidadAnterior = cantidadItems.getAttribute('valor-anterior');
-                let cantidadActual = cantidadItems.value;
-                let isbnLibro = cantidadItems.getAttribute('isbn');
-
-                compras = compras + (cantidadActual - cantidadAnterior) * itemPrecio;
-                actualizarPago();
-                cantidadItems.setAttribute('valor-anterior', cantidadActual);
-
-                // for (let i = 0; i < isbn.length; i++) {
-                //     if (isbn[i].isbn = isbnLibro) {
-                //         isbn[i].cantidad = cantidadActual;
-                //     }
-                // }
-                // // isbn.forEach(item => {
-                // //     if (item.isbn = isbnLibro) {
-                // //         item.cantidad = cantidadActual;
-                // //     }
-                // // });
-            });
-
-            compras = compras + (libro.precio * cantidadItems.value);
         }
 
         actualizarPago();
@@ -140,6 +112,8 @@ const inicializar = async() => {
     listaCarrito = await obtenerDatos('mostrar-carrito');
     mostrarMetodos(listaCarrito);
 };
+
+
 
 const paginaSiguiente = () => {
     let navegar = { 'tipo': '', 'url': '' };
@@ -181,46 +155,17 @@ const actualizarPago = () => {
 
     if (radioEnvio[0].checked) {
         envio = 2000.00; //Tomar parámetro de la base de datos
-        entrega = 'Domicilio';
     } else {
         envio = 0.00;
-        entrega = 'Punto de Retiro';
     }
 
     indicadorCompras.textContent = `₡ ${compras}`;
     indicadorEnvio.textContent = `₡ ${envio}`;
     indicadorImpuestos.textContent = `₡ ${impuesto}`;
     indicadorTotal.textContent = `₡ ${compras + envio + impuesto}`;
-
-    let informacionCompra = {
-        'entrega': entrega,
-        'tarjeta': 0,
-        'compras': compras,
-        'descuento': 0,
-        'descuentoFan': 0,
-        'impuesto': impuesto,
-        'isbn': isbn,
-        'direccion': '',
-        'socio': ''
-    }
-    localStorage.setItem('informacionCompra', JSON.stringify(informacionCompra));
 };
 
 btnPagar.addEventListener('click', () => {
-
-    const cantidadesLibros = document.getElementsByName('input-cantidad');
-    cantidadesLibros.forEach(elemento => {
-
-        let cantidad = elemento.getAttribute('valor-anterior');
-        let isbnLibro = elemento.getAttribute('isbn');
-
-        isbn.push({
-            isbn: isbnLibro,
-            cantidad: cantidad
-        });
-    });
-
-    actualizarPago();
     window.location.href = paginaSiguiente().url;
 });
 
@@ -228,8 +173,8 @@ btnComprar.addEventListener('click', () => {
     window.location.href = 'pagina_principal.html';
 });
 
-document.body.addEventListener('change', () => {
-    actualizarPago();
-});
+// radioEnvio.addEventListener('change', () => {
+//     actualizarPago();
+// });
 
 inicializar();
