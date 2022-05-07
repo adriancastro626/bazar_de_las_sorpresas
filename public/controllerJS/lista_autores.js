@@ -1,7 +1,6 @@
 const cuerpoTabla = document.querySelector("#tbl-autores tbody");
-// 
-let lista = [];
 
+let lista = [];
 document.getElementById("btn-agregar-autor").addEventListener('click', () => {
     window.location.href = "registro_autor.html";
 
@@ -122,14 +121,21 @@ const mostrarDatos = () => {
 
     });
 
+    numFilas = cuerpoTabla.rows.length
+    for (let i = 0; i < numFilas; i++) {
 
+        celdaBiografia = cuerpoTabla.rows[i].cells[5];
+        celdaBiografia.style.display = 'none';
+
+        celdaFoto = cuerpoTabla.rows[i].cells[6];
+        celdaFoto.style.display = 'none';
+
+    }
 };
 
 
 
 function obtenerDatosTabla(nombre, fechanacimiento, fechadefuncion, nacionalidad, biografia, apellido, adjunto) {
-
-
 
     location.href = "perfil_autor.html?nombre=" + encodeURI(nombre) + '&fechanacimiento=' + encodeURI(fechanacimiento) + '&fechadefuncion=' + encodeURI(fechadefuncion) + '&nacionalidad=' + encodeURI(nacionalidad) + '&biografia=' + encodeURI(biografia) + '&apellido=' + encodeURI(apellido) + '&adjunto=' + encodeURI(adjunto);
 
