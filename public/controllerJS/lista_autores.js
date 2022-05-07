@@ -2,10 +2,10 @@ const cuerpoTabla = document.querySelector("#tbl-autores tbody");
 // 
 let lista = [];
 
-document.getElementById("btn-agregar-autor").addEventListener('click', () => {
-    window.location.href = "registro_autor.html";
+// document.getElementById("btn-agregar-autor").addEventListener('click', () => {
+//     window.location.href = "registro_autor.html";
 
-});
+// });
 
 const inicializar = async() => {
 
@@ -65,8 +65,8 @@ const mostrarDatos = () => {
         fila.insertCell().innerText = autor.nacionalidad;
         fila.insertCell().innerText = nacimiento;
         fila.insertCell().innerText = defuncion;
-        fila.insertCell().innerText = autor.bibliografia;
-        fila.insertCell().innerText = autor.adjunto;
+        fila.insertCell().innerText = autor.biografia;
+        fila.insertCell().innerText = autor.foto;
 
 
         fila.insertCell().appendChild(botonBiografia);

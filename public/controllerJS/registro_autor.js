@@ -6,7 +6,7 @@ const listaGenero = document.getElementById("slt-genero");
 const fechaNacimiento = document.getElementById("txt-nacimiento");
 const fechaDefuncion = document.getElementById("txt-defuncion");
 const inputBiografia = document.getElementById("txt-biografia");
-const input_foto = document.querySelector('#user-photo');
+const inputFoto = document.querySelector('#user-photo');
 
 
 const validar = () => {
@@ -58,6 +58,7 @@ const validar = () => {
         });
 
     } else {
+        registrarAutor();
         /* imprimir();
          Swal.fire({
              'icon': 'success',
@@ -66,8 +67,7 @@ const validar = () => {
          }).then(() => {
              window.location.href = 'lista_autores.html';
          });*/
-        registrarAutor();
-        imprimir();
+        // imprimir();
     }
 
 };
@@ -75,46 +75,43 @@ const validar = () => {
 
 
 
-const imprimir = () => {
-    let nombreAutor = inputNombreR.value;
-    let apellidoAutor = inputApellido.value;
-    let nacionalidad = listaGenero.value;
-    let nacimientoAutor = fechaNacimiento.value;
-    let defuncionAutor = fechaDefuncion.value;
-    let biografiaAutor = inputBiografia.value;
+// const imprimir = () => {
+//     let nombreAutor = inputNombreR.value;
+//     let apellidoAutor = inputApellido.value;
+//     let nacionalidad = listaGenero.value;
+//     let nacimientoAutor = fechaNacimiento.value;
+//     let defuncionAutor = fechaDefuncion.value;
+//     let biografiaAutor = inputBiografia.value;
 
 
 
 
-    console.log('El nombre del autor es', nombreAutor);
-    console.log('El apellido del autor es', apellidoAutor);
-    //    console.log('El genero del autor es', generoAutor)
-    console.log('La nacionalidad del autor es', nacionalidad);
-    console.log('El autor nacio en ', nacimientoAutor);
-    console.log('El autor fallecio en', defuncionAutor);
-    console.log("Esta es la biografia del autor", biografiaAutor);
+//     console.log('El nombre del autor es', nombreAutor);
+//     console.log('El apellido del autor es', apellidoAutor);
+//     //    console.log('El genero del autor es', generoAutor)
+//     console.log('La nacionalidad del autor es', nacionalidad);
+//     console.log('El autor nacio en ', nacimientoAutor);
+//     console.log('El autor fallecio en', defuncionAutor);
+//     console.log("Esta es la biografia del autor", biografiaAutor);
 
-};
+// };
 
 const registrarAutor = () => {
     let data = {
 
-        "adjunto": input_foto.src,
+        "foto": inputFoto.src,
         "nombre": inputNombreR.value,
         "apellido": inputApellido.value,
         "nacionalidad": listaGenero.value,
-        "nacimientoAutor": fechaNacimiento.value,
-        "defuncionAutor": fechaDefuncion.value,
-        "bibliografia": inputBiografia.value,
-
-
-
+        "nacimiento": fechaNacimiento.value,
+        "defuncion": fechaDefuncion.value,
+        "biografia": inputBiografia.value
     };
     registrarDatos('registrar-autor', data, 'lista_autores.html');
-}
+};
 
 btnRegistrar.addEventListener('click', () => {
-    imprimir();
+    // imprimir();
     validar();
 
 });
