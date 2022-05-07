@@ -1,152 +1,80 @@
-const listaLibrosEliminar = document.querySelector('.borrar-libro');
-const listagenerosModificar = document.querySelector('.editar-libro');
-
-
-// Función de evento para eliminar libros
-listaLibrosEliminar.addEventListener('click', () => {
-
-    Swal.fire({
-        title: 'Estás seguro?',
-        text: "No serás capaz de recuperar la información.",
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Si, eliminar',
-        cancelButtonText: 'Cancelar',
-    }).then((result) => {
-        if (result.isConfirmed) {
-            Swal.fire(
-                'Eliminado!',
-                'La información ha sido eliminada.',
-                'success'
-            )
-            console.log('Se eliminó el libro de la lista');
-        }
-    })
-});
-
-
-// Función de evento para modificar libros
-
-listagenerosModificar.addEventListener('click', () => {
-
-    console.log('Permitiendo la modificación del libro');
-    Swal.fire({
-        'icon': 'success',
-        'title': 'Modificar género',
-    }).then(() => {
-        listaGenerosCompleto.reset();
-    });
-});
-
 'use strict';
 
-const cuerpoTabla = document.querySelector('#tbl-libros tbody');
+const tablaLibros = document.querySelector('#tbl-libros tbody');
 let listaLibros = [];
 
-const inicializarLista = async() => {
+const inicializarLibros = async() =>{
     listaLibros = await obtenerListaLibros('/listar-libros');
-    mostrarTabla();
+    mostrarTablas();
 };
 
-const mostrarTabla = async() => {
-    cuerpoTabla.innerHTML = '';
-
-    listaLibros.forEach(libro => {
-        let fila = cuerpoTabla.insertRow();
-
-        fila.insertCell().innerText = libro.titulo;
-        fila.insertCell().innerText = libro.editorial;
-        fila.insertCell().innerText = libro.publicacion;
-        fila.insertCell().innerText = libro.autor;
-    });
+const inicializar = async()=>{
+    listaLibros = await obtenerListaLibros('/listar-libros');
+    mostrarLibros();
 };
 
-inicializarLista();
+const mostrarLibros =() => {
+    tablaLibros.innerHTML = '';
+    listaLibros.forEach(libros => {
+        let botonPerfil = document.createElement('button');
+        botonPerfil.name = 'boton-perfil';
+        botonPerfil.classList.add('fa-book');
+        botonPerfil.classList.add('fa-solid');
+        botonPerfil.classList.add('fa-1l');
+        botonPerfil.classList.add('icono-eliminar-modificar');
 
+        let botonEliminar = document.createElement('button');
+        botonEliminar.classList.add('fa-trash-can');
+        botonEliminar.classList.add('fa-solid');
+        botonEliminar.classList.add('fa-1l');
+        botonEliminar.classList.add('icono-eliminar-modificar');
+        botonEliminar.name = 'boton-eliminar';
 
-/*const listaLibrosEliminar = document.querySelector('.borrar-libro');
-const listagenerosModificar = document.querySelector('.editar-libro');
+        let fila = tablaLibros.insertRow();
+        
+        fila.insertCell().innerText = libros.titulo
+        fila.insertCell().innerText = libros.publicacion,
+        fila.insertCell().innerText = libros.autor,
+        fila.insertCell().innerText = libros.editorial,
+        fila.insertCell().innerText = libros.precio,
+        fila.insertCell().innerText = libros.isbn
 
+        let celdaEliminar = fila.insertCell();
+        celdaEliminar.appendChild(botonEliminar);
 
-// Función de evento para eliminar libros
-listaLibrosEliminar.addEventListener('click', () => {
+        botonEliminar.addEventListener('click', ()=> {
+            eliminarLibro('/eliminar-libro', libros._id);
+        });
 
-    Swal.fire({
-        title: '¿Estás seguro?',
-        text: "No serás capaz de recuperar la información.",
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Si, eliminar',
-        cancelButtonText: 'Cancelar',
-    }).then((result) => {
-        if (result.isConfirmed) {
-            Swal.fire(
-                'Eliminado',
-                'La información ha sido eliminada.',
-                'success'
-            )
-            console.log('Se eliminó el libro de la lista');
-        }
-    })
-});
+        let celdaPerfil = fila.insertCell();
+        celdaPerfil.appendChild(botonPerfil);
 
+        botonPerfil.addEventListener('click', () => {
+            let tituloLibro = '';
+            let nombreAutor = '';
+            let fechaPublicacion = '';
+            let nombreEditorial ='';
+            let precioLibro = '';
+            let isbnLibro = '';
 
-// Función de evento para modificar libros
+            
+            let indice = botonPerfil.parentNode.parentNode.rowIndex;
 
-listagenerosModificar.addEventListener('click', () => {
+            tituloLibro = document.getElementById('tbl-libros').rows[indice].cells[0].innerHTML
+            nombreAutor = document.getElementById('tbl-libros').rows[indice].cells[1].innerHTML
+            nombreEditorial = document.getElementById('tbl-libros').rows[indice].cells[2].innerHTML
+            precioLibro = document.getElementById('tbl-libros').rows[indice].cells[3].innerHTML
+            isbnLibro = document.getElementById('tbl-libros').rows[indice].cells[4].innerHTML
 
-    console.log('Permitiendo la modificación del libro');
-    Swal.fire({
-        'icon': 'success',
-        'title': 'Modificar género',
-    }).then(() => {
-        listaGenerosCompleto.reset();
-    });
+            obtenerLibros(tituloLibro, nombreAutor, nombreEditorial, precioLibro,isbnLibro);
+        });
+    });   
+};
 
-const listaLibrosEliminar = document.querySelector('.borrar-libro');
-const listagenerosModificar = document.querySelector('.editar-libro');
+function obtenerLibros(titulo, autor, editorial,precio, isbn) {
 
+    location.href = 'perfil_libro.html?titulo=' + encodeURI(titulo) + '&autor=' + encodeURI(autor) + '&editorial=' + encodeURI(editorial) + '&precio=' + encodeURI(precio) + '&isbn=' + encodeURI(isbn);
 
-// Función de evento para eliminar libros
-listaLibrosEliminar.addEventListener('click', () => {
+};
 
-    Swal.fire({
-        title: 'Estás seguro?',
-        text: "No serás capaz de recuperar la información.",
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Si, eliminar',
-        cancelButtonText: 'Cancelar',
-    }).then((result) => {
-        if (result.isConfirmed) {
-            Swal.fire(
-                'Eliminado!',
-                'La información ha sido eliminada.',
-                'success'
-            )
-            console.log('Se eliminó el libro de la lista');
-        }
-    })
-});
-
-
-// Función de evento para modificar libros
-
-listagenerosModificar.addEventListener('click', () => {
-
-    console.log('Permitiendo la modificación del libro');
-    Swal.fire({
-        'icon': 'success',
-        'title': 'Modificar género',
-    }).then(() => {
-        listaGenerosCompleto.reset();
-    });
-});
-
-});*/
+inicializar();

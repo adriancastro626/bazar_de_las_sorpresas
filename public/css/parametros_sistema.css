@@ -13,6 +13,15 @@ h2 {
     padding-bottom: 30px;
 }
 
+.icono-eliminar-modificar {
+    color: #FFB4A2;
+    background-color: transparent;
+    border: none;
+    font-size: 32px;
+    position: relative;
+    left:43%;
+}
+
 .parametros-sistema {
     margin: 20px 0 50px 0;
 }
@@ -41,12 +50,8 @@ thead td {
     text-align: center;
 }
 
-tr a {
+tr .icono-eliminar-modificar:hover {
     color: #6D6875;
-}
-
-tr a:hover {
-    color: #FFB4A2;
 }
 
 tr:nth-child(even) {
@@ -54,11 +59,11 @@ tr:nth-child(even) {
     color: #FFCDB2;
 }
 
-tr:nth-child(even) a {
-    color: #FFCDB2;
+tr:nth-child(even) .icono-eliminar-modificar  {
+    color: #FFB4A2;
 }
 
-tr:nth-child(even) a:hover {
+tr:nth-child(even) .icono-eliminar-modificar:hover {
     color: #FFFFFF;
 }
 

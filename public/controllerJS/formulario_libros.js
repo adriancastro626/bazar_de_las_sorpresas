@@ -141,7 +141,7 @@ const formLibroValidacion = () => {
             sipnosis: formLibroSinopsis.value
         };
 
-        registrarDatos(libro, '/registrar-libro');
+        registrarLibro(libro, '/registrar-libro')
 
         formLibroImprimir();
         Swal.fire({

@@ -127,41 +127,18 @@
 
                         <!-- Género literario -->
                         <div class="formulario-libros-espaciado-form">
-                            <label for="select-genero">Género literario</label>
-                            <select id="select-genero" name="select-genero">
-                                    <option value="0">Seleccione el género literario</option>
-                                    <option value="1">Ciencia Ficción</option>
-                                    <option value="2">Policiacos</option>
-                                    <option value="3">Infantil</option>
-                                    <option value="4">Poesía</option>
-                                    <option value="5">Novela</option>
-                                    <option value="6">Biografías</option>
-                                    <option value="7">Historia</option>
-                                    <option value="8">Autoayuda</option>
-                                </select>
+                            <label for="select-autor">Genero Literario</label>
+                            <div id="select-genero">
+
+                            </div>
                         </div>
 
                         <!-- Autor -->
                         <div class="formulario-libros-espaciado-form">
                             <label for="select-autor">Autor</label>
-                            <select id="select-autor" name="select-autor">
-                                <option value="0">Seleccione el autor</option>
-                                <option value="1">Isaac Asimov</option>
-                                <option value="2">Federico García Lorca</option>
-                                <option value="3">María Hesse</option>
-                                <option value="4">Paulo Coelho</option>
-                                <option value="5">Agatha Christie</option>
-                                <option value="6">Jane Austen</option>
-                                <option value="7">Joaquín Gutiérrez</option>
-                                <option value="8">Yuval Noah Harari</option>
-                                <option value="9">Peter Handke</option>
-                                <option value="10">Ismail Kadaré</option>
-                                <option value="11">Margaret Atwood</option>
-                                <option value="12">Hervé Le Tellier</option>
-                                <option value="13">Han Kang</option>
-                                <option value="14">Inés Martín Rodrigo</option>
-                                <option value="15">Robert Santiago </option>
-                            </select>
+                            <div id="select-autor">
+
+                            </div>
                         </div>
 
                         <!-- ISBN -->
@@ -187,11 +164,9 @@
                         <!-- Descuentos -->
                         <div class="formulario-libros-espaciado-form">
                             <label for="select-descuento">Descuento (Opcional)</label>
-                            <select id="select-descuento" name="select-descuento">
-                                    <option value="0">Ninguno</option>
-                                    <option value="1">Día de la madre</option>
-                                    <option value="2">Libros de cuentos</option>
-                                </select>
+                            <div id="select-promocion">
+
+                            </div>
                         </div>
 
                         <!-- Premios -->
@@ -286,9 +261,12 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="../controllerJS/informacion_libros.js"></script>
+    <script src="../controllerJS/servicio_parametros.js"></script>
     <script src="../controllerJS/img-libros.js"></script>
     <script src="../controllerJS/formulario_libros.js"></script>
+    <script src="../controllerJS/seleccion_libros.js"></script>
+    <script src="../controllerJS/seleccion_promociones.js"></script>
+    <script src="../controllerJS/seleccion_autores.js"></script>
 </body>
 
 </html>

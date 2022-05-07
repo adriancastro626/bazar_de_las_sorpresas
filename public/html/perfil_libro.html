@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil de libro</title>
     <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/estilos_general.css">
     <link rel="stylesheet" href="../css/perfil_libro.css">
     <link rel="stylesheet" href="../css/footer.css">
@@ -125,13 +125,13 @@
                     <!-- Información libro -->
                     <div class="perfil-libro-info">
                         <h2>Autor</h2>
-                        <p>Yuval Noa Harari</p>
+                        <p><label id="autor"></label></p>
                         <h2>Publicación</h2>
-                        <p>2011</p>
+                        <p></p>
                         <h2>Editorial</h2>
-                        <p>Debate</p>
+                        <p><label id="editorial"></label></p>
                         <h2>ISBN</h2>
-                        <p>9788499924212</p>
+                        <p><label id="isbn"></label></p>
                         <h2>Género literario</h2>
                         <p>Historia</p>
                         <h2>Premios</h2>
@@ -143,13 +143,14 @@
 
                 <div class="perfil-libro-columna-der">
 
-                    <h1>Sapiens: De animales a dioses</h1>
-
+                    <h1><label id="titulo"></label></h1>
+                    
+                
                     <!-- Venta -->
                     <div class="perfil-libro-venta">
                         <div class="perfil-libro-venta-precio">
                             <h2>Precio</h2>
-                            <p>₡18,000.00</p>
+                            <p>₡<label id="precio"></label></p>
                         </div>
                         <div class="perfil-libro-venta-descuento">
                             <h2>Descuento</h2>
@@ -293,8 +294,9 @@
             </div>
         </footer>
     </div>
-    <script src="../js/editar_perfil.js"></script>
-
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../controllerJS/servicio_parametros.js"></script>
+    <script src="../controllerJS/perfil_libro.js"></script>
 </body>
 
 </html>
