@@ -24,6 +24,26 @@ const registrarDatos = async(endpoint, data, redireccion) => {
 
 };
 
+const registrarDatosSimple = async(endpoint, data) => {
+    let url = `http://localhost:3000/api/${endpoint}`;
+
+    await axios({
+        'url': url,
+        'method': 'post',
+        'responseType': 'json',
+        'data': data
+    }).then(response => {
+        //PLACEHOLDER
+    }).catch(error => {
+        Swal.fire({
+            'icon': 'error',
+            'title': 'Ha ocurrido un error',
+            'text': error
+        })
+    });
+
+};
+
 const obtenerDatos = async(endpoint) => {
     let url = `http://localhost:3000/api/${endpoint}`;
     let listaDatos = [];

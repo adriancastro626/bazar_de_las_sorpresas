@@ -17,6 +17,8 @@ let compras = 0;
 let envio = 0;
 let impuesto = 0;
 let total = 0;
+let entrega = '';
+let isbn = [];
 let listaCarrito = [];
 let usuarioConectado = JSON.parse(localStorage.getItem('usuarioConectado'));
 
@@ -26,11 +28,11 @@ const mostrarMetodos = async() => {
     compras = 0;
 
     for (let i = 0; i < listaCarrito.length; i++) {
-        // listaCarrito.forEach(async(item) => {
         if (listaCarrito[i].correoUsuario.includes(filtro)) {
 
             let libro = await obtenerElemento(`obtener-libro-isbn/${listaCarrito[i].isbncarrito}`);
             compras = compras + libro.precio;
+            isbn.push(listaCarrito[i].isbncarrito);
 
             // Crear elementos HTML
             let contenedorItem = document.createElement('div');
@@ -155,14 +157,28 @@ const actualizarPago = () => {
 
     if (radioEnvio[0].checked) {
         envio = 2000.00; //Tomar parámetro de la base de datos
+        entrega = 'Domicilio';
     } else {
         envio = 0.00;
+        entrega = 'Punto de Retiro';
     }
 
     indicadorCompras.textContent = `₡ ${compras}`;
     indicadorEnvio.textContent = `₡ ${envio}`;
     indicadorImpuestos.textContent = `₡ ${impuesto}`;
     indicadorTotal.textContent = `₡ ${compras + envio + impuesto}`;
+
+    let informacionCompra = {
+        'entrega': entrega,
+        'tarjeta': 0,
+        'compras': compras,
+        'descuento': 0,
+        'descuentoFan': 0,
+        'impuesto': impuesto,
+        'isbn': isbn,
+        'direccion': ''
+    }
+    localStorage.setItem('informacionCompra', JSON.stringify(informacionCompra));
 };
 
 btnPagar.addEventListener('click', () => {
@@ -173,8 +189,8 @@ btnComprar.addEventListener('click', () => {
     window.location.href = 'pagina_principal.html';
 });
 
-// radioEnvio.addEventListener('change', () => {
-//     actualizarPago();
-// });
+document.body.addEventListener('change', () => {
+    actualizarPago();
+});
 
 inicializar();
