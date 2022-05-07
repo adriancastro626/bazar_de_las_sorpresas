@@ -103,7 +103,8 @@ const guardarVentas = async() => {
             "descuento": informacionCompra.descuento,
             "grantotal": 0,
             "descuentolibrofan": informacionCompra.descuentoFan,
-            "nombrelibro": libro.titulo
+            "nombrelibro": libro.titulo,
+            "sociocomercial": informacionCompra.socio
         };
 
         registrarDatosSimple('registrar-ventas', registroVenta);

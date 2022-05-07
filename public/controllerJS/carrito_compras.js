@@ -31,8 +31,6 @@ const mostrarMetodos = async() => {
         if (listaCarrito[i].correoUsuario.includes(filtro)) {
 
             let libro = await obtenerElemento(`obtener-libro-isbn/${listaCarrito[i].isbncarrito}`);
-            compras = compras + libro.precio;
-            isbn.push(listaCarrito[i].isbncarrito);
 
             // Crear elementos HTML
             let contenedorItem = document.createElement('div');
@@ -73,10 +71,13 @@ const mostrarMetodos = async() => {
             contenedorItemInteriorDerecho.classList.add('caja-interior-derecha');
             contenedorNumeroItems.classList.add('cont-numero-items');
             cantidadItems.type = 'number';
-            // cantidadItems.placeholder = item.cantidadcarrito;
-            cantidadItems.placeholder = '1';
+            cantidadItems.value = listaCarrito[i].cantidadcarrito;
             cantidadItems.min = '1';
+            cantidadItems.name = 'input-cantidad';
             cantidadItems.id = 'input-cantidad';
+            cantidadItems.setAttribute('valor-anterior', listaCarrito[i].cantidadcarrito);
+            cantidadItems.setAttribute('isbn', libro.isbn);
+            cantidadItems.setAttribute('precio', libro.precio);
             botonEliminar.classList.add('btn-eliminar');
             sBotonEliminar.classList.add('span-boton');
             iconoEliminar.classList.add('fa-solid');
@@ -104,6 +105,31 @@ const mostrarMetodos = async() => {
             botonEliminar.addEventListener('click', () => {
                 notificarEliminacion();
             });
+
+            // Detecta actualizaciones en el numero de libros
+            cantidadItems.addEventListener('change', () => {
+                let itemPrecio = cantidadItems.getAttribute('precio');
+                let cantidadAnterior = cantidadItems.getAttribute('valor-anterior');
+                let cantidadActual = cantidadItems.value;
+                let isbnLibro = cantidadItems.getAttribute('isbn');
+
+                compras = compras + (cantidadActual - cantidadAnterior) * itemPrecio;
+                actualizarPago();
+                cantidadItems.setAttribute('valor-anterior', cantidadActual);
+
+                // for (let i = 0; i < isbn.length; i++) {
+                //     if (isbn[i].isbn = isbnLibro) {
+                //         isbn[i].cantidad = cantidadActual;
+                //     }
+                // }
+                // // isbn.forEach(item => {
+                // //     if (item.isbn = isbnLibro) {
+                // //         item.cantidad = cantidadActual;
+                // //     }
+                // // });
+            });
+
+            compras = compras + (libro.precio * cantidadItems.value);
         }
 
         actualizarPago();
@@ -114,8 +140,6 @@ const inicializar = async() => {
     listaCarrito = await obtenerDatos('mostrar-carrito');
     mostrarMetodos(listaCarrito);
 };
-
-
 
 const paginaSiguiente = () => {
     let navegar = { 'tipo': '', 'url': '' };
@@ -176,12 +200,27 @@ const actualizarPago = () => {
         'descuentoFan': 0,
         'impuesto': impuesto,
         'isbn': isbn,
-        'direccion': ''
+        'direccion': '',
+        'socio': ''
     }
     localStorage.setItem('informacionCompra', JSON.stringify(informacionCompra));
 };
 
 btnPagar.addEventListener('click', () => {
+
+    const cantidadesLibros = document.getElementsByName('input-cantidad');
+    cantidadesLibros.forEach(elemento => {
+
+        let cantidad = elemento.getAttribute('valor-anterior');
+        let isbnLibro = elemento.getAttribute('isbn');
+
+        isbn.push({
+            isbn: isbnLibro,
+            cantidad: cantidad
+        });
+    });
+
+    actualizarPago();
     window.location.href = paginaSiguiente().url;
 });
 

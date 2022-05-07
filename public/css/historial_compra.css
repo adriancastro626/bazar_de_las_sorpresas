@@ -29,12 +29,11 @@ h1 {
 /* Estilos de la tabla */
 
 
-/* .tbl-compras {
-    width: 900px;
-} */
-
-
 /* Encabezado */
+
+.tbl-compras {
+    width: 100%;
+}
 
 th {
     background-color: #FFB4A2;
@@ -42,6 +41,8 @@ th {
     font-weight: bold;
     color: #6D6875;
     border: 2px solid #fff;
+    min-width: 100px;
+    max-width: 200px;
 }
 
 .cont-encabezado {
