@@ -12,11 +12,13 @@ let obtenerAcceso = () => {
     let usuarioAceptado = false;
 
     if (!errorBlancos) {
-        usuarioAceptado = validar_credenciales(pcorreo, pcontrasenna);
-        if (usuarioAceptado) {
-            window.location.href = 'pagina_principal.html';
-        }
+        usuarioAceptado = validar_credenciales(correousuario, contrasenna);
+        let user = localStorage.getItem(correousuario);
+        let data = JSON.parse(user);
+        console.log(data);
     }
+
+
 
 };
 
@@ -24,7 +26,7 @@ const validar = (susuario, scontrasenna) => {
 
     let error = false;
 
-    if (susuario || scontrasenna == '') {
+    if (susuario == '' || scontrasenna == '') {
         error = true;
         inputUsuario.classList.add('input-error');
         inputContrasenna.classList.add('input-error');
@@ -33,21 +35,7 @@ const validar = (susuario, scontrasenna) => {
         inputContrasenna.classList.remove('input-error');
     }
 
-    if (error == true) {
-        Swal.fire({
-            'icon': 'warning',
-            'title': 'Ingrese usuario y/o contraseña valido',
-            'text': ''
-        });
 
-    } else {
-        Swal.fire({
-            'icon': 'success',
-            'title': 'Saludos',
-            'text': 'El Bazar de las Sorpresas'
-        });
-
-    }
 
     return error;
 

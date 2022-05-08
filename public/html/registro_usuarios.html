@@ -59,7 +59,7 @@
 
                         <div class="cont-control">
                             <label for="txt-nacimiento">Fecha de nacimiento</label>
-                            <input id="txt-nacimiento" type="date">
+                            <input id="txt-nacimiento" type="date" min="0" max="120">
                         </div>
                     </div>
 
@@ -93,6 +93,7 @@
                         </div>
                         <div class="cont-control">
                             <label for="btn-foto">Foto de Perfil</label>
+                            <img id="user-foto">
                             <input type="file" id="btn-foto" name="file-foto" multiple>
                         </div>
                     </div>
@@ -114,7 +115,7 @@
                             <input id="txt-contrasenna" type="password">
                         </div>
                         <div class="cont-control">
-                            <label for="txt-confirmacion">Confirmacion</label>
+                            <label for="txt-confirmacion">Confirmación</label>
                             <input id="txt-confirmacion" type="password">
                         </div>
                     </div>
@@ -236,11 +237,13 @@
     <!-- 1. Cargar bibliotecas externas -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
     <!-- 2. Enlazar el servicio general que comunica con el servidor -->
     <script src="/public/servicesJS/servicio-general.js"></script>
 
     <!-- Enlazar los controladores de la página -->
     <script src="/public/controllerJS/registro_usuarios.js"></script>
+    <script src="/public/controllerJS/servicio-imagenes-usuario.js"></script>
 </body>
 
 </html>

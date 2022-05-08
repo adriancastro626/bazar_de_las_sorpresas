@@ -103,6 +103,22 @@ const validar_credenciales = (pcorreo, pcontrasenna) => {
         }
     });
     peticion.done((response) => {
+        if (response.success == true) {
+            Swal.fire({
+                'icon': 'success',
+                'title': 'Saludos',
+                'text': 'El Bazar de las Sorpresas'
+            }).then(() => {
+                window.location.href = 'pagina_principal.html';
+
+            });
+        } else {
+            Swal.fire({
+                'icon': 'warning',
+                'title': 'Ingrese usuario y/o contraseña valido',
+                'text': ''
+            });
+        }
         respuesta = response;
         sessionStorage.setItem('conectado', response.success);
     });
