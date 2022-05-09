@@ -33,6 +33,9 @@ const mostrarMetodos = async() => {
         if (listaCarrito[i].correoUsuario.includes(filtro)) {
 
             let libro = await obtenerElemento(`obtener-libro-isbn/${listaCarrito[i].isbncarrito}`);
+            console.log(libro);
+            compras = compras + libro.precio;
+
 
             // Crear elementos HTML
             let contenedorItem = document.createElement('div');

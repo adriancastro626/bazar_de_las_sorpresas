@@ -84,7 +84,7 @@ const obtenerDescuento = async(pendPoint) => {
 
 };
 
-const obtenerCompra = async(pendPoint) => {
+const obtenerMinimo = async(pendPoint) => {
     let url = 'http://localhost:3000/api';
     url += pendPoint;
 

@@ -175,9 +175,9 @@ const formLibroValidacion = () => {
                 'icon': 'success',
                 'title': 'Libro registrado',
             })
-            // .then(() => {
-            //     window.location.href = 'lista_libros.html';
-            // });
+             .then(() => {
+                 window.location.href = 'lista_libros.html';
+             });
     }
 
 };
