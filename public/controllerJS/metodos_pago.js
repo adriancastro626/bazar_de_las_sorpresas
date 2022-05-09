@@ -6,6 +6,9 @@ let listaMetodos = [];
 let usuarioConectado = JSON.parse(localStorage.getItem('usuarioConectado'));
 let tipoEntrega = JSON.parse(localStorage.getItem('tipoEntrega'));
 let tarjeta = '';
+let informacionCompra = JSON.parse(localStorage.getItem('informacionCompra'));
+let listaCarrito = informacionCompra.isbn;
+let pedido = (Math.floor(Math.random() * 10000) + 10000).toString().substring(1);
 
 const inicializar = async() => {
     listaMetodos = await obtenerDatos('listar-tarjetas');
@@ -14,8 +17,8 @@ const inicializar = async() => {
 
 const mostrarMetodos = () => {
     let contador = 0;
-    // let filtro = usuarioConectado.correo;
-    let filtro = "prueba@gmail.com";
+    let filtro = usuarioConectado.correousuario;
+    // let filtro = "prueba@gmail.com";
     listaMetodos.forEach(metodo => {
         if (metodo.correousuario.includes(filtro)) {
             let nombreMetodo = definirNombreMetodo(metodo.numtarjeta);
@@ -26,6 +29,7 @@ const mostrarMetodos = () => {
             radioInput.type = 'radio';
             radioInput.name = 'seleccion-metodo';
             radioInput.id = 'radio-' + nombreMetodo;
+            radioInput.setAttribute('tarjeta', metodo.numtarjeta);
             radioInput.value = toString(contador);
             radioInput.classList.add('radio-metodo');
             (metodo.favorito || contador == 1) ? radioInput.checked = true: radioInput.checked = false;
@@ -34,8 +38,6 @@ const mostrarMetodos = () => {
             radioLabel.appendChild(document.createTextNode(nombreMetodo));
 
             obtenerMetodos.appendChild(radioLabel);
-
-            if (radioInput.checked) { tarjeta = metodo.numtarjeta }
         }
     });
 };
@@ -52,25 +54,61 @@ const definirNombreMetodo = (numeroTarjeta) => {
     return nombreMetodo;
 };
 
-const guardarHistorial = () => {
-    let registroHistorial = {
-        "correousuario": '',
-        "metodopago": tarjeta,
-        "nombrelibro": '',
-        "numeropedido": 0,
-        "isbnhistorial": 0,
-        "fechacompra": new Date(),
-        "costo": 0,
-        "estado": 'Enviado',
-        "entrega": tipoEntrega.tipo,
-        "calificacion": 5,
-        "comentario": ''
+const obtenerSeleccionMetodo = () => {
+    const metodos = document.getElementsByName('seleccion-metodo');
+    metodos.forEach(metodo => {
+        if (metodo.checked) {
+            tarjeta = metodo.getAttribute('tarjeta');
+            console.log(tarjeta);
+        }
+    });
+};
 
+const guardarHistorial = async() => {
+
+    for (let i = 0; i < listaCarrito.length; i++) {
+        let libro = await obtenerElemento(`obtener-libro-isbn/${listaCarrito[i]}`);
+
+        let registroHistorial = {
+            "correousuario": usuarioConectado.correousuario,
+            // "correousuario": "prueba@gmail.com",
+            "metodopago": tarjeta,
+            "nombrelibro": libro.titulo,
+            "autor": libro.autor,
+            "numeropedido": pedido,
+            "isbnhistorial": listaCarrito[i],
+            "fechacompra": new Date(),
+            "costo": libro.precio,
+            "estado": 'Pendiente',
+            "entrega": tipoEntrega.tipo,
+            "calificacion": 4,
+            "comentario": 'N/A'
+        };
+
+        registrarDatosSimple('registrar-historial', registroHistorial);
     };
 };
 
-const guardarVentas = () => {
+const guardarVentas = async() => {
+    for (let i = 0; i < listaCarrito.length; i++) {
+        let libro = await obtenerElemento(`obtener-libro-isbn/${listaCarrito[i]}`);
 
+        let registroVenta = {
+            "correousuario": usuarioConectado.correousuario,
+            // "correousuario": "prueba@gmail.com",
+            "numeropedido": pedido,
+            "fecha": new Date(),
+            "costobruto": informacionCompra.compras,
+            "costoneto": (informacionCompra.compras + informacionCompra.impuesto - informacionCompra.descuento - informacionCompra.descuentoFan),
+            "descuento": informacionCompra.descuento,
+            "grantotal": 0,
+            "descuentolibrofan": informacionCompra.descuentoFan,
+            "nombrelibro": libro.titulo,
+            "sociocomercial": informacionCompra.socio
+        };
+
+        registrarDatosSimple('registrar-ventas', registroVenta);
+    };
 };
 
 const generarFactura = () => {
@@ -82,7 +120,7 @@ btnAtras.addEventListener('click', () => {
 });
 
 btnContinuar.addEventListener('click', () => {
-    localStorage.setItem('numeroTarjeta', JSON.stringify(tarjeta));
+    obtenerSeleccionMetodo();
     guardarHistorial();
     guardarVentas();
     // PLACEHOLDER: Generar factura
