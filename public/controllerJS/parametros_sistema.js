@@ -227,3 +227,6 @@ listaPromosModificar.addEventListener('click', () => {
     });
 
 });
+
+
+

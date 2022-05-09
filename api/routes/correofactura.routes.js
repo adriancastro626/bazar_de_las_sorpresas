@@ -21,4 +21,19 @@ router.post('/registrar-correoadmin', (req, res) => {
     });
 });
 
+router.get('/listar-correoadmin', (req, res) => {
+    Correofactura.find((error, correoadmin) => {
+        if (error) {
+            res.json({
+                msj: 'No se pudo listar el Correo Admin',
+                error
+            });
+        } else {
+            res.json({
+                correoadmin
+            });
+        }
+    });
+});
+
 module.exports = router;

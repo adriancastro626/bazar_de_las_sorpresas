@@ -12,6 +12,7 @@ const btnComprar = document.getElementById('btn-seguir-comprando');
 // Elementos de la lista de compras
 const contenedorExterno = document.getElementById('cont-items');
 
+
 // Variables
 let compras = 0;
 let envio = 0;

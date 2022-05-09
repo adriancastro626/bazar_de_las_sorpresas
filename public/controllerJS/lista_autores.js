@@ -114,8 +114,8 @@ const mostrarDatos = () => {
         botonEliminar.addEventListener("click", () => {
             Swal.fire({
                 'icon': 'error',
-                'title': 'Método eliminado!',
-                'text': 'Se ha eliminado el método de pago.'
+                'title': '¡Registro eliminado!',
+                'text': 'Se ha eliminado el registro'
             });
         })
 

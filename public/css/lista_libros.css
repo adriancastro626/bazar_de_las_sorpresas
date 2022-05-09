@@ -26,6 +26,15 @@ form {
     margin-bottom: 20px;
 }
 
+.icono-eliminar-modificar {
+    color: #FFB4A2;
+    background-color: transparent;
+    border: none;
+    font-size: 32px;
+    position: relative;
+    left: 33%;
+}
+
 
 /* Botones (incluye visitar perfil de libro) */
 
@@ -73,21 +82,41 @@ form {
 /*Estilos de tabla*/
 
 table {
-    width: 98.5%;
+    border-collapse: collapse;
+    width: 100%;
 }
 
 td {
+    border: 4px solid #636069;
     padding: 8px;
     text-align: left;
+    vertical-align: middle;
 }
 
-tr {
+thead {
+    font-size: 22px;
+    font-weight: 900;
+}
+
+thead td {
+    text-align: center;
+}
+
+tr .icono-eliminar-modificar:hover {
+    color: #6D6875;
+}
+
+tr:nth-child(even) {
     background-color: #6D6875;
     color: #FFCDB2;
 }
 
-.tabla-titulos {
-    font-weight: bold;
+tr:nth-child(even) .icono-eliminar-modificar {
+    color: #FFB4A2;
+}
+
+tr:nth-child(even) .icono-eliminar-modificar:hover {
+    color: #FFFFFF;
 }
 
 .lista-libros-sinopsis {
@@ -101,6 +130,10 @@ tr {
     padding: 10px 0 20px 0;
     text-decoration: none;
     text-align: end;
+}
+
+.oculto {
+    display: none;
 }
 
 

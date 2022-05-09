@@ -58,7 +58,6 @@ app.use('/api', require('./routes/generosliterarios.routes'));
 app.use('/api', require('./routes/historialcompras.routes'));
 app.use('/api', require('./routes/libros.routes'));
 app.use('/api', require('./routes/metodospago.routes'));
-app.use('/api', require('./routes/parametros.routes'));
 app.use('/api', require('./routes/usuarios.routes'));
 app.use('/api', require('./routes/ventas.routes'));
 app.use('/api', require('./routes/promociones.routes'));

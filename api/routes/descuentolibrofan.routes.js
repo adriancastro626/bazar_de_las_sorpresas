@@ -22,4 +22,20 @@ router.post('/registrar-descuentofan', (req, res) =>{
     });
 });
 
+router.get('/listar-descuentofan', (req, res) => {
+    Descuentofan.find((error, descuentolibrofan, minimocompra) => {
+        if (error) {
+            res.json({
+                msj: 'No se pudo listar el descuento librofan',
+                error
+            });
+        } else {
+            res.json({
+                descuentolibrofan,
+                minimocompra
+            });
+        }
+    });
+});
+
 module.exports = router;

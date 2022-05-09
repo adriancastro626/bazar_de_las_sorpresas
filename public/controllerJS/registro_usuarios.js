@@ -17,7 +17,7 @@ const inputContrasenna = document.getElementById('txt-contrasenna');
 const inputConfirmacionContrasenna = document.getElementById('txt-confirmacion');
 const inputAutores = document.getElementById('slt-autores');
 const inputDireccion = document.getElementById('direccion-exacta');
-const inputMapa = document.getElementById('txt-mapa');
+const inputMapa = document.getElementById('coordinates');
 const inputFoto = document.getElementById('btn-foto');
 const btnRegistrar = document.getElementById('btn-registrar');
 
@@ -51,6 +51,32 @@ selectCantones.addEventListener('change', () => {
 });
 
 // Fin API para seleccionar Provincia, Canton, Distrito
+
+// Mapa
+
+// Inicializar mapa
+mapboxgl.accessToken = 'pk.eyJ1IjoiZ2FoZWVsIiwiYSI6ImNsMnB1MjdhZDJvcHMzanNiaTdybTR0MXIifQ.R9Uyo4zTtxYTkqjcLJ-7gw';
+const coordinates = document.getElementById('coordinates');
+const map = new mapboxgl.Map({
+    container: 'mapa', // container ID
+    style: 'mapbox://styles/mapbox/streets-v11', // style URL
+    center: [-84.107337, 9.936220], // starting position [lng, lat] -74.5, 40
+    zoom: 9 // starting zoom
+});
+
+const marker = new mapboxgl.Marker({
+        draggable: true
+    })
+    .setLngLat([-84.107337, 9.936220])
+    .addTo(map);
+
+function onDragEnd() {
+    const lngLat = marker.getLngLat();
+    coordinates.style.display = 'block';
+    coordinates.innerHTML = `Longitude: ${lngLat.lng}<br />Latitude: ${lngLat.lat}`;
+}
+
+marker.on('dragend', onDragEnd);
 
 //Registro de Usuario
 
@@ -296,7 +322,8 @@ const registrarUsuario = () => {
         "provincia": selectProvincias.value,
         "canton": selectCantones.value,
         "distrito": selectDistritos.value,
-        "direccion": inputDireccion.value
+        "direccion": inputDireccion.value,
+        "mapa": inputMapa.value
 
     };
     let json = JSON.stringify(data);

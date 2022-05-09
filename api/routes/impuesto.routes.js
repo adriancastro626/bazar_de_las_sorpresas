@@ -21,17 +21,16 @@ router.post('/registrar-impuesto', (req, res) => {
     });
 });
 
-// http://localhost:3000/api/obtener-impuestos
-router.get('/obtener-impuestos', (req, res) => {
-    Impuesto.find((error, lista) => {
+router.get('/listar-impuesto', (req, res) => {
+    Impuesto.find((error, impuesto) => {
         if (error) {
             res.json({
-                msj: 'No se pudo mostrar el Historial',
+                msj: 'No se pudo mostrar la tasa deimpuesto',
                 error
             });
         } else {
             res.json({
-                lista
+                impuesto
             });
         }
     });
