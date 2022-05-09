@@ -2,7 +2,7 @@ let usuarioConectado = JSON.parse(localStorage.getItem('usuarioConectado'));
 const perfilModificar = document.querySelector('.span-boton');
 
 
-document.getElementById('campo-nombre-lateral').textContent = usuarioConectado.nombre;
+document.getElementById('campo-nombre-lateral').textContent = usuarioConectado.primernombre;
 document.getElementById('campo-correo-lateral').textContent = usuarioConectado.correo;
 document.getElementById('campo-nombre').textContent = usuarioConectado.nombre;
 document.getElementById('campo-segundoNombre').textContent = usuarioConectado.segundoNombre;
