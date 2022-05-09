@@ -51,6 +51,15 @@ input[type="text"] {
     border-radius: 6px;
 }
 
+.icono-eliminar-modificar {
+    color: #FFB4A2;
+    background-color: transparent;
+    border: none;
+    font-size: 32px;
+    position: relative;
+    left:43%;
+}
+
 form {
     margin-bottom: 20px;
 }
@@ -75,12 +84,8 @@ td {
     vertical-align: middle;
 }
 
-tr a {
+tr .icono-eliminar-modificar:hover {
     color: #6D6875;
-}
-
-tr a:hover {
-    color: #FFB4A2;
 }
 
 tr:nth-child(even) {
@@ -88,11 +93,11 @@ tr:nth-child(even) {
     color: #FFCDB2;
 }
 
-tr:nth-child(even) a {
-    color: #FFCDB2;
+tr:nth-child(even) .icono-eliminar-modificar  {
+    color: #FFB4A2;
 }
 
-tr:nth-child(even) a:hover {
+tr:nth-child(even) .icono-eliminar-modificar:hover {
     color: #FFFFFF;
 }
 

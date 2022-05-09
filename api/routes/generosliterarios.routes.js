@@ -22,7 +22,7 @@ router.post('/registrar-generoliterario', (req, res) => {
     });
 });
 
-// http://localhost:3000/api/listar-generosliterarios
+// http://localhost:3000/api/listar-
 router.get('/listar-generosliterarios', (req, res) => {
     Generosliterarios.find((error, generos) => {
         if (error) {

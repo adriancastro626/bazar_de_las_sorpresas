@@ -1,3 +1,4 @@
+'use strict';
 const express = require('express');
 const router = express.Router();
 const Libro = require('../models/libros.model');
@@ -6,13 +7,16 @@ const Libro = require('../models/libros.model');
 router.post('/registrar-libro', (req, res) => {
     let nuevoLibro = new Libro({
         titulo: req.body.titulo,
-        autor: req.body.autor,
         editorial: req.body.editorial,
-        fotos: req.body.fotos,
+        portada: req.body.portada,
+        contraportada: req.body.contraportada,
         precio: req.body.precio,
         publicacion: req.body.publicacion,
-        premios: req.body.premios,
+        genero: req.body.genero,
+        autor: req.body.autor,
+        descuento: req.body.descuento,
         isbn: req.body.isbn,
+        premios: req.body.premios,
         sipnosis: req.body.sipnosis
     });
 

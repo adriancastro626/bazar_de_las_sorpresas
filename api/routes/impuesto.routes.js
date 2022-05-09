@@ -21,5 +21,19 @@ router.post('/registrar-impuesto', (req, res) => {
     });
 });
 
+router.get('/listar-impuesto', (req, res) => {
+    Impuesto.find((error, impuesto) => {
+        if (error) {
+            res.json({
+                msj: 'No se pudo mostrar la tasa deimpuesto',
+                error
+            });
+        } else {
+            res.json({
+                impuesto
+            });
+        }
+    });
+});
 
 module.exports = router;

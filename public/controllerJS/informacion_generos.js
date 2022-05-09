@@ -16,17 +16,27 @@ const mostrarTablas = async()=>{
 
         fila.insertCell().innerText = generosliterarios.nombregenero
 
-        let celdaBotones = fila.insertCell();
+        let celdaEliminar = fila.insertCell();
+        let celdaModificar = fila.insertCell();
 
         let botonEliminar = document.createElement('button');
-        botonEliminar.classList.add('btn-eliminar');
-        botonEliminar.innerHTML = 'Eliminar';
+        botonEliminar.classList.add('fa-trash-can');
+        botonEliminar.classList.add('fa-solid');
+        botonEliminar.classList.add('fa-1l');
+        botonEliminar.classList.add('icono-eliminar-modificar');
+
+        let botonModificar = document.createElement('button');
+        botonModificar.classList.add('fa-pen-to-square');
+        botonModificar.classList.add('fa-solid');
+        botonModificar.classList.add('fa-1l');
+        botonModificar.classList.add('icono-eliminar-modificar');
 
         botonEliminar.addEventListener('click', ()=> {
             eliminarGenero('/eliminar-generoliterario', generosliterarios._id);
         });
 
-        celdaBotones.appendChild(botonEliminar);
+        celdaEliminar.appendChild(botonEliminar);
+        celdaModificar.appendChild(botonModificar);
 
     });
 };
