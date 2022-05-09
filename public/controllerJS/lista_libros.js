@@ -35,7 +35,7 @@ const mostrarLibros = () => {
             fila.insertCell().innerText = libros.descuento,
             fila.insertCell().innerText = libros.isbn,
             fila.insertCell().innerText = libros.genero,
-            fila.insertCell().innerhtml = libros.premios,
+            fila.insertCell().innerText = libros.premios,
             fila.insertCell().innerText = libros.sipnosis,
             fila.insertCell().innerText = libros.portada,
             fila.insertCell().innerText = libros.contraportada
@@ -103,9 +103,9 @@ const mostrarLibros = () => {
         celdaDescuentos = tablaLibros.rows[i].cells[5];
         celdaDescuentos.style.display = 'none';
 
-        let celdaPremios = 0
-        celdaPremios = tablaLibros.rows[i].cells[8];
-        celdaPremios.style.display = 'none';
+        // let celdaPremios = 0
+        // celdaPremios = tablaLibros.rows[i].cells[8];
+        // celdaPremios.style.display = 'none';
 
         let celdaSinopsis = 0
         celdaSinopsis = tablaLibros.rows[i].cells[9];
