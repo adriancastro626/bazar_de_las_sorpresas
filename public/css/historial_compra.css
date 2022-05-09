@@ -18,10 +18,11 @@ h1 {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    /* width: 80%; */
 }
 
 .tbl-compras {
-    width: 100%;
+    width: 86%;
 }
 
 
@@ -41,8 +42,6 @@ th {
     font-weight: bold;
     color: #6D6875;
     border: 2px solid #fff;
-    min-width: 200px;
-    max-width: 200px;
 }
 
 .cont-encabezado {

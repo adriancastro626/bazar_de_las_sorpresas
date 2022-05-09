@@ -1,9 +1,9 @@
 const cuerpoTabla = document.querySelector("#tbl-autores tbody");
-// 
-let lista = [];
 
-// document.getElementById("btn-agregar-autor").addEventListener('click', () => {
-//     window.location.href = "registro_autor.html";
+
+let lista = [];
+document.getElementById("btn-agregar-autor").addEventListener('click', () => {
+    window.location.href = "registro_autor.html";
 
 // });
 
