@@ -17,7 +17,8 @@ const schemaUsuarios = new mongoose.Schema({
     canton: { type: String, required: true },
     distrito: { type: String, required: true },
     ubicacion: { type: String, required: false },
-    direccion: { type: String, required: true }
+    direccion: { type: String, required: true },
+    mapa: { type: String, required: false }
 
 });
 

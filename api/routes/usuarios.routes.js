@@ -23,7 +23,8 @@ router.post('/registrar-usuario', (req, res) => {
         canton: req.body.canton,
         distrito: req.body.distrito,
         ubicacion: req.body.ubicacion,
-        direccion: req.body.direccion
+        direccion: req.body.direccion,
+        mapa: req.body.mapa
 
     });
 
