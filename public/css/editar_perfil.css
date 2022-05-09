@@ -146,3 +146,72 @@ body {
     color: #FFCDB2;
     cursor: pointer;
 }
+
+
+/* Sección mapa */
+
+.cont-mapa {
+    width: 100%;
+    height: auto;
+}
+
+#mapa {
+    height: 300px;
+    width: 100%;
+    border: 1px solid #fff;
+}
+
+.coordinates {
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    position: absolute;
+    bottom: 0px;
+    /* left: 62.5%; */
+    padding: 5px 5px;
+    margin: 0;
+    font-size: 14px;
+    line-height: 18px;
+    border-radius: 3px;
+    /* display: none; */
+}
+
+
+/* Botones */
+
+.cont-botones {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.btn-metodo-envio {
+    margin-left: 30px;
+    height: 30px;
+    width: 80px;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+#btn-atras {
+    background: #6D6875;
+    border: 1px solid #6D6875;
+}
+
+#btn-continuar {
+    background: #6D6875;
+    border: 1px solid #6D6875;
+}
+
+.btn-metodo {
+    background-color: #6D6875;
+    border: none;
+    border-radius: 6px;
+    color: #6D6875;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 6px 10px;
+    text-decoration: none;
+}
