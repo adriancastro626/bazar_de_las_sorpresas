@@ -4,8 +4,8 @@ const cuerpoTabla = document.querySelector('#tbl-compras tbody');
 let usuarioConectado = JSON.parse(localStorage.getItem('usuarioConectado'));
 
 const mostrarHistorial = () => {
-    // let filtro = usuarioConectado.correo;
-    let filtro = "prueba@gmail.com";
+    let filtro = usuarioConectado.correousuario;
+    // let filtro = "prueba@gmail.com";
     let contador = 0;
     let pedido = 0;
     let total = 0;

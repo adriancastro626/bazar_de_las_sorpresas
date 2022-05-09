@@ -102,7 +102,7 @@ const registrarAutor = () => {
         "foto": inputFoto.src,
         "nombre": inputNombreR.value,
         "apellido": inputApellido.value,
-        "nacionalidad": listaGenero.value,
+        "nacionalidad": listaGenero.options[listaGenero.value].text,
         "nacimiento": fechaNacimiento.value,
         "defuncion": fechaDefuncion.value,
         "biografia": inputBiografia.value
