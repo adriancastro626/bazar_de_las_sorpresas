@@ -32,8 +32,9 @@ form {
     border: none;
     font-size: 32px;
     position: relative;
-    left:33%;
+    left: 33%;
 }
+
 
 /* Botones (incluye visitar perfil de libro) */
 
@@ -110,7 +111,7 @@ tr:nth-child(even) {
     color: #FFCDB2;
 }
 
-tr:nth-child(even) .icono-eliminar-modificar  {
+tr:nth-child(even) .icono-eliminar-modificar {
     color: #FFB4A2;
 }
 
@@ -129,6 +130,10 @@ tr:nth-child(even) .icono-eliminar-modificar:hover {
     padding: 10px 0 20px 0;
     text-decoration: none;
     text-align: end;
+}
+
+.oculto {
+    display: none;
 }
 
 

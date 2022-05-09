@@ -8,13 +8,12 @@ const formLibroContraportada = document.querySelector('#subir-contraportada');
 const formLibroPublicacion = document.querySelector('#date-publicacion');
 const formLibroGenero = document.querySelector('#select-genero');
 const formLibroAutor = document.querySelector('#select-autor');
-const formLibroDescuento = document.querySelector('#select-descuento');
+const formLibroDescuento = document.querySelector('#select-promocion');
 const formLibroISBN = document.querySelector('#txt-isbn');
 const formLibroEditorial = document.querySelector('#txt-editorial');
 const formLibroPrecio = document.querySelector('#number-precio');
 const formLibroSinopsis = document.querySelector('#textarea-sinopsis');
 const formLibroGuardar = document.querySelector('#btn-guardar');
-
 
 // Validacion del formulario
 const formLibroValidacion = () => {
@@ -55,19 +54,23 @@ const formLibroValidacion = () => {
     };
 
     // Género literario
-    if (formLibroGenero.value == 0) {
+    const formGeneroLiterario = document.querySelector('#select-generoLiterario');
+    if (formGeneroLiterario.value == "") {
         formLibroIncompleto = true;
-        formLibroGenero.classList.add('formulario-libros-incompleto');
+        formGeneroLiterario.classList.add('formulario-libros-incompleto');
     } else {
-        formLibroGenero.classList.remove('formulario-libros-incompleto');
+        formGeneroLiterario.classList.remove('formulario-libros-incompleto');
+        console.log('El género literario es', formGeneroLiterario.value);
     };
 
     // Autor
-    if (formLibroAutor.value == 0) {
+    const formAutorLibro = document.querySelector('#select-autorLibro');
+    if (formAutorLibro.value == "") {
         formLibroIncompleto = true;
-        formLibroAutor.classList.add('formulario-libros-incompleto');
+        formAutorLibro.classList.add('formulario-libros-incompleto');
     } else {
-        formLibroAutor.classList.remove('formulario-libros-incompleto');
+        formAutorLibro.classList.remove('formulario-libros-incompleto');
+        console.log('El autor es', formAutorLibro.value);
     };
 
     // ISBN
@@ -97,17 +100,34 @@ const formLibroValidacion = () => {
     // Premios
     let formLibroPremioNobel = document.querySelectorAll('#formulario-libros-premios input[type=checkbox]:checked');
     const formLibroFechaNobel = document.querySelector('#formulario-libros-premios input[type=number]');
+    let formLibroPremios = "";
+    let formPremioFecha = "";
 
     formLibroPremioNobel.forEach(check => {
-        if (check.value == 1) {
+        if (check.value == 'Premio Nobel de Literatura') {
             if (formLibroFechaNobel.value == "") {
                 formLibroIncompleto = true;
                 formLibroFechaNobel.classList.add('formulario-libros-incompleto');
             } else {
                 formLibroFechaNobel.classList.remove('formulario-libros-incompleto');
+                formPremioFecha = check.value + ". Año: " + formLibroFechaNobel.value
             };
         }
     });
+    console.log(formPremioFecha);
+
+    for (let i = 0; i < formLibroPremioNobel.length; i++) {
+        if (formLibroPremioNobel[i].value == 'Premio Nobel de Literatura') {
+            formLibroPremioNobel[i].value = formPremioFecha;
+            // console.log(formPremioFecha);
+            formLibroPremios = formLibroPremioNobel[i].value + ", ";
+            // console.log(formLibroPremios);
+        } else {
+            formLibroPremios = formLibroPremios + formLibroPremioNobel[i].value + ", ";
+        }
+    }
+    console.log(formLibroPremios);
+
 
     // Sinopsis
     if (formLibroSinopsis.value == "") {
@@ -117,6 +137,10 @@ const formLibroValidacion = () => {
         formLibroSinopsis.classList.remove('formulario-libros-incompleto');
     };
 
+    //Promociones
+    const formDescuento = document.querySelector('#select-descuento');
+    console.log('El descuento es', formDescuento.value);
+
     // Acciones a ejecutar al presionar el botón
     if (formLibroIncompleto == true) {
         Swal.fire({
@@ -124,6 +148,7 @@ const formLibroValidacion = () => {
             'title': 'El libro no se puede registrar',
             'text': 'Por favor revise los campos resaltados',
         });
+        formLibroImprimir();
     } else {
 
         let libro = {
@@ -133,23 +158,26 @@ const formLibroValidacion = () => {
             contraportada: formLibroContraportada.src,
             precio: formLibroPrecio.value,
             publicacion: formLibroPublicacion.value,
-            genero: formLibroGenero.value,
-            autor: formLibroAutor.value,
-            descuento: formLibroDescuento.value,
+            genero: formGeneroLiterario.value,
+            autor: formAutorLibro.value,
+            descuento: formDescuento.value,
             isbn: formLibroISBN.value,
-            premios: formLibroPremioNobel.value,
+            premios: formLibroPremios,
             sipnosis: formLibroSinopsis.value
         };
+
+        console.log(libro);
 
         registrarLibro(libro, '/registrar-libro')
 
         formLibroImprimir();
         Swal.fire({
-            'icon': 'success',
-            'title': 'Libro registrado',
-        }).then(() => {
-            window.location.href = 'lista_libros.html';
-        });
+                'icon': 'success',
+                'title': 'Libro registrado',
+            })
+            // .then(() => {
+            //     window.location.href = 'lista_libros.html';
+            // });
     }
 
 };
@@ -165,11 +193,11 @@ const formLibroImprimir = () => {
 
     console.log('La fecha de publicación es', formLibroPublicacion.value);
 
-    console.log('El género literario es', formLibroGenero.value);
+    // console.log('El género literario es', formGeneroLiterario.value);
 
-    console.log('El autor es', formLibroAutor.value);
+    // console.log('El autor es', formLibroAutor.value);
 
-    console.log('El descuento es', formLibroDescuento.value);
+    // console.log('El descuento es', formLibroDescuento.value);
 
     console.log('El ISBN es', formLibroISBN.value);
 

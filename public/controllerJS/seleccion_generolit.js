@@ -9,19 +9,19 @@ const inicializarGeneros = async() => {
 };
 
 
-const mostrarSelectgenero = async()=>{
+const mostrarSelectgenero = async() => {
     selectGenero.innerHTML = '';
     const selectList = document.createElement('select');
+    selectList.id = "select-generoLiterario";
     selectGenero.appendChild(selectList);
-    
-    listaGeneros.forEach(generos =>{
-    let option = document.createElement('option');
-        option.setAttribute('value', generos._id);
+
+    listaGeneros.forEach(generos => {
+        let option = document.createElement('option');
+        option.setAttribute('value', generos.nombregenero);
         option.text = generos.nombregenero;
         selectList.appendChild(option);
     });
-    
+
 };
 
 inicializarGeneros();
-

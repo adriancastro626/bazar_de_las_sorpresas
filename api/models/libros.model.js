@@ -6,12 +6,12 @@ const schemaLibro = new mongoose.Schema({
     portada: { type: String, required: false },
     contraportada: { type: String, required: false },
     precio: { type: Number, required: true },
-    publicacion: { type: Date, required: true },
+    publicacion: { type: Number, required: true },
     genero: {type: String, required: true},
     autor: {type: String, required: true},
-    descuento: {type: Number, required: true},
+    descuento: {type: String, required: true},
     isbn: { type: Number, required: true, unique: true },
-    premios: { type: Number, required: false },
+    premios: { type: String, required: false },
     sipnosis: { type: String, required: true }
 });
 

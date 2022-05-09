@@ -8,8 +8,6 @@ const inicalizarPromociones = async() =>{
     mostrarTablas();
 };
 
-
-
 const mostrarTablas = async()=>{
     tablaPromociones.innerHTML = '';
     
@@ -47,5 +45,89 @@ inicalizarPromociones();
 
 
 
+const tablaCorreo = document.querySelector('#factura-info tbody');
+let listaCorreoFactura = [];
+
+const inicializarCorreo = async() =>{
+    listaCorreoFactura = await obtenerCorreoFactura('/listar-correoadmin');
+    mostrarCorreo();
+};
+
+const mostrarCorreo = async()=>{
+    tablaCorreo.innerHTML = '';
+
+    listaCorreoFactura.forEach(correoadmin =>{
+        let datoCorreo = tablaCorreo.insertRow();
+
+        datoCorreo.insertCell().innerText = correoadmin.correoadmin
+    });
+};
+
+inicializarCorreo();
 
 
+
+const tablaImpuesto = document.querySelector('#impuesto-info tbody');
+let listaImpuesto = [];
+
+const inicializarImpuesto = async() =>{
+    listaImpuesto = await obtenerImpuesto('/listar-impuesto');
+    mostrarImpuesto();
+};
+
+const mostrarImpuesto = async()=>{
+    tablaImpuesto.innerHTML = '';
+
+    listaImpuesto.forEach(impuesto =>{
+        let datoImpuesto = tablaImpuesto.insertRow();
+
+        datoImpuesto.insertCell().innerText = impuesto.tasaimpuesto +'%'
+    });
+};
+
+inicializarImpuesto();
+
+
+
+const tablaDescuento = document.querySelector('#descuento-info tbody');
+let listaLibrofan = [];
+
+const inicializarDescuento = async() =>{
+    listaLibrofan = await obtenerDescuento('/listar-descuentofan');
+    mostrarDescuento();
+};
+
+const mostrarDescuento = async()=>{
+    tablaDescuento.innerHTML = '';
+
+    listaLibrofan.forEach(descuentolibrofan =>{
+        let datoDescuento = tablaDescuento.insertRow();
+
+        datoDescuento.insertCell().innerText = descuentolibrofan.descuentolibrofan +'%'
+    });
+};
+
+inicializarDescuento();
+
+
+
+const tablaMinimo = document.querySelector('minimo-info tbody');
+let listaMinimo = [];
+
+const inicializarMinimo = async() =>{
+    listaMinimo = await obtenerCompra('/listar-descuentofan');
+    mostrarMinimo();
+};
+
+const mostrarMinimo = async()=>{
+    tablaMinimo.innerHTML = '';
+
+    listaMinimo.forEach(minimocompra =>{
+        let datoMinimo = tablaMinimo.insertRow();
+
+        datoMinimo.insertCell().innerText = minimocompra.minimo
+    });
+};
+
+
+inicializarMinimo();

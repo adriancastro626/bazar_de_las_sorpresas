@@ -67,6 +67,39 @@ const registrarFan = async(pdatos, pendPoint) => {
     });
 };
 
+const obtenerDescuento = async(pendPoint) => {
+    let url = 'http://localhost:3000/api';
+    url += pendPoint;
+
+    let listaLibrofan = [];
+
+    await axios({
+        method: 'get',
+        url: url
+    }).then(response => {
+        listaLibrofan = response.data.descuentolibrofan;
+    });
+
+    return listaLibrofan;
+
+};
+
+const obtenerCompra = async(pendPoint) => {
+    let url = 'http://localhost:3000/api';
+    url += pendPoint;
+
+    let listaMinimo = [];
+
+    await axios({
+        method: 'get',
+        url: url
+    }).then(response => {
+        listaMinimo = response.data.minimocompra;
+    });
+
+    return listaMinimo;
+
+};
 
 //IMPUESTO
 const registrarImpuesto = async(pdatos, pendPoint) => {
@@ -78,6 +111,23 @@ const registrarImpuesto = async(pdatos, pendPoint) => {
         url: url,
         data: pdatos
     });
+};
+
+const obtenerImpuesto = async(pendPoint) => {
+    let url = 'http://localhost:3000/api';
+    url += pendPoint;
+
+    let listaImpuesto = [];
+
+    await axios({
+        method: 'get',
+        url: url
+    }).then(response => {
+        listaImpuesto = response.data.impuesto;
+    });
+
+    return listaImpuesto;
+
 };
 
 
@@ -103,7 +153,7 @@ const obtenerCorreoFactura = async(pendPoint) => {
         method: 'get',
         url: url
     }).then(response => {
-        listaCorreoFactura = response.data.generos;
+        listaCorreoFactura = response.data.correoadmin;
     });
 
     return listaCorreoFactura;

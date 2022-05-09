@@ -127,8 +127,8 @@
 
                         <!-- Género literario -->
                         <div class="formulario-libros-espaciado-form">
-                            <label for="select-autor">Genero Literario</label>
-                            <div id="select-genero">
+                            <label for="select-genero1">Genero Literario</label>
+                            <div id="select-genero" name="select-genero">
 
                             </div>
                         </div>
@@ -136,7 +136,7 @@
                         <!-- Autor -->
                         <div class="formulario-libros-espaciado-form">
                             <label for="select-autor">Autor</label>
-                            <div id="select-autor">
+                            <div id="select-autor" name="select-autor">
 
                             </div>
                         </div>
@@ -164,7 +164,7 @@
                         <!-- Descuentos -->
                         <div class="formulario-libros-espaciado-form">
                             <label for="select-descuento">Descuento (Opcional)</label>
-                            <div id="select-promocion">
+                            <div id="select-promocion" name="select-promocion">
 
                             </div>
                         </div>
@@ -175,30 +175,30 @@
                             <div id="formulario-libros-premios">
                                 <div class="premio-literatura">
                                     <div id="formulario-libros-premios-nobel">
-                                        <input type="checkbox" name="checkbox-premios" value="1">Premio Nobel de Literatura
+                                        <input type="checkbox" name="checkbox-premios" value="Premio Nobel de Literatura">Premio Nobel de Literatura
                                     </div>
                                     <input type="number" placeholder="Año en que ganó el Nobel" name="checkbox-premios" class="checkbox-premio-nobel">
                                 </div>
                                 <div>
-                                    <input type="checkbox" name="checkbox-premios" value="2">Premio Príncipe de Asturias de las Letras
+                                    <input type="checkbox" name="checkbox-premios" value="Premio Príncipe de Asturias de las Letras">Premio Príncipe de Asturias de las Letras
                                 </div>
                                 <div>
-                                    <input type="checkbox" name="checkbox-premios" value="3">Premio Booker
+                                    <input type="checkbox" name="checkbox-premios" value="Premio Booker">Premio Booker
                                 </div>
                                 <div>
-                                    <input type="checkbox" name="checkbox-premios" value="4">Premio Goncourt
+                                    <input type="checkbox" name="checkbox-premios" value="Premio Goncourt">Premio Goncourt
                                 </div>
                                 <div>
-                                    <input type="checkbox" name="checkbox-premios" value="5">Premio Man Booker Internacional
+                                    <input type="checkbox" name="checkbox-premios" value="Premio Man Booker Internacional">Premio Man Booker Internacional
                                 </div>
                                 <div>
-                                    <input type="checkbox" name="checkbox-premios" value="6">Premio Barco de Vapor
+                                    <input type="checkbox" name="checkbox-premios" value="Premio Barco de Vapor">Premio Barco de Vapor
                                 </div>
                                 <div>
-                                    <input type="checkbox" name="checkbox-premios" value="7">Premio Nadal
+                                    <input type="checkbox" name="checkbox-premios" value="Premio Nadal">Premio Nadal
                                 </div>
                                 <div>
-                                    <input type="checkbox" name="checkbox-premios" value="8">Otros
+                                    <input type="checkbox" name="checkbox-premios" value="Otros">Otros
                                 </div>
                             </div>
                         </div>
@@ -263,10 +263,10 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../controllerJS/servicio_parametros.js"></script>
     <script src="../controllerJS/img-libros.js"></script>
-    <script src="../controllerJS/formulario_libros.js"></script>
-    <script src="../controllerJS/seleccion_libros.js"></script>
+    <script src="../controllerJS/seleccion_generolit.js"></script>
     <script src="../controllerJS/seleccion_promociones.js"></script>
     <script src="../controllerJS/seleccion_autores.js"></script>
+    <script src="../controllerJS/formulario_libros.js"></script>
 </body>
 
 </html>

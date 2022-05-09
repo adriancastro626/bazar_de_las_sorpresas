@@ -9,19 +9,19 @@ const inicializarPromociones = async() => {
 };
 
 
-const mostrarSelectpromo = async()=>{
+const mostrarSelectpromo = async() => {
     selectPromocion.innerHTML = '';
     const selectList = document.createElement('select');
+    selectList.id = "select-descuento";
     selectPromocion.appendChild(selectList);
-    
-    listaPromociones.forEach(promociones =>{
-    let option = document.createElement('option');
-        option.setAttribute('value', promociones._id);
-        option.text = promociones.nombrepromocion;
+
+    listaPromociones.forEach(promociones => {
+        let option = document.createElement('option');
+        option.setAttribute('value', promociones.nombrepromocion +' '+ promociones.porcentajepromocion + '%');
+        option.text = promociones.nombrepromocion +' '+ promociones.porcentajepromocion + '%';
         selectList.appendChild(option);
     });
-    
+
 };
 
 inicializarPromociones();
-
