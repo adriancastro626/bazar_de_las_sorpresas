@@ -5,8 +5,6 @@ const btnAtras = document.getElementById('btn-atras');
 const btnContinuar = document.getElementById('btn-continuar');
 
 let listaComercios = [];
-let informacionCompra = JSON.parse(localStorage.getItem('informacionCompra'));
-
 const url = 'https://ubicaciones.paginasweb.cr/';
 
 // Completar opciones de provincia, canton y distrito
@@ -73,15 +71,8 @@ const validar = () => {
             'text': 'Por favor revise los campos resaltados.'
         });
     } else {
-        guardarDireccion();
-        window.location.href = 'metodos_pago.html';
+        window.location.href = 'metodos_pago.html'
     }
-};
-
-const guardarDireccion = () => {
-    informacionCompra.direccion =
-        `${selectProvincias.options[selectProvincias.selectedIndex].text}, ${selectCantones.options[selectCantones.selectedIndex].text}, ${selectEstablecimiento.options[selectEstablecimiento.selectedIndex].text}`;
-    localStorage.setItem('informacionCompra', JSON.stringify(informacionCompra));
 };
 
 listarSelect(url + 'provincias.json', selectProvincias);
