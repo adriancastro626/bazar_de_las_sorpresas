@@ -132,7 +132,7 @@ const inicializar = async() => {
 };
 
 const obtenerImpuesto = async() => {
-    let impuestos = await obtenerDatos('mostrar-carrito');
+    let impuestos = await obtenerDatos('listar-impuesto');
     impuesto = impuestos[impuestos.length - 1];
 };
 
