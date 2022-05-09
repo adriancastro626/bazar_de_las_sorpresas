@@ -21,8 +21,8 @@ let listaCarrito = [];
 let usuarioConectado = JSON.parse(localStorage.getItem('usuarioConectado'));
 
 const mostrarMetodos = async() => {
-    // let filtro = usuarioConectado.correo;
-    let filtro = "prueba@gmail.com";
+    let filtro = usuarioConectado.correousuario;
+    // let filtro = "prueba@gmail.com";
     compras = 0;
 
     for (let i = 0; i < listaCarrito.length; i++) {
@@ -30,6 +30,7 @@ const mostrarMetodos = async() => {
         if (listaCarrito[i].correoUsuario.includes(filtro)) {
 
             let libro = await obtenerElemento(`obtener-libro-isbn/${listaCarrito[i].isbncarrito}`);
+            console.log(libro);
             compras = compras + libro.precio;
 
             // Crear elementos HTML
@@ -52,7 +53,7 @@ const mostrarMetodos = async() => {
             // Dar propiedades a los elementos HTML
             contenedorItem.classList.add('caja-exterior-item');
             contenedorItemInteriorIzquierdo.classList.add('caja-interior-izquierda');
-            contenedorImagen.src = libro.fotos;
+            contenedorImagen.src = libro.portada;
             // contenedorImagen.src = '../imgs/el_nombre_del_viento.jpg';
             contenedorImagen.alt = `Portada del libro: ${libro.titulo}`;
             // contenedorImagen.alt = 'Portada del libro: El Nombre del Viento';

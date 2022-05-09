@@ -31,7 +31,7 @@ const mostrarLibros = () => {
             fila.insertCell().innerText = libros.autor,
             fila.insertCell().innerText = libros.publicacion,
             fila.insertCell().innerText = libros.editorial,
-            fila.insertCell().innerText = libros.precio,
+            fila.insertCell().innerText = '₡' + libros.precio,
             fila.insertCell().innerText = libros.descuento,
             fila.insertCell().innerText = libros.isbn,
             fila.insertCell().innerText = libros.genero,

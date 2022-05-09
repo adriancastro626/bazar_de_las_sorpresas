@@ -14,7 +14,7 @@ router.post('/registrar-libro', (req, res) => {
         publicacion: req.body.publicacion,
         genero: req.body.genero,
         autor: req.body.autor,
-        descuento: req.body.descuento,       
+        descuento: req.body.descuento,
         isbn: req.body.isbn,
         premios: req.body.premios,
         sipnosis: req.body.sipnosis
@@ -66,5 +66,21 @@ router.delete('/eliminar-libro', (req, res) => {
     });
 });
 
+// http://localhost:3000/api/obtener-libro-isbn
+router.get('/obtener-libro-isbn/:isbn', (req, res) => {
+    let isbn = req.params.isbn;
+    Libro.findOne({ isbn: isbn }, (error, libroBD) => {
+        if (error) {
+            return res.json({
+                msj: "No se encontró un libro que considiera con el ISBN.",
+                error
+            });
+        } else {
+            return res.json({
+                libro: libroBD
+            });
+        }
+    })
+});
 
 module.exports = router;
