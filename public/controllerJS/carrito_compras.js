@@ -123,7 +123,7 @@ const mostrarMetodos = async() => {
                 cantidadItems.setAttribute('valor-anterior', cantidadActual);
             });
 
-            compras = compras + (libro.precio * cantidadItems.value);
+            // compras = compras + (libro.precio * cantidadItems.value);
         }
         actualizarPago();
     }

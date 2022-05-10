@@ -12,10 +12,11 @@ let obtenerAcceso = () => {
     let usuarioAceptado = false;
 
     if (!errorBlancos) {
+        let data = {
+            "correousuario": correousuario
+        }
+        localStorage.setItem('usuarioConectado', JSON.stringify(data));
         usuarioAceptado = validar_credenciales(correousuario, contrasenna);
-        let user = localStorage.getItem(correousuario);
-        let data = JSON.parse(user);
-        console.log(data);
     }
 
 

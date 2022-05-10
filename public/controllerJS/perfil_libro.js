@@ -82,7 +82,7 @@ const carritoInfo = () => {
 
     console.log(carrito);
 
-    registrarDatos('agregar-carrito', carrito, "../html/carrito_compras.html")
+    registrarDatos('agregar-carrito', carrito, "../html/lista_libros.html")
 
 };
 
