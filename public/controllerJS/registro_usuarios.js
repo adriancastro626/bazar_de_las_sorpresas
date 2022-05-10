@@ -17,7 +17,7 @@ const inputContrasenna = document.getElementById('txt-contrasenna');
 const inputConfirmacionContrasenna = document.getElementById('txt-confirmacion');
 const inputAutores = document.getElementById('slt-autores');
 const inputDireccion = document.getElementById('direccion-exacta');
-const inputMapa = document.getElementById('mapa');
+const inputMapa = document.getElementById('coordinates');
 const inputFoto = document.getElementById('btn-foto');
 const btnRegistrar = document.getElementById('btn-registrar');
 
@@ -51,6 +51,32 @@ selectCantones.addEventListener('change', () => {
 });
 
 // Fin API para seleccionar Provincia, Canton, Distrito
+
+// Mapa
+
+// Inicializar mapa
+mapboxgl.accessToken = 'pk.eyJ1IjoiZ2FoZWVsIiwiYSI6ImNsMnB1MjdhZDJvcHMzanNiaTdybTR0MXIifQ.R9Uyo4zTtxYTkqjcLJ-7gw';
+const coordinates = document.getElementById('coordinates');
+const map = new mapboxgl.Map({
+    container: 'mapa', // container ID
+    style: 'mapbox://styles/mapbox/streets-v11', // style URL
+    center: [-84.107337, 9.936220], // starting position [lng, lat] -74.5, 40
+    zoom: 9 // starting zoom
+});
+
+const marker = new mapboxgl.Marker({
+        draggable: true
+    })
+    .setLngLat([-84.107337, 9.936220])
+    .addTo(map);
+
+function onDragEnd() {
+    const lngLat = marker.getLngLat();
+    coordinates.style.display = 'block';
+    coordinates.innerHTML = `Longitude: ${lngLat.lng}<br />Latitude: ${lngLat.lat}`;
+}
+
+marker.on('dragend', onDragEnd);
 
 //Registro de Usuario
 
@@ -130,6 +156,14 @@ const validar = () => {
         inputNacimiento.classList.remove('input-error');
     }
 
+    if (new Date(inputNacimiento.value) > new Date()) {
+
+        hayError = true;
+        inputNacimiento.classList.add('input-error');
+    } else {
+        inputNacimiento.classList.remove('input-error');
+    }
+
     if (inputGeneroLiterario.value == '') {
 
         hayError = true;
@@ -154,6 +188,18 @@ const validar = () => {
         inputConfirmacionCorreo.classList.remove('input-error');
     }
 
+    if (inputCorreo.value != inputConfirmacionCorreo.value) {
+
+        hayError = true;
+        inputCorreo.classList.add('input-error');
+        inputConfirmacionCorreo.classList.add('input-error');
+
+    } else {
+        inputCorreo.classList.remove('input-error');
+        inputConfirmacionCorreo.classList.add('input-error');
+
+    }
+
     if (inputContrasenna.value == '') {
 
         hayError = true;
@@ -168,6 +214,17 @@ const validar = () => {
         inputConfirmacionContrasenna.classList.add('input-error');
     } else {
         inputConfirmacionContrasenna.classList.remove('input-error');
+    }
+
+    if (inputContrasenna.value != inputConfirmacionContrasenna.value) {
+        hayError = true;
+        inputConfirmacionContrasenna.classList.add('input-error');
+        inputContrasenna.classList.add('input-error');
+    } else {
+
+        inputConfirmacionContrasenna.classList.remove('input-error');
+        inputContrasenna.classList.remove('input-error');
+
     }
 
     if (inputAutores.value == '') {
@@ -214,13 +271,34 @@ const validar = () => {
         Swal.fire({
             'icon': 'warning',
             'title': 'El usuario no se puede registrar',
-            'text': 'Complete todos los espacios'
+            'text': 'Revise los espacios resaltados'
         });
-
     } else {
         registrarUsuario();
+        limpiar();
     }
 
+};
+
+let limpiar = () => {
+    inputNombre.value = "";
+    inputSegundoNombre.value = "";
+    inputPrimerApellido.value = "";
+    inputSegundoApellido.value = "";
+    inputNacimiento.value = "";
+    inputTipoIdentificacion.value = "";
+    inputIdentificacion.value = "";
+    inputGenero.value = "";
+    inputOtroGenero.value = "";
+    inputFoto.src = "";
+    inputCorreo.value = "";
+    inputContrasenna.value = "";
+    inputGeneroLiterario.value = "";
+    inputAutores.value = "";
+    selectProvincias.value = "";
+    selectCantones.value = "";
+    selectDistritos.value = "";
+    inputDireccion.value = "";
 };
 
 // Back-end Base de Datos
@@ -236,7 +314,7 @@ const registrarUsuario = () => {
         "numeroidentificacion": inputIdentificacion.value,
         "genero": inputGenero.value,
         "otrogenero": inputOtroGenero.value,
-        "foto": inputFoto.value,
+        "foto": inputFoto.src,
         "correousuario": inputCorreo.value,
         "contrasenna": inputContrasenna.value,
         "generoliterario": inputGeneroLiterario.value,
@@ -244,10 +322,14 @@ const registrarUsuario = () => {
         "provincia": selectProvincias.value,
         "canton": selectCantones.value,
         "distrito": selectDistritos.value,
-        "direccion": inputDireccion.value
+        "direccion": inputDireccion.value,
+        "mapa": inputMapa.value
 
     };
+    let json = JSON.stringify(data);
+    localStorage.setItem('usuarioConectado', json);
     registrarDatos('registrar-usuario', data, 'inicio_sesion.html');
+
 };
 
 btnRegistrar.addEventListener('click', () => {

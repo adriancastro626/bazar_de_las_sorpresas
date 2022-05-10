@@ -47,7 +47,7 @@ h2 {
 .perfil-libro-navegacion {
     bottom: 5%;
     display: flex;
-    left: 34.5%;
+    left: 39.5%;
     position: relative;
 }
 
@@ -118,7 +118,7 @@ img {
 /* Estilos venta columna derecha */
 
 .perfil-libro-venta-carrito {
-    margin-top: 18px;
+    margin: 18px 10px 0 0;
 }
 
 .perfil-libro-venta-carrito a {

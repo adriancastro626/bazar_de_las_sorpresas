@@ -105,9 +105,24 @@
                     </div>
                 </div>
 
-                <table class="tabla" id="tbl-libros">
+                <table id="tbl-libros">
                     <thead>
-                        <tr>Libro</tr>
+                        <tr>
+                            <td>Título</td>
+                            <td>Autor</td>
+                            <td class="oculto">Año Publicación</td>
+                            <td class="oculto">Editorial</td>
+                            <td>Precio</td>
+                            <td class="oculto">Descuento</td>
+                            <td class="oculto">ISBN</td>
+                            <td>Género Literario</td>
+                            <td>Premios</td>
+                            <td class="oculto">Sinopsis</td>
+                            <td class="oculto">Portada</td>
+                            <td class="oculto">Contraportada</td>
+                            <td>Eliminar</td>
+                            <td>Perfil Libro</td>
+                        </tr>
                     </thead>
                     <tbody>
 
@@ -144,7 +159,7 @@
                         </a>
                     </div>
                     <div>
-                        <a href="/html/carrito_compras.html">
+                        <a href="carrito_compras.html">
                             <p>Carrito</p>
                         </a>
                     </div>
@@ -160,8 +175,8 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="../js/informacion_libros.js"></script>
-    <script src="../js/lista_libros.js"></script>
+    <script src="../controllerJS/servicio_parametros.js"></script>
+    <script src="../controllerJS/lista_libros.js"></script>
 </body>
 
 </html>

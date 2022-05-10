@@ -7,7 +7,7 @@ const schemaAutor = new mongoose.Schema({
     nacionalidad: { type: String, required: true },
     nacimiento: { type: Date, required: true },
     defuncion: { type: Date, required: false },
-    biografia: { type: Number, required: true }
+    biografia: { type: String, required: true }
 });
 
 module.exports = new mongoose.model('Autor', schemaAutor, 'autor');

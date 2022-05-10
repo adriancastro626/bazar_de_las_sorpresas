@@ -68,7 +68,6 @@ const validar = () => {
         inputTarjetahabiente.classList.remove('input-error');
     }
 
-    // PLACEHOLDER
     if (hayError) {
         Swal.fire({
             'icon': 'warning',
@@ -101,8 +100,8 @@ const validar = () => {
 const registrarMetodo = () => {
     // verificarFavorito();
     let metodo = {
-        // "correousuario": usuarioConectado.correo,
-        "correousuario": "prueba@gmail.com",
+        "correousuario": usuarioConectado.correousuario,
+        // "correousuario": "prueba@gmail.com",
         "numtarjeta": inputNumeroTarjeta.value,
         "nombretarjeta": inputTarjetahabiente.value,
         "mes": inputMes.value,

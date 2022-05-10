@@ -1,3 +1,5 @@
+'use strict';
+
 const parametrosPromoCompleto = document.querySelector('#parametros-promocion');
 const parametrosPromoNombre = document.querySelector('#txt-nombre-promo');
 const parametrosPromoPorcentaje = document.querySelector('#number-porcentaje-promo');
@@ -50,13 +52,20 @@ parametrosPromoBoton.addEventListener('click', () => {
             'title': 'Por favor indique los datos de la promoción que desea ingresar',
         });
     } else {
+        let promocion = {
+            nombrepromocion: parametrosPromoNombre.value,
+            porcentajepromocion: parametrosPromoPorcentaje.value
+        };
+
+        registrarPromocion(promocion, '/registrar-promociones');
+
         console.log('El nombre de la promoción es', parametrosPromoNombre.value);
         console.log('El porcentaje de la promoción es', parametrosPromoPorcentaje.value);
         Swal.fire({
             'icon': 'success',
             'title': 'Promoción registrada',
         }).then(() => {
-            parametrosPromoCompleto.reset();
+            window.location.href = '../html/parametros_sistema.html';
         });
     }
 
@@ -92,6 +101,14 @@ parametrosFanBoton.addEventListener('click', () => {
             'title': 'Por favor indique los datos del descuento Libro Fan que desea ingresar',
         });
     } else {
+        
+        let libroFan = {
+            descuentolibrofan: parametrosFanPorcentaje.value,
+            minimocompra: parametrosFanMonto.value
+        };
+
+        registrarFan(libroFan, '/registrar-descuentofan');
+
         console.log('El porcentaje de descuento de Libro Fan es', parametrosFanPorcentaje.value);
         console.log('El monto mínimo de compras para el descuento de Libro Fan es', parametrosFanMonto.value);
         Swal.fire({
@@ -115,6 +132,13 @@ parametrosImpBoton.addEventListener('click', () => {
             'title': 'Por favor indique el porcentaje de impuesto que desea ingresar',
         });
     } else {
+
+        let impuesto = {
+            tasaimpuesto: parametrosImp.value
+        };
+
+        registrarImpuesto(impuesto, '/registrar-impuesto');
+
         parametrosImp.classList.remove('parametros-incompleto');
 
         // Impresión de los resultados
@@ -140,6 +164,13 @@ parametrosCorreoBoton.addEventListener('click', () => {
             'title': 'Por favor indique el correo electrónico que desea ingresar',
         });
     } else {
+
+        let correo = {
+            correoadmin: parametrosCorreo.value
+        };
+
+        registrarfactura(correo, '/registrar-correoadmin');
+
         parametrosCorreo.classList.remove('parametros-incompleto');
 
         // Impresión de los resultados
@@ -196,3 +227,6 @@ listaPromosModificar.addEventListener('click', () => {
     });
 
 });
+
+
+

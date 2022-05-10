@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/listar_metodos_pago.css">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet' />
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
     <title>Editar Perfil</title>
 </head>
 
@@ -92,7 +94,7 @@
                 <section id="sct-registro-usuarios">
                     <form>
                         <h1 class="sct-registro-usuarios-titulo">Actualizar Perfil</h1>
-                        <div class="parent">
+                        <div id="listarUsuarios" class="parent">
                             <div class="col-uno">
                                 <div class="cont-control">
                                     <label for="txt-nombre">Nombre</label>
@@ -241,7 +243,7 @@
                                     </button>
 
                                 </div>
-                                <div class="cont-control">
+                                <!-- <div class="cont-control">
                                     <label for="slct-cantones">Canton:</label>
                                     <span id="campo-canton"></span>
                                     <button type="button" class="btn-comentar" id="icono-actualizar">
@@ -250,8 +252,8 @@
                                         </span>
                                     </button>
 
-                                </div>
-                                <div class="cont-control">
+                                </div> -->
+                                <!-- <div class="cont-control">
                                     <label for="slct-distritos">Distrito:</label>
                                     <span id="campo-distrito"></span>
                                     <button type="button" class="btn-comentar" id="icono-actualizar">
@@ -260,7 +262,7 @@
                                         </span>
                                     </button>
 
-                                </div>
+                                </div> -->
                                 <div class="cont-control">
                                     <label for="direccion-exacta">Dirección exacta:</label>
                                     <span id="campo-direccion"></span>
@@ -272,29 +274,31 @@
 
                                 </div>
                                 <div class="cont-control">
-                                    <label for="txt-mapa">Seleccione Ubicación</label>
-                                    <div class="mapa">
-                                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15716.957693189064!2d-84.2172889!3d9.997071349999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2scr!4v1649369411565!5m2!1ses!2scr" width="200" height="100" style="border:0;"
-                                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                    </div>
-                                    <button type="button" class="btn-comentar" id="icono-actualizar">
-                                        <span class="span-boton">
-                                            <i id="btn-editar" class="fa-solid fa-pen-to-square fa-2x"></i>
-                                        </span>
-                                    </button>
+                                    <label for="btn-foto">Cambiar Foto de Perfil</label>
+                                    <input type="file" id="btn-foto" name="file-foto" multiple>
                                 </div>
                                 <div class="cont-control">
-                                    <label for="btn-foto">Cambiar Foto de Perfil</label>
-                                    <input type="file" id="file-foto" name="file-foto" multiple>
+                                    <label for="txt-mapa">Seleccione Ubicación</label>
+                                    <div class="mapa" id="txt-mapa">
+                                        <div class="cont-mapa">
+                                            <div class="cont-linea">
+                                                <div id="mapa"></div>
+                                                <pre id="coordinates" class="coordinates"></pre>
+                                            </div>
+                                            <div class="cont-botones">
+                                                <button type="button" id="btn-atras" class="btn-metodo-envio"></button>
+                                                <button type="button" id="btn-continuar" class="btn-metodo-envio"></button>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-
                         <div class="seleccion-metodo-pago">
                             <section id="sct-seleccion-metodo-pago">
                                 <form class="formulario-metodos">
                                     <h1>Métodos de pago</h1>
-                                    <div class="lista" id="cont-listar-metodos">
+                                    <div id="cont-listar-metodos">
                                         <!-- Se agregan de forma dinámica los métodos de pago -->
                                     </div>
                                     <div class="cont-agregar">
@@ -305,14 +309,13 @@
                                         </button>
                                         <input type="text" disabled>
                                     </div>
-                                </form>
                             </section>
                             <div>
                                 <button id="btn-actualizar" type="button" class="btn-oscuro">Guardar</button>
                             </div>
                         </div>
 
-                    </form>
+                        </form>
                 </section>
 
             </div>
@@ -353,11 +356,23 @@
         </div>
 
     </footer>
+
+
+
+    <!-- 1. Cargar bibliotecas externas -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="../js/editar_perfil.js"></script>
-    <script src="../js/lista_metodos.js"></script>
-    <script src="../js/listar_metodos_pago.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://kit.fontawesome.com/3269682608.js" crossorigin="anonymous"></script>
+    <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
+    <!-- 2. Enlazar el servicio general que comunica con el servidor -->
+    <script src="/public/servicesJS/servicio-general.js"></script>
+
+    <!-- Enlazar los controladores de la página -->
+    <script src="/public/controllerJS/listar_metodos_pago.js"></script>
+    <script src="/public/controllerJS/editar_perfil.js"></script>
+    <script src="/public/controllerJS/servicio-imagenes-usuario.js"></script>
+
+
 
 </body>
 

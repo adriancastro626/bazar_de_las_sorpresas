@@ -1,65 +1,45 @@
-const inputValidarUsuario = document.getElementById('txt-usuario');
-const inputValidarContrasenna = document.getElementById('txt-contrasenna');
-const btnIngresar = document.getElementById('btn-ingresar');
+'use strict'
 
+const inputUsuario = document.querySelector('#txtusuario');
+const inputContrasenna = document.querySelector('#txtcontrasenna');
+const btnIngresar = document.querySelector('#btningresar');
 
+let obtenerAcceso = () => {
+    let correousuario = inputUsuario.value;
+    let contrasenna = inputContrasenna.value;
 
-const validarCredenciales = () => {
-    let ingresoCorrecto = false;
-    listaUsuarios.forEach(usuario => {
-        if ((usuario.correo == inputValidarUsuario.value) && (usuario.contrasenna == inputValidarContrasenna.value)) {
-            ingresoCorrecto = true;
-            localStorage.setItem('usuarioConectado', JSON.stringify(usuario));
+    let errorBlancos = validar(correousuario, contrasenna);
+    let usuarioAceptado = false;
+
+    if (!errorBlancos) {
+        let data = {
+            "correousuario": correousuario
         }
-    });
-
-    if (ingresoCorrecto == true) {
-        window.location.href = 'pagina_principal.html';
-    } else {
-
+        localStorage.setItem('usuarioConectado', JSON.stringify(data));
+        usuarioAceptado = validar_credenciales(correousuario, contrasenna);
     }
+
+
 
 };
 
-document.getElementById('btn-ingresar').addEventListener('click', validarCredenciales)
+const validar = (susuario, scontrasenna) => {
 
+    let error = false;
 
-
-
-const validar = () => {
-
-    let hayError = false;
-
-    if (inputValidarUsuario.value || inputValidarContrasenna.value == '') {
-
-        hayError = true;
-        inputValidarUsuario.classList.add('input-error');
-        inputValidarContrasenna.classList.add('input-error');
-
+    if (susuario == '' || scontrasenna == '') {
+        error = true;
+        inputUsuario.classList.add('input-error');
+        inputContrasenna.classList.add('input-error');
     } else {
-        inputValidarUsuario.classList.remove('input-error');
-        inputValidarContrasenna.classList.remove('input-error');
-
+        inputUsuario.classList.remove('input-error');
+        inputContrasenna.classList.remove('input-error');
     }
 
-    if (hayError == true) {
-        Swal.fire({
-            'icon': 'warning',
-            'title': 'Ingrese usuario y/o contraseña valido',
-            'text': ''
-        });
 
-    } else {
-        Swal.fire({
-            'icon': 'success',
-            'title': 'Saludos',
-            'text': 'El Bazar de las Sorpresas'
-        })
-    }
+
+    return error;
 
 };
 
-btnIngresar.addEventListener('click', () => {
-    validar();
-
-});
+btnIngresar.addEventListener('click', obtenerAcceso);

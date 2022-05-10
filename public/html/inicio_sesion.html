@@ -34,18 +34,18 @@
                 <form>
                     <h1>Inicio de Sesión</h1>
                     <div class="cont-control ">
-                        <label for="txt-usuario">Usuario</label>
-                        <input id="txt-usuario" type="text" placeholder="Usuario">
+                        <label for="txtusuario">Usuario</label>
+                        <input id="txtusuario" type="text" placeholder="Usuario">
                     </div>
                     <div class="cont-control">
-                        <label for="txt-contrasenna">Contraseña</label>
-                        <input id="txt-contrasenna" type="password" placeholder="Contraseña">
+                        <label for="txtcontrasenna">Contraseña</label>
+                        <input id="txtcontrasenna" type="password" placeholder="Contraseña">
                     </div>
                     <div class="cont-control lnk">
                         <a class="contrasenna" href="./recuperar_contrasenna.html">¿Olvidó su Contraseña?</a>
                     </div>
                     <div class="cont-control btn">
-                        <button id="btn-ingresar" type="button" class="btn-oscuro">Ingresar</button>
+                        <button id="btningresar" type="button" class="btn-oscuro">Ingresar</button>
                     </div>
 
                 </form>
@@ -93,9 +93,15 @@
         </div>
 
     </footer>
-    <script src="/js/inicio_sesion.js"></script>
+    <!-- 1. Cargar bibliotecas externas -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="/js/lista_usuarios.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- 2. Enlazar el servicio general que comunica con el servidor -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="/public/servicesJS/servicio-general.js"></script>
+    <!-- Enlazar los controladores de la página -->
+    <script src="/public/controllerJS/inicio_sesion.js"></script>
+
 </body>
 
 </html>

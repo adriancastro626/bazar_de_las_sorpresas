@@ -1,3 +1,4 @@
+'use strict';
 const express = require('express');
 const router = express.Router();
 const Libro = require('../models/libros.model');
@@ -6,13 +7,16 @@ const Libro = require('../models/libros.model');
 router.post('/registrar-libro', (req, res) => {
     let nuevoLibro = new Libro({
         titulo: req.body.titulo,
-        autor: req.body.autor,
         editorial: req.body.editorial,
-        fotos: req.body.fotos,
+        portada: req.body.portada,
+        contraportada: req.body.contraportada,
         precio: req.body.precio,
         publicacion: req.body.publicacion,
-        premios: req.body.premios,
+        genero: req.body.genero,
+        autor: req.body.autor,
+        descuento: req.body.descuento,
         isbn: req.body.isbn,
+        premios: req.body.premios,
         sipnosis: req.body.sipnosis
     });
 
@@ -32,7 +36,7 @@ router.post('/registrar-libro', (req, res) => {
 
 // http://localhost:3000/api/listar-libros
 router.get('/listar-libros', (req, res) => {
-    Libro.find((error, lista) => {
+    Libro.find((error, libros) => {
         if (error) {
             res.json({
                 msj: 'No se pudo mostrar los Libros',
@@ -40,7 +44,7 @@ router.get('/listar-libros', (req, res) => {
             });
         } else {
             res.json({
-                lista
+                libros
             });
         }
     });
@@ -65,7 +69,7 @@ router.delete('/eliminar-libro', (req, res) => {
 // http://localhost:3000/api/obtener-libro-isbn
 router.get('/obtener-libro-isbn/:isbn', (req, res) => {
     let isbn = req.params.isbn;
-    Libro.find({ isbn: isbn }, (error, libroBD) => {
+    Libro.findOne({ isbn: isbn }, (error, libroBD) => {
         if (error) {
             return res.json({
                 msj: "No se encontró un libro que considiera con el ISBN.",

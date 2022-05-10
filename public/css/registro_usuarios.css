@@ -82,12 +82,13 @@ form h3 {
     color: #FFF;
 }
 
-.mapa {
+
+/* .mapa {
     width: 250px;
     height: 35px;
     text-align: left;
     margin-bottom: 50px;
-}
+} */
 
 .cont-control input,
 .cont-control select {
@@ -190,4 +191,122 @@ input[type="password"],
 .input-error::placeholder {
     color: #ad3049;
     font-weight: bold;
+}
+
+
+/* Navbar */
+
+.nav {
+    padding: 20px;
+    text-align: center;
+    background-color: #B5838D;
+    height: 150px;
+}
+
+.nav-img {
+    height: 100px;
+    width: 100px;
+}
+
+.parentNav {
+    display: flex;
+    width: 100%;
+    text-align: center;
+}
+
+.navUno {
+    width: 150px;
+    display: block;
+    margin: 0px auto;
+}
+
+.navDos {
+    text-decoration: none;
+    width: 150px;
+    float: right;
+}
+
+.btn-nav {
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0.2rem 0.2rem 0.3rem rgba(0, 0, 0, 0.4);
+}
+
+.btn-nav:hover {
+    background: rgba(255, 255, 255, 1);
+    cursor: pointer;
+}
+
+
+/*Fin Navbar */
+
+
+/* Sección mapa */
+
+.cont-mapa {
+    width: 100%;
+    height: auto;
+}
+
+#mapa {
+    height: 300px;
+    width: 100%;
+    border: 1px solid #fff;
+}
+
+.coordinates {
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    position: absolute;
+    bottom: 0px;
+    /* left: 62.5%; */
+    padding: 5px 5px;
+    margin: 0;
+    font-size: 14px;
+    line-height: 18px;
+    border-radius: 3px;
+    /* display: none; */
+}
+
+
+/* Botones */
+
+.cont-botones {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.btn-metodo-envio {
+    margin-left: 30px;
+    height: 30px;
+    width: 80px;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+#btn-atras {
+    background: #6D6875;
+    border: 1px solid #6D6875;
+}
+
+#btn-continuar {
+    background: #6D6875;
+    border: 1px solid #6D6875;
+}
+
+.btn-metodo {
+    background-color: #6D6875;
+    border: none;
+    border-radius: 6px;
+    color: #6D6875;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 6px 10px;
+    text-decoration: none;
 }
