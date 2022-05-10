@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil de libro</title>
     <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/estilos_general.css">
     <link rel="stylesheet" href="../css/perfil_libro.css">
     <link rel="stylesheet" href="../css/footer.css">
@@ -106,36 +106,33 @@
                             <input type="radio" name="common" id="perfil-libro-btn3">
 
                             <div class="perfil-libro-image-libro perfil-libro-primero">
-                                <img src="../imgs/libro01.jpg" alt="">
+                                <img src="" id="portada" alt="">
                             </div>
                             <div class="perfil-libro-image-libro">
-                                <img src="../imgs/libro02.jpg" alt="">
-                            </div>
-                            <div class="perfil-libro-imagen-libro">
-                                <img src="../imgs/libro03.jpg" alt="">
+                                <img src="" id="contraportada" alt="">
                             </div>
                         </div>
                         <div class="perfil-libro-navegacion">
                             <label for="perfil-libro-btn1" class="barra"></label>
                             <label for="perfil-libro-btn2" class="barra"></label>
-                            <label for="perfil-libro-btn3" class="barra"></label>
                         </div>
                     </div>
 
                     <!-- Información libro -->
                     <div class="perfil-libro-info">
                         <h2>Autor</h2>
-                        <p>Yuval Noa Harari</p>
+                        <p id="autor"></p>
                         <h2>Publicación</h2>
-                        <p>2011</p>
+                        <p id="publicacion"></p>
                         <h2>Editorial</h2>
-                        <p>Debate</p>
+                        <p id="editorial"></p>
                         <h2>ISBN</h2>
-                        <p>9788499924212</p>
+                        <p id="isbn"></p>
                         <h2>Género literario</h2>
-                        <p>Historia</p>
+                        <p id="genero"></p>
                         <h2>Premios</h2>
-                        <p>N/A</p>
+                        <p id="premios"></p>
+
                     </div>
                 </div>
 
@@ -143,36 +140,31 @@
 
                 <div class="perfil-libro-columna-der">
 
-                    <h1>Sapiens: De animales a dioses</h1>
+                    <h1><label id="titulo"></label></h1>
+
 
                     <!-- Venta -->
                     <div class="perfil-libro-venta">
                         <div class="perfil-libro-venta-precio">
                             <h2>Precio</h2>
-                            <p>₡18,000.00</p>
+                            <p><span id="precio"></span></p>
                         </div>
                         <div class="perfil-libro-venta-descuento">
                             <h2>Descuento</h2>
-                            <p>20% Dia de la madre</p>
+                            <p id="descuento"></p>
                         </div>
                         <div class="perfil-libro-venta-carrito">
-                            <a href="/html/carrito_compras.html"><i class="fa-solid fa-basket-shopping"></i>Agregar al carrito</a>
-                            <a href="/html/carrito_compras.html"><i class="fa-solid fa-cart-shopping"></i>Pagar</a>
+                            <a href="#" id="btn-carrito"><i class="fa-solid fa-basket-shopping"></i>Agregar al carrito</a>
+                        </div>
+                        <div class="perfil-libro-venta-carrito">
+                            <a href="carrito_compras.html"><i class="carrito"></i>Ir al carrito</a>
                         </div>
                     </div>
 
                     <!-- Sinopsis -->
                     <div class="perfil-libro-sinopsis">
                         <h2>Sinopsis</h2>
-                        <p>
-                            De la mano de uno de los historiadores más interesantes de la actualidad, he aquí la fascinante interpretación de Yuval Noah Harari sobre la historia de la humanidad. Bestseller nacional e internacional, este libro explora las formas en que la biología
-                            y la historia nos han definido y han mejorado nuestra comprensión de lo que significa ser «humano».
-                        </p>
-                        <p>
-                            Hace 70.000 años al menos seis especies de humanos habitaban la Tierra. Hoy solo queda una, la nuestra: Homo Sapiens. ¿Cómo logró nuestra especie imponerse en la lucha por la existencia? ¿Por qué nuestros ancestros recolectores se unieron para crear ciudades
-                            y reinos? ¿Cómo llegamos a creer en dioses, en naciones o en los derechos humanos; a confiar en el dinero, en los libros o en las leyes? ¿Cómo acabamos sometidos a la burocracia, a los horarios y al consumismo? ¿Y cómo será
-                            el mundo en los milenios venideros?
-                        </p>
+                        <p id="sipnosis"></p>
                     </div>
 
                     <!-- Opiniones -->
@@ -293,8 +285,11 @@
             </div>
         </footer>
     </div>
-    <script src="../js/editar_perfil.js"></script>
-
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../controllerJS/servicio_parametros.js"></script>
+    <script src="../controllerJS/perfil_libro.js"></script>
+    <script src="../servicesJS/servicio-general.js"></script>
 </body>
 
 </html>

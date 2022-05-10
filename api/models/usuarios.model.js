@@ -7,7 +7,7 @@ const schemaUsuarios = new mongoose.Schema({
     segundoapellido: { type: String, required: true },
     fechanacimiento: { type: Date, required: true },
     tipoidentificacion: { type: Number, required: true },
-    numeroidentificacion: { type: Number, required: true },
+    numeroidentificacion: { type: String, required: true },
     genero: { type: String, required: true },
     otrogenero: { type: String, required: false },
     foto: { type: String, required: true },
@@ -16,8 +16,9 @@ const schemaUsuarios = new mongoose.Schema({
     provincia: { type: String, required: true },
     canton: { type: String, required: true },
     distrito: { type: String, required: true },
-    ubicacion: { type: String, required: true },
+    ubicacion: { type: String, required: false },
     direccion: { type: String, required: true },
+    mapa: { type: String, required: false }
 
 });
 

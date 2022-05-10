@@ -7,7 +7,7 @@ body {
 }
 
 .cont-metodo-envío {
-    width: 1000px;
+    width: 60%;
     height: auto;
     margin: 60px auto 0;
     display: flex;
@@ -35,7 +35,7 @@ h2 {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    width: 1000px;
+    width: 100%;
     height: auto;
     border-radius: 6px;
     background-color: #6D6875;
@@ -61,7 +61,7 @@ h2 {
 }
 
 .cont-linea select {
-    width: 240px;
+    width: 60%;
     text-align: center;
 }
 
@@ -106,5 +106,8 @@ h2 {
 /* Error */
 
 .input-error {
-    border: 2px solid #c0392b;
+    border: 3px solid #ad3049;
+    color: #ad3049;
+    /* font-size: 18px; */
+    font-weight: bold;
 }

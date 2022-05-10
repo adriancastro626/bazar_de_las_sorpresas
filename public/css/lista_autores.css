@@ -5,8 +5,9 @@
     background-color: #ffcdb2;
 }
 
-.paginacontenido {
-    justify-content: space-around;
+.pagina-contenido {
+    max-width: 1300px !important;
+    min-width: 1300px !important;
 }
 
 .titulo {
@@ -19,13 +20,19 @@
 }
 
 th {
-    text-align: left;
     font-family: 'Asap', sans-serif;
     font-weight: bold;
     font-family: 'Asap', sans-serif;
     background: #ffcdb2;
     padding: 15px 0;
+}
+
+td {
     text-align: center;
+}
+
+.esconder {
+    display: none;
 }
 
 .icono-eliminar {

@@ -1,7 +1,7 @@
 const express = require('express');
-const ventasModel = require('../models/ventas.model');
+const ventasModel = require('../models/historialcompras.model');
 const router = express.Router();
-const Ventas = require('../models/ventas.model');
+const Ventas = require('../models/historialcompras.model');
 
 // http://localhost:3000/api/registrar-ventas
 router.post('/registrar-ventas', (req, res) => {

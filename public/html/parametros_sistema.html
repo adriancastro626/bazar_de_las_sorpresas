@@ -100,26 +100,19 @@
                 <!-- Lista promociones -->
                 <div class="parametros-tabla-completa">
                     <h2>Lista de Promociones</h2>
-                    <table id="parametros-tabla">
+                    
+                    <table id="tabla-promociones">
+                        <thead>
+                            <tr>
+                                <td>Nombre de la promocion</td>
+                                <td>Descuento</td>
+                                <td>Eliminar</td>
+                                <td>Modificar</td>
+                            </tr>
+                        </thead>
+                        <tbody>
 
-                        <tr>
-                            <td>Día de la Madre - 15%</td>
-                            <td class="parametros-tabla-centrar"><a href="#" class="parametros-tabla-modificar"><i class="fa-solid fa-pen-to-square fa-2x"></i></a></td>
-                            <td class="parametros-tabla-centrar"><a href="#" class="parametros-tabla-eliminar"><i class="fa-solid fa-trash-can fa-2x"></a></td>
-                        </tr>
-
-                        <tr>
-                            <td>Navidad - 5%</td>
-                            <td class="parametros-tabla-centrar"><a href="#" class="parametros-tabla-modificar"><i class="fa-solid fa-pen-to-square fa-2x"></i></a></td>
-                            <td class="parametros-tabla-centrar"><a href="#" class="parametros-tabla-eliminar"><i class="fa-solid fa-trash-can fa-2x"></a></td>
-                        </tr>
-
-                        <tr>
-                            <td>Libros infantiles - 10%</td>
-                            <td class="parametros-tabla-centrar"><a href="#" class="parametros-tabla-modificar"><i class="fa-solid fa-pen-to-square fa-2x"></i></a></td>
-                            <td class="parametros-tabla-centrar"><a href="#" class="parametros-tabla-eliminar"><i class="fa-solid fa-trash-can fa-2x"></a></td>
-                        </tr>
-
+                        </tbody>
                     </table>
                 </div>
 
@@ -167,7 +160,12 @@
 
                             <div>
                                 <div class="parametros-ingresar-inputs-todo">
-                                    <p>Porcentaje de descuento actual: 15%</p>
+                                    <p class="lbl-fan">Porcentaje de descuento actual:</p>
+                                    <table id="descuento-info">
+                                        <tbody>
+                                            
+                                        </tbody>
+                                    </table>
                                 </div>
 
                                 <div class="parametros-ingresar-inputs-todo">
@@ -183,7 +181,12 @@
 
                             <div>
                                 <div class="parametros-ingresar-inputs-todo">
-                                    <p>Monto mínimo de compras actual: ¢10,000.00</p>
+                                    <p class="lbl-fan">Monto mínimo de compras: <span>₡15000</span></p>
+                                    <table id="minimo-info">
+                                        <tbody>
+                                            
+                                        </tbody>
+                                    </table>
                                 </div>
 
                                 <div class="parametros-ingresar-inputs-todo">
@@ -214,7 +217,12 @@
                     <form id="parametros-imp">
 
                         <div class="parametros-ingresar-inputs-todo">
-                            <p>Tasa de impuesto actual: 5%</p>
+                            <p class="lbl-tabla">Tasa de impuesto:</p>
+                            <table id="impuesto-info">
+                                <tbody>
+                                    
+                                </tbody>
+                            </table>
                         </div>
 
 
@@ -244,7 +252,12 @@
                     <form id="parametros-correo">
 
                         <div class="parametros-ingresar-inputs-todo">
-                            <p>Correo electrónico actual: facturas@elbazardelassorpresas.com</p>
+                            <p class="lbl-tabla">Correo registrado:</p>
+                            <table id="factura-info">
+                                <tbody>
+                                    
+                                </tbody>
+                            </table>
                         </div>
 
                         <div class="parametros-ingresar-inputs-todo">
@@ -307,10 +320,12 @@
         </footer>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="../js/parametros_sistema.js"></script>
-    <script src="/js/editar_perfil.js"></script>
-
+    <script src="../controllerJS/servicio_parametros.js"></script>
+    <script src="../controllerJS/informacion_parametros.js"></script>
+    <script src="../controllerJS/parametros_sistema.js"></script>
+    
 </body>
 
 </html>

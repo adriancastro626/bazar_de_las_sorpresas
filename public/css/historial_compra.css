@@ -13,8 +13,25 @@ h1 {
     text-align: center;
 }
 
+.pagina-contenido {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    /* width: 80%; */
+}
+
+.tbl-compras {
+    width: 86%;
+}
+
 
 /* Estilos de la tabla */
+
+
+/* .tbl-compras {
+    width: 900px;
+} */
 
 
 /* Encabezado */
@@ -22,9 +39,8 @@ h1 {
 th {
     background-color: #FFB4A2;
     font-size: 18px;
-    font-weight: 600;
+    font-weight: bold;
     color: #6D6875;
-    width: 160px;
     border: 2px solid #fff;
 }
 
@@ -32,7 +48,7 @@ th {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: 10px 10px;
+    margin: 5px 5px;
 }
 
 
@@ -77,11 +93,6 @@ th {
     margin-left: 10px;
     margin-right: 50px;
 }
-
-
-/* .rotar45 {
-    transform: rotate(45deg);
-} */
 
 .coloreado {
     color: #FFCDB2;

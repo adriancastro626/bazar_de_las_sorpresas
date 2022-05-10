@@ -1,5 +1,4 @@
 const express = require('express');
-const generosliterariosModel = require('../models/generosliterarios.model');
 const router = express.Router();
 const Generosliterarios = require('../models/generosliterarios.model');
 
@@ -23,9 +22,9 @@ router.post('/registrar-generoliterario', (req, res) => {
     });
 });
 
-// http://localhost:3000/api/listar-generosliterarios
+// http://localhost:3000/api/listar-
 router.get('/listar-generosliterarios', (req, res) => {
-    Generosliterarios.find((error, lista) => {
+    Generosliterarios.find((error, generos) => {
         if (error) {
             res.json({
                 msj: 'No se pudo listar los Generos Literarios',
@@ -33,7 +32,7 @@ router.get('/listar-generosliterarios', (req, res) => {
             });
         } else {
             res.json({
-                lista
+                generos
             });
         }
     });
