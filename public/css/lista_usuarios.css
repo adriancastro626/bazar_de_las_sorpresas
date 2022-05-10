@@ -119,3 +119,37 @@ th {
     color: #FFCDB2;
     cursor: pointer;
 }
+
+
+/*Estilos de tabla*/
+
+table {
+    width: 98.5%;
+}
+
+td {
+    padding: 8px;
+    text-align: left;
+}
+
+tr {
+    background-color: #6D6875;
+    color: #FFCDB2;
+}
+
+.tabla-titulos {
+    font-weight: bold;
+}
+
+.lista-libros-sinopsis {
+    background-color: #6D6875;
+    color: #FFCDB2;
+    line-height: 26px;
+    text-align: justify;
+}
+
+.lista-libros-enlace {
+    padding: 10px 0 20px 0;
+    text-decoration: none;
+    text-align: end;
+}
