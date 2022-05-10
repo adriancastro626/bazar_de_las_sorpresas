@@ -132,7 +132,7 @@
                         <p id="genero"></p>
                         <h2>Premios</h2>
                         <p id="premios"></p>
-                        
+
                     </div>
                 </div>
 
@@ -141,21 +141,20 @@
                 <div class="perfil-libro-columna-der">
 
                     <h1><label id="titulo"></label></h1>
-                    
-                
+
+
                     <!-- Venta -->
                     <div class="perfil-libro-venta">
                         <div class="perfil-libro-venta-precio">
                             <h2>Precio</h2>
-                            <p>₡<span id="precio"></span></p>
+                            <p><span id="precio"></span></p>
                         </div>
                         <div class="perfil-libro-venta-descuento">
                             <h2>Descuento</h2>
                             <p id="descuento"></p>
                         </div>
                         <div class="perfil-libro-venta-carrito">
-                            <a href="/html/carrito_compras.html"><i class="fa-solid fa-basket-shopping"></i>Agregar al carrito</a>
-                            <a href="/html/carrito_compras.html"><i class="fa-solid fa-cart-shopping"></i>Pagar</a>
+                            <a href="#" id="btn-carrito"><i class="fa-solid fa-basket-shopping"></i>Agregar al carrito</a>
                         </div>
                     </div>
 
@@ -284,8 +283,10 @@
         </footer>
     </div>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="../controllerJS/servicio_parametros.js"></script>
     <script src="../controllerJS/perfil_libro.js"></script>
+    <script src="../servicesJS/servicio-general.js"></script>
 </body>
 
 </html>

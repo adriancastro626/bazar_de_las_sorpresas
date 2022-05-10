@@ -115,7 +115,7 @@ const tablaMinimo = document.querySelector('minimo-info tbody');
 let listaMinimo = [];
 
 const inicializarMinimo = async() =>{
-    listaMinimo = await obtenerCompra('/listar-descuentofan');
+    listaMinimo = await obtenerMinimo('/listar-descuentofan');
     mostrarMinimo();
 };
 
