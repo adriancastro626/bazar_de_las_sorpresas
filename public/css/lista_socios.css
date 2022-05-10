@@ -1,121 +1,129 @@
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #ffffff;
-}
-
-#titulo {
-    border: 1px solid black;
-    font-weight: bold;
-    text-align: center;
-    font-size: 24px;
-    background: #6d6875;
-    color: #ffcdb2;
-    max-width: 100% !important;
-}
-
-.cont-control {
-    border: 1px solid black;
-    text-align: end;
-    background: #ffdbc8;
-}
-
-.cont-primera-fila img {
-    max-width: 200px;
-    padding-left: 23%;
-}
-
-.primer-socio {
-    border: 1px solid black;
-    background: #ffffff;
-    width: 340px;
-    height: 400px;
-    padding: 10px;
-}
-
-.segundo-socio {
-    border: 1px solid black;
-    background: #ffffff;
-    width: 340px;
-    height: 400px;
-    padding: 10px;
-}
-
-.tercer-socio {
-    border: 1px solid black;
-    background: #ffffff;
-    width: 340px;
-    height: 400px;
-    padding: 10px;
-}
-
-.cont-primera-fila {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-.sct-socio-comercial h4 {
-    font-size: 15px;
-    text-align: center;
-    font-weight: bold;
-}
-
-p {
-    text-align: center;
-}
-
-#sct-socio-comercial {
-    border: 1px solid black;
-    width: 100%;
-}
-
-.btn-oscuro {
-    background: #6d6875;
-    color: #ffffff;
-    height: 30px;
-    width: 340px;
-    font-weight: bold;
-    border: 2px solid #6d6875;
-}
-
-.btn-oscuro:hover {
-    background: #b0a9bc;
-    border: 2px solid #6d6875;
-    color: #5a565f;
-    cursor: pointer;
-}
-
-.btn-claro {
-    background: #b5838d;
-    color: #ffffff;
-    height: 30px;
-    width: 340px;
-    font-weight: bold;
-    border: 2px solid #8b0000;
-}
-
-.btn-claro:hover {
-    background: #e8aaac;
-    border: 2px solid #8b0000;
-    color: #8b0000;
-    cursor: pointer;
-}
-
-.btn-socio {
-    background: #b5838d;
-    color: #ffffff;
-    height: 30px;
-    width: 340px;
-    font-weight: bold;
-    border: 2px solid #8b0000;
-}
-
-.btn-socio:hover {
-    background: #e8aaac;
-    border: 2px solid #8b0000;
-    color: #8b0000;
-    cursor: pointer;
-}
-
-
-/* btn-editar-socio */
+                body {
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    background: #ffffff;
+                }
+                
+                #titulo {
+                    border: 1px solid black;
+                    font-weight: bold;
+                    text-align: center;
+                    font-size: 24px;
+                    background: #6d6875;
+                    color: #ffcdb2;
+                    max-width: 100% !important;
+                }
+                
+                .cont-control {
+                    border: 1px solid black;
+                    text-align: end;
+                    background: #ffdbc8;
+                }
+                
+                .cont-primera-fila img {
+                    max-width: 200px;
+                    padding-left: 23%;
+                }
+                
+                .primer-socio {
+                    border: 1px solid black;
+                    background: #ffffff;
+                    width: 340px;
+                    height: 400px;
+                    padding: 10px;
+                }
+                
+                .segundo-socio {
+                    border: 1px solid black;
+                    background: #ffffff;
+                    width: 340px;
+                    height: 400px;
+                    padding: 10px;
+                }
+                
+                .tercer-socio {
+                    border: 1px solid black;
+                    background: #ffffff;
+                    width: 340px;
+                    height: 400px;
+                    padding: 10px;
+                }
+                
+                .cont-primera-fila {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-around;
+                }
+                
+                .sct-socio-comercial h4 {
+                    font-size: 15px;
+                    text-align: center;
+                    font-weight: bold;
+                }
+                
+                p {
+                    text-align: center;
+                }
+                
+                #sct-socio-comercial {
+                    border: 1px solid black;
+                    width: 100%;
+                }
+                
+                .btn-oscuro {
+                    background: #6d6875;
+                    color: #ffffff;
+                    height: 30px;
+                    width: 340px;
+                    font-weight: bold;
+                    border: 2px solid #6d6875;
+                }
+                
+                .btn-oscuro:hover {
+                    background: #b0a9bc;
+                    border: 2px solid #6d6875;
+                    color: #5a565f;
+                    cursor: pointer;
+                }
+                
+                .btn-claro {
+                    background: #b5838d;
+                    color: #ffffff;
+                    height: 30px;
+                    width: 340px;
+                    font-weight: bold;
+                    border: 2px solid #8b0000;
+                }
+                
+                .btn-claro:hover {
+                    background: #e8aaac;
+                    border: 2px solid #8b0000;
+                    color: #8b0000;
+                    cursor: pointer;
+                }
+                
+                .btn-socio {
+                    background: #b5838d;
+                    color: #ffffff;
+                    height: 30px;
+                    width: 340px;
+                    font-weight: bold;
+                    border: 2px solid #8b0000;
+                }
+                
+                .btn-socio:hover {
+                    background: #e8aaac;
+                    border: 2px solid #8b0000;
+                    color: #8b0000;
+                    cursor: pointer;
+                }
+                
+                #tbl-socios tbody {
+                    width: 100%;
+                    height: 100%;
+                    font-size: 25px;
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    line-height: 80px;
+                    text-align: center;
+                    margin-bottom: 10px;
+                }
+                /* btn-editar-socio */

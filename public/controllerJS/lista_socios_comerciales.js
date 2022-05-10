@@ -72,11 +72,9 @@ const mostrarDatos = () => {
         if (socio.nombrecomercio.toLowerCase().includes(filtro)) {
             let fila = cuerpoTabla.insertRow();
 
-            fila.insertCell().innerText = socio.nombrecomercio;
             fila.insertCell().innerText = socio.fotocomercio;
-            fila.insertCell().innerText = socio.provinciacomercio;
-            fila.insertCell().innerText = socio.cantoncomercio;
-            fila.insertCell().innerText = socio.distritocomercio;
+            fila.insertCell().innerText = socio.nombrecomercio;
+            fila.insertCell().innerText = socio.direccioncomercio;
 
         }
     });
