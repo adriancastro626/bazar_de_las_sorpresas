@@ -19,7 +19,7 @@
         <nav class="nav">
             <div class="parentNav">
                 <a class="navUno" href="./pagina_principal.html">
-                    <img class="nav-img" src="/imgs/logo.png" alt="Logo">
+                    <img class="nav-img" src="../imgs/logo.png" alt="Logo">
                 </a>
                 <a class="navDos" href="./pagina_principal.html">
                     <button class="btn-nav" id="btn-registro" type="button">Cerrar Sesión</button>
@@ -111,93 +111,17 @@
                         <br>
                     </div>
                     <section id="desgloce-ventas">
-                        <table>
+                        <table id="tbl-descuentos">
                             <thead>
                                 <th>Nombre</th>
                                 <th>Precio de Venta</th>
-                                <th>Cantidad</th>
-                                <th>Descuento Oferta 10%</th>
-                                <th>Descuento Libro Fan 15%</th>
+                                <th>Descuento</th>
+                                <th>Total</th>
                             </thead>
 
-                            <tr>
-                                <td>Harry Potter</td>
-                                <td>₡14,000.00</td>
-                                <td>1</td>
-                                <td>₡0.00</td>
-                                <td>₡2,100.00</td>
+                            <tbody>
 
-                            </tr>
-                            <tr>
-                                <td>Los Juegos del Hambre</td>
-                                <td>₡16,000.00</td>
-                                <td>1</td>
-                                <td>₡1,600.00</td>
-                                <td>₡0.00</td>
-                            </tr>
-                            <tr>
-                                <td>After</td>
-                                <td>₡12,000.00</td>
-                                <td>1</td>
-                                <td>₡0.00</td>
-                                <td>₡1,800.00</td>
-                            </tr>
-                            <tr>
-                                <td>Gadsby</td>
-                                <td>₡10,000.00</td>
-                                <td>1</td>
-                                <td>₡1,000.00</td>
-                                <td>₡0.00</td>
-                            </tr>
-                            <tr>
-                                <td>Bajo la Misma Estrella</td>
-                                <td>₡11,000.00</td>
-                                <td>1</td>
-                                <td>₡0.00</td>
-                                <td>₡1,650.00</td>
-                            </tr>
-                            <tr>
-                                <td>Juego de Tronos</td>
-                                <td>₡13,000.00</td>
-                                <td>1</td>
-                                <td>₡1,300.00</td>
-                                <td>₡0.00</td>
-                            </tr>
-                            <tr>
-                                <td>El Principito</td>
-                                <td>₡15,000.00</td>
-                                <td>1</td>
-                                <td>₡0.00</td>
-                                <td>₡2,250.00</td>
-                            </tr>
-                            <tr>
-                                <td>A dos metros de ti</td>
-                                <td>₡18,000.00</td>
-                                <td>1</td>
-                                <td>₡1,800.00</td>
-                                <td>₡0.00</td>
-                            </tr>
-                            <tr>
-                                <td>Yo antes de ti</td>
-                                <td>₡9,500.00</td>
-                                <td>1</td>
-                                <td>₡0.00</td>
-                                <td>₡1,425.00</td>
-                            </tr>
-                            <tr>
-                                <td>Invisible</td>
-                                <td>₡17,000.00</td>
-                                <td>1</td>
-                                <td>₡1,700.00</td>
-                                <td>₡0.00</td>
-                            </tr>
-                            <tr id="total">
-                                <td>TOTAL</td>
-                                <td>₡135,500.00</td>
-                                <td>10</td>
-                                <td>₡7,400.00</td>
-                                <td>₡9,225.00</td>
-                            </tr>
+                            </tbody>
                         </table>
                     </section>
 
@@ -245,8 +169,12 @@
             </div>
         </footer>
     </div>
-    <script src="/js/editar_perfil.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- 1. Cargar bibliotecas externas -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- 2. Enlazar el servicio general que comunica con el servidor -->
+    <script src="../servicesJS/servicio-general.js"></script>
+    <!-- Enlazar los controladores de la página -->
+    <script src="../controllerJS/reportes_descuentos.js"></script>
 </body>
-
 </html>

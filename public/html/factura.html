@@ -8,86 +8,121 @@
     <link rel="stylesheet" href="../css/factura.css">
     <title>Factura Impresa</title>
 </head>
-<section id="cont-factura">
-    <form>
-        <h1>El Bazar De Las Sorpresas</h1>
-        <div class="cont-cedula-juridica">
-            <h4>Cédula Jurídica: 3-101-074154</h4>
-        </div>
-        <div class="cont-direccion">
-            <a>Cartago, Tejar, Costado Suroeste De La Iglesia Católica Inmaculáda Concepción</a>
-        </div>
-        <div class="cont-telefono">
-            <a>Teléfono: 25529168</a>
-        </div>
-        <div class="cont-recibo">
-            <h4>*Recibo de Compra*</h4>
-        </div>
-        <div class="cont-numero-recibo">
-            <a>Recibo No.583694</a>
-        </div>
-        <div class="cont-transaccion">
-            <a>Transacción. 903856330576</a>
-        </div>
-        <div class="cont-fecha">
-            <a>Fecha: 30-03-2022</a>
-        </div>
-        <div class="cont- linea">
-            <hr>
-        </div>
-        <div class="cont-cedula-cliente">
-            <a>Cédula: 305420784</a>
-        </div>
-        <div class="cont-nombre-cliente">
-            <a>SR(a): Vanessa Pérez Aguilar</a>
-        </div>
-        <div class="cont-direccion-cliente">
-            <a>Dirección: Cartago, Tejar, del colegio Elías Leiva 100m Norte casa mano derecha color vino</a>
-        </div>
-        <div class="cont-telefono-cliente">
-            <a>Teléfono: 82746352</a>
-        </div>
-        <div class="cont-espacio">
-            <br><br><br>
-        </div>
-        <div class="cont-cuenta-cliente">
-            <a>Cuenta: 83097011*****</a>
-        </div>
-        <div class="cont-producto">
-            <a>Nombre Producto: Libro Harry Potter</a>
-        </div>
-        <div class="cont-precio-base">
-            <a>Precio Base: ₡11,900.00</a>
-        </div>
-        <div class="cont-iva">
-            <a>Iva: ₡1,547.00</a>
-        </div>
-        <div class="cont-descuento">
-            <a>Descuento Total: ₡2,100.00</a>
-        </div>
-        <div class="cont-total">
-            <a>Total: ₡13,447.00</a>
-        </div>
-        <div class="cont- linea">
-            <hr>
-        </div>
-        <div class="cont- linea">
-            <a>Monto Cancelado: ₡13,447.00</a>
-        </div>
-        <div class="cont- linea">
-            <hr>
-        </div>
-        <div class="cont-final">
-            <h3>*Gracias por su Compra*</h3>
-        </div>
-
-
-
-    </form>
-</section>
 
 <body>
+    <section id="cont-factura">
+        <form>
+            <h1>El Bazar De Las Sorpresas</h1>
+            <div class="cont-cedula-juridica">
+                <h4>Cédula Jurídica: 3-101-074154</h4>
+            </div>
+            <div class="cont-direccion">
+                <a>Cartago, Tejar, Costado Suroeste De La Iglesia Católica Inmaculáda Concepción</a>
+            </div>
+            <div class="cont-telefono">
+                <a>Teléfono: 25529168</a>
+            </div>
+            <div class="cont-recibo">
+                <h4>*Recibo de Compra*</h4>
+            </div>
+            <div class="cont-numero-recibo">
+                <a>Recibo No.583694</a>
+            </div>
+            <div class="cont-transaccion">
+                <a>Transacción. 903856330576</a>
+            </div>
+            <div id="cont-fecha">
+                <a>Fecha: 09/05/2022</a>
+            </div>
+            <div class="cont- linea">
+                <hr>
+            </div>
+            <div id="cont-cedula-cliente">
+                <a>Cédula: 305420784</a>
+            </div>
+            <div id="cont-nombre-cliente">
+                <a>
 
+                </a>
+            </div>
+            <div id="cont-direccion-cliente">
+                <a>Dirección: </a>
+                <p>
+
+                </p>
+            </div>
+            <div id="cont-telefono-cliente">
+                <a>Teléfono: </a>
+                <p>
+
+                </p>
+            </div>
+            <div class="cont-espacio">
+                <br><br><br>
+            </div>
+            <div id="cont-cuenta-cliente">
+                <a>Cuenta: </a>
+                <p>
+
+                </p>
+            </div>
+            <div id="cont-producto">
+                <a>Nombre Producto: </a>
+                <p>
+
+                </p>
+            </div>
+            <div id="cont-precio-base">
+                <a>Precio Base: </a>
+                <p>
+
+                </p>
+            </div>
+            <div id="cont-iva">
+                <a>Iva:</a>
+                <p>
+
+                </p>
+            </div>
+            <div id="cont-descuento">
+                <a>Descuento Total:</a>
+                <p>
+
+                </p>
+            </div>
+            <div id="cont-total">
+                <a>Total:</a>
+                <p>
+
+                </p>
+            </div>
+            <div class="cont- linea">
+                <hr>
+            </div>
+            <div id="cont- linea">
+                <a>Monto Cancelado:</a>
+                <p>
+
+                </p>
+            </div>
+            <div class="cont- linea">
+                <hr>
+            </div>
+            <div class="cont-final">
+                <h3>*Gracias por su Compra*</h3>
+            </div>
+
+
+
+        </form>
+    </section>
+    <!-- 1. Cargar bibliotecas externas -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- 2. Enlazar el servicio general que comunica con el servidor -->
+    <script src="../servicesJS/servicio-general.js"></script>
+    <!-- Enlazar los controladores de la página -->
+    <script src="../controllerJS/factura.js"></script>
 </body>
 
 </html>

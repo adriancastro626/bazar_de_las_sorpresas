@@ -6,7 +6,7 @@ const inputProvincias = document.getElementById('slct-provincias');
 const inputCantones = document.getElementById('slct-cantones');
 const inputDistritos = document.getElementById('slct-distritos');
 const inputDireccion = document.getElementById('direccion-exacta');
-// const inputFoto = document.getElementById('file-foto');
+const inputFoto = document.getElementById('file-foto');
 
 
 let selectProvincias = document.getElementById('slct-provincias');
@@ -93,12 +93,12 @@ const validar = () => {
         inputDireccion.classList.remove('input-error')
     }
 
-    // if (inputFoto.value == '') {
-    //     hayError = true;
-    //     inputFoto.classList.add('input-error')
-    // } else {
-    //     inputFoto.classList.remove('input-error')
-    // }
+    if (inputFoto.value == '') {
+        hayError = true;
+        inputFoto.classList.add('input-error')
+    } else {
+        inputFoto.classList.remove('input-error')
+    }
 
     if (hayError == true) {
         Swal.fire({
@@ -108,39 +108,25 @@ const validar = () => {
         });
         //json
     } else {
-        imprimir();
-        Swal.fire({
-            'icon': 'success',
-            'title': 'Socio Comercial Registrado',
-            'text': 'Añadido a lista de socios comerciales'
-        }).then(() => {
-            window.location.href = 'lista_socios_comerciales.html';
-        });
+        registrarComercio();
 
     }
 };
 
 
 
-const imprimir = () => {
-    let Cedula = inputCedula.value;
-    let Fecha = inputFecha.value;
-    let Provincias = inputProvincias.value;
-    let Cantones = inputCantones.value;
-    let Distritos = inputDistritos.value;
-    let Nombre = inputNombre.value;
-
-
-
-    console.log('El nombre del socio comercial es', Nombre);
-    console.log('La cédula jurídica es', Cedula);
-    console.log('La fecha de inicio de relación comercial es', Fecha);
-    console.log('La Provincia es', Provincias);
-    console.log('El Cantón es', Cantones);
-    console.log('El distrito es', Distritos);
-
-
-
+const registrarComercio = () => {
+    let data = {
+        "nombrecomercio": inputNombre.value,
+        "cedulajuridica": inputCedula.value,
+        "fechainicio": inputFecha.value,
+        "provinciacomercio": inputProvincias.value,
+        "cantoncomercio": inputCantones.value,
+        "distritocomercio": inputDistritos.value,
+        "direccioncomercio": inputDireccion.value,
+        "fotocomercio": inputFoto.value
+    };
+    registrarDatos('registrar-comercio', data, 'lista_socios.html');
 };
 
 btnRegistrar.addEventListener('click', () => {

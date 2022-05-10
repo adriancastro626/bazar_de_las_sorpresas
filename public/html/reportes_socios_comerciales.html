@@ -107,63 +107,15 @@
                         <br>
                     </div>
                     <section id="desgloce-ventas">
-                        <table>
+                        <table id="tbl-reporte-socios">
                             <thead>
                                 <th>Nombre</th>
                                 <th>Punto de Retiro</th>
                                 <th>Cantidad de Retiros </th>
                             </thead>
+                            <tbody>
 
-                            <tr>
-                                <td>Nombre Socio Comercial</td>
-                                <td>Provincia, Cantón, Distrito</td>
-                                <td>200 retiros</td>
-                            </tr>
-                            <tr>
-                                <td>Nombre Socio Comercial</td>
-                                <td>Provincia, Cantón, Distrito</td>
-                                <td>200 retiros</td>
-                            </tr>
-                            <tr>
-                                <td>Nombre Socio Comercial</td>
-                                <td>Provincia, Cantón, Distrito</td>
-                                <td>200 retiros</td>
-                            </tr>
-                            <tr>
-                                <td>Nombre Socio Comercial</td>
-                                <td>Provincia, Cantón, Distrito</td>
-                                <td>200 retiros</td>
-                            </tr>
-                            <tr>
-                                <td>Nombre Socio Comercial</td>
-                                <td>Provincia, Cantón, Distrito</td>
-                                <td>200 retiros</td>
-                            </tr>
-                            <tr>
-                                <td>Nombre Socio Comercial</td>
-                                <td>Provincia, Cantón, Distrito</td>
-                                <td>200 retiros</td>
-                            </tr>
-                            <tr>
-                                <td>Nombre Socio Comercial</td>
-                                <td>Provincia, Cantón, Distrito</td>
-                                <td>200 retiros</td>
-                            </tr>
-                            <tr>
-                                <td>Nombre Socio Comercial</td>
-                                <td>Provincia, Cantón, Distrito</td>
-                                <td>200 retiros</td>
-                            </tr>
-                            <tr>
-                                <td>Nombre Socio Comercial</td>
-                                <td>Provincia, Cantón, Distrito</td>
-                                <td>200 retiros</td>
-                            </tr>
-                            <tr>
-                                <td>Nombre Socio Comercial</td>
-                                <td>Provincia, Cantón, Distrito</td>
-                                <td>200 retiros</td>
-                            </tr>
+                            </tbody>
                         </table>
                     </section>
 
@@ -210,6 +162,13 @@
             </div>
         </footer>
     </div>
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- 1. Cargar bibliotecas externas -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- 2. Enlazar el servicio general que comunica con el servidor -->
+    <script src="../servicesJS/servicio-general.js"></script>
+    <!-- Enlazar los controladores de la página -->
+    <script src="../controllerJS/reporte_socios_comerciales.js"></script>
 </body>
+
 </html>

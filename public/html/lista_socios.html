@@ -19,7 +19,7 @@
         <nav class="nav">
             <div class="parentNav">
                 <a class="navUno" href="./pagina_principal.html">
-                    <img class="nav-img" src="/imgs/logo.png" alt="Logo">
+                    <img class="nav-img" src="../imgs/logo.png" alt="Logo">
                 </a>
                 <a class="navDos" href="./pagina_principal.html">
                     <button class="btn-nav" id="btn-registro" type="button">Cerrar Sesión</button>
@@ -102,161 +102,135 @@
                         <button type="button" id="btn-agregar-socio" class="btn-socio">Agregar Socio Comercial</button>
                         <br><br>
                     </div>
-                    <div class="cont-primera-fila">
-                        <div class="primer-socio">
-                            <br>
-                            <h4>Nombre Socio Comercial</h4>
-                            <br>
-                            <img src="../imgs/usuarioSinFoto.png" alt="img-tercer-socio" class="img">
-                            <br>
-                            <p>Punto de retiro: Provincia, Cantón, Distrito</p>
-                            <br>
-                            <button type="button" id="btn-editar-socio" class="btn-oscuro">Editar Socio Comercial</button>
-                            <br><br>
-                            <button type="button" id="btn-eliminar-socio" class="btn-claro">Eliminar Socio Comercial</button>
-                        </div>
-                        <div class="segundo-socio">
-                            <br>
-                            <h4>Nombre Socio Comercial</h4>
-                            <br>
-                            <img src="../imgs/usuarioSinFoto.png" alt="img-tercer-socio" class="img">
-                            <br>
-                            <p>Punto de retiro: Provincia, Cantón, Distrito</p>
-                            <br>
-                            <button type="button" id="btn-editar-socio" class="btn-oscuro">Editar Socio Comercial</button>
-                            <br><br>
-                            <button type="button" id="btn-eliminar-socio" class="btn-claro">Eliminar Socio Comercial</button>
-                        </div>
-                        <div class="tercer-socio">
-                            <br>
-                            <h4>Nombre Socio Comercial</h4>
-                            <br>
-                            <img src="../imgs/usuarioSinFoto.png" alt="img-tercer-socio" class="img">
-                            <br>
-                            <p>Punto de retiro: Provincia, Cantón, Distrito</p>
-                            <br>
-                            <button type="button" id="btn-editar-socio" class="btn-oscuro">Editar Socio Comercial</button>
-                            <br><br>
-                            <button type="button" id="btn-eliminar-socio" class="btn-claro">Eliminar Socio Comercial</button>
-                        </div>
+                    <div id="filtro">
+                        <label for="txt-filtro">Filtro</label>
+                        <input type="text" id="txt-filtro">
                     </div>
-                    <div class="cont-primera-fila">
-                        <div class="primer-socio">
-                            <br>
-                            <h4>Nombre Socio Comercial</h4>
-                            <br>
-                            <img src="../imgs/usuarioSinFoto.png" alt="img-tercer-socio" class="img">
-                            <br>
-                            <p>Punto de retiro: Provincia, Cantón, Distrito</p>
-                            <br>
-                            <button type="button" id="btn-editar-socio" class="btn-oscuro">Editar Socio Comercial</button>
-                            <br><br>
-                            <button type="button" id="btn-eliminar-socio" class="btn-claro">Eliminar Socio Comercial</button>
+                    <table id="tbl-socios">
+                        <tbody>
+
+                        </tbody>
+
+                        <!-- <div class="cont-primera-fila">
+                            <div class="primer-socio">
+                                <br>
+                                <h4>Nombre Socio Comercial</h4>
+                                <br>
+                                <img src="../imgs/usuarioSinFoto.png" alt="img-tercer-socio" class="img">
+                                <br>
+                                <p>Punto de retiro: Provincia, Cantón, Distrito</p>
+                                <br>
+                                <button type="button" id="btn-editar-socio" class="btn-oscuro">Editar Socio Comercial</button>
+                                <br><br>
+                                <button type="button" id="btn-eliminar-socio" class="btn-claro">Eliminar Socio Comercial</button>
+                            </div>
+                            <div class="segundo-socio">
+                                <br>
+                                <h4>Nombre Socio Comercial</h4>
+                                <br>
+                                <img src="../imgs/usuarioSinFoto.png" alt="img-tercer-socio" class="img">
+                                <br>
+                                <p>Punto de retiro: Provincia, Cantón, Distrito</p>
+                                <br>
+                                <button type="button" id="btn-editar-socio" class="btn-oscuro">Editar Socio Comercial</button>
+                                <br><br>
+                                <button type="button" id="btn-eliminar-socio" class="btn-claro">Eliminar Socio Comercial</button>
+                            </div>
+                            <div class="tercer-socio">
+                                <br>
+                                <h4>Nombre Socio Comercial</h4>
+                                <br>
+                                <img src="../imgs/usuarioSinFoto.png" alt="img-tercer-socio" class="img">
+                                <br>
+                                <p>Punto de retiro: Provincia, Cantón, Distrito</p>
+                                <br>
+                                <button type="button" id="btn-editar-socio" class="btn-oscuro">Editar Socio Comercial</button>
+                                <br><br>
+                                <button type="button" id="btn-eliminar-socio" class="btn-claro">Eliminar Socio Comercial</button>
+                            </div>
                         </div>
-                        <div class="segundo-socio">
-                            <br>
-                            <h4>Nombre Socio Comercial</h4>
-                            <br>
-                            <img src="../imgs/usuarioSinFoto.png" alt="img-tercer-socio" class="img">
-                            <br>
-                            <p>Punto de retiro: Provincia, Cantón, Distrito</p>
-                            <br>
-                            <button type="button" id="btn-editar-socio" class="btn-oscuro">Editar Socio Comercial</button>
-                            <br><br>
-                            <button type="button" id="btn-eliminar-socio" class="btn-claro">Eliminar Socio Comercial</button>
+                        <div class="cont-primera-fila">
+                            <div class="primer-socio">
+                                <br>
+                                <h4>Nombre Socio Comercial</h4>
+                                <br>
+                                <img src="../imgs/usuarioSinFoto.png" alt="img-tercer-socio" class="img">
+                                <br>
+                                <p>Punto de retiro: Provincia, Cantón, Distrito</p>
+                                <br>
+                                <button type="button" id="btn-editar-socio" class="btn-oscuro">Editar Socio Comercial</button>
+                                <br><br>
+                                <button type="button" id="btn-eliminar-socio" class="btn-claro">Eliminar Socio Comercial</button>
+                            </div>
+                            <div class="segundo-socio">
+                                <br>
+                                <h4>Nombre Socio Comercial</h4>
+                                <br>
+                                <img src="../imgs/usuarioSinFoto.png" alt="img-tercer-socio" class="img">
+                                <br>
+                                <p>Punto de retiro: Provincia, Cantón, Distrito</p>
+                                <br>
+                                <button type="button" id="btn-editar-socio" class="btn-oscuro">Editar Socio Comercial</button>
+                                <br><br>
+                                <button type="button" id="btn-eliminar-socio" class="btn-claro">Eliminar Socio Comercial</button>
+                            </div>
+                            <div class="tercer-socio">
+                                <br>
+                                <h4>Nombre Socio Comercial</h4>
+                                <br>
+                                <img src="../imgs/usuarioSinFoto.png" alt="img-tercer-socio" class="img">
+                                <br>
+                                <p>Punto de retiro: Provincia, Cantón, Distrito</p>
+                                <br>
+                                <button type="button" id="btn-editar-socio" class="btn-oscuro">Editar Socio Comercial</button>
+                                <br><br>
+                                <button type="button" id="btn-eliminar-socio" class="btn-claro">Eliminar Socio Comercial</button>
+                            </div>
                         </div>
-                        <div class="tercer-socio">
-                            <br>
-                            <h4>Nombre Socio Comercial</h4>
-                            <br>
-                            <img src="../imgs/usuarioSinFoto.png" alt="img-tercer-socio" class="img">
-                            <br>
-                            <p>Punto de retiro: Provincia, Cantón, Distrito</p>
-                            <br>
-                            <button type="button" id="btn-editar-socio" class="btn-oscuro">Editar Socio Comercial</button>
-                            <br><br>
-                            <button type="button" id="btn-eliminar-socio" class="btn-claro">Eliminar Socio Comercial</button>
-                        </div>
-                    </div>
-                    <div class="cont-primera-fila">
-                        <div class="primer-socio">
-                            <br>
-                            <h4>Nombre Socio Comercial</h4>
-                            <br>
-                            <img src="../imgs/usuarioSinFoto.png" alt="img-tercer-socio" class="img">
-                            <br>
-                            <p>Punto de retiro: Provincia, Cantón, Distrito</p>
-                            <br>
-                            <button type="button" id="btn-editar-socio" class="btn-oscuro">Editar Socio Comercial</button>
-                            <br><br>
-                            <button type="button" id="btn-eliminar-socio" class="btn-claro">Eliminar Socio Comercial</button>
-                        </div>
-                        <div class="segundo-socio">
-                            <br>
-                            <h4>Nombre Socio Comercial</h4>
-                            <br>
-                            <img src="../imgs/usuarioSinFoto.png" alt="img-tercer-socio" class="img">
-                            <br>
-                            <p>Punto de retiro: Provincia, Cantón, Distrito</p>
-                            <br>
-                            <button type="button" id="btn-editar-socio" class="btn-oscuro">Editar Socio Comercial</button>
-                            <br><br>
-                            <button type="button" id="btn-eliminar-socio" class="btn-claro">Eliminar Socio Comercial</button>
-                        </div>
-                        <div class="tercer-socio">
-                            <br>
-                            <h4>Nombre Socio Comercial</h4>
-                            <br>
-                            <img src="../imgs/usuarioSinFoto.png" alt="img-tercer-socio" class="img">
-                            <br>
-                            <p>Punto de retiro: Provincia, Cantón, Distrito</p>
-                            <br>
-                            <button type="button" id="btn-editar-socio" class="btn-oscuro">Editar Socio Comercial</button>
-                            <br><br>
-                            <button type="button" id="btn-eliminar-socio" class="btn-claro">Eliminar Socio Comercial</button>
-                        </div>
-                    </div>
-                    <div class="cont-primera-fila">
-                        <div class="primer-socio">
-                            <br>
-                            <h4>Nombre Socio Comercial</h4>
-                            <br>
-                            <img src="../imgs/usuarioSinFoto.png" alt="img-tercer-socio" class="img">
-                            <br>
-                            <p>Punto de retiro: Provincia, Cantón, Distrito</p>
-                            <p>Cantidad de retiros: ******</p>
-                            <br>
-                            <button type="button" id="btn-editar-socio" class="btn-oscuro">Editar Socio Comercial</button>
-                            <br><br>
-                            <button type="button" id="btn-eliminar-socio" class="btn-claro">Eliminar Socio Comercial</button>
-                        </div>
-                        <div class="segundo-socio">
-                            <br>
-                            <h4>Nombre Socio Comercial</h4>
-                            <br>
-                            <img src="../imgs/usuarioSinFoto.png" alt="img-tercer-socio" class="img">
-                            <br>
-                            <p>Punto de retiro: Provincia, Cantón, Distrito</p>
-                            <p>Cantidad de retiros: ******</p>
-                            <br>
-                            <button type="button" id="btn-editar-socio" class="btn-oscuro">Editar Socio Comercial</button>
-                            <br><br>
-                            <button type="button" id="btn-eliminar-socio" class="btn-claro">Eliminar Socio Comercial</button>
-                        </div>
-                        <div class="tercer-socio">
-                            <br>
-                            <h4>Nombre Socio Comercial</h4>
-                            <br>
-                            <img src="../imgs/usuarioSinFoto.png" alt="img-tercer-socio" class="img">
-                            <br>
-                            <p>Punto de retiro: Provincia, Cantón, Distrito</p>
-                            <p>Cantidad de retiros: ******</p>
-                            <br>
-                            <button type="button" id="btn-editar-socio" class="btn-oscuro">Editar Socio Comercial</button>
-                            <br><br>
-                            <button type="button" id="btn-eliminar-socio" class="btn-claro">Eliminar Socio Comercial</button>
-                        </div>
-                    </div>
+                        <div class="cont-primera-fila">
+                            <div class="primer-socio">
+                                <br>
+                                <h4>Nombre Socio Comercial</h4>
+                                <br>
+                                <img src="../imgs/usuarioSinFoto.png" alt="img-tercer-socio" class="img">
+                                <br>
+                                <p>Punto de retiro: Provincia, Cantón, Distrito</p>
+                                <p>Cantidad de retiros: ******</p>
+                                <br>
+                                <button type="button" id="btn-editar-socio" class="btn-oscuro">Editar Socio Comercial</button>
+                                <br><br>
+                                <button type="button" id="btn-eliminar-socio" class="btn-claro">Eliminar Socio Comercial</button>
+                            </div>
+                            <div class="segundo-socio">
+                                <br>
+                                <h4>Nombre Socio Comercial</h4>
+                                <br>
+                                <img src="../imgs/usuarioSinFoto.png" alt="img-tercer-socio" class="img">
+                                <br>
+                                <p>Punto de retiro: Provincia, Cantón, Distrito</p>
+                                <p>Cantidad de retiros: ******</p>
+                                <br>
+                                <button type="button" id="btn-editar-socio" class="btn-oscuro">Editar Socio Comercial</button>
+                                <br><br>
+                                <button type="button" id="btn-eliminar-socio" class="btn-claro">Eliminar Socio Comercial</button>
+                            </div>
+                            <div class="tercer-socio">
+                                <br>
+                                <h4>Nombre Socio Comercial</h4>
+                                <br>
+                                <img src="../imgs/usuarioSinFoto.png" alt="img-tercer-socio" class="img">
+                                <br>
+                                <p>Punto de retiro: Provincia, Cantón, Distrito</p>
+                                <p>Cantidad de retiros: ******</p>
+                                <br>
+                                <button type="button" id="btn-editar-socio" class="btn-oscuro">Editar Socio Comercial</button>
+                                <br><br>
+                                <button type="button" id="btn-eliminar-socio" class="btn-claro">Eliminar Socio Comercial</button>
+                            </div>
+                        </div> -->
+
+                    </table>
+
                 </form>
 
             </section>
@@ -300,10 +274,14 @@
             </div>
         </footer>
     </div>
-    <script src="/js/editar_perfil.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="../js/lista_socios_comerciales.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- 1. Cargar bibliotecas externas -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- 2. Enlazar el servicio general que comunica con el servidor -->
+    <script src="../servicesJS/servicio-general.js"></script>
+    <!-- Enlazar los controladores de la página -->
+    <script src="../controllerJS/lista_socios_comerciales.js"></script>
 
 </body>
 
