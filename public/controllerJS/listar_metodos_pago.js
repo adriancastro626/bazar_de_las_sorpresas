@@ -11,7 +11,7 @@ const inicializar = async() => {
 
 // Puebla la lista de métodos con los datos de la base de datos
 const mostrarMetodos = () => {
-    let filtro = usuarioConectado.correo;
+    let filtro = usuarioConectado.correousuario;
     // let filtro = "prueba@gmail.com";
 
     listaMetodos.forEach(metodo => {

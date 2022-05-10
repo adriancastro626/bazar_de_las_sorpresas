@@ -7,7 +7,7 @@ const campoTipoIdentificacion = document.getElementById('campo-tipoIdentificacio
 const campoNumIdentificacion = document.getElementById('campo-numeroIdentificacion');
 const campoGenero = document.getElementById('campo-genero');
 const campoOtroGenero = document.getElementById('campo-otroGenero');
-const campoFoto = document.getElementById('file-foto');
+const campoFoto = document.getElementById('btn-foto');
 const campoCorreo = document.getElementById('campo-correo');
 const campoContrasenna = document.getElementById('campo-contrasenna');
 const campoProvincia = document.getElementById('campo-provincia');
@@ -47,7 +47,6 @@ marker.on('dragend', onDragEnd);
 // const btnAgregar = document.getElementById('icono-agregar');
 
 let listaUsuarios = [];
-let usuariOnline = JSON.parse(localStorage.getItem('usuariOnline'));
 
 const empezar = async() => {
     listaUsuarios = await obtenerDatos('listar-usuarios');
@@ -56,8 +55,7 @@ const empezar = async() => {
 
 // Puebla la lista de métodos con los datos de la base de datos
 const mostrarUsuarios = () => {
-    // let filtro = usuarioConectado.correo;
-    let filtro = "romero@gmail.com";
+    let filtro = usuarioConectado.correousuario;
 
 
 
@@ -161,7 +159,7 @@ const mostrarUsuarios = () => {
             let contenerdorcampoContrasenna = document.createElement('div');
             let elementocampoContrasenna = document.createElement('p');
             contenerdorcampoContrasenna.appendChild(elementocampoContrasenna);
-            elementocampoContrasenna.textContent = contrasenna;
+            elementocampoContrasenna.textContent = "**********";
             campoContrasenna.appendChild(contenerdorcampoContrasenna);
 
             let contenerdorcampoUbicacion = document.createElement('div');
@@ -219,13 +217,13 @@ const definirProvincia = (provincia) => {
 const definirIdentificacion = (tipoidentificacion) => {
     let nombreIdentificacion;
 
-    if (tipoidentificacion.value == '1') {
+    if (tipoidentificacion == '1') {
         nombreIdentificacion = 'Cédula de Identidad';
-    } else if (tipoidentificacion.value == '2') {
+    } else if (tipoidentificacion == '2') {
         nombreIdentificacion = 'DIMEX';
-    } else if (tipoidentificacion.value == '3') {
+    } else if (tipoidentificacion == '3') {
         nombreIdentificacion = 'NITE';
-    } else if (tipoidentificacion.value == '4') {
+    } else if (tipoidentificacion == '4') {
         nombreIdentificacion = 'DIDI';
     } else {
         nombreIdentificacion = 'Otro';
@@ -237,9 +235,9 @@ const definirIdentificacion = (tipoidentificacion) => {
 const definirGenero = (tipoGenero) => {
     let nombreGenero;
 
-    if (tipoGenero.value == '1') {
+    if (tipoGenero == '1') {
         nombreGenero = 'Femenino';
-    } else if (tipoGenero.value == '2') {
+    } else if (tipoGenero == '2') {
         nombreGenero = 'Masculino';
     } else {
         nombreGenero = 'Otro';
@@ -327,14 +325,14 @@ btnActualizar.addEventListener('click', () => {
 
 // Función de evento para modificar datos
 
-perfilModificar.addEventListener('click', () => {
+// perfilModificar.addEventListener('click', () => {
 
-    console.log('Permitiendo la modificación de la información del perfil');
-    Swal.fire({
-        'icon': 'success',
-        'title': 'Modificar perfil',
-    }).then(() => {
-        listaGenerosCompleto.reset();
-    });
+//     console.log('Permitiendo la modificación de la información del perfil');
+//     Swal.fire({
+//         'icon': 'success',
+//         'title': 'Modificar perfil',
+//     }).then(() => {
+//         listaGenerosCompleto.reset();
+//     });
 
-});
+// });
